@@ -1,0 +1,16 @@
+{
+  "name": "legal-data-synthesis-lab",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "法律数据合成研究学习: versioned skills, case materials, benchmarks and expert review.",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "start": "node server.mjs",
+    "dev": "node --watch server.mjs",
+    "test": "node --test test/*.test.mjs",
+    "check": "node scripts/check-content.mjs",
+    "import:workspace": "node scripts/import-workspace.mjs ..",
+    "package": "node scripts/package.mjs"
+  }
+}

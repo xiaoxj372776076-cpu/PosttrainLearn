@@ -1,0 +1,16 @@
+{
+  "versions": [
+    {
+      "version": "1.1.0",
+      "title": "材料标准化与 Few-Shot 难度控制",
+      "createdAt": "2026-11-14T16:00:00+08:00",
+      "importedAt": "2026-11-14T08:10:49.501Z",
+      "author": "工作区已有 Skill",
+      "note": "首个可追溯快照。保存当前真实内容，未伪造不存在的历史版本。1.1.0 为本站快照版本号，不是上游官方版本。",
+      "parent": null,
+      "sha256": "308d3ea4d553e07f2e1206d7e6484ea2f68848eb443c511f231e95c4b47d2190",
+      "schemaVersion": "1.1",
+      "materialPackVersion": "1.0"
+    }
+  ]
+}

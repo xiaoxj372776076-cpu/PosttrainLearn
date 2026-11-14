@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="围绕真实法律材料、版本化 Skill 与专家审核，研究可验证的 Posttrain 数据合成。">
+  <meta name="theme-color" content="#eef3fc">
+  <title>法律数据合成研究学习</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+  <script type="module" src="/app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳转到内容</a>
+  <header class="topbar">
+    <a class="brand" href="#overview" aria-label="法律数据合成研究学习首页">
+      <svg viewBox="0 0 44 44" aria-hidden="true"><path d="M7 8h11c4 0 6 3 6 6v24c-2-3-4-4-8-4H7z" fill="#3767eb"/><path d="M24 14c0-4 4-7 8-7h6v27h-7c-3 0-5 1-7 4z" fill="#69c8c0"/><path d="M14 17h4m-4 6h4m12-5h3m-3 6h3" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+      <span>法律数据合成<span class="brand-sub">研究学习 / POSTTRAIN LAB</span></span>
+    </a>
+    <nav aria-label="主要导航">
+      <a href="#overview" data-nav="overview">研究总览</a>
+      <a href="#skills" data-nav="skills">Skill 版本</a>
+      <a href="#cases" data-nav="cases">案例材料</a>
+      <a href="#benchmarks" data-nav="benchmarks">评测与种子<span class="nav-dot"></span></a>
+    </nav>
+    <div class="top-actions"><span class="local-badge"><i></i>本地研究空间</span><a class="button small ghost" href="/api/export/research" download>导出研究备份</a></div>
+  </header>
+  <main id="main" tabindex="-1"><div class="loading-state"><span class="loader"></span>正在读取研究材料…</div></main>
+  <footer><span>法律数据合成研究学习</span><span>证据先行 · 专家共建 · 版本可追溯</span><span>本地应用 v0.1.0</span></footer>
+  <dialog id="modal" aria-labelledby="modal-title"><div id="modal-content"></div></dialog>
+  <div id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

@@ -1,0 +1,10 @@
+node_modules/
+.DS_Store
+.env
+.env.*
+.local/
+private-source/
+releases/
+coverage/
+*.log
+*.tmp
