@@ -1,0 +1,22 @@
+{
+  "requestedModel": "gpt-6-astra",
+  "actualModel": "deployment-gpt-6-astra-platform-global",
+  "text": "{\n  \"question_sufficiency\": \"pass\",\n  \"answer_leakage\": false,\n  \"required_repairs\": [],\n  \"assessed_difficulty\": \"D4\",\n  \"reasoning_dependencies\": [\n    \"规范适用时点→A效力判断→返还范围→从属保证效力：[S01]—[S02]、[S12]；lending-2020-12第13、31条，civil-code-2020第157、682条。\",\n    \"B实际交付本金→逐次合法结息→后续利息→全期间本息上限：[S03]—[S06]；civil-code-2020第670条，lending-2020-12第25—28条。须区分纸面金额与可保护金额。\",\n    \"C有效付款识别→债务指定→通常清偿顺序与T-02特别约定→逐段本金、利息和费用余额：[S07]—[S09]、[S11]；civil-code-2020第560、561条。重复凭证和失败指令不能形成新增清偿。\",\n    \"B保证范围及结息同意→未获书面同意的展期效应→保证期间与请求到达日期比较→即时责任：[S06]；civil-code-2020第688、691—693、695条。\",\n    \"C保证方式→保证期间→短信与起诉的不同法律作用→是否还需判断先诉抗辩：[S10]；civil-code-2020第686、687、692、693条。\",\n    \"各债务支持范围→最终分项取分→借款人总额及相应保证责任，避免重复计入本金或跨债务冲抵：[S12]及answer-contract.json。\"\n  ],\n  \"reason\": \"仅据学生输入，必要交付与计息时点、实际自然日/365口径、结算及付款日期、费用与清偿顺序、保证范围和行权事实足以完成审查。B未另列逾期利率，可依所附第28条处理；保证范围亦有约定或所附默认规则可用。题设对交易重复、费用可收取等事项的明确设定是虚构情景前提，不是原案证据，也未直接给出待判断结论。D4反映多阶段计算与责任分支的依赖结构，不代表已验证低成功率；本次未独立认证法条全文。\"\n}",
+  "usage": {
+    "input_tokens": 15021,
+    "input_tokens_details": {
+      "cache_write_tokens": 15018,
+      "cached_tokens": 0
+    },
+    "output_tokens": 1837,
+    "output_tokens_details": {
+      "reasoning_tokens": 1277
+    },
+    "total_tokens": 16858
+  },
+  "latencyMs": 40660,
+  "completedAt": "2026-11-14T21:46:18.179Z",
+  "status": "completed",
+  "input_sha256": "03fc8483b5ae4c656c1a93d0eda4ffa81f5f6f7b415f38c1863b298a9829f2eb",
+  "output_sha256": "2641e382f406ed194e2081e60c9babb4390c263cc979c608b334580ad6dd1005"
+}

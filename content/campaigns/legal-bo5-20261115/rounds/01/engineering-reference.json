@@ -1,0 +1,16 @@
+{
+  "answer": {
+    "restitution": "524100.00",
+    "unadvanced_arithmetic": "19900.00",
+    "interest_statement_gap": "2000.00",
+    "loan_valid": false,
+    "additional_origin_independently_traced": false,
+    "defendant_substantive_admission": false
+  },
+  "proof": [
+    "502000+750+1350+20000=524100",
+    "42000-22100=19900",
+    "abs(21900-19900)=2000"
+  ],
+  "expert_review": false
+}

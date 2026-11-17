@@ -1,0 +1,55 @@
+{
+  "summary": "1份公开判决展示视图与5个官方规范页面已冻结；有限本地研究，不解除正式发布权限阻断",
+  "config": {
+    "run_id": "legal-harbor-001",
+    "protocol_version": "0.1",
+    "skill_version": "1.1.0",
+    "skill_sha256": "308d3ea4d553e07f2e1206d7e6484ea2f68848eb443c511f231e95c4b47d2190",
+    "created_at": "2026-11-14T09:31:41.818Z",
+    "jurisdiction": "中国大陆 / 上海",
+    "legal_as_of": "2023-11-21",
+    "task_type": "numeric_calculation",
+    "scope": "封闭材料下无效借贷返还范围及证据账目审计；不是判决预测或现行法律意见",
+    "source_case_id": "cn-shanghai-minhang-2023-civil-first-23060",
+    "dossier_version": "0.1.0",
+    "material_pack_version": "1.0",
+    "target_difficulty": "D4",
+    "candidate_limit": 3,
+    "model": "gpt-6-astra",
+    "model_independence": "same_family_fresh_context",
+    "budget": {
+      "max_calls": 12,
+      "max_input_tokens": 160000,
+      "max_output_tokens": 100000,
+      "per_call_max_output_tokens": 10000,
+      "max_repairs": 2,
+      "max_cost": null,
+      "cost_note": "网关未提供价格；以调用数和 token 硬限制约束，实际金额未知"
+    },
+    "bon": {
+      "n": 3,
+      "selection": "oracle_max_fixed_verifier_score",
+      "ties": "earliest",
+      "feedback_between_attempts": false
+    },
+    "environment": {
+      "harbor_version": "0.25.0",
+      "backend": "smol",
+      "target": "local",
+      "agent": "restricted_file_gateway_agent",
+      "no_upload": true
+    },
+    "permission": {
+      "status": "limited_local_research_only",
+      "basis": "copyright-2020/5(1)",
+      "limits": [
+        "公开脱敏司法文件有限研究加工",
+        "不含证据原件",
+        "未确认商业再分发、个人信息和外部模型条款适配",
+        "正式训练准入仍 unresolved"
+      ]
+    }
+  },
+  "laws_count": 5,
+  "case_sha256": "5735df246160af2f3f6cc854cbff91ea2719e26bbebdb940604b34be10efbbeb"
+}

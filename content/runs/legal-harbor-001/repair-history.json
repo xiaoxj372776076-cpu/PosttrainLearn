@@ -1,0 +1,48 @@
+{
+  "rounds": [
+    {
+      "repair_round": 1,
+      "trigger": "P3 required_repairs",
+      "method": "engineering_format_and_leakage_repair_not_model_generated_new_facts",
+      "old_instruction_sha256": "8026ebd536b720c75b1be61b12675becbcdc1aaf1538b800f1099db46e78aeab",
+      "new_instruction_sha256": "497c78b8c892bbf9a86ddd895ef36f0765b3ebd04e9be2c7aef4408870594c86",
+      "old_student_sha256": "d76adfa4d06921c184bb04ea00148497cd69222101d1df3aee703aa29d6486c6",
+      "new_student_sha256": "255445628c0a911c0ac736b9192aaf6bd2ae71b3278cd04faf85bb0452340ce8",
+      "changes": [
+        "标题不预设效力结论",
+        "金额提及中性定位，不给角色或重复关系答案",
+        "公开角色/计数约定，保持严格评分原有经济语义",
+        "总额明确为限定来源前提的结果",
+        "P3补足D1-D4定义"
+      ],
+      "facts_changed": false,
+      "required_reruns": [
+        "P3",
+        "P4",
+        "P5",
+        "P6"
+      ],
+      "old_P3_preserved": true
+    },
+    {
+      "repair_round": 2,
+      "trigger": "P3-r1 fail: same-paragraph equal-value IDs not uniquely located",
+      "method": "exact_frozen_source_quote_and_offset_alignment",
+      "old_student_sha256": "255445628c0a911c0ac736b9192aaf6bd2ae71b3278cd04faf85bb0452340ce8",
+      "new_student_sha256": "8abe001158c7bfe20e33ec3718ae88df11c9ff65eb279895aacf10de591fcd00",
+      "changes": [
+        "所有15个提及增加唯一原文quote与字符起止定位，不补角色/答案标签",
+        "区分同段同额的借条/收条、原诉请利息/追加款叙述"
+      ],
+      "facts_changed": false,
+      "locators_all_unique": true,
+      "required_reruns": [
+        "P3",
+        "P4",
+        "P5",
+        "P6"
+      ]
+    }
+  ],
+  "max_repairs": 2
+}

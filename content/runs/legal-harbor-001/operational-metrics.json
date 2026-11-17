@@ -1,0 +1,15 @@
+{
+  "physical_model_trials": 4,
+  "completed_model_answers": 3,
+  "infrastructure_timeouts": 1,
+  "strict_successes": 3,
+  "completed_answer_contract_success_rate": 1,
+  "end_to_end_trial_success_rate": 0.75,
+  "raw_harbor_rewards": [
+    1,
+    1,
+    0,
+    1
+  ],
+  "interpretation": "3/3为完成答案的固定契约通过率，不是无条件端到端成功率；4次物理trial有1次网关超时，端到端3/4。均不是法律语义正确率。"
+}

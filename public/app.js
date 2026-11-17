@@ -1,4 +1,5 @@
 import { escapeHtml as e, markdown, percent, date, usageLabels, patternLabels, suggestedVersion } from './utils.js';
+import { createExplorer } from './exploration.js';
 
 const main = document.querySelector('#main');
 const modal = document.querySelector('#modal');
@@ -37,13 +38,14 @@ function dialog(content, kind = '') {
   if (!modal.open) modal.showModal();
 }
 const closeButton = `<button class="icon-button" data-action="close-modal" aria-label="关闭弹窗">${icon('close')}</button>`;
+const explorer = createExplorer({ main, api, heading, icon, tag, notice, dialog, closeButton });
 function reviewCounts() { const counts = { unassigned: boot.dataset.total, candidate: 0, approved: 0, holdout: 0 }; for (const r of Object.values(boot.state.reviews)) { counts.unassigned--; counts[r.usage]++; } return counts; }
 
 function overview() {
   const counts = reviewCounts(); const current = boot.versions.at(-1);
   const paired = boot.evaluation.paired;
   main.innerHTML = `<section class="hero"><div class="hero-grain"></div><div class="hero-copy"><div class="eyebrow"><span class="tiny-line"></span>LEGAL DATA · EXPERT-IN-THE-LOOP</div><h1>让法律经验，成为<br><span>可验证的训练数据。</span></h1><p>从一份真实判决书出发，把材料整理、种子命题与专家判断<br class="desktop-only">连接成可追溯的 Posttrain 数据合成方法。</p><div class="hero-actions"><a class="button primary" href="#skills">探索合成 Skill ${icon('arrow')}</a><a class="button glass" href="#benchmarks">浏览 PLawBench ${icon('grid')}</a></div><div class="hero-meta"><span><i></i>一个方向，逐步验证</span><span>不自动合成 · 不调用模型</span></div></div><div class="hero-diagram"><div class="diagram-top"><span class="eyebrow">THE RESEARCH LOOP</span>${tag('专家参与', 'teal')}</div><div class="diagram-step">${icon('file')}<div><b>真实材料</b><span>事实、证据、法律版本</span></div><span class="step-number">01</span></div><div class="diagram-connector"></div><div class="diagram-step">${icon('layers')}<div><b>结构化命题</b><span>判断点 + Few-Shot + 难度</span></div><span class="step-number">02</span></div><div class="diagram-connector"></div><div class="diagram-step highlight">${icon('people')}<div><b>专家核验与反馈</b><span>修正标准，沉淀下一版 Skill</span></div><span class="step-number">03</span></div><div class="loop-note">证据约束内容，种子示范结构 ${icon('arrow')}</div></div></section>
-    <div class="content-wrap"><section class="stats-grid"><div class="stat-card"><span>合成 Skill</span><strong>${boot.versions.length}<small>个版本</small></strong><div>${tag(`v${current.version}`, 'blue')}<span>不可覆盖的快照</span></div></div><div class="stat-card"><span>真实案例材料</span><strong>01<small>份</small></strong><div>${tag('原文已取得', 'teal')}<span>待标准化</span></div></div><div class="stat-card"><span>公开评测题目</span><strong>${boot.dataset.total}<small>题</small></strong><div><span>4 类任务 · ${boot.dataset.rubricGroups.toLocaleString()} 个评分组</span></div></div><div class="stat-card"><span>专家批准种子</span><strong>${String(counts.approved).padStart(2, '0')}<small>题</small></strong><div><span>${counts.candidate} 题待审 · ${counts.holdout} 题保留评测</span></div></div></section>
+    <div class="content-wrap"><section class="stats-grid"><div class="stat-card"><span>合成 Skill</span><strong>${boot.versions.length}<small>个版本</small></strong><div>${tag(`v${current.version}`, 'blue')}<span>不可覆盖的快照</span></div></div><div class="stat-card"><span>真实案例材料</span><strong>01<small>份</small></strong><div>${tag('Schema 已试填', 'teal')}<span>${boot.dossier.gaps} 项缺口待核</span></div></div><div class="stat-card"><span>公开评测题目</span><strong>${boot.dataset.total}<small>题</small></strong><div><span>4 类任务 · ${boot.dataset.rubricGroups.toLocaleString()} 个评分组</span></div></div><div class="stat-card"><span>专家批准种子</span><strong>${String(counts.approved).padStart(2, '0')}<small>题</small></strong><div><span>${counts.candidate} 题待审 · ${counts.holdout} 题保留评测</span></div></div></section>
     <div class="section-title"><div><span class="eyebrow">RESEARCH WORKSPACE</span><h2>从这里，开始这一轮研究</h2></div><span class="muted small-text">材料 → 判断点 → 问题 → 核验 → 迭代</span></div>
     <section class="workspace-grid"><a href="#skills" class="feature-card skill-card"><div class="card-top"><span class="card-icon">${icon('layers')}</span>${tag(`v${current.version}`, 'blue')}</div><h3>方法不是一段 Prompt，<br>而是一条有门槛的链路。</h3><p>完整阅读 Skill、材料格式、Few-Shot 策略与审核要求。每次标准调整，都留下独立版本与变更依据。</p><div class="card-bottom"><span>查看方法与版本历史</span>${icon('arrow')}</div></a><a href="#cases" class="feature-card case-card"><div class="card-top"><span class="card-icon">${icon('book')}</span>${tag('第一份案例', 'teal')}</div><h3>借条上的金额，<br>不一定是实际应返还的金额。</h3><p>马某与皮某民间借贷纠纷。用真实文书检验金额角色、当事人主张与法院认定能否被准确保留。</p><div class="case-mini-meta"><span>上海市闵行区人民法院</span><span>2023.11.21</span></div><div class="card-bottom"><span>阅读原始材料展示视图</span>${icon('arrow')}</div></a><a href="#benchmarks" class="feature-card benchmark-card"><div class="card-top"><span class="card-icon">${icon('grid')}</span>${tag('公开子集', 'amber')}</div><h3>用难题观察能力，<br>用专家判断选择种子。</h3><p>280 道 PLawBench 题目、原始 rubric 与真实模型评分。保留评测和开发种子分开管理。</p><div class="task-dots"><span>案例分析 250</span><span>咨询 18</span><span>文书 12</span></div><div class="card-bottom"><span>进入评测与种子管理</span>${icon('arrow')}</div></a></section>
     <section class="bottom-grid"><div class="panel score-overview"><div class="panel-heading"><div><span class="eyebrow">OBSERVE, NOT CERTIFY</span><h2>模型表现，作为研究线索</h2></div>${tag('本地实验快照')}</div><p class="muted">共同已评分的 ${paired.evaluated} 题 · 逐题百分比均值 · 非官方榜单</p>${paired.models.map((m, i) => `<div class="score-bar-row"><span>${e(m.label)}</span><div class="score-track"><div class="score-fill ${i ? 'teal' : ''}" data-progress="${m.aggregate.macroPercentage}"></div></div><b>${percent(m.aggregate.macroPercentage)}</b></div>`).join('')}<p class="fine-print">仍有未完成评分，且 Pro 同时担任裁判。分数仅衡量 rubric 对齐，不代表法律金标。</p><button class="text-button" data-action="benchmark-scores">查看评分口径与详细结果 ${icon('arrow')}</button></div><div class="panel feedback-overview"><div class="panel-heading"><div><span class="eyebrow">EXPERT COLLABORATION</span><h2>把分歧，变成下一版标准</h2></div>${icon('people')}</div><div class="feedback-flow"><span>发现问题</span><i>→</i><span>专家复核</span><i>→</i><span>调整 Skill</span><i>→</i><span>再次验证</span></div><p>记录事实遗漏、rubric 争议、题目难度与流程建议，并关联到当时的 Skill 版本。</p><div class="feedback-counter"><strong>${boot.state.feedback.length}</strong><span>条已记录反馈</span><button class="button small" data-action="feedback">记录专家反馈</button></div></div></section>
@@ -52,6 +54,15 @@ function overview() {
 }
 
 async function skillsView(epoch) {
+  const latest = await api('/api/bootstrap');
+  if (epoch !== renderEpoch) return;
+  boot.versions = latest.versions;
+  const requested = new URLSearchParams(location.hash.split('?')[1] ?? '').get('version');
+  if (requested && requested !== skillVersion) {
+    skillVersion = requested;
+    skillFile = 'SKILL.md';
+    skillMode = 'read';
+  }
   skillVersion ??= boot.versions.at(-1).version;
   skill = await api(`/api/skills/${skillVersion}?file=${encodeURIComponent(skillFile)}`);
   if (epoch !== renderEpoch) return;
@@ -76,7 +87,10 @@ function newVersion() {
 
 async function casesView(epoch) {
   const value = await api('/api/case'); if (epoch !== renderEpoch) return;
-  main.innerHTML = `<div class="content-wrap">${heading('SOURCE MATERIAL / CASE 001', '先把材料读准确，再谈合成。', '第一份真实案例，按原文段落阅读。当前只完成材料获取，尚未生成 material_pack 或训练题目。', `<a class="button" href="${e(value.sourceUrl)}" target="_blank" rel="noopener noreferrer">法院官网原文 ↗</a>`)}<div class="case-layout"><aside><div class="panel case-info"><div class="eyebrow">CIVIL LITIGATION</div><h2>民间借贷纠纷</h2>${tag('已获取 · 待标准化', 'teal')}<dl><dt>案号</dt><dd>${e(value.caseNumber)}</dd><dt>法院</dt><dd>${e(value.court)}</dd><dt>裁判日期</dt><dd>${e(value.date)}</dd><dt>程序</dt><dd>一审 · 缺席判决</dd><dt>来源核验</dt><dd>官方 HTML · HTTP 200</dd><dt>上诉 / 生效状态</dt><dd>未确认</dd></dl><div class="fine-print">冻结文本 SHA-256<br><code>${e(value.sourceTextSha256)}</code></div></div><div class="panel reading-guide"><h3>这一份材料的观察重点</h3><ol><li>当事人主张与法院认定分开</li><li>名义金额与实际交付分开</li><li>同笔金额重复叙述不重复计算</li><li>合同效力与返还责任分开</li></ol><button class="text-button" data-action="normalization-spec">查看材料格式标准 ${icon('arrow')}</button></div></aside><section class="panel case-document"><div class="document-toolbar"><div>${icon('file')}<b>公开判决书 · 脱敏展示视图</b></div>${tag('非完整卷宗')}</div>${notice('仅省略与研究无关的身份信息，不改写金额、行为时间或裁判理由。段落 ID 保留原文行号；本展示视图不是逐字原件。')}<div class="case-text">${value.paragraphs.map((p, index) => `${index === 0 || p.section !== value.paragraphs[index - 1].section ? `<div class="case-section-label">${e(p.section)}</div>` : ''}<div class="case-paragraph"><span class="paragraph-id">${e(p.id)}</span><p>${e(p.text)}</p></div>`).join('')}</div><div class="document-footnote">${e(value.note)}<br>证据原件未取得；训练权限、法律版本与评测重叠仍待核验。${value.redactions.length} 处展示脱敏记录已保存。</div></section></div></div>`;
+  main.innerHTML = `<div class="content-wrap">${heading('SOURCE MATERIAL / CASE 001', '先把材料读准确，再谈合成。', '原文与整理结果分开保存。已完成 Case Dossier 0.1 试填，仍为 partial，尚未批准训练材料包或生成题目。', `<a class="button primary" href="#exploration?stage=dossier">查看案件全景与链路 ${icon('arrow')}</a><a class="button" href="${e(value.sourceUrl)}" target="_blank" rel="noopener noreferrer">法院官网原文</a>`)}
+    <div class="case-layout"><aside><div class="panel case-info"><div class="eyebrow">CIVIL LITIGATION</div><h2>民间借贷纠纷</h2>${tag('案件包 v0.1.0 · 待核验', 'teal')}<dl><dt>案号</dt><dd>${e(value.caseNumber)}</dd><dt>法院</dt><dd>${e(value.court)}</dd><dt>裁判日期</dt><dd>${e(value.date)}</dd><dt>程序</dt><dd>一审 · 缺席判决</dd><dt>来源快照</dt><dd>法院公开 HTML · ${date(value.retrievedAt)} 取得</dd><dt>上诉 / 生效状态</dt><dd>未确认</dd></dl><div class="fine-print">冻结文本 SHA-256<br><code>${e(value.sourceTextSha256)}</code></div></div>
+    <div class="panel reading-guide"><h3>这一份材料的观察重点</h3><ol><li>当事人主张与法院认定分开</li><li>名义金额与实际交付分开</li><li>同笔金额重复叙述不重复计算</li><li>合同效力与返还责任分开</li></ol><a class="text-button" href="#exploration?stage=dossier&tab=schema">查看整案 Schema ${icon('arrow')}</a><br><button class="text-button" data-action="normalization-spec">查看 Skill 材料包标准 ${icon('arrow')}</button></div></aside>
+    <section class="panel case-document"><div class="document-toolbar"><div>${icon('file')}<b>公开判决书 · 脱敏展示视图</b></div>${tag('非完整卷宗')}</div>${notice('仅省略与研究无关的身份信息，不改写金额、行为时间或裁判理由。段落 ID 保留原文行号；本展示视图不是逐字原件。')}<div class="case-text">${value.paragraphs.map((p, index) => `${index === 0 || p.section !== value.paragraphs[index - 1].section ? `<div class="case-section-label">${e(p.section)}</div>` : ''}<div class="case-paragraph"><span class="paragraph-id">${e(p.id)}</span><p>${e(p.text)}</p></div>`).join('')}</div><div class="document-footnote">${e(value.note)}<br>证据原件未取得；训练权限、法律版本与评测重叠仍待核验。${value.redactions.length} 处展示脱敏记录已保存。</div></section></div></div>`;
 }
 
 function benchmarkHeader() {
@@ -126,13 +140,14 @@ function feedbackHistory() {
 
 async function render() {
   const epoch = ++renderEpoch; page = location.hash.slice(1).split('?')[0] || 'overview';
-  if (!['overview', 'skills', 'cases', 'benchmarks'].includes(page)) page = 'overview';
+  if (!['overview', 'skills', 'cases', 'benchmarks', 'exploration'].includes(page)) page = 'overview';
   document.querySelectorAll('[data-nav]').forEach(node => { node.classList.toggle('active', node.dataset.nav === page); node.setAttribute('aria-current', node.dataset.nav === page ? 'page' : 'false'); });
   main.innerHTML = '<div class="loading-state"><span class="loader"></span>正在读取研究材料…</div>';
   try {
     if (page === 'overview') overview();
     else if (page === 'skills') await skillsView(epoch);
     else if (page === 'cases') await casesView(epoch);
+    else if (page === 'exploration') await explorer.render(() => epoch === renderEpoch);
     else await benchmarksView(epoch);
   } catch (error) { if (epoch === renderEpoch) main.innerHTML = `<div class="content-wrap">${notice(error.message, 'amber')}<button class="button" data-action="retry">重新加载</button></div>`; }
 }
@@ -141,9 +156,14 @@ document.addEventListener('click', async event => {
   const button = event.target.closest('[data-action]'); if (!button) return;
   const action = button.dataset.action;
   try {
+    if (action.startsWith('explore-')) explorer.handle(button);
     if (action === 'close-modal') modal.close();
     if (action === 'retry') await render();
-    if (action === 'select-version') { skillVersion = button.dataset.version; await render(); }
+    if (action === 'select-version') {
+      skillVersion = button.dataset.version;
+      history.replaceState(null, '', `#skills?version=${encodeURIComponent(skillVersion)}`);
+      await render();
+    }
     if (action === 'skill-file') { skillFile = button.dataset.file; if (page !== 'skills') location.hash = 'skills'; else await render(); }
     if (action === 'skill-mode') { skillMode = button.dataset.mode; await render(); }
     if (action === 'new-version') newVersion();
@@ -184,7 +204,9 @@ document.addEventListener('submit', async event => {
   try {
     if (form.id === 'version-form') {
       const created = await post('/api/skills', { ...data, parent: skill.version, file: skill.file, parentFileSha256: skill.fileSha256 });
-      skillVersion = created.version; modal.close(); toast(`已保存不可覆盖的 Skill v${created.version}`);
+      skillVersion = created.version;
+      history.replaceState(null, '', `#skills?version=${encodeURIComponent(skillVersion)}`);
+      modal.close(); toast(`已保存不可覆盖的 Skill v${created.version}`);
     } else if (form.id === 'review-form') {
       const result = await post(`/api/reviews/${currentRecord.id}`, { ...data, patterns: new FormData(form).getAll('patterns'), permissionConfirmed: data.permissionConfirmed === 'on', answerVerified: data.answerVerified === 'on', expectedRevision: currentRecord.review?.revision ?? 0 });
       currentRecord.review = result; modal.close(); toast('审核已落盘保存，历史修订已保留');

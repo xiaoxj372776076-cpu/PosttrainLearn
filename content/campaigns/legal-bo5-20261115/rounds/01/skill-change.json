@@ -1,0 +1,25 @@
+{
+  "version": "1.2.0",
+  "parent": "1.1.0",
+  "analysis": {
+    "basis_run": "legal-harbor-001",
+    "observed_completed_answers": 3,
+    "observed_contract_successes": 3,
+    "causes": [
+      "金额角色清单使事实归属变成标签转换。",
+      "逐项检查表直接提示去重、净利息矛盾和未知状态的解法。",
+      "追加来源的scope假设预先解决了最难的证据归属。",
+      "固定单争点全字段契约限制了P2的实质候选空间。",
+      "旧BoN最大分与D4自评均未检验低成功率。"
+    ],
+    "hypothesis": "先去除解题脚手架；若原案仍全通过，转换为显著标为虚构且参考重新建立的多债务状态依赖题。",
+    "preserve": [
+      "必要事实与法条全文",
+      "真实未知与限定前提",
+      "固定gpt-6-astra/high/10000预算",
+      "语义等价评分",
+      "旧运行全部历史"
+    ]
+  },
+  "skill_sha256": "63211684f77509df71b5dc3e7bb82dbd5f3abb30b0d0bfff1c0a564959929d98"
+}

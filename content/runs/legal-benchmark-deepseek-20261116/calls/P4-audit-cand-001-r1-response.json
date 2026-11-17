@@ -1,0 +1,21 @@
+{
+  "requestedModel": "deepseek-v4.1-1017",
+  "actualModel": "deepseek-v4-1-flash-261017",
+  "text": "{\n  \"question_sufficient\": true,\n  \"reference_supported\": true,\n  \"criteria_supported\": true,\n  \"issues\": [],\n  \"reason\": \"题目已提供借条、收条、四笔转账、后续支付宝转账、原告关于预扣利息的陈述及被告缺席程序，足以回答变更后的本金及诉讼费用请求，无需补充关键事实。参考结论与公开判决 p-020、p-023、p-025 一致：合同因套取金融机构贷款转贷无效，实际交付52.41万元，54.40万元中未实际交付净额1.99万元不予支持，诉讼费按部分胜败分担，公告费由被告负担。C1至C4的事实定位可由 p-012 至 p-020-fact、p-006、p-007 及 p-025 核验；法律版本采用2020年12月修正民间借贷规定第13条第1项、第31条第1款及民法典第157条，正确。参考未将原告自述直接冒充法院查明，2.21万元及预扣利息处理有 p-020-fact 裁判理由支持，精确诉讼费金额有 p-025 支持。未发现需修改事项。\"\n}",
+  "usage": {
+    "input_tokens": 9811,
+    "input_tokens_details": {
+      "cached_tokens": 0
+    },
+    "output_tokens": 14836,
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "total_tokens": 24647
+  },
+  "latencyMs": 103463,
+  "completedAt": "2026-11-16T07:18:34.826Z",
+  "status": "completed",
+  "input_sha256": "eb90105471cf7a4b1252c85b4d9dd6175b28176aa75a812770900cfb7f7492bc",
+  "output_sha256": "ed6eea761a2c56705449e2c837b662a1c0dfcedf4549ea97f9a29eb5cc7f5c75"
+}

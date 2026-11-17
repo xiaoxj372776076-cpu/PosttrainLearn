@@ -3,6 +3,8 @@ import path from 'node:path';
 import { createHash } from 'node:crypto';
 import { fileURLToPath } from 'node:url';
 import assert from 'node:assert/strict';
+import { buildDossier, validateDossier, renderCasebook } from '../lib/dossier.mjs';
+import { promptSections } from '../lib/exploration.mjs';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 const read = async file => JSON.parse(await fs.readFile(path.join(root, file), 'utf8'));
@@ -44,4 +46,13 @@ for (const version of (await read('content/skills/index.json')).versions) {
   assert.equal(sha(await fs.readFile(path.join(root, 'content/skills', version.version, 'SKILL.md'))), version.sha256);
   for (const file of ['references/material-normalization.md', 'references/few-shot-and-difficulty.md', 'references/prompts.md', 'scripts/audit_release.py']) await fs.access(path.join(root, 'content/skills', version.version, file));
 }
-console.log(JSON.stringify({ status: 'passed', questions: dataset.records.length, rubricGroups: 1000, sourceHashes: 'verified', models: counts, publishedLeaderboardRows: 24, caseRedaction: 'verified', skillSnapshots: 'verified' }, null, 2));
+const dossier = await read('content/dossiers/shanghai-2023-23060/0.1.0.json');
+const dossierSchema = await read('schemas/case-dossier-0.1.schema.json');
+const dossierChecks = validateDossier(dossier, dossierSchema, caseData);
+assert.deepEqual(dossier, buildDossier(await read('content/dossiers/shanghai-2023-23060/0.1.0.extraction.json'), caseData, dossierSchema));
+assert.equal(await fs.readFile(path.join(root, 'content/dossiers/shanghai-2023-23060/casebook.md'), 'utf8'), renderCasebook(dossier));
+const pipeline = await read('content/pipelines/case-study-0.1.json');
+const prompts = promptSections(await fs.readFile(path.join(root, 'content/skills', pipeline.skill_version, 'references/prompts.md'), 'utf8'));
+assert.equal(new Set(pipeline.stages.map(s => s.id)).size, pipeline.stages.length);
+for (const stage of pipeline.stages) if (stage.prompt_key) assert.ok(prompts[stage.prompt_key], stage.id);
+console.log(JSON.stringify({ status: 'passed', questions: dataset.records.length, rubricGroups: 1000, sourceHashes: 'verified', models: counts, publishedLeaderboardRows: 24, caseRedaction: 'verified', skillSnapshots: 'verified', dossierStructuralChecks: dossierChecks, pipelineStages: pipeline.stages.length, trainingReadiness: dossier.case_metadata.training_readiness }, null, 2));

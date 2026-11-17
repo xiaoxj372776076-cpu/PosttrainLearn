@@ -8,3 +8,5 @@ releases/
 coverage/
 *.log
 *.tmp
+__pycache__/
+.venv/

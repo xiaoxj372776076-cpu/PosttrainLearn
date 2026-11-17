@@ -1,0 +1,24 @@
+{
+  "id": "case-068",
+  "method": "coding_agent_web_retrieval_and_paraphrase_not_expert_review",
+  "retrieved_at": "2026-11-16",
+  "sources": [
+    {
+      "url": "https://kfzy.hncourt.gov.cn/public/detail.php?id=9945",
+      "title": "开封市中级人民法院：河南中汇诉中原银行股东知情权、公司盈余分配纠纷案",
+      "observed": "法院公开案例说明记载先有程序裁定，再有实体判决，最终二审改判驳回中汇诉讼请求。说明强调受理条件与实体利益受损审查有别，不能仅因受理例外成立就支持知情权。",
+      "matches_benchmark": "5500万股、6435万余股、利润分配50132930.25元、分红534283.59元及转让日期均与case-068一致。",
+      "limitation": "法院网站的案例说明，不是本次取得的完整原审卷宗或独立法律金标。"
+    },
+    {
+      "url": "https://www.court.gov.cn/zixun/xiangqing/57402.html",
+      "title": "最高人民法院：公司法司法解释（四）（2017年文本）",
+      "observed": "第七条第二款规定非现股东的起诉例外，涉及持股期间利益受损的初步证据；程序受理不自动保证实体胜诉。",
+      "limitation": "核验案涉历史规则，不把2017年文本声称为当前法律全文。"
+    }
+  ],
+  "original_audit_retained": "probes/case-068-audit.json",
+  "question_for_recheck": "原审查唯一rubric问题是未列股份有限公司准用条文，不是核心裁判结论无来源。应独立判断这是否可作为有补充说明的开发种子，不能为凑数强行接受。",
+  "expert_review": false,
+  "public_release_permission": "unresolved"
+}

@@ -1,0 +1,13 @@
+{
+  "selected_index": 0,
+  "selected_sha256": "52be871699e24b34a69b915a95cd64af0621d0383643f1cc64fa4c151136ad05",
+  "method": "first_source_preserving_candidate_under_fixed_contract",
+  "selection_reason": "一个返还范围的联动账目审计，保留材料事实；未把3个候选当3条完成样本",
+  "rejected_or_not_selected": [
+    {
+      "index": 0,
+      "selected": true,
+      "reason": "selected"
+    }
+  ]
+}

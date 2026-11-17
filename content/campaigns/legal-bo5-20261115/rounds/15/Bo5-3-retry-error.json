@@ -1,0 +1,13 @@
+{
+  "round": "15",
+  "stage": "Bo5-3-retry",
+  "status": "failed_usage_unknown",
+  "submitted_at": "2026-11-15T01:22:33.092Z",
+  "input_sha256": "45e1836e605d09738f123ad43f07b245e8daa797a1e03fcb11402e33af19cae6",
+  "input_reservation": 43320,
+  "output_reservation": 20000,
+  "usage": null,
+  "failure_kind": "infrastructure",
+  "error": "The operation was aborted due to timeout",
+  "failed_at": "2026-11-15T01:40:06.393Z"
+}

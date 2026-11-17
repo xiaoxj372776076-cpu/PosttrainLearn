@@ -1,0 +1,425 @@
+[
+  {
+    "index": 1,
+    "stage": "Bo5-1",
+    "job": "legal-bo5-19-bo5-1",
+    "finished_at": "2026-11-15T03:17:35.126740Z",
+    "exceptions": [],
+    "completed_answer": true,
+    "infrastructure_failure": false,
+    "report": {
+      "passed": false,
+      "score": 0.6875,
+      "checks": {
+        "A_valid": true,
+        "A_restitution": true,
+        "A_guarantee": false,
+        "B_initial_principal": true,
+        "B_protected_total": true,
+        "B_guarantee": false,
+        "C_outstanding_principal": true,
+        "C_outstanding_interest": true,
+        "C_outstanding_expenses": true,
+        "C_guarantee": false,
+        "borrower_total": true,
+        "B_second_guarantee": false,
+        "B_joint_payment_limit": true,
+        "C_third_party_type": false,
+        "C_third_party_payment_limit": true,
+        "C_original_borrower_liability": true
+      },
+      "failed_checks": [
+        "A_guarantee",
+        "B_guarantee",
+        "C_guarantee",
+        "B_second_guarantee",
+        "C_third_party_type"
+      ],
+      "note": "金额或状态固定核对，不证明法律解释；语义等价与错误类型由P6另审，不以此直接计低成功率。"
+    },
+    "reward": 0.6875,
+    "model": "deployment-gpt-6-astra-platform-global",
+    "usage": {
+      "input_tokens": 18921,
+      "input_tokens_details": {
+        "cache_write_tokens": 18918,
+        "cached_tokens": 0
+      },
+      "output_tokens": 10938,
+      "output_tokens_details": {
+        "reasoning_tokens": 7768
+      },
+      "total_tokens": 29859
+    },
+    "latency_ms": 220041,
+    "answer_text": "{\n  \"A_valid\": \"无效\",\n  \"A_restitution\": \"122816.00\",\n  \"A_guarantee\": \"主合同无效，丁的保证合同亦无效；本次保证给付请求不支持，且不审查未被请求的无效后过错赔偿。\",\n  \"B_initial_principal\": \"187030.00\",\n  \"B_protected_total\": \"203220.81\",\n  \"B_guarantee\": \"戊承担有效的全额连带责任保证；甲已在保证期间内依法行权，撤诉不消灭该效果。内部50%分担约定不限制对甲的责任，亦不存在因甲未向庚及时行权而部分免责的情形。\",\n  \"C_outstanding_principal\": \"152860.88\",\n  \"C_outstanding_interest\": \"1415.53\",\n  \"C_outstanding_expenses\": \"0.00\",\n  \"C_guarantee\": \"己原为有效的一般保证，甲在保证期间届满前重新起诉乙，原保证责任未因期间经过消灭；但S14将全部C余额转移给辛，未经己书面同意，己对该全部债务不再承担保证责任，本次立即给付请求不支持。\",\n  \"borrower_total\": \"326036.81\",\n  \"B_second_guarantee\": \"庚承担有效的全额连带责任保证；2023-07-06已在保证期间内收到甲的完整给付请求。对剩余B债务203220.81元的立即给付请求可获支持，与乙、戊的同一债务不得重复受偿。\",\n  \"B_joint_payment_limit\": \"203220.81\",\n  \"C_third_party_type\": \"经甲同意的全部免责债务承担，即C剩余债务全部转移给辛、乙退出；不是保证，也不是与乙并存的债务加入。辛承担直接付款义务。\",\n  \"C_third_party_payment_limit\": \"154276.41\",\n  \"C_original_borrower_liability\": \"0.00\",\n  \"basis\": {\n    \"A\": {\n      \"facts\": [\"dossier.md S01\", \"dossier.md S02\", \"dossier.md S12\"],\n      \"rules\": [\n        {\"source_id\": \"lending-2020-12\", \"provision\": \"13、31\"},\n        {\"source_id\": \"civil-code-2020\", \"provision\": \"157、682\"}\n      ],\n      \"explanation\": \"A于2022年成立，已证实套取银行信贷资金转贷，适用规则不要求另具高利或乙事先知情。按实际取得财产返还，重复收据不构成第二次交付。\",\n      \"calculation\": \"143123.00－20307.00＝122816.00元；未交付票面差额和无效后赔偿不在最终请求范围内。\"\n    },\n    \"B_balance\": {\n      \"facts\": [\"dossier.md S03\", \"dossier.md S04\", \"dossier.md S05\", \"dossier.md S13\"],\n      \"rules\": [\n        {\"source_id\": \"civil-code-2020\", \"provision\": \"670、679、680\"},\n        {\"source_id\": \"lending-2020-12\", \"provision\": \"25、26、27、28\"}\n      ],\n      \"explanation\": \"预扣利息12551.00元不计入初始本金。后三张借据没有新增交付或债务更新，须从实际本金逐次重算可保护结息，不能直接采纳纸面金额。约定年利率13.2%低于合同成立时LPR四倍14.8%。\",\n      \"calculation\": [\n        \"初始本金＝199581.00－12551.00＝187030.00元。\",\n        \"四段日数依次为175、103、84、204日，共566日；每段适用P下一期＝P本期×(1＋13.2%×日数/365)。全程保留精度。\",\n        \"2022-07-06、2022-10-17、2023-01-09重算本金分别显示为198866.69、206274.34、212540.56元；截至2023-08-01、不计当日利息的滚算本息为228220.81元。\",\n        \"第27条总额上限＝187030×(1＋14.8%×566/365)＝229953.64元，未触及该上限。\",\n        \"SP-01到账后余额＝228220.812766…－25000.00＝203220.81元。\"\n      ]\n    },\n    \"B_guarantors\": {\n      \"facts\": [\"dossier.md S06\", \"dossier.md S12\"],\n      \"rules\": [\n        {\"source_id\": \"civil-code-2020\", \"provision\": \"688、691、692、693、695\"},\n        {\"source_id\": \"guarantee-2020\", \"provision\": \"13、25、29、31、32、34\"}\n      ],\n      \"explanation\": [\n        \"戊正文表示无条件清偿、无须先向乙追索，且共同正文明确戊、庚各以连带责任保证覆盖全部B债务，故不是一般保证或对外各半保证。\",\n        \"“直至本息全部还清”属于保证期间约定不明。两人均未书面同意展期，保证期间仍以原到期日2023-01-12起算六个月，至2023-07-12届满。\",\n        \"甲对戊的起诉状副本于2023-07-07送达，虽2023-07-09撤诉，依第31条仍属期间内行权。甲对庚的独立完整请求于2023-07-06到达，同样及时；不是以对戊行权替代对庚行权。\",\n        \"内部各50%约定仅规范相互追偿。甲没有因漏向庚行权而损害戊的追偿权，第29条部分免责条件不成立。两人对最终B余额均承担全额连带保证责任，但不得重复受偿。\"\n      ]\n    },\n    \"C_balance\": {\n      \"facts\": [\"dossier.md S07\", \"dossier.md S08\", \"dossier.md S09\", \"dossier.md S11\"],\n      \"rules\": [\n        {\"source_id\": \"lending-2015\", \"provision\": \"26\"},\n        {\"source_id\": \"lending-2020-12\", \"provision\": \"25、28、31\"},\n        {\"source_id\": \"civil-code-2020\", \"provision\": \"561\"}\n      ],\n      \"explanation\": [\n        \"依甲明确请求，成立日至2020-08-19适用旧解释，约定23.5%未超过24%；2020-08-20起按起诉时题设LPR四倍，即3.25%×4＝13%保护，逾期亦按13%。\",\n        \"原合同约定费用、合法利息、本金的清偿顺序；仅T-02经双方补充约定先还本金，其26978.00元全部冲本金。其他单方“还本金”备注不改变原约定。\",\n        \"T-01截图、收据与主表系同一交易，只计一次。X-01未执行、未到账，不构成清偿。T系列实际付款合计213080.00元。\",\n        \"按未偿本金、实际自然日/365单利计算，未付利息不生息；付款日不再对被偿还本金计息。下列中间余额仅为取分展示，计算未逐次取分。\"\n      ],\n      \"day_counts\": [\n        \"2019-02-07至2019-04-18：70日，23.5%。\",\n        \"2019-04-18至2019-08-23：127日，23.5%。\",\n        \"2019-08-23至2020-02-14：175日，23.5%。\",\n        \"2020-02-14至2020-08-20：188日，23.5%；2020-08-20至2020-09-21：32日，13%。\",\n        \"2020-09-21至2021-04-11：202日；至下一付款日2022-06-06：421日；至下一付款日2023-07-06：395日；此后至2023-08-01：26日，均为13%。\"\n      ],\n      \"payment_ledger\": [\n        {\"payment\": \"T-01\", \"principal_after\": \"214489.15\", \"interest_after\": \"0.00\", \"expenses_after\": \"0.00\"},\n        {\"payment\": \"T-02\", \"principal_after\": \"187511.15\", \"interest_after\": \"17538.16\", \"expenses_after\": \"0.00\"},\n        {\"payment\": \"T-03\", \"principal_after\": \"187511.15\", \"interest_after\": \"9956.27\", \"expenses_after\": \"0.00\"},\n        {\"payment\": \"T-04\", \"principal_after\": \"187511.15\", \"interest_after\": \"4349.94\", \"expenses_after\": \"0.00\"},\n        {\"payment\": \"T-05\", \"principal_after\": \"173180.62\", \"interest_after\": \"0.00\", \"expenses_after\": \"0.00\"},\n        {\"payment\": \"T-06\", \"principal_after\": \"165246.23\", \"interest_after\": \"0.00\", \"expenses_after\": \"0.00\"},\n        {\"payment\": \"T-07\", \"principal_after\": \"152860.88\", \"interest_after\": \"0.00\", \"expenses_after\": \"0.00\"}\n      ],\n      \"calculation\": [\n        \"T-01先清费用1680.00元及利息227790×23.5%×70/365＝10266.152054…元，余款清本金。\",\n        \"末段利息＝152860.880953…×13%×26/365＝1415.533637…元。\",\n        \"截日整个C关系余额＝152860.88＋1415.53＋0.00＝154276.41元。\"\n      ]\n    },\n    \"C_guarantee_and_SP01\": {\n      \"facts\": [\"dossier.md S06\", \"dossier.md S10\", \"dossier.md S13\", \"dossier.md S14\"],\n      \"rules\": [\n        {\"source_id\": \"civil-code-2020\", \"provision\": \"560、561、687、691、692、693、1260\"},\n        {\"source_id\": \"guarantee-2020\", \"provision\": \"25、31、34\"}\n      ],\n      \"explanation\": [\n        \"己的保证订立于2022年，不能随2019年借款适用旧保证规则。“不能履行、无力偿还时才清偿”构成一般保证。未约定期间，故自C到期日2022-12-15起六个月，至2023-06-15届满。\",\n        \"C-诉1撤诉后，甲已于2023-06-14在期间内重新起诉乙，故己不能以期间经过主张免责。仅向己催告不能替代起诉乙；2023-06-25仅确认收件亦不构成新保证。\",\n        \"SP-01于09:20到账时，B、C均已到期，戊、庚和己的保证均依法存续、足额且同等资信。己享有先诉抗辩不等于C没有担保。\",\n        \"依S13双方附件，按付款日可强制请求的年利率比较：B为13.2%，C为13%，故25000.00元全部抵充B，不抵充A或C。B内部先抵利息再抵本金。\",\n        \"S14于13:40签署，不能倒改09:20已完成的抵充。签署前己虽有有效一般保证，但因主债务尚未审判、执行且无先诉抗辩例外，当时亦不能要求其立即清偿。\"\n      ]\n    },\n    \"C_transfer_and_final_totals\": {\n      \"facts\": [\"dossier.md S12\", \"dossier.md S13\", \"dossier.md S14\"],\n      \"rules\": [\n        {\"source_id\": \"civil-code-2020\", \"provision\": \"552、697\"},\n        {\"source_id\": \"guarantee-2020\", \"provision\": \"36\"}\n      ],\n      \"explanation\": [\n        \"三方正文明确SP-01结算后的C尚欠全部由辛独自履行，甲不再向乙请求、乙不再负付款义务。这是全部免责债务承担，不是保证，也不是第552条所称与原债务人并存的债务加入；不能仅凭“代偿”标题定性。\",\n        \"己未书面同意该债务转移，也无另行约定，依第697条对全部转移债务不再承担保证责任。其最终免责原因是债务转移，而非保证期间失权。\",\n        \"S14未改变原到期日，未发生新交付或后续付款。辛直接承担已到期的全部C余额，本次立即给付支持154276.41元；乙在C关系中剩余付款责任为0.00元。正文转移全部余额，不适用共同条款中关于50%份额的计算。\"\n      ],\n      \"calculation\": [\n        \"辛立即付款上限＝C本金152860.88＋利息1415.53＋费用0.00＝154276.41元。\",\n        \"乙最终付款总额＝A返还122816.00＋B余额203220.81＋C剩余本人责任0.00＝326036.81元。\",\n        \"戊、庚对B的保证给付额及辛承担的C债务，均不重复计入乙的付款总额。\"\n      ]\n    }\n  }\n}",
+    "trace": {
+      "actions": [
+        {
+          "action": "adapter_read_file",
+          "path": "/app/input/dossier.md",
+          "sha256": "25aca80f7f721b005ddc518ef714742eeebf6839f9287c670ebf26f5560b0a22"
+        },
+        {
+          "action": "adapter_read_file",
+          "path": "/app/input/rules.json",
+          "sha256": "45dd738c33e7c7ff136d11b2c354c77d2e645b52b4f9e721237fa992ce9edebf"
+        },
+        {
+          "action": "adapter_read_file",
+          "path": "/app/input/answer-contract.json",
+          "sha256": "95968aa3f574d1ffb1e0749e117d76f46332494660f25ee6d164f5e4d3f4e53a"
+        },
+        {
+          "action": "adapter_submit_answer",
+          "path": "/app/output/answer.json",
+          "sha256": "9c21bf3129d4a9baa63d693613762ca7a99d8b8c5b1fc648bdf3b2ab98ca7a09"
+        }
+      ],
+      "adapter_version": "0.3.0",
+      "host_writes_answer": true,
+      "fresh_api_completion": true,
+      "arbitrary_shell_enabled": false,
+      "hidden_answer_input": false
+    }
+  },
+  {
+    "index": 2,
+    "stage": "Bo5-2",
+    "job": "legal-bo5-19-bo5-2",
+    "finished_at": "2026-11-15T03:17:17.353089Z",
+    "exceptions": [],
+    "completed_answer": true,
+    "infrastructure_failure": false,
+    "report": {
+      "passed": false,
+      "score": 0.625,
+      "checks": {
+        "A_valid": false,
+        "A_restitution": true,
+        "A_guarantee": false,
+        "B_initial_principal": true,
+        "B_protected_total": true,
+        "B_guarantee": false,
+        "C_outstanding_principal": true,
+        "C_outstanding_interest": true,
+        "C_outstanding_expenses": true,
+        "C_guarantee": false,
+        "borrower_total": true,
+        "B_second_guarantee": false,
+        "B_joint_payment_limit": true,
+        "C_third_party_type": false,
+        "C_third_party_payment_limit": true,
+        "C_original_borrower_liability": true
+      },
+      "failed_checks": [
+        "A_valid",
+        "A_guarantee",
+        "B_guarantee",
+        "C_guarantee",
+        "B_second_guarantee",
+        "C_third_party_type"
+      ],
+      "note": "金额或状态固定核对，不证明法律解释；语义等价与错误类型由P6另审，不以此直接计低成功率。"
+    },
+    "reward": 0.625,
+    "model": "deployment-gpt-6-astra-platform-global",
+    "usage": {
+      "input_tokens": 18921,
+      "input_tokens_details": {
+        "cache_write_tokens": 18918,
+        "cached_tokens": 0
+      },
+      "output_tokens": 11833,
+      "output_tokens_details": {
+        "reasoning_tokens": 7768
+      },
+      "total_tokens": 30754
+    },
+    "latency_ms": 202288,
+    "answer_text": "{\n  \"A_valid\": \"无效。套取金融机构贷款转贷，不以高利转贷或乙事先知情为必要条件。\",\n  \"A_restitution\": \"122816.00\",\n  \"A_guarantee\": \"丁的保证合同随A主合同无效；本次保证给付请求不获支持，立即给付额为0.00元。未请求保证无效后的过错赔偿。\",\n  \"B_initial_principal\": \"187030.00\",\n  \"B_protected_total\": \"203220.81\",\n  \"B_guarantee\": \"戊承担有效的全额连带责任保证；已在保证期间内有效行权，撤诉不消除行权效果。内部各50%的分担约定不限制对甲的责任，本次可请求戊立即支付203220.81元。\",\n  \"C_outstanding_principal\": \"152860.88\",\n  \"C_outstanding_interest\": \"1415.53\",\n  \"C_outstanding_expenses\": \"0.00\",\n  \"C_guarantee\": \"己原为一般保证人，保证责任在SP-01付款时已经依法保全；但S14将全部剩余C债务转移给辛，未经己书面同意，己对该全部余额不再承担保证责任。本次立即给付额为0.00元。\",\n  \"borrower_total\": \"326036.81\",\n  \"B_second_guarantee\": \"庚承担有效的全额连带责任保证；2023-07-06首次完整给付请求在保证期间内实际到达，保证责任未消灭，本次可请求庚立即支付203220.81元。\",\n  \"B_joint_payment_limit\": \"203220.81\",\n  \"C_third_party_type\": \"全部剩余C债务的免责债务承担：辛独自承受，乙退出；不是债务加入，也不是保证。\",\n  \"C_third_party_payment_limit\": \"154276.41\",\n  \"C_original_borrower_liability\": \"0.00\",\n  \"basis\": {\n    \"A效力及返还\": {\n      \"facts\": [\"dossier.md[S01]\", \"dossier.md[S02]\", \"dossier.md[S12]\"],\n      \"rules\": [\n        {\"source_id\": \"lending-2020-12\", \"provision\": \"13\"},\n        {\"source_id\": \"lending-2020-12\", \"provision\": \"31\"},\n        {\"source_id\": \"civil-code-2020\", \"provision\": \"157\"},\n        {\"source_id\": \"civil-code-2020\", \"provision\": \"682\"}\n      ],\n      \"explanation\": \"A成立于2022年，适用现行套取金融机构贷款转贷无效规则，乙不知来源及仅约定6%不改变效力。实际交付143123.00元，已返还20307.00元，剩余返还额为143123.00－20307.00＝122816.00元。未交付票面差额不计入；同交易号收据不是另一次交付。丁不承担有效保证合同项下的给付责任，过错赔偿不在本次请求范围。\"\n    },\n    \"B本息计算\": {\n      \"facts\": [\"dossier.md[S03]\", \"dossier.md[S04]\", \"dossier.md[S05]\", \"dossier.md[S13]\"],\n      \"rules\": [\n        {\"source_id\": \"civil-code-2020\", \"provision\": \"670\"},\n        {\"source_id\": \"civil-code-2020\", \"provision\": \"679\"},\n        {\"source_id\": \"lending-2020-12\", \"provision\": \"25\"},\n        {\"source_id\": \"lending-2020-12\", \"provision\": \"26\"},\n        {\"source_id\": \"lending-2020-12\", \"provision\": \"27\"},\n        {\"source_id\": \"lending-2020-12\", \"provision\": \"28\"}\n      ],\n      \"explanation\": \"预扣利息12551.00元不能作为本金，最初本金为199581.00－12551.00＝187030.00元。归档没有新增交付或债务更新，须从实际本金逐次核算合法结息，不能直接采用纸面金额。13.2%低于合同成立时LPR四倍14.8%。以下中间结果仅展示至六位小数，计算不逐期取分。\",\n      \"steps\": [\n        {\n          \"interval\": \"2022-01-12至2022-07-06\",\n          \"days\": 175,\n          \"formula\": \"187030×(1＋0.132×175/365)\",\n          \"protected_rolled_principal\": \"198866.693151\"\n        },\n        {\n          \"interval\": \"2022-07-06至2022-10-17\",\n          \"days\": 103,\n          \"formula\": \"上一期未取整结果×(1＋0.132×103/365)\",\n          \"protected_rolled_principal\": \"206274.341260\"\n        },\n        {\n          \"interval\": \"2022-10-17至2023-01-09\",\n          \"days\": 84,\n          \"formula\": \"上一期未取整结果×(1＋0.132×84/365)\",\n          \"protected_rolled_principal\": \"212540.560153\"\n        },\n        {\n          \"interval\": \"2023-01-09至2023-08-01\",\n          \"days\": 204,\n          \"formula\": \"上一期未取整结果×(1＋0.132×204/365)\",\n          \"total_before_SP_01\": \"228220.812767\"\n        }\n      ],\n      \"overall_cap\": \"总日数566；整体上限＝187030×(1＋0.148×566/365)＝229953.641205元。逐期计算结果低于整体上限，不再削减。\",\n      \"final_calculation\": \"SP-01全额抵充B后，B余额＝228220.812766527…－25000.00＝203220.81元。\"\n    },\n    \"B保证及内部追偿\": {\n      \"facts\": [\"dossier.md[S06]\", \"dossier.md[S12]\"],\n      \"rules\": [\n        {\"source_id\": \"civil-code-2020\", \"provision\": \"688\"},\n        {\"source_id\": \"civil-code-2020\", \"provision\": \"691\"},\n        {\"source_id\": \"civil-code-2020\", \"provision\": \"692\"},\n        {\"source_id\": \"civil-code-2020\", \"provision\": \"693\"},\n        {\"source_id\": \"civil-code-2020\", \"provision\": \"695\"},\n        {\"source_id\": \"guarantee-2020\", \"provision\": \"13\"},\n        {\"source_id\": \"guarantee-2020\", \"provision\": \"25\"},\n        {\"source_id\": \"guarantee-2020\", \"provision\": \"29\"},\n        {\"source_id\": \"guarantee-2020\", \"provision\": \"31\"},\n        {\"source_id\": \"guarantee-2020\", \"provision\": \"32\"}\n      ],\n      \"explanation\": \"戊的无条件清偿条款以及戊、庚共同确认的正文均明确全额连带保证，并覆盖合法结息。‘直至还清’属于保证期间约定不明；未经书面同意的展期不影响保证期间，二人的期间均按原到期日2023-01-12起六个月、至2023-07-12核对。对戊7月5日起诉、7月7日送达，虽7月9日撤诉仍构成期间内行权；对庚7月6日请求实际到达，亦在期间内。二人均不因7月18日再次催告较晚而免责。内部各50%不等于对外各承担50%；甲没有遗漏对庚行权，戊不存在第29条所称丧失追偿权的减责基础。二人各自的立即给付上限均为B剩余203220.81元，但同一B债权不得重复受偿。\"\n    },\n    \"C利率及付款核对\": {\n      \"facts\": [\"dossier.md[S07]\", \"dossier.md[S08]\", \"dossier.md[S09]\", \"dossier.md[S11]\"],\n      \"rules\": [\n        {\"source_id\": \"lending-2015\", \"provision\": \"26\"},\n        {\"source_id\": \"lending-2020-12\", \"provision\": \"31\"},\n        {\"source_id\": \"lending-2020-12\", \"provision\": \"25\"},\n        {\"source_id\": \"lending-2020-12\", \"provision\": \"28\"},\n        {\"source_id\": \"civil-code-2020\", \"provision\": \"561\"}\n      ],\n      \"explanation\": \"依甲的明确请求，成立日至2020-08-19按约定23.5%计算，未超过旧规则24%；自2020-08-20起按起诉时LPR四倍，即3.25%×4＝13%计算。利息按未清本金、实际日数/365单利计算，付款日不再对已偿本金计息，未付利息不生息。T-02依双方补充协议全部先冲本金，其余付款依原合同先费用、再合法利息、后本金；乙的其他单方备注不改变该顺序。T-01截图与收据是同一交易，不重复抵扣；X-01已撤销且未到账，不构成清偿。\",\n      \"ledger_note\": \"以下均使用未取整数据连续计算，中间展示至六位小数；各区间包括起日、不包括付款日或截日。\",\n      \"ledger\": [\n        {\n          \"payment\": \"T-01\",\n          \"interval\": \"2019-02-07至2019-04-18\",\n          \"days\": 70,\n          \"rate\": \"23.5%\",\n          \"accrued_interest\": \"10266.152055\",\n          \"payment_amount\": \"25247.00\",\n          \"allocation\": \"先清费用1680.00元，再清利息，余款冲本金\",\n          \"principal_after\": \"214489.152055\",\n          \"interest_after\": \"0.000000\"\n        },\n        {\n          \"payment\": \"T-02\",\n          \"interval\": \"2019-04-18至2019-08-23\",\n          \"days\": 127,\n          \"rate\": \"23.5%\",\n          \"accrued_interest\": \"17538.160940\",\n          \"payment_amount\": \"26978.00\",\n          \"allocation\": \"依补充协议全部冲本金\",\n          \"principal_after\": \"187511.152055\",\n          \"interest_after\": \"17538.160940\"\n        },\n        {\n          \"payment\": \"T-03\",\n          \"interval\": \"2019-08-23至2020-02-14\",\n          \"days\": 175,\n          \"rate\": \"23.5%\",\n          \"accrued_interest\": \"21127.112680\",\n          \"payment_amount\": \"28709.00\",\n          \"allocation\": \"全部冲利息\",\n          \"principal_after\": \"187511.152055\",\n          \"interest_after\": \"9956.273620\"\n        },\n        {\n          \"payment\": \"T-04\",\n          \"interval\": \"2020-02-14至2020-09-21\",\n          \"interest_formula\": \"未清本金×(0.235×188＋0.13×32)/365\",\n          \"accrued_interest\": \"24833.668741\",\n          \"payment_amount\": \"30440.00\",\n          \"allocation\": \"全部冲利息\",\n          \"principal_after\": \"187511.152055\",\n          \"interest_after\": \"4349.942361\"\n        },\n        {\n          \"payment\": \"T-05\",\n          \"interval\": \"2020-09-21至2021-04-11\",\n          \"days\": 202,\n          \"rate\": \"13%\",\n          \"accrued_interest\": \"13490.528364\",\n          \"payment_amount\": \"32171.00\",\n          \"allocation\": \"先清累计利息，余款冲本金\",\n          \"principal_after\": \"173180.622780\",\n          \"interest_after\": \"0.000000\"\n        },\n        {\n          \"payment\": \"T-06\",\n          \"interval\": \"2021-04-11至2022-06-06\",\n          \"days\": 421,\n          \"rate\": \"13%\",\n          \"accrued_interest\": \"25967.604068\",\n          \"payment_amount\": \"33902.00\",\n          \"allocation\": \"先清利息，余款冲本金\",\n          \"principal_after\": \"165246.226848\",\n          \"interest_after\": \"0.000000\"\n        },\n        {\n          \"payment\": \"T-07\",\n          \"interval\": \"2022-06-06至2023-07-06\",\n          \"days\": 395,\n          \"rate\": \"13%\",\n          \"accrued_interest\": \"23247.654106\",\n          \"payment_amount\": \"35633.00\",\n          \"allocation\": \"先清利息，余款冲本金\",\n          \"principal_after\": \"152860.880953\",\n          \"interest_after\": \"0.000000\"\n        },\n        {\n          \"interval\": \"2023-07-06至2023-08-01\",\n          \"days\": 26,\n          \"rate\": \"13%\",\n          \"interest_formula\": \"未取整剩余本金×0.13×26/365\",\n          \"principal_at_cutoff\": \"152860.880953\",\n          \"interest_at_cutoff\": \"1415.533637\",\n          \"expenses_at_cutoff\": \"0.000000\"\n        }\n      ]\n    },\n    \"C保证的期间与先诉抗辩\": {\n      \"facts\": [\"dossier.md[S07]\", \"dossier.md[S10]\"],\n      \"rules\": [\n        {\"source_id\": \"civil-code-2020\", \"provision\": \"1260\"},\n        {\"source_id\": \"civil-code-2020\", \"provision\": \"686\"},\n        {\"source_id\": \"civil-code-2020\", \"provision\": \"687\"},\n        {\"source_id\": \"civil-code-2020\", \"provision\": \"691\"},\n        {\"source_id\": \"civil-code-2020\", \"provision\": \"692\"},\n        {\"source_id\": \"civil-code-2020\", \"provision\": \"693\"},\n        {\"source_id\": \"guarantee-2020\", \"provision\": \"25\"},\n        {\"source_id\": \"guarantee-2020\", \"provision\": \"31\"}\n      ],\n      \"explanation\": \"己的保证成立于2022年，不能因主借款成立于2019年而改用旧保证规则。‘不能履行、无力偿还时才代偿’属于一般保证，法定范围覆盖C全部合法债务。保证期间至2023-06-15；6月8日起诉后虽6月12日撤诉，但6月14日在期间届满前再次起诉，依法保全保证责任。5月8日催告及6月25日仅确认收件均不是保全一般保证责任的决定性事实，也没有成立新保证。S14之前，己仍享有先诉抗辩，案件未审判执行且不存在例外，不能要求其立即给付；保证本身并非因此不存在。\"\n    },\n    \"SP_01抵充\": {\n      \"facts\": [\"dossier.md[S06]\", \"dossier.md[S10]\", \"dossier.md[S13]\", \"dossier.md[S14]\"],\n      \"rules\": [\n        {\"source_id\": \"civil-code-2020\", \"provision\": \"560\"},\n        {\"source_id\": \"civil-code-2020\", \"provision\": \"561\"}\n      ],\n      \"explanation\": \"09:20付款时B、C均到期，戊、庚及己的全额保证责任均依法存续，且担保履行能力与价值无争议，符合SP附件的同等资信全额保证条件。一般保证的先诉抗辩不等于缺乏保证。依双方约定比较付款日可强制请求的年利率，B为13.2%、C为13%，故25000.00元全部先抵B，不抵A或C；B内部先息后本。13:40才签署的S14不追溯改变已经完成的抵充。\"\n    },\n    \"S14债务转移及最终主体责任\": {\n      \"facts\": [\"dossier.md[S12]\", \"dossier.md[S13]\", \"dossier.md[S14]\"],\n      \"rules\": [\n        {\"source_id\": \"civil-code-2020\", \"provision\": \"552\"},\n        {\"source_id\": \"civil-code-2020\", \"provision\": \"697\"},\n        {\"source_id\": \"guarantee-2020\", \"provision\": \"36\"}\n      ],\n      \"explanation\": \"三方正文明确SP-01后的C全部余额由辛独自履行，甲不再向乙请求且乙不再负付款义务，属于全部余额的免责债务承担，不符合债务加入的共同承担含义，也不是仅凭文件标题认定的保证。C已到期，文书未改变到期日，辛应依文书承担立即给付义务；甲当日获准追加辛并请求按实体义务支付。己未书面同意该全部债务转移，亦无另行约定或新保证，依第697条对转移后的全部C余额免责。该变化发生在SP-01抵充之后。\",\n      \"calculations\": [\n        \"C各项分别取分后合计：152860.88＋1415.53＋0.00＝154276.41元，全部由辛承担。\",\n        \"乙的C责任＝0.00元；乙最终总额＝A返还122816.00＋B余额203220.81＋C责任0.00＝326036.81元。\",\n        \"戊、庚的保证限额及辛承受的C债务均不得作为乙本人总额的重复加项。\"\n      ]\n    }\n  }\n}",
+    "trace": {
+      "actions": [
+        {
+          "action": "adapter_read_file",
+          "path": "/app/input/dossier.md",
+          "sha256": "25aca80f7f721b005ddc518ef714742eeebf6839f9287c670ebf26f5560b0a22"
+        },
+        {
+          "action": "adapter_read_file",
+          "path": "/app/input/rules.json",
+          "sha256": "45dd738c33e7c7ff136d11b2c354c77d2e645b52b4f9e721237fa992ce9edebf"
+        },
+        {
+          "action": "adapter_read_file",
+          "path": "/app/input/answer-contract.json",
+          "sha256": "95968aa3f574d1ffb1e0749e117d76f46332494660f25ee6d164f5e4d3f4e53a"
+        },
+        {
+          "action": "adapter_submit_answer",
+          "path": "/app/output/answer.json",
+          "sha256": "afaf6a26c750386ed4cef956340ab5cb33b6e88ff89ca6b2bbc68749106a21d2"
+        }
+      ],
+      "adapter_version": "0.3.0",
+      "host_writes_answer": true,
+      "fresh_api_completion": true,
+      "arbitrary_shell_enabled": false,
+      "hidden_answer_input": false
+    }
+  },
+  {
+    "index": 3,
+    "stage": "Bo5-3",
+    "job": "legal-bo5-19-bo5-3",
+    "finished_at": "2026-11-15T03:17:11.710578Z",
+    "exceptions": [],
+    "completed_answer": true,
+    "infrastructure_failure": false,
+    "report": {
+      "passed": false,
+      "score": 0.6875,
+      "checks": {
+        "A_valid": true,
+        "A_restitution": true,
+        "A_guarantee": false,
+        "B_initial_principal": true,
+        "B_protected_total": true,
+        "B_guarantee": false,
+        "C_outstanding_principal": true,
+        "C_outstanding_interest": true,
+        "C_outstanding_expenses": true,
+        "C_guarantee": false,
+        "borrower_total": true,
+        "B_second_guarantee": false,
+        "B_joint_payment_limit": true,
+        "C_third_party_type": false,
+        "C_third_party_payment_limit": true,
+        "C_original_borrower_liability": true
+      },
+      "failed_checks": [
+        "A_guarantee",
+        "B_guarantee",
+        "C_guarantee",
+        "B_second_guarantee",
+        "C_third_party_type"
+      ],
+      "note": "金额或状态固定核对，不证明法律解释；语义等价与错误类型由P6另审，不以此直接计低成功率。"
+    },
+    "reward": 0.6875,
+    "model": "deployment-gpt-6-astra-platform-global",
+    "usage": {
+      "input_tokens": 18921,
+      "input_tokens_details": {
+        "cache_write_tokens": 18918,
+        "cached_tokens": 0
+      },
+      "output_tokens": 9680,
+      "output_tokens_details": {
+        "reasoning_tokens": 6622
+      },
+      "total_tokens": 28601
+    },
+    "latency_ms": 196645,
+    "answer_text": "{\n  \"A_valid\": \"无效\",\n  \"A_restitution\": \"122816.00\",\n  \"A_guarantee\": \"主合同无效导致丁的保证合同无效；本次保证给付请求不予支持\",\n  \"B_initial_principal\": \"187030.00\",\n  \"B_protected_total\": \"203220.81\",\n  \"B_guarantee\": \"戊的全额连带责任保证有效且存续；内部50%分担不限制对甲的责任\",\n  \"C_outstanding_principal\": \"152860.88\",\n  \"C_outstanding_interest\": \"1415.53\",\n  \"C_outstanding_expenses\": \"0.00\",\n  \"C_guarantee\": \"己原为有效的一般保证，已在保证期间内依法保全；S14将全部剩余C债务转移给辛，未经己书面同意，己对该全部余额不再承担保证责任，本次立即给付请求不予支持\",\n  \"borrower_total\": \"326036.81\",\n  \"B_second_guarantee\": \"庚的全额连带责任保证有效且存续；本次立即给付上限203220.81元，与乙、戊的同一B债务不得重复受偿\",\n  \"B_joint_payment_limit\": \"203220.81\",\n  \"C_third_party_type\": \"免责债务承担：辛承接SP-01后全部C剩余债务，乙退出该全部债务；不是保证或债务加入\",\n  \"C_third_party_payment_limit\": \"154276.41\",\n  \"C_original_borrower_liability\": \"0.00\",\n  \"basis\": {\n    \"A\": {\n      \"facts\": [\"dossier.md [S01]\", \"dossier.md [S02]\", \"dossier.md [S12]\"],\n      \"rules\": [\n        {\"source_id\": \"lending-2020-12\", \"provision\": [\"13\", \"31\"]},\n        {\"source_id\": \"civil-code-2020\", \"provision\": [\"157\", \"682\"]}\n      ],\n      \"explanation\": \"A于2022年签订，套取银行贷款转贷即属无效情形，不以高利或乙事先知情为条件。实际交付仅143123元，同交易号收据不重复计算。此前20307元依清算协议全部冲抵返还财产。甲不请求保证无效后的过错赔偿，故丁本次支付额为0。\",\n      \"calculation\": \"143123.00－20307.00＝122816.00\"\n    },\n    \"B_balance\": {\n      \"facts\": [\"dossier.md [S03]\", \"dossier.md [S04]\", \"dossier.md [S05]\", \"dossier.md [S06]\", \"dossier.md [S13]\"],\n      \"rules\": [\n        {\"source_id\": \"civil-code-2020\", \"provision\": [\"670\", \"679\", \"680\", \"561\"]},\n        {\"source_id\": \"lending-2020-12\", \"provision\": [\"25\", \"26\", \"27\", \"28\"]}\n      ],\n      \"explanation\": \"B为合法自有资金借款，预扣利息12551元不计本金。换据无新增交付且不构成债务更新，应从实际本金逐期核算，不能直接采用纸面金额。13.2%低于成立时LPR四倍14.8%。中间计算不取分。\",\n      \"calculation\": {\n        \"initial_principal\": \"199581.00－12551.00＝187030.00\",\n        \"periods\": [\n          \"2022-01-12至2022-07-06：175日\",\n          \"2022-07-06至2022-10-17：103日\",\n          \"2022-10-17至2023-01-09：84日\",\n          \"2023-01-09至2023-08-01：204日\"\n        ],\n        \"formula\": \"逐期余额＝上期合法余额×(1＋0.132×该期日数/365)\",\n        \"intermediate_balances\": [\n          \"B-1：198866.693151\",\n          \"B-2：206274.341260\",\n          \"B-3：212540.560153\"\n        ],\n        \"before_SP\": \"逐期计算得228220.812767；整体上限＝187030×(1＋0.148×566/365)＝229953.641205，故整体上限不触发\",\n        \"after_SP\": \"228220.812767－25000.00＝203220.812767，最终取分203220.81。SP先清当期未付利息15680.252613，再冲抵其余债务。\"\n      }\n    },\n    \"B_guarantors\": {\n      \"facts\": [\"dossier.md [S06]\", \"dossier.md [S12]\"],\n      \"rules\": [\n        {\"source_id\": \"civil-code-2020\", \"provision\": [\"688\", \"691\", \"692\", \"693\", \"695\"]},\n        {\"source_id\": \"guarantee-2020\", \"provision\": [\"13\", \"25\", \"29\", \"31\", \"32\", \"34\"]}\n      ],\n      \"explanation\": \"正文既约定无须先追索乙，又明确戊、庚各自对全部B债务承担连带保证。‘直至还清’属于期间约定不明，保证期间为原到期日2023-01-12起六个月，至2023-07-12；未经二人书面同意的展期不改变该期间。戊于期间内被起诉，诉状2023-07-07送达，后撤诉不否定已行权。庚于2023-07-06收到完整给付请求，亦属期间内行权。二人的权利保全分别成立，无须以对戊行权替代对庚行权。庚责任未消灭，戊不存在因甲漏向庚行权而丧失追偿权的免责事由。内部各50%仅用于追偿分担，不是对外限额。\",\n      \"immediate_payment\": \"戊、庚各自均可被请求立即支付全部B剩余203220.81元，但甲对同一债务不得重复受偿。\"\n    },\n    \"C_balance\": {\n      \"facts\": [\"dossier.md [S07]\", \"dossier.md [S08]\", \"dossier.md [S09]\", \"dossier.md [S11]\", \"dossier.md [S13]\"],\n      \"rules\": [\n        {\"source_id\": \"lending-2015\", \"provision\": [\"26\"]},\n        {\"source_id\": \"lending-2020-12\", \"provision\": [\"25\", \"28\", \"31\"]},\n        {\"source_id\": \"civil-code-2020\", \"provision\": [\"561\"]}\n      ],\n      \"explanation\": \"C自有资金借款有效。依甲明确请求，成立日至2020-08-19适用旧解释，23.5%未超过24%；自2020-08-20起按起诉时LPR四倍13%保护，包括逾期部分。按未偿本金、实际日数/365计单利，不计截日。2019年付款依S09约定处理，此后该约定亦符合第561条；仅T-02有有效的本金优先补充协议，其他单方备注不改变费用、合法利息、本金的顺序。T-01多份记录仅计一次；X-01未执行，不作清偿。SP-01全部抵B，故不减少C。\",\n      \"calculation_records\": [\n        \"T-01：2019-02-07至2019-04-18共70日，利息10266.152055；付款先清费用1680及利息，余本214489.152055，余息、余费均0。\",\n        \"T-02：距上次127日，新增利息17538.160940；26978全部清本金，余本187511.152055，余息17538.160940。\",\n        \"T-03：距上次175日，新增利息21127.112680；付款28709后余本187511.152055，余息9956.273620。\",\n        \"T-04：2020-02-14至2020-08-20共188日按23.5%，利息22696.555336；2020-08-20至2020-09-21共32日按13%，利息2137.113404。付款30440后余本187511.152055，余息4349.942361。\",\n        \"T-05：距上次202日按13%，新增利息13490.528655；付款32171后余本173180.623070，余息0。\",\n        \"T-06：距上次421日按13%，新增利息25967.604111；付款33902后余本165246.227182，余息0。\",\n        \"T-07：距上次395日按13%，新增利息23247.654153；付款35633后余本152860.881334，余息0。\",\n        \"2023-07-06至2023-08-01共26日，利息＝152860.881334×0.13×26/365＝1415.533641。以上中间数仅展示，不据此截断计算。\",\n        \"最终本金152860.88＋利息1415.53＋费用0.00＝154276.41。\"\n      ]\n    },\n    \"C_guarantee_timeline\": {\n      \"facts\": [\"dossier.md [S07]\", \"dossier.md [S10]\", \"dossier.md [S12]\", \"dossier.md [S14]\"],\n      \"rules\": [\n        {\"source_id\": \"civil-code-2020\", \"provision\": [\"1260\", \"686\", \"687\", \"691\", \"692\", \"693\", \"697\"]},\n        {\"source_id\": \"guarantee-2020\", \"provision\": [\"25\", \"31\", \"34\"]}\n      ],\n      \"explanation\": \"保证成立于2022年，不能因C借款成立于2019年而套用旧保证规则。‘不能履行、无力偿还时才清偿’构成一般保证，范围覆盖合法本息及费用。未约定期间，依C原到期日2022-12-15计算至2023-06-15。C-诉1虽撤诉，但C-诉2已于2023-06-14有效受理，故期间内依法保全；仅向己催告不能替代对乙起诉。6月25日仅确认收件且否认付款义务，不形成新保证。S14之前己保有先诉抗辩，案件未审判执行且无例外，不能立即请求其付款；S14之后则因全部债务未经其书面同意转移，依第697条对全部余额免责。\"\n    },\n    \"SP_allocation\": {\n      \"facts\": [\"dossier.md [S06]\", \"dossier.md [S10]\", \"dossier.md [S13]\", \"dossier.md [S14]\"],\n      \"rules\": [\n        {\"source_id\": \"civil-code-2020\", \"provision\": [\"560\", \"561\"]},\n        {\"source_id\": \"lending-2020-12\", \"provision\": [\"25\", \"31\"]}\n      ],\n      \"explanation\": \"09:20付款时B、C均到期，B的戊、庚保证和C的己保证均依法存续且为同等资信的全额保证，适用SP附件约定。比较付款日可强制请求的年利率，B为13.2%，C为13%，故25000元全额先抵B；不得采用C合同23.5%的不可强制请求部分。13:40才签署的S14不追溯改变09:20已经完成的抵充。\"\n    },\n    \"S14_and_final_liability\": {\n      \"facts\": [\"dossier.md [S12]\", \"dossier.md [S13]\", \"dossier.md [S14]\"],\n      \"rules\": [\n        {\"source_id\": \"civil-code-2020\", \"provision\": [\"552\", \"697\"]},\n        {\"source_id\": \"guarantee-2020\", \"provision\": [\"36\"]}\n      ],\n      \"explanation\": \"三方正文明确辛独自履行SP后全部C余额、甲不再向乙请求且乙不再负付款义务，属于全部免责债务承担，而非保留乙责任的债务加入，也非保证。文件标题不能替代正文。范围明确为全部C，通用条款中涉及50%的取分规则未被触发。C早已到期，履行期限未改变，辛没有保证人的先诉抗辩；甲已获准追加辛并请求其履行实体义务，故本次可立即请求辛支付全部154276.41元。己未书面同意转移，全部免责。\",\n      \"calculation\": [\n        \"乙的C责任＝0.00；辛的C立即给付上限＝152860.88＋1415.53＋0.00＝154276.41。\",\n        \"乙最终立即给付总额＝A返还122816.00＋B余额203220.81＋C责任0.00＝326036.81。\",\n        \"戊、庚对B的保证额不另加到乙总额；辛承接的C余额也不重复计入乙总额。\"\n      ]\n    }\n  }\n}",
+    "trace": {
+      "actions": [
+        {
+          "action": "adapter_read_file",
+          "path": "/app/input/dossier.md",
+          "sha256": "25aca80f7f721b005ddc518ef714742eeebf6839f9287c670ebf26f5560b0a22"
+        },
+        {
+          "action": "adapter_read_file",
+          "path": "/app/input/rules.json",
+          "sha256": "45dd738c33e7c7ff136d11b2c354c77d2e645b52b4f9e721237fa992ce9edebf"
+        },
+        {
+          "action": "adapter_read_file",
+          "path": "/app/input/answer-contract.json",
+          "sha256": "95968aa3f574d1ffb1e0749e117d76f46332494660f25ee6d164f5e4d3f4e53a"
+        },
+        {
+          "action": "adapter_submit_answer",
+          "path": "/app/output/answer.json",
+          "sha256": "8169adff8ab0fcbad04a2ce71afb9ce61a841c6a72d183929b20b451f6ff46b4"
+        }
+      ],
+      "adapter_version": "0.3.0",
+      "host_writes_answer": true,
+      "fresh_api_completion": true,
+      "arbitrary_shell_enabled": false,
+      "hidden_answer_input": false
+    }
+  },
+  {
+    "index": 4,
+    "stage": "Bo5-4",
+    "job": "legal-bo5-19-bo5-4",
+    "finished_at": "2026-11-15T03:19:25.101860Z",
+    "exceptions": [],
+    "completed_answer": true,
+    "infrastructure_failure": false,
+    "report": {
+      "passed": false,
+      "score": 0.625,
+      "checks": {
+        "A_valid": false,
+        "A_restitution": true,
+        "A_guarantee": false,
+        "B_initial_principal": true,
+        "B_protected_total": true,
+        "B_guarantee": false,
+        "C_outstanding_principal": true,
+        "C_outstanding_interest": true,
+        "C_outstanding_expenses": true,
+        "C_guarantee": false,
+        "borrower_total": true,
+        "B_second_guarantee": false,
+        "B_joint_payment_limit": true,
+        "C_third_party_type": false,
+        "C_third_party_payment_limit": true,
+        "C_original_borrower_liability": true
+      },
+      "failed_checks": [
+        "A_valid",
+        "A_guarantee",
+        "B_guarantee",
+        "C_guarantee",
+        "B_second_guarantee",
+        "C_third_party_type"
+      ],
+      "note": "金额或状态固定核对，不证明法律解释；语义等价与错误类型由P6另审，不以此直接计低成功率。"
+    },
+    "reward": 0.625,
+    "model": "deployment-gpt-6-astra-platform-global",
+    "usage": {
+      "input_tokens": 18921,
+      "input_tokens_details": {
+        "cache_write_tokens": 18918,
+        "cached_tokens": 0
+      },
+      "output_tokens": 15539,
+      "output_tokens_details": {
+        "reasoning_tokens": 11912
+      },
+      "total_tokens": 34460
+    },
+    "latency_ms": 330073,
+    "answer_text": "{\n  \"A_valid\": \"无效：属于套取金融机构贷款转贷，不以乙事先知情或约定高利为必要条件。\",\n  \"A_restitution\": \"122816.00\",\n  \"A_guarantee\": \"丁的保证合同因主合同无效而无效；本次依据保证合同请求立即给付，不予支持。未请求的保证合同无效后过错赔偿不作判断。\",\n  \"B_initial_principal\": \"187030.00\",\n  \"B_protected_total\": \"203220.81\",\n  \"B_guarantee\": \"戊承担有效且已在保证期间内依法行权的全额连带责任保证；本次立即给付上限为203220.81元，不能以内部50%分担约定对抗甲。\",\n  \"C_outstanding_principal\": \"152860.88\",\n  \"C_outstanding_interest\": \"1415.53\",\n  \"C_outstanding_expenses\": \"0.00\",\n  \"C_guarantee\": \"己原为一般保证，保证期间内重新起诉已保全保证责任；但S14将全部剩余C债务转移给辛，未经己书面同意，己对该全部余额不再承担保证责任。本次立即给付请求支持金额为0.00元。\",\n  \"borrower_total\": \"326036.81\",\n  \"B_second_guarantee\": \"庚承担有效且已在保证期间内依法行权的全额连带责任保证；本次立即给付上限为203220.81元。乙、戊、庚就同一B债务的清偿不得重复计算。\",\n  \"B_joint_payment_limit\": \"203220.81\",\n  \"C_third_party_type\": \"经甲同意的全部免责债务承担，即全部剩余C债务转移；辛替代乙成为该余额的债务人，并非保证或债务加入。\",\n  \"C_third_party_payment_limit\": \"154276.41\",\n  \"C_original_borrower_liability\": \"0.00\",\n  \"basis\": {\n    \"A\": {\n      \"materials\": [\"S01\", \"S02\", \"S12\"],\n      \"rules\": [\n        {\"source_id\": \"lending-2020-12\", \"provision\": \"13\"},\n        {\"source_id\": \"lending-2020-12\", \"provision\": \"31\"},\n        {\"source_id\": \"civil-code-2020\", \"provision\": \"157\"},\n        {\"source_id\": \"civil-code-2020\", \"provision\": \"682\"}\n      ],\n      \"explanation\": \"A成立于2022年，适用现行转贷无效规则；低利率和乙不知资金来源不改变结论。实际到账143123.00元，已返还20307.00元全部冲抵返还财产，故余额为143123.00－20307.00＝122816.00元。同交易号收据不构成另一次交付，未交付票面差额及无效后赔偿均不在最终请求范围。\"\n    },\n    \"B计息与限额\": {\n      \"materials\": [\"S03\", \"S04\", \"S05\", \"S06\", \"S12\", \"S13\"],\n      \"rules\": [\n        {\"source_id\": \"civil-code-2020\", \"provision\": \"670\"},\n        {\"source_id\": \"civil-code-2020\", \"provision\": \"679\"},\n        {\"source_id\": \"lending-2020-12\", \"provision\": \"25\"},\n        {\"source_id\": \"lending-2020-12\", \"provision\": \"26\"},\n        {\"source_id\": \"lending-2020-12\", \"provision\": \"27\"},\n        {\"source_id\": \"lending-2020-12\", \"provision\": \"28\"}\n      ],\n      \"explanation\": \"B为合法自有资金借款，最初本金按实际交付认定为199581.00－12551.00＝187030.00元。后续借据没有新增交付或债务更新，不能直接采用纸面本金；依法核算可计入后期本金的利息。沿用原合同13.2%利率及成立时LPR，四倍上限为3.70%×4＝14.8%。\",\n      \"calculation\": [\n        \"各段实际日数：2022-01-12至2022-07-06为175日；至2022-10-17为103日；至2023-01-09为84日；至2023-08-01为204日，合计566日。\",\n        \"依次结算本金为187030×(1＋13.2%×175/365)＝198866.69315068；再乘(1＋13.2%×103/365)＝206274.34126048；再乘(1＋13.2%×84/365)＝212540.56015335。\",\n        \"截日抵充前本息＝212540.56015335…×(1＋13.2%×204/365)＝228220.81276653…元。\",\n        \"第27条整体上限＝187030×(1＋14.8%×566/365)＝229953.64120548…元。逐期结算结果未超过该上限，抵充前可保护228220.81276653…元。\",\n        \"SP-01抵充B的25000.00元后，B余额＝228220.81276653…－25000.00＝203220.81276653…元，最终取分为203220.81元。计算未使用展示值提前取分。\"\n      ]\n    },\n    \"B两名保证人\": {\n      \"materials\": [\"S06\", \"S12\"],\n      \"rules\": [\n        {\"source_id\": \"civil-code-2020\", \"provision\": \"688\"},\n        {\"source_id\": \"civil-code-2020\", \"provision\": \"691\"},\n        {\"source_id\": \"civil-code-2020\", \"provision\": \"692\"},\n        {\"source_id\": \"civil-code-2020\", \"provision\": \"693\"},\n        {\"source_id\": \"civil-code-2020\", \"provision\": \"695\"},\n        {\"source_id\": \"guarantee-2020\", \"provision\": \"25\"},\n        {\"source_id\": \"guarantee-2020\", \"provision\": \"31\"},\n        {\"source_id\": \"guarantee-2020\", \"provision\": \"32\"},\n        {\"source_id\": \"guarantee-2020\", \"provision\": \"13\"},\n        {\"source_id\": \"guarantee-2020\", \"provision\": \"29\"}\n      ],\n      \"explanation\": \"戊的无条件清偿正文及共同确认条款均表明连带责任保证；戊、庚各自对甲覆盖全部依法清算的B债务，且同意结息机制。“直至还清”为期间约定不明，保证期间按原到期日2023-01-12起六个月，至2023-07-12届满；未经书面同意的展期不改变该期间。对戊的诉状于2023-07-07送达，虽随后撤诉，仍构成期间内行权。对庚的完整请求于2023-07-06独立到达，也在期间内，无须借用对戊的诉讼效力。庚责任未消灭，戊不存在因甲漏行权而丧失对庚追偿权的免责范围。内部各50%仅规范相互分担，不将各自对甲的全额保证降为50%。\"\n    },\n    \"C计息与流水\": {\n      \"materials\": [\"S07\", \"S08\", \"S09\", \"S11\", \"S12\"],\n      \"rules\": [\n        {\"source_id\": \"lending-2015\", \"provision\": \"26\"},\n        {\"source_id\": \"lending-2020-12\", \"provision\": \"31\"},\n        {\"source_id\": \"lending-2020-12\", \"provision\": \"25\"},\n        {\"source_id\": \"lending-2020-12\", \"provision\": \"28\"},\n        {\"source_id\": \"civil-code-2020\", \"provision\": \"561\"}\n      ],\n      \"explanation\": \"C为合法自有资金借款。依甲明确请求，成立日至2020-08-19适用旧解释，23.5%未超过24%，按约支持；2020-08-20起按起诉时保护标准3.25%×4＝13%计算，包括逾期期间。依原合同，各笔先费用、再依法可请求利息、最后本金；仅T-02依双方补充协议优先本金，其他单方备注不改变顺序。T-01的截图、收据与主表为同一交易，仅计一次；X-01撤销且未到账，不构成清偿。\",\n      \"calculation\": [\n        \"计息区间及日数：2019-02-07至2019-04-18为70日；至2019-08-23为127日；至2020-02-14为175日；至2020-08-20为188日；至2020-09-21为32日；至2021-04-11为202日；至2022-06-06为421日；至2023-07-06为395日；至2023-08-01为26日。前四段年率23.5%，后五段13%，均按实际自然日/365单利。\",\n        \"T-01支付费用1680.00元、利息227790×23.5%×70/365＝10266.15205479…元，余款抵本金；付款后本金214489.15205479…元，费用归零。\",\n        \"T-02的26978.00元全部抵本金，本金降为187511.15205479…元；该段利息17538.16093993…元保留，不另计息。\",\n        \"T-03的28709.00元及T-04的30440.00元均全部抵利息，本金不变；付款后未付利息分别为9956.27362008…元、4349.94236071…元。T-04跨利率分界，当段利息＝187511.15205479…×(23.5%×188＋13%×32)/365。\",\n        \"T-05先清利息17840.47072498…元，付款后本金173180.62277977…元；T-06当段利息25967.60406777…元，付款后本金165246.22684754…元；T-07当段利息23247.65410581…元，付款后本金152860.88095336…元，届时依法可请求利息已清。\",\n        \"最后26日利息＝152860.88095336…×13%×26/365＝1415.53363732…元。保留计算精度至最终取分，C本金152860.88元、利息1415.53元、费用0.00元。\"\n      ]\n    },\n    \"己在SP到账时的保证状态\": {\n      \"materials\": [\"S07\", \"S10\", \"S12\", \"S13\"],\n      \"rules\": [\n        {\"source_id\": \"civil-code-2020\", \"provision\": \"1260\"},\n        {\"source_id\": \"civil-code-2020\", \"provision\": \"687\"},\n        {\"source_id\": \"civil-code-2020\", \"provision\": \"691\"},\n        {\"source_id\": \"civil-code-2020\", \"provision\": \"692\"},\n        {\"source_id\": \"civil-code-2020\", \"provision\": \"693\"},\n        {\"source_id\": \"guarantee-2020\", \"provision\": \"25\"},\n        {\"source_id\": \"guarantee-2020\", \"provision\": \"31\"},\n        {\"source_id\": \"guarantee-2020\", \"provision\": \"34\"}\n      ],\n      \"explanation\": \"保证于2022年成立，不能因主借款成立于2019年而适用旧保证类型规则。“不能履行、无力偿还时才清偿”为一般保证。保证期间自2022-12-15起六个月，至2023-06-15届满。首次起诉虽撤回，但2023-06-14已在期间届满前重新有效起诉且未撤回，故保证责任得到保全。2023-05-08单独催告不能替代对乙起诉；2023-06-25仅确认收件且否认付款义务，不构成新保证。SP到账时己仍提供全额一般保证，但因尚未审判、执行且无例外，享有先诉抗辩，不能立即要求其无条件给付。该先诉抗辩不等于保证已经消灭。\"\n    },\n    \"SP-01抵充\": {\n      \"materials\": [\"S06\", \"S10\", \"S13\", \"S14\"],\n      \"rules\": [\n        {\"source_id\": \"civil-code-2020\", \"provision\": \"560\"},\n        {\"source_id\": \"civil-code-2020\", \"provision\": \"561\"},\n        {\"source_id\": \"lending-2020-12\", \"provision\": \"25\"},\n        {\"source_id\": \"lending-2020-12\", \"provision\": \"31\"}\n      ],\n      \"explanation\": \"09:20付款时，B、C均到期，B的戊、庚保证及C的己保证均依法存续并覆盖全额，材料确认相同资信和足额履行能力，符合SP附件的比较条件。应比较依法可强制请求的年利率：B为13.2%，C为13%，不能采用C合同中超出保护范围的23.5%。25000.00元故全部抵B，不抵A或C；在B内部先抵截日利息15680.25261318…元，再抵依法结算本金9319.74738682…元。13:40才签署的S14不追溯改变09:20已经完成的抵充。\"\n    },\n    \"S14与最终主体责任\": {\n      \"materials\": [\"S12\", \"S13\", \"S14\"],\n      \"rules\": [\n        {\"source_id\": \"civil-code-2020\", \"provision\": \"552\"},\n        {\"source_id\": \"civil-code-2020\", \"provision\": \"697\"},\n        {\"source_id\": \"guarantee-2020\", \"provision\": \"36\"}\n      ],\n      \"explanation\": \"三方正文明确由辛独自履行SP结算后C的全部余额，并明确乙不再向甲承担该部分付款义务，构成全部免责债务转移，不是共同承担的债务加入，也不是保证；不能仅凭“代偿支持”等称谓判断。甲已参与同意，原到期日未变，故辛对已到期的全部受让债务负立即给付义务。己未书面同意该债务转移，也无另行约定或新保证，依第697条对全部转移余额不再承担保证责任。S14没有新增交付、付款或利率变更，故不重新起算借款或改变C余额。正文转移的是全部，而非50%，共同条款中的50%份额取分规则不触发。\",\n      \"totals\": [\n        \"辛立即给付上限＝C本金152860.88＋利息1415.53＋费用0.00＝154276.41元。\",\n        \"乙对C的剩余付款义务＝0.00元；乙本人总额＝A返还122816.00＋B余额203220.81＋C责任0.00＝326036.81元。\",\n        \"戊、庚各自的203220.81元保证上限对应同一B余额，不另加至乙总额，也不得与乙清偿重复受偿；辛的C债务亦不重复计入乙总额。\"\n      ]\n    }\n  }\n}",
+    "trace": {
+      "actions": [
+        {
+          "action": "adapter_read_file",
+          "path": "/app/input/dossier.md",
+          "sha256": "25aca80f7f721b005ddc518ef714742eeebf6839f9287c670ebf26f5560b0a22"
+        },
+        {
+          "action": "adapter_read_file",
+          "path": "/app/input/rules.json",
+          "sha256": "45dd738c33e7c7ff136d11b2c354c77d2e645b52b4f9e721237fa992ce9edebf"
+        },
+        {
+          "action": "adapter_read_file",
+          "path": "/app/input/answer-contract.json",
+          "sha256": "95968aa3f574d1ffb1e0749e117d76f46332494660f25ee6d164f5e4d3f4e53a"
+        },
+        {
+          "action": "adapter_submit_answer",
+          "path": "/app/output/answer.json",
+          "sha256": "8d59451dddc56597631ea83ec035163456873845b9fe16adf6c3cbe57febafb8"
+        }
+      ],
+      "adapter_version": "0.3.0",
+      "host_writes_answer": true,
+      "fresh_api_completion": true,
+      "arbitrary_shell_enabled": false,
+      "hidden_answer_input": false
+    }
+  },
+  {
+    "index": 5,
+    "stage": "Bo5-5",
+    "job": "legal-bo5-19-bo5-5",
+    "finished_at": "2026-11-15T03:17:37.106194Z",
+    "exceptions": [],
+    "completed_answer": true,
+    "infrastructure_failure": false,
+    "report": {
+      "passed": false,
+      "score": 0.625,
+      "checks": {
+        "A_valid": false,
+        "A_restitution": true,
+        "A_guarantee": false,
+        "B_initial_principal": true,
+        "B_protected_total": true,
+        "B_guarantee": false,
+        "C_outstanding_principal": true,
+        "C_outstanding_interest": true,
+        "C_outstanding_expenses": true,
+        "C_guarantee": false,
+        "borrower_total": true,
+        "B_second_guarantee": false,
+        "B_joint_payment_limit": true,
+        "C_third_party_type": false,
+        "C_third_party_payment_limit": true,
+        "C_original_borrower_liability": true
+      },
+      "failed_checks": [
+        "A_valid",
+        "A_guarantee",
+        "B_guarantee",
+        "C_guarantee",
+        "B_second_guarantee",
+        "C_third_party_type"
+      ],
+      "note": "金额或状态固定核对，不证明法律解释；语义等价与错误类型由P6另审，不以此直接计低成功率。"
+    },
+    "reward": 0.625,
+    "model": "deployment-gpt-6-astra-platform-global",
+    "usage": {
+      "input_tokens": 18921,
+      "input_tokens_details": {
+        "cache_write_tokens": 18918,
+        "cached_tokens": 0
+      },
+      "output_tokens": 12908,
+      "output_tokens_details": {
+        "reasoning_tokens": 9322
+      },
+      "total_tokens": 31829
+    },
+    "latency_ms": 222023,
+    "answer_text": "{\n  \"A_valid\": \"无效：套取银行信贷资金转贷，不以高利转贷或乙事先知情为必要条件。\",\n  \"A_restitution\": \"122816.00\",\n  \"A_guarantee\": \"丁的保证合同随主合同无效；本次依保证合同立即给付的请求不支持，支持金额为0.00元。未请求的过错赔偿不作认定。\",\n  \"B_initial_principal\": \"187030.00\",\n  \"B_protected_total\": \"203220.81\",\n  \"B_guarantee\": \"戊的连带责任保证有效，且已在保证期间内依法行权；对B全部受保护余额承担保证责任，本次可支持立即支付203220.81元。\",\n  \"C_outstanding_principal\": \"152860.88\",\n  \"C_outstanding_interest\": \"1415.53\",\n  \"C_outstanding_expenses\": \"0.00\",\n  \"C_guarantee\": \"己原为有效的一般保证人，保证期间内已依法行权；但S14将全部剩余C债务转移给辛，未经己书面同意，己对该全部债务不再承担保证责任。本次立即给付请求支持0.00元。\",\n  \"borrower_total\": \"326036.81\",\n  \"B_second_guarantee\": \"庚的连带责任保证有效，甲已在保证期间内单独向其提出到达的给付请求；庚对B全部受保护余额承担保证责任，本次可支持立即支付203220.81元。\",\n  \"B_joint_payment_limit\": \"203220.81\",\n  \"C_third_party_type\": \"经甲同意的免责式全部债务承担：辛独自承担SP-01结算后的全部C债务，乙退出该部分债务；不是保证，也不是与乙并存的债务加入。\",\n  \"C_third_party_payment_limit\": \"154276.41\",\n  \"C_original_borrower_liability\": \"0.00\",\n  \"basis\": {\n    \"A效力与返还\": {\n      \"材料\": [\"S01\", \"S02\", \"S12\"],\n      \"说明\": \"A成立于2022年，适用现行贷款转贷无效规则，不适用2015年规则中的高利及借款人知情条件。实际交付仅计一次，同交易号收据不构成新增交付；既往20307元全部冲抵返还财产。\",\n      \"计算\": \"143123.00－20307.00＝122816.00元。\",\n      \"规范\": [\n        {\"source_id\": \"lending-2020-12\", \"provision\": \"13\"},\n        {\"source_id\": \"lending-2020-12\", \"provision\": \"31\"},\n        {\"source_id\": \"civil-code-2020\", \"provision\": \"157\"},\n        {\"source_id\": \"civil-code-2020\", \"provision\": \"682\"}\n      ]\n    },\n    \"B本息清算\": {\n      \"材料\": [\"S03\", \"S04\", \"S05\", \"S13\"],\n      \"说明\": \"B资金合法，合同有效。预扣利息不计本金；各新借据没有新增交付或债务更新，须从实际本金逐次核算可计入后期本金的利息，不直接采用纸面本金。以下中间金额仅供展示，实际计算不作中间取分。\",\n      \"初始本金\": \"199581.00－12551.00＝187030.00元。\",\n      \"利率\": \"合同年利率13.2%，低于成立时一年期LPR四倍3.70%×4＝14.8%；逾期沿用可保护的借期利率。\",\n      \"逐期计算\": [\n        \"2022-01-12至2022-07-06：175日；187030×(1＋0.132×175/365)＝198866.693151元。\",\n        \"2022-07-06至2022-10-17：103日；以上期未取分金额×(1＋0.132×103/365)＝206274.341260元。\",\n        \"2022-10-17至2023-01-09：84日；以上期未取分金额×(1＋0.132×84/365)＝212540.560153元。\",\n        \"2023-01-09至2023-08-01：204日；以上期未取分金额×(1＋0.132×204/365)＝228220.812767元。\"\n      ],\n      \"总额上限与抵充\": \"全期566日，上限＝187030×(1＋0.148×566/365)＝229953.641205元。逐期结息结果未超上限；SP-01冲抵25000元后，B余额取分为203220.81元。\",\n      \"规范\": [\n        {\"source_id\": \"civil-code-2020\", \"provision\": \"670\"},\n        {\"source_id\": \"civil-code-2020\", \"provision\": \"679\"},\n        {\"source_id\": \"lending-2020-12\", \"provision\": \"25\"},\n        {\"source_id\": \"lending-2020-12\", \"provision\": \"26\"},\n        {\"source_id\": \"lending-2020-12\", \"provision\": \"27\"},\n        {\"source_id\": \"lending-2020-12\", \"provision\": \"28\"}\n      ]\n    },\n    \"B两保证人的责任\": {\n      \"材料\": [\"S06\", \"S12\"],\n      \"说明\": [\n        \"戊承诺不履行即无条件清偿、无须先追索乙，且共同正文明确戊庚各自对全部B承担连带责任保证；内部各50%不是对甲的责任限额。\",\n        \"“直至本息全部还清”为保证期间约定不明，适用六个月。未经戊庚书面同意的展期不改变保证期间，仍从2023-01-12起算，至2023-07-12届满。\",\n        \"对戊的诉讼于2023-07-05受理，诉状于07-07送达；07-09撤诉不否定期间内已行权。甲对庚的完整给付请求于07-06实际到达，亦属独立、及时行权。\",\n        \"双方保证责任均存续，不存在甲漏向庚行权造成戊丧失内部追偿的事实，戊不能依此免责。戊、庚各可被请求支付全部203220.81元，但与乙的同一B债务不得重复受偿。\"\n      ],\n      \"规范\": [\n        {\"source_id\": \"civil-code-2020\", \"provision\": \"688\"},\n        {\"source_id\": \"civil-code-2020\", \"provision\": \"691\"},\n        {\"source_id\": \"civil-code-2020\", \"provision\": \"692\"},\n        {\"source_id\": \"civil-code-2020\", \"provision\": \"693\"},\n        {\"source_id\": \"civil-code-2020\", \"provision\": \"695\"},\n        {\"source_id\": \"guarantee-2020\", \"provision\": \"13\"},\n        {\"source_id\": \"guarantee-2020\", \"provision\": \"25\"},\n        {\"source_id\": \"guarantee-2020\", \"provision\": \"29\"},\n        {\"source_id\": \"guarantee-2020\", \"provision\": \"31\"},\n        {\"source_id\": \"guarantee-2020\", \"provision\": \"32\"}\n      ]\n    },\n    \"C利率付款与余额\": {\n      \"材料\": [\"S07\", \"S08\", \"S09\", \"S11\", \"S13\", \"S14\"],\n      \"利率及算法\": \"C借贷有效。按甲的明确请求，2019-02-07至2020-08-19适用约定年利率23.5%，未超过旧规则24%保护线；2020-08-20起适用3.25%×4＝13%的保护上限。按未偿本金×适用年利率×实际日数/365计单利，付款当日及2023-08-01不对已偿本金计息，未付利息不生息。\",\n      \"付款识别与顺序\": \"T-01至T-07各计一次，合计213080.00元；S11截图和收据只是T-01的重复凭证，X-01未执行，不抵扣。依S09原合同，通常先费用、再合法利息、后本金；T-02依有效补充协议先还本金26978元。其他单方“还本金”备注不改变约定。\",\n      \"逐笔结算\": [\n        {\n          \"交易\": \"T-01\",\n          \"计息日数\": \"70日，23.5%\",\n          \"付款后本金\": \"214489.152055\",\n          \"付款后未付利息\": \"0.000000\",\n          \"说明\": \"25247元先付费用1680元、利息10266.152055元，其余偿本；费用此后为零。\"\n        },\n        {\n          \"交易\": \"T-02\",\n          \"计息日数\": \"127日，23.5%\",\n          \"付款后本金\": \"187511.152055\",\n          \"付款后未付利息\": \"17538.160940\"\n        },\n        {\n          \"交易\": \"T-03\",\n          \"计息日数\": \"175日，23.5%\",\n          \"付款后本金\": \"187511.152055\",\n          \"付款后未付利息\": \"9956.273620\"\n        },\n        {\n          \"交易\": \"T-04\",\n          \"计息日数\": \"至2020-08-20为188日，23.5%；其后至付款日32日，13%\",\n          \"付款后本金\": \"187511.152055\",\n          \"付款后未付利息\": \"4349.942361\"\n        },\n        {\n          \"交易\": \"T-05\",\n          \"计息日数\": \"202日，13%\",\n          \"付款后本金\": \"173180.622780\",\n          \"付款后未付利息\": \"0.000000\"\n        },\n        {\n          \"交易\": \"T-06\",\n          \"计息日数\": \"421日，13%\",\n          \"付款后本金\": \"165246.226848\",\n          \"付款后未付利息\": \"0.000000\"\n        },\n        {\n          \"交易\": \"T-07\",\n          \"计息日数\": \"395日，13%\",\n          \"付款后本金\": \"152860.880953\",\n          \"付款后未付利息\": \"0.000000\"\n        }\n      ],\n      \"截日计算\": \"中间展示不作实际取分。T-07后至截日26日，利息＝未取分本金×0.13×26/365＝1415.533637元。SP-01未分配给C，S14也不是现金清偿；故C本金152860.88元、利息1415.53元、费用0.00元，分项取分后合计154276.41元。\",\n      \"规范\": [\n        {\"source_id\": \"lending-2015\", \"provision\": \"26\"},\n        {\"source_id\": \"lending-2020-12\", \"provision\": \"25\"},\n        {\"source_id\": \"lending-2020-12\", \"provision\": \"28\"},\n        {\"source_id\": \"lending-2020-12\", \"provision\": \"31\"},\n        {\"source_id\": \"civil-code-2020\", \"provision\": \"561\"}\n      ]\n    },\n    \"己在SP付款前的保证状态\": {\n      \"材料\": [\"S07\", \"S10\"],\n      \"说明\": [\n        \"己的保证订立于2022年，应按该保证成立时的规则认定，不随2019年借款适用旧保证规则。“不能履行、无力偿还时才清偿”属于一般保证。\",\n        \"未约定保证期间，主债务2022-12-15到期，保证期间至2023-06-15。C-诉1撤回后，甲已于06-14在期间内再次对乙起诉，因此保证责任未因期间问题消灭。\",\n        \"05-08向己催告不能替代对乙起诉；06-25仅确认收件且明确不确认付款义务，不构成新保证承诺。己无需通过新保证维持原责任。\",\n        \"在S14转移之前，己虽仍提供全额一般保证，但主债务未经审判和执行，且没有先诉抗辩例外，故当时不能要求己立即给付。\"\n      ],\n      \"规范\": [\n        {\"source_id\": \"civil-code-2020\", \"provision\": \"1260\"},\n        {\"source_id\": \"civil-code-2020\", \"provision\": \"687\"},\n        {\"source_id\": \"civil-code-2020\", \"provision\": \"691\"},\n        {\"source_id\": \"civil-code-2020\", \"provision\": \"692\"},\n        {\"source_id\": \"civil-code-2020\", \"provision\": \"693\"},\n        {\"source_id\": \"guarantee-2020\", \"provision\": \"25\"},\n        {\"source_id\": \"guarantee-2020\", \"provision\": \"31\"},\n        {\"source_id\": \"guarantee-2020\", \"provision\": \"34\"}\n      ]\n    },\n    \"SP01抵充\": {\n      \"材料\": [\"S06\", \"S10\", \"S13\", \"S14\"],\n      \"说明\": \"09:20付款时，B、C均已到期，均有依法存续、资信及价值符合题设的全额保证；己享有先诉抗辩不等于其保证已消灭。依SP附件，以依法可强制请求的年利率比较，B为13.2%、C为13%，25000元全部先抵B，不得按C合同票面23.5%比较。B内部先抵当期利息再抵本金。13:40才签署的S14不能追溯改变已完成的抵充。\",\n      \"规范\": [\n        {\"source_id\": \"civil-code-2020\", \"provision\": \"560\"},\n        {\"source_id\": \"civil-code-2020\", \"provision\": \"561\"}\n      ]\n    },\n    \"S14及最终责任\": {\n      \"材料\": [\"S12\", \"S14\"],\n      \"说明\": [\n        \"甲乙辛三方明确约定：SP-01后全部C余债由辛独自履行，乙不再负付款义务。应依正文认定为免责式全部债务承担，不能仅按“代偿”标题认定保证，也不是乙仍负债的债务加入。\",\n        \"己未书面同意债务转移，亦无另行约定，因此对全部转移的154276.41元C债务不再承担保证责任；其最终免责原因不是保证期间内未行权。\",\n        \"辛承担的是已到期的主债务履行义务，不享有一般保证的先诉抗辩。甲已获准追加辛并按其实体义务请求支付，本次可支持154276.41元。\",\n        \"乙最终仅承担A返还122816.00元及B余额203220.81元，合计326036.81元；C全部余额归辛承担，不再计入乙的总额。戊、庚的保证给付与乙的B给付为同一债务，不重复累计。\"\n      ],\n      \"规范\": [\n        {\"source_id\": \"civil-code-2020\", \"provision\": \"552\"},\n        {\"source_id\": \"civil-code-2020\", \"provision\": \"697\"},\n        {\"source_id\": \"guarantee-2020\", \"provision\": \"36\"}\n      ]\n    }\n  }\n}",
+    "trace": {
+      "actions": [
+        {
+          "action": "adapter_read_file",
+          "path": "/app/input/dossier.md",
+          "sha256": "25aca80f7f721b005ddc518ef714742eeebf6839f9287c670ebf26f5560b0a22"
+        },
+        {
+          "action": "adapter_read_file",
+          "path": "/app/input/rules.json",
+          "sha256": "45dd738c33e7c7ff136d11b2c354c77d2e645b52b4f9e721237fa992ce9edebf"
+        },
+        {
+          "action": "adapter_read_file",
+          "path": "/app/input/answer-contract.json",
+          "sha256": "95968aa3f574d1ffb1e0749e117d76f46332494660f25ee6d164f5e4d3f4e53a"
+        },
+        {
+          "action": "adapter_submit_answer",
+          "path": "/app/output/answer.json",
+          "sha256": "3ea11ca37b3206325687217833bbd3fc212d2d87ff224be52ec36b375c71eebb"
+        }
+      ],
+      "adapter_version": "0.3.0",
+      "host_writes_answer": true,
+      "fresh_api_completion": true,
+      "arbitrary_shell_enabled": false,
+      "hidden_answer_input": false
+    }
+  }
+]

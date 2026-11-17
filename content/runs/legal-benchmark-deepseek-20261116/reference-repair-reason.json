@@ -1,0 +1,11 @@
+{
+  "stage": "before_any_blind_answer",
+  "reason": "Coding agent found overly mandatory proportional fee allocation and case-specific announcement fee conclusion in C4; independent re-audit missed it.",
+  "source": "https://www.court.gov.cn/zixun/xiangqing/5092.html",
+  "provisions": [
+    "12",
+    "29"
+  ],
+  "expert_review": false,
+  "old_freeze_preserved": true
+}

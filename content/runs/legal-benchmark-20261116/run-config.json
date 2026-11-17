@@ -1,0 +1,32 @@
+{
+  "id": "legal-benchmark-20261116",
+  "title": "真实 benchmark 错题引导 · 同类 QA Pilot",
+  "skill_version": "1.4.0",
+  "model": {
+    "model": "gpt-6-astra",
+    "effort": "high",
+    "maxOutputTokens": 10000
+  },
+  "status": "infrastructure_interrupted",
+  "created_at": "2026-11-16T06:06:43.851Z",
+  "max_submissions": 48,
+  "probe_count": 10,
+  "seed_count": 2,
+  "candidate_count": 3,
+  "blind_n": 5,
+  "confirmation_n": 5,
+  "selected_candidate_max": 1,
+  "split": "adaptive_dev",
+  "expert_review": false,
+  "training_rows": 0,
+  "tools": "closed_book_case_analysis_no_tools",
+  "local_only": true,
+  "source_permission": "unresolved_no_public_release",
+  "updated_at": "2026-11-16T06:41:42.073Z",
+  "successful_probe_concurrency": 1,
+  "blind_concurrency": 1,
+  "audit_concurrency": 1,
+  "min_inter_call_ms": 120000,
+  "scheduling_note": "Increased from 30s after further gateway 429; independent sequential contexts unchanged.",
+  "stop_reason": "Repeated_gateway_resource_and_token_limits_before_seed_selection"
+}

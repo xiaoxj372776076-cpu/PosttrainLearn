@@ -1,0 +1,20 @@
+{
+  "kind": "fictional_derivative",
+  "new_scenario": true,
+  "not_original_case_evidence": true,
+  "changes": [
+    "增加独立虚构B/C债务、预扣利息与结息借据、分时付款和保证状态",
+    "原案只是研究动机；全部新情景参考重新由题设与法条建立"
+  ],
+  "mechanisms": [
+    "actual_disbursement_before_capitalization",
+    "period_cap_and_whole_term_cap",
+    "agreement_exception_to_payment_priority",
+    "accessory_validity_and_guarantee_period",
+    "preservation_vs_immediate_enforcement"
+  ],
+  "dossier_sha256": "6166eacd35a797c1196cc0f1de204d703afc8bf6d31caa0bbd6d304d373aba20",
+  "authority_manifest_sha256": "8761431470d3efaedb0ff45aeb7e2998de03b1717cf8751fddf0405cee422c8d",
+  "use": "local_research_only",
+  "expert_review": false
+}

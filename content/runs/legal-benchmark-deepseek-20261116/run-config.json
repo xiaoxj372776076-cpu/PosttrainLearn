@@ -1,0 +1,53 @@
+{
+  "id": "legal-benchmark-deepseek-20261116",
+  "title": "真实 benchmark 错题引导 · deepseek-v4.1-1017",
+  "skill_version": "1.4.0",
+  "model": {
+    "model": "deepseek-v4.1-1017",
+    "effort": "high",
+    "maxOutputTokens": 10000
+  },
+  "status": "completed_invalid_measurement",
+  "created_at": "2026-11-16T06:41:51.694Z",
+  "max_submissions": 52,
+  "probe_count": 4,
+  "seed_count": 1,
+  "candidate_count": 3,
+  "blind_n": 5,
+  "confirmation_n": 5,
+  "selected_candidate_max": 1,
+  "split": "adaptive_dev",
+  "expert_review": false,
+  "training_rows": 0,
+  "successful_probe_concurrency": 1,
+  "blind_concurrency": 1,
+  "audit_concurrency": 1,
+  "tools": "closed_book_case_analysis_no_tools",
+  "local_only": true,
+  "source_permission": "unresolved_no_public_release",
+  "min_inter_call_ms": 10000,
+  "scheduling_note": "Independent new target from authorized gateway inventory; never mix Astra probe or blind answers.",
+  "updated_at": "2026-11-16T08:22:54.498Z",
+  "auxiliary_model": {
+    "model": "deepseek-v4.1-1017",
+    "effort": "medium",
+    "maxOutputTokens": 16000
+  },
+  "auxiliary_config_note": "After incomplete benchmark audit, auxiliary retries/generation/reference/grading use medium/16000. Existing audits retained. Target probes and all blind answers remain high/10000.",
+  "seed_count_note": "One-shot fallback: only one supported wrong seed selected; not a two-example test.",
+  "candidate_repair_count": 1,
+  "material_version": "1.1",
+  "grading_model": {
+    "model": "deepseek-v4.1-1017",
+    "effort": "low",
+    "maxOutputTokens": 16000
+  },
+  "final_audit_model": {
+    "model": "deepseek-v4.1-1017",
+    "effort": "low",
+    "maxOutputTokens": 16000
+  },
+  "final_audit_note": "Named last audit retry after medium/16000 exhaustion. Audit/grading receive only relevant frozen provisions. Target remains high/10000, no blind answers yet.",
+  "stop_reason": null,
+  "submission_budget_amendment": "submission-budget-amendment.json"
+}

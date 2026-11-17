@@ -1,0 +1,58 @@
+{
+  "question": "本任务沿用所附文件中明确标明的虚构衍生情景，不是对真实案件判决的预测。仅以 dossier.md、rules.json 和 answer-contract.json 为事实、规范及输出依据，对 dossier.md 所载最终诉请进行一项整体财产与责任审查：截至2023-08-01且SP-01到账后，甲对乙尚可请求的范围是什么，甲要求丁、戊、己依各自保证合同立即付款的请求是否成立？以相关合同及保证的法律状态支撑审查结论，完整回答 answer-contract.json 要求的全部内容，不增补或改变文件中的事实、法条及约定。\n\n交付格式：仅返回一个有效JSON对象，包含 answer-contract.json 的 fields 所列全部字段及 basis。状态表达、金额格式、精度和汇总口径遵循该契约。basis 按契约提供简短、可核验的依据，并标注 dossier.md 的段落编号及 rules.json 的 source_id、provision；不要求内部思维链。JSON之外不要添加说明或代码围栏。学生只需返回JSON，无需自行写文件；如需落盘，由宿主适配器负责。",
+  "reasoning_dependencies": [
+    {
+      "dependency": "规范适用时点、主合同与保证合同的法律状态共同约束整体请求的性质及责任范围。",
+      "support": [
+        "dossier.md:导言、S01、S02、S03、S06、S10、S12",
+        "rules.json:lending-2020-12:13、31",
+        "rules.json:civil-code-2020:157、682、1260"
+      ]
+    },
+    {
+      "dependency": "交易记录之间的关系、实际履行情况、结算约定及规范限制共同影响剩余请求金额。",
+      "support": [
+        "dossier.md:S02、S03、S04、S05、S07、S08、S09、S11",
+        "rules.json:civil-code-2020:561、670、679",
+        "rules.json:lending-2020-12:25、26、27、28"
+      ]
+    },
+    {
+      "dependency": "债务到期、保证约定及行权事实既关联保证请求，也关联截日付款后的债务余额，不能作为互不相关的附问处理。",
+      "support": [
+        "dossier.md:S06、S07、S10、S13",
+        "rules.json:civil-code-2020:560、686、687、688、692、693、695"
+      ]
+    },
+    {
+      "dependency": "各法律状态与金额结论须在同一截日、诉请范围及输出口径下形成一致的整体审查结果。",
+      "support": [
+        "dossier.md:导言、S12、S13",
+        "answer-contract.json:fields、money、basis"
+      ]
+    }
+  ],
+  "shortcut_audit": [
+    {
+      "check": "题面答案泄漏",
+      "finding": "题面仅给出整体目标与交付要求，未提供逐项步骤、金额归属标签、计算公式或法律状态答案。"
+    },
+    {
+      "check": "输入与轮次隔离",
+      "finding": "学生依据限于给定三份文件；不将研究者判断单元、结构示例答案或DATA.analysis中的其他轮次金额与统计拼入题面。"
+    },
+    {
+      "check": "结构示例边界",
+      "finding": "示例仅用于匹配规则限制、保证条件与协议例外的任务结构，不作为本题事实或法律依据。"
+    },
+    {
+      "check": "捷径及难度声明",
+      "finding": "未改动学生材料，也未执行盲答、金额复算或独立法源核验；现有材料中的提示及非必要计算仍待后续审查，不宣称捷径已排除或实测难度已验证。"
+    },
+    {
+      "check": "交付接口一致性",
+      "finding": "统一要求学生返回JSON，落盘由宿主适配器负责，不设置相互冲突的写文件要求。"
+    }
+  ],
+  "source_mode": "new_scenario"
+}

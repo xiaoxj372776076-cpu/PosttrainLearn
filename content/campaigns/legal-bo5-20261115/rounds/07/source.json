@@ -1,0 +1,34 @@
+{
+  "kind": "fictional_derivative",
+  "new_scenario": true,
+  "not_original_case_evidence": true,
+  "changes": [
+    "增加独立虚构B/C债务、预扣利息与结息借据、分时付款和保证状态",
+    "原案只是研究动机；全部新情景参考重新由题设与法条建立"
+  ],
+  "student_projection": {
+    "policy": "neutral_primary_records",
+    "enabled_from_round": 6,
+    "rationale": "保留同一交易号、银行执行状态、双方补充协议与单方备注；删除整理者归属结论和责任状态检查表，不改变已生成参考的实质事实。",
+    "skill_version": "1.2.6"
+  },
+  "material_repairs": {
+    "basis": "rounds/02/stage-P3.json",
+    "changes": [
+      "明确B实际到账、起息和成立日期，不能以借据日期推定",
+      "A的清算约定改为如被认定无效的条件式，不预给效力结论"
+    ],
+    "previous_rounds_not_rewritten": true
+  },
+  "mechanisms": [
+    "actual_disbursement_before_capitalization",
+    "period_cap_and_whole_term_cap",
+    "agreement_exception_to_payment_priority",
+    "accessory_validity_and_guarantee_period",
+    "preservation_vs_immediate_enforcement"
+  ],
+  "dossier_sha256": "9bd370b20ba2621b3f38cebbf8544636e3cac70c1f71e18f42458144b7c4fdca",
+  "authority_manifest_sha256": "8761431470d3efaedb0ff45aeb7e2998de03b1717cf8751fddf0405cee422c8d",
+  "use": "local_research_only",
+  "expert_review": false
+}

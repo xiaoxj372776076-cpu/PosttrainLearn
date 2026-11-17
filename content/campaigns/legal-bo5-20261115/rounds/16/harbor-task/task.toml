@@ -1,0 +1,21 @@
+schema_version = "1.4"
+artifacts = [{source="/app/output", destination="legal-answer"}]
+[metadata]
+description="Bo5 empirical legal difficulty calibration; not expert gold"
+difficulty="hard"
+category="legal-document-audit"
+[agent]
+timeout_sec=660.0
+user="root"
+[verifier]
+timeout_sec=60.0
+environment_mode="shared"
+[environment]
+docker_image="mirror.gcr.io/library/python@sha256:935c3c5b12357a7e10caa9c1e6ca5692344d97cf229832ef584be2cec9fc03df"
+workdir="/app"
+cpus=2
+memory_mb=2048
+storage_mb=4096
+build_timeout_sec=600.0
+[[steps]]
+name="audit"

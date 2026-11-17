@@ -1,0 +1,55 @@
+{
+  "kind": "fictional_derivative",
+  "new_scenario": true,
+  "not_original_case_evidence": true,
+  "changes": [
+    "增加独立虚构B/C债务、预扣利息与结息借据、分时付款和保证状态",
+    "原案只是研究动机；全部新情景参考重新由题设与法条建立"
+  ],
+  "student_projection": {
+    "policy": "neutral_primary_records",
+    "enabled_from_round": 6,
+    "rationale": "保留同一交易号、银行执行状态、双方补充协议与单方备注；删除整理者归属结论和责任状态检查表，不改变已生成参考的实质事实。",
+    "skill_version": "1.2.8"
+  },
+  "material_repairs": {
+    "basis": "rounds/02/stage-P3.json",
+    "changes": [
+      "明确B实际到账、起息和成立日期，不能以借据日期推定",
+      "A的清算约定改为如被认定无效的条件式，不预给效力结论"
+    ],
+    "previous_rounds_not_rewritten": true
+  },
+  "mechanisms": [
+    "actual_disbursement_before_capitalization",
+    "period_cap_and_whole_term_cap",
+    "agreement_exception_to_payment_priority",
+    "accessory_validity_and_guarantee_period",
+    "preservation_vs_immediate_enforcement",
+    "guarantee_state_to_undesignated_payment_allocation",
+    "guarantee_type_withdrawal_service_refiling_receipt_signature"
+  ],
+  "cross_branch_coupling": {
+    "enabled_from_round": 8,
+    "span": "S13",
+    "amount": "25000.00",
+    "dependency": "保证存续状态 -> 民法典560条B/C债务抵充 -> 未偿余额",
+    "scope": "双方限定只清偿B/C；不将先诉抗辩视为保证消灭；新增题设与参考，不复用旧题计数"
+  },
+  "procedural_coupling": {
+    "enabled_from_round": 9,
+    "spans": [
+      "S06",
+      "S10",
+      "S13"
+    ],
+    "authority": "https://www.court.gov.cn/zixun/xiangqing/282721.html",
+    "dependency": "保证条款类型与期间 -> 起诉/送达/撤诉/再诉及收件签名 -> 保证存续 -> B/C抵充及剩余余额",
+    "hypothesis": "第8轮前三答均通过简单的催告/起诉分支；改用原始程序文件，区分两种保证的撤诉效果与仅收件签名，不增加算术量。",
+    "not_retroactive": true
+  },
+  "dossier_sha256": "49c102b06177ce10959c753db0fc302f87d3ac9884878e91238b1e3afc4c9507",
+  "authority_manifest_sha256": "0b5e621dcbafbca1ebac4287b77c4942ccd7c3bf7ce6f771bf2682325c9a0939",
+  "use": "local_research_only",
+  "expert_review": false
+}

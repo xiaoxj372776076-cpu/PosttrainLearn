@@ -1,0 +1,13 @@
+{
+  "A_valid": false,
+  "A_restitution": "122876.00",
+  "A_guarantee": "invalid_accessory",
+  "B_initial_principal": "183330.00",
+  "B_protected_total": "225404.49",
+  "B_guarantee": "joint",
+  "C_outstanding_principal": "149745.16",
+  "C_outstanding_interest": "0.00",
+  "C_outstanding_expenses": "0.00",
+  "C_guarantee": "expired",
+  "borrower_total": "498025.65"
+}

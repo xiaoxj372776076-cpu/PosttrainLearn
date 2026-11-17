@@ -1,0 +1,27 @@
+{
+  "job": "legal-bo5-07-oracle",
+  "finished_at": "2026-11-14T22:30:31.284439Z",
+  "exceptions": [],
+  "completed_answer": false,
+  "infrastructure_failure": false,
+  "report": {
+    "passed": true,
+    "score": 1.0,
+    "checks": {
+      "A_valid": true,
+      "A_restitution": true,
+      "A_guarantee": true,
+      "B_initial_principal": true,
+      "B_protected_total": true,
+      "B_guarantee": true,
+      "C_outstanding_principal": true,
+      "C_outstanding_interest": true,
+      "C_outstanding_expenses": true,
+      "C_guarantee": true,
+      "borrower_total": true
+    },
+    "failed_checks": [],
+    "note": "金额或状态固定核对，不证明法律解释；语义等价与错误类型由P6另审，不以此直接计低成功率。"
+  },
+  "reward": 1.0
+}

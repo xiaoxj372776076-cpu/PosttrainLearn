@@ -1,0 +1,28 @@
+{
+  "round": "04",
+  "stage": "Bo5-5",
+  "status": "failed_with_known_usage",
+  "submitted_at": "2026-11-14T21:32:41.903Z",
+  "input_sha256": "516065ec94db46d50c544a60a403e363b2bb9d16d8432440840f3017259951d0",
+  "input_reservation": 29414,
+  "output_reservation": 10000,
+  "usage": {
+    "input_tokens": 12354,
+    "input_tokens_details": {
+      "cache_write_tokens": 12351,
+      "cached_tokens": 0
+    },
+    "output_tokens": 10000,
+    "output_tokens_details": {
+      "reasoning_tokens": 8705
+    },
+    "total_tokens": 22354
+  },
+  "failure_kind": "truncation",
+  "error": "Incomplete response: incomplete",
+  "failed_at": "2026-11-14T21:35:58.632Z",
+  "actual_model": "deployment-gpt-6-astra-platform-global",
+  "incomplete_details": {
+    "reason": "max_output_tokens"
+  }
+}

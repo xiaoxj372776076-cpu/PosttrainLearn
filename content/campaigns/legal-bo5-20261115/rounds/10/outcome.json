@@ -1,0 +1,27 @@
+{
+  "round": 10,
+  "status": "completed_not_confirmed",
+  "full_chain_completed": true,
+  "skill_version": "1.2.9",
+  "measured": {
+    "valid": true,
+    "correct": 5,
+    "n": 5,
+    "target_hit": false,
+    "deterministic_successes": 5,
+    "reason": "semantic_five_answer_measurement"
+  },
+  "confirmation": null,
+  "confirmed_target_hit": false,
+  "next_level": 6,
+  "training_rows": 0,
+  "release_status": "quarantine",
+  "assessed_difficulty": "D3",
+  "analysis": "本次依据所给虚构事实和规范摘录核对，不将工程参考或教师判断直接视为金标。适用lending-2020-12第31条；A转贷无效不要求高利或借款人知情。B以实际交付183700元起算，合法结息公式为183700×(1＋0.132×175/365)×(1＋0.132×103/365)×(1＋0.132×84/365)×(1＋0.132×204/365)，结果约224157.425575元，低于整体上限225859.401644元。C按各段未偿本金计单利，T-02适用本金优先协议；其余付款按费用、利息、本金抵充。SP-01前C本金约172133.918329818元、利息约3010.692971555元；因B保证仍存续而C保证已消灭，25000元优先清偿C，最终本金约150144.611301373元。工程参考的法律状态、最终金额和决定性计算依据均获支持，未发现导致题面不成立的缺口。提交的五份答案均完整、可解析：有效完成5/5、法律正确5/5、最终金额正确5/5、basis正确5/5、整体正确5/5；无格式失败、截断或已报告的基础设施故障。原确定性检查与本次语义审计结论一致，无需改判。答案3、4只有容差内尾数展示质量提示。结构评定为D3：保证类型、期间与程序效果会影响担保状态及跨债务抵充，债内抵充又影响计息本金，存在真实必要的规则依赖。difficulty_mechanism_valid为true仅表示这些依赖有效且影响必答字段，不表示低成功率已验证。本批5/5正确，未命中1—2/5目标，不应启动命中确认或声称已验证高法律推理难度。本次未外部核验网页、来源哈希或五答调用独立性，结论限于提交材料。",
+  "remaining_gates": [
+    "expert_review",
+    "source_and_export_permissions",
+    "independent_family_confirmation",
+    "benchmark_source_overlap"
+  ]
+}

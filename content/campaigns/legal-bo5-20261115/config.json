@@ -1,0 +1,76 @@
+{
+  "id": "legal-bo5-20261115",
+  "protocol": "0.3",
+  "created_at": "2026-11-14T20:52:06.052Z",
+  "max_rounds": 20,
+  "model": "gpt-6-astra",
+  "effort": "high",
+  "max_output_tokens": 20000,
+  "configuration_history": [
+    {
+      "from_round": 1,
+      "max_output_tokens": 10000,
+      "reason": "Initial frozen configuration; all prior inputs and trials remain unchanged."
+    },
+    {
+      "from_round": 5,
+      "max_output_tokens": 20000,
+      "reason": "Round 04 Bo5-5 explicitly terminated at max_output_tokens. Increase the output allowance rather than using truncation as difficulty. Aggregate budgets, model and reasoning effort remain unchanged.",
+      "evidence": "rounds/04/Bo5-5-error.json"
+    },
+    {
+      "from_round": 7,
+      "adapter_version": "0.3.0",
+      "reason": "Clarify that the host writes answer.json; exclude missing-file-tool prose from substantive difficulty. No new tools, model changes or budget changes.",
+      "evidence": "rounds/06/harbor-Bo5-1.json"
+    },
+    {
+      "from_round": 10,
+      "blind_concurrency": 2,
+      "reason": "Bounded parallel independent trials; transaction-safe request reservations, same model/input/budget and all five answers retained."
+    },
+    {
+      "from_round": 13,
+      "blind_concurrency": 5,
+      "host_memory_bytes": 34359738368,
+      "reason": "Five independent 2GB Harbor environments fit the verified 32GB host; same input/model/tools/output budget and transaction-safe aggregate reservations."
+    }
+  ],
+  "target": {
+    "n": 5,
+    "correct_min": 1,
+    "correct_max": 2,
+    "metric": "substantive_correct_completed_answers",
+    "confirmation_n": 5
+  },
+  "budget": {
+    "max_requests": 360,
+    "max_input_tokens": 6000000,
+    "max_output_tokens": 3600000,
+    "cost_usd": null
+  },
+  "local_only": true,
+  "no_push": true,
+  "protected_benchmark": "PLawBench_all_280_not_sent",
+  "reference_status": "engineering_not_expert",
+  "initial_analysis": {
+    "basis_run": "legal-harbor-001",
+    "observed_completed_answers": 3,
+    "observed_contract_successes": 3,
+    "causes": [
+      "金额角色清单使事实归属变成标签转换。",
+      "逐项检查表直接提示去重、净利息矛盾和未知状态的解法。",
+      "追加来源的scope假设预先解决了最难的证据归属。",
+      "固定单争点全字段契约限制了P2的实质候选空间。",
+      "旧BoN最大分与D4自评均未检验低成功率。"
+    ],
+    "hypothesis": "先去除解题脚手架；若原案仍全通过，转换为显著标为虚构且参考重新建立的多债务状态依赖题。",
+    "preserve": [
+      "必要事实与法条全文",
+      "真实未知与限定前提",
+      "固定gpt-6-astra/high/10000预算",
+      "语义等价评分",
+      "旧运行全部历史"
+    ]
+  }
+}

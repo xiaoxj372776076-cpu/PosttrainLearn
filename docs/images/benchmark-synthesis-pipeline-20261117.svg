@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="1570" viewBox="0 0 1680 1570" role="img" aria-labelledby="title desc">
+  <title id="title">法律 Posttrain 数据合成链路：完整 Benchmark 错题示范与五答筛选</title>
+  <desc id="desc">2026年11月17日整理的实际试跑图。上海公开判决经材料整理形成学生视图；PLawBench四题探针筛出一道有据错题，完整案情、原问题、原rubric及派生答案仅进入出题模型。生成三个候选QA，经题面审核、盲答前修复、独立参考与有据审核后冻结。五答只接收题目和材料，逐答评分仅使用本答及冻结标准。合同无效认定1/5通过，金额5/5通过，费用0/5通过；整题测量无效，不是已验证的1至2/5高难样本，确认未执行，训练行数为零。</desc>
+  <defs>
+    <linearGradient id="page" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f7fafc"/>
+      <stop offset="1" stop-color="#edf6f2"/>
+    </linearGradient>
+    <linearGradient id="frozen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e8f3f2"/>
+      <stop offset="1" stop-color="#f3f6e9"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 1 1 L 9 5 L 1 9 Z" fill="#607981"/>
+    </marker>
+    <marker id="conditional-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 1 1 L 9 5 L 1 9 Z" fill="#a58043"/>
+    </marker>
+    <style>
+      text { font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif; fill: #233b45; }
+      .title { font-family: "Songti SC", "Noto Serif CJK SC", serif; font-size: 46px; font-weight: 600; }
+      .subtitle { font-size: 23px; fill: #516b76; }
+      .label { font-size: 20px; fill: #58747c; letter-spacing: 1px; }
+      .heading { font-size: 29px; font-weight: 600; }
+      .body { font-size: 23px; }
+      .small { font-size: 21px; fill: #526b76; }
+      .note { font-size: 20px; fill: #725723; }
+      .number { font-size: 47px; font-weight: 500; fill: #245b5e; }
+      .panel { fill: #ffffff; stroke: #d7e3e8; stroke-width: 1.5; }
+      .line { fill: none; stroke: #607981; stroke-width: 2.5; marker-end: url(#arrow); stroke-linejoin: round; }
+      .conditional { fill: none; stroke: #a58043; stroke-width: 2; stroke-dasharray: 7 6; marker-end: url(#conditional-arrow); stroke-linejoin: round; }
+      .divider { stroke: #dbe7ea; stroke-width: 1.5; }
+    </style>
+  </defs>
+
+  <rect width="1680" height="1570" fill="url(#page)"/>
+  <text x="60" y="55" class="label">POSTTRAIN LAB / ACTUAL PILOT / SKILL 1.4.0</text>
+  <text x="60" y="120" class="title">让真实错题，示范下一道题。</text>
+  <text x="60" y="164" class="subtitle">法律数据合成链路 · 原始材料 × 完整 Benchmark 示范 → 新材料 QA → 有据校验 → 五答筛选</text>
+  <text x="1620" y="55" class="label" text-anchor="end">图示快照 2026.11.17</text>
+
+  <rect x="60" y="210" width="670" height="252" rx="20" class="panel"/>
+  <text x="88" y="252" class="label">INPUT A / 新案件材料</text>
+  <text x="88" y="298" class="heading">上海公开判决 → 固定材料包</text>
+  <text x="88" y="342" class="body">原文保留 · 段落 ID · 来源定位 · 叙述归属</text>
+  <text x="88" y="382" class="body">学生视图 v1.1：必要事实，不含裁判结论或结果</text>
+  <text x="88" y="430" class="small">仅公开判决展示视图，不是完整卷宗或证据原件。</text>
+
+  <rect x="790" y="210" width="830" height="252" rx="20" class="panel"/>
+  <text x="818" y="252" class="label">INPUT B / 目标模型错题 → 完整示例</text>
+  <text x="818" y="298" class="heading">PLawBench 4 题实测 → 有据错题 1 道</text>
+  <text x="818" y="342" class="body">闭卷探针 → 对照原 rubric、来源复核 → case-068</text>
+  <text x="818" y="382" class="body">原案情＋原问题＋全部原 rubric＋派生答案与纠错附注</text>
+  <text x="818" y="430" class="small">本轮为完整 one-shot；派生答案不是官方独立金标。</text>
+
+  <path d="M 245 462 V 550" class="line"/>
+  <path d="M 1205 462 V 490 H 245" fill="none" stroke="#607981" stroke-width="2.5" stroke-linejoin="round"/>
+  <text x="500" y="522" class="small">两个输入支路只在出题阶段汇合</text>
+
+  <rect x="60" y="550" width="350" height="225" rx="20" class="panel"/>
+  <text x="86" y="589" class="label">P2 / 生成</text>
+  <text x="86" y="634" class="heading">新材料同类 QA</text>
+  <text x="86" y="678" class="body">材料＋完整示例＋Skill</text>
+  <text x="86" y="717" class="body">实际生成 3 个候选</text>
+  <text x="86" y="750" class="small">不复制种子事实或法律结论</text>
+
+  <path d="M 410 661 H 460" class="line"/>
+  <rect x="460" y="550" width="350" height="225" rx="20" class="panel"/>
+  <text x="486" y="589" class="label">P3 / 题面审核</text>
+  <text x="486" y="634" class="heading">可回答性与题型模仿</text>
+  <text x="486" y="678" class="body">查事实充分、答案暗示</text>
+  <text x="486" y="717" class="body">选 1 题，盲答前修复</text>
+  <text x="486" y="750" class="small">最终题：cand-001-r1</text>
+
+  <path d="M 810 661 H 860" class="line"/>
+  <rect x="860" y="550" width="350" height="225" rx="20" class="panel"/>
+  <text x="886" y="589" class="label">P4 / 独立参考与校验</text>
+  <text x="886" y="634" class="heading">答案＋关键判据</text>
+  <text x="886" y="678" class="body">新上下文，不看生成答案</text>
+  <text x="886" y="717" class="body">核验材料、原文与法条</text>
+  <text x="886" y="750" class="small">查事实定位及合理替代答案</text>
+
+  <path d="M 1210 661 H 1260" class="line"/>
+  <rect x="1260" y="550" width="360" height="225" rx="20" fill="url(#frozen)" stroke="#bcd9d3" stroke-width="1.5"/>
+  <text x="1286" y="589" class="label">F0 / 冻结</text>
+  <text x="1286" y="634" class="heading">锁定输入与标准</text>
+  <text x="1286" y="678" class="body">题面、材料、参考、判据</text>
+  <text x="1286" y="717" class="body">模型配置与文件哈希</text>
+  <text x="1286" y="750" class="small">盲答后不改题、不改标准</text>
+
+  <path d="M 635 775 V 817 H 235 V 775" class="conditional"/>
+  <text x="430" y="848" class="note" text-anchor="middle">虚线修复只发生在盲答前，旧产物保留</text>
+  <path d="M 1435 775 V 880 H 380 V 955" class="line"/>
+  <text x="630" y="917" class="label" text-anchor="middle">给学生：只有冻结题目＋学生材料</text>
+  <path d="M 1530 775 V 918 H 1230 V 955" class="line"/>
+  <text x="1460" y="946" class="label" text-anchor="middle">冻结参考仅给评分侧</text>
+
+  <rect x="60" y="955" width="760" height="224" rx="20" class="panel"/>
+  <text x="88" y="996" class="label">B5 / 目标模型</text>
+  <text x="88" y="1042" class="heading">5 次独立盲答，同一输入与配置</text>
+  <text x="88" y="1088" class="body">目标配置 high / 10000；五份完整答卷均已取得</text>
+  <text x="88" y="1128" class="body">学生不看种子、rubric、参考答案或原判结果</text>
+  <text x="88" y="1160" class="small">两次截断另存并具名重试，不计为法律错答。</text>
+
+  <path d="M 820 1067 H 890" class="line"/>
+  <rect x="890" y="955" width="730" height="224" rx="20" class="panel"/>
+  <text x="918" y="996" class="label">B5 / 逐答语义审核</text>
+  <text x="918" y="1042" class="heading">一答一上下文，只用冻结判据</text>
+  <text x="918" y="1088" class="body">本答＋题目＋材料＋参考＋相关法条</text>
+  <text x="918" y="1128" class="body">不看种子、其他答卷或目标正确数</text>
+  <text x="918" y="1160" class="small">一份评分格式无效，原响应保留后具名重试。</text>
+
+  <path d="M 1230 1179 V 1205 H 585 V 1240" class="line"/>
+  <rect x="60" y="1240" width="1080" height="250" rx="20" class="panel"/>
+  <text x="88" y="1281" class="label">E0 / 本轮逐项观测，不等于整题成功率</text>
+  <text x="118" y="1340" class="number">1/5</text>
+  <text x="118" y="1378" class="body">明确合同无效</text>
+  <text x="448" y="1340" class="number">5/5</text>
+  <text x="448" y="1378" class="body">返还金额 52.41 万元</text>
+  <text x="833" y="1340" class="number">0/5</text>
+  <text x="833" y="1378" class="body">冻结费用要求</text>
+  <path d="M 88 1402 H 1112" class="divider"/>
+  <text x="88" y="1440" class="body">整题测量无效：完整性标记混用，费用硬门槛需复核。</text>
+  <text x="88" y="1474" class="small">保留原评分与错误证据；不事后删评分项改报整题 1/5。</text>
+
+  <path d="M 1140 1354 H 1210" class="conditional"/>
+  <rect x="1210" y="1240" width="410" height="250" rx="20" fill="#fbf5e9" stroke="#e5d7b9" stroke-width="1.5"/>
+  <text x="1236" y="1281" class="label">C5 / 条件路线</text>
+  <text x="1236" y="1326" class="heading">原题新五答确认</text>
+  <text x="1236" y="1370" class="body">仅有效整题 1–2/5</text>
+  <text x="1236" y="1408" class="body">且预算足够时启动</text>
+  <text x="1236" y="1466" class="note">本轮未执行，不提交半批。</text>
+
+  <text x="60" y="1536" class="small">实际试跑：2026.11.16 · 共享提交 51/52 · 同家族自动审核，专家审核 0 · 训练行 0 · 仅本地归档</text>
+  <text x="1620" y="1536" class="label" text-anchor="end">POSTTRAIN LEARN</text>
+</svg>

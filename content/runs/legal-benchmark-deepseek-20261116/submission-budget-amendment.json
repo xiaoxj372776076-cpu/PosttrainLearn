@@ -1,0 +1,38 @@
+{
+  "previous_limit": 48,
+  "next_limit": 52,
+  "shared_run_ids": [
+    "legal-benchmark-20261116",
+    "legal-benchmark-deepseek-20261116"
+  ],
+  "user_authorized": true,
+  "authorization": "User approved continuation after proposal to expand the shared submission cap from 48 to 52: 可以的，你继续把",
+  "submitted_before_amendment": 41,
+  "frozen_hashes": {
+    "candidate_id": "cand-001-r1",
+    "frozen_at": "2026-11-16T07:26:40.051Z",
+    "request_sha256": "cfa434e45101c5acc6089073365a5667293ef0179553de2c39a20a10aeb803b0",
+    "reference_sha256": "2d46df9ad75f76244a94d58628bc48bfd27b3516dcef96b13e66d274121d42a5",
+    "reference_audit_sha256": "ea0eb4809994c5f057f7f2c9af3b442408d6753de99c1c32e9b425ca3b419768",
+    "material_sha256": "b792a789b9ee93b21303f606108f60f0071e16ecf91baa390f0275a557c23954",
+    "authorities_sha256": "b01acb1331427d63dfc9a5858c16d5f5f1fd1af35203bdaf496223d860b9cd60",
+    "model": {
+      "model": "deepseek-v4.1-1017",
+      "effort": "high",
+      "maxOutputTokens": 10000
+    },
+    "target_actual_model": "deepseek-v4-1-flash-261017",
+    "reference_revision": "reference-repair-1",
+    "grading": "All mandatory legal criteria correct; minor form/quotation omissions do not fail; incomplete responses not legal errors.",
+    "target": {
+      "min_correct": 1,
+      "max_correct": 2,
+      "n": 5
+    },
+    "blind_concurrency": 1,
+    "expert_review": false
+  },
+  "target_config_unchanged": true,
+  "reason": "Complete the same frozen five-answer evaluation; truncated answer retained and not counted as a legal failure.",
+  "amended_at": "2026-11-16T08:09:23.571Z"
+}

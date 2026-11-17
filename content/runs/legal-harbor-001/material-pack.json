@@ -1,0 +1,1909 @@
+{
+  "material_pack_version": "1.0",
+  "material_id": "material-shanghai-23060",
+  "material_type": "case",
+  "source_ids": [
+    "case-doc-23060"
+  ],
+  "case_ids": [
+    "cn-shanghai-minhang-2023-civil-first-23060"
+  ],
+  "metadata": {
+    "jurisdiction": "中国大陆 / 上海",
+    "document_date": "2023-11-21",
+    "procedural_stage": "civil_first_instance",
+    "text_sha256": "5735df246160af2f3f6cc854cbff91ea2719e26bbebdb940604b34be10efbbeb",
+    "normalization_version": "dossier-map-0.1",
+    "permission_status": "limited_local_research_only"
+  },
+  "case_data": {
+    "entities": [
+      {
+        "id": "party-ma",
+        "title": "马某",
+        "text": "本案一审原告；个人贷款的借款人与向皮某转款的一方。真实身份映射不在公开包中。",
+        "roles": [
+          {
+            "proceeding_id": "proc-first",
+            "role": "plaintiff"
+          }
+        ],
+        "support_span_ids": [
+          "doc-judgment:p-004",
+          "doc-judgment:p-012",
+          "doc-judgment:p-016"
+        ]
+      },
+      {
+        "id": "party-pi",
+        "title": "皮某",
+        "text": "本案一审被告；借条与收条出具者、转款收取者。未到庭答辩亦未提供证据，不等于承认全部主张。",
+        "roles": [
+          {
+            "proceeding_id": "proc-first",
+            "role": "defendant"
+          }
+        ],
+        "support_span_ids": [
+          "doc-judgment:p-005",
+          "doc-judgment:p-008",
+          "doc-judgment:p-015",
+          "doc-judgment:p-016"
+        ]
+      },
+      {
+        "id": "court-first",
+        "title": "上海市闵行区人民法院",
+        "text": "本案一审裁判机关。",
+        "roles": [
+          {
+            "proceeding_id": "proc-first",
+            "role": "court"
+          }
+        ],
+        "support_span_ids": [
+          "doc-judgment:p-001"
+        ]
+      },
+      {
+        "id": "bank-gf",
+        "title": "广发银行",
+        "text": "据法院查明，于2022年8月24日向原告发放14.40万元贷款。",
+        "roles": [
+          {
+            "proceeding_id": "proc-first",
+            "role": "nonparty_lender"
+          }
+        ],
+        "support_span_ids": [
+          "doc-judgment:p-012"
+        ]
+      },
+      {
+        "id": "bank-js",
+        "title": "江苏银行",
+        "text": "据法院查明，于2022年8月24日向原告发放20万元贷款。",
+        "roles": [
+          {
+            "proceeding_id": "proc-first",
+            "role": "nonparty_lender"
+          }
+        ],
+        "support_span_ids": [
+          "doc-judgment:p-013"
+        ]
+      },
+      {
+        "id": "bank-sh",
+        "title": "上海农商银行",
+        "text": "判决书使用上海农商业银行、上海农商银行等名称，按同一贷款关系归一，原文名称保留。",
+        "roles": [
+          {
+            "proceeding_id": "proc-first",
+            "role": "nonparty_lender"
+          }
+        ],
+        "support_span_ids": [
+          "doc-judgment:p-014"
+        ]
+      },
+      {
+        "id": "intermediary",
+        "title": "XX易融公司",
+        "text": "贷款中介公司，仅在原告事实与理由中出现，具体身份和行为未独立核验。",
+        "roles": [
+          {
+            "proceeding_id": "proc-first",
+            "role": "nonparty_intermediary"
+          }
+        ],
+        "support_span_ids": [
+          "doc-judgment:p-007"
+        ]
+      }
+    ],
+    "party_positions": [
+      {
+        "id": "claim-principal-v1",
+        "title": "原诉请1：借款本金",
+        "text": "请求立即返还借款本金54.40万元。",
+        "proceeding_id": "proc-first",
+        "actor_id": "party-ma",
+        "version": 1,
+        "status": "superseded",
+        "supersedes": [],
+        "amount_ids": [
+          "amt-claim-principal"
+        ],
+        "support_span_ids": [
+          "doc-judgment:p-007"
+        ]
+      },
+      {
+        "id": "claim-interest-v1",
+        "title": "原诉请2：利息",
+        "text": "请求自2023年3月至还款时的利息，暂计至2023年8月23日为2.21万元。变更后的诉请没有列入该项，不标成法院已经驳回。",
+        "proceeding_id": "proc-first",
+        "actor_id": "party-ma",
+        "version": 1,
+        "status": "not_carried_forward",
+        "supersedes": [],
+        "amount_ids": [
+          "amt-claim-interest"
+        ],
+        "support_span_ids": [
+          "doc-judgment:p-007"
+        ]
+      },
+      {
+        "id": "claim-penalty-v1",
+        "title": "原诉请3：逾期违约金",
+        "text": "请求自2023年3月1日至还款时的逾期违约金，暂计至2023年8月23日为4787.20元。变更后未列入。",
+        "proceeding_id": "proc-first",
+        "actor_id": "party-ma",
+        "version": 1,
+        "status": "not_carried_forward",
+        "supersedes": [],
+        "amount_ids": [
+          "amt-claim-penalty"
+        ],
+        "support_span_ids": [
+          "doc-judgment:p-007"
+        ]
+      },
+      {
+        "id": "claim-fees-v1",
+        "title": "原诉请4：相关费用",
+        "text": "请求承担诉讼及执行过程的案件受理费、保全费、执行费等费用。具体金额未给出。",
+        "proceeding_id": "proc-first",
+        "actor_id": "party-ma",
+        "version": 1,
+        "status": "superseded",
+        "supersedes": [],
+        "amount_ids": [],
+        "support_span_ids": [
+          "doc-judgment:p-007"
+        ]
+      },
+      {
+        "id": "claim-principal-v2",
+        "title": "变更后诉请1：本金",
+        "text": "请求归还借款本金54.40万元。",
+        "proceeding_id": "proc-first",
+        "actor_id": "party-ma",
+        "version": 2,
+        "status": "last_recorded",
+        "supersedes": [
+          "claim-principal-v1"
+        ],
+        "amount_ids": [
+          "amt-claim-principal"
+        ],
+        "support_span_ids": [
+          "doc-judgment:p-007"
+        ]
+      },
+      {
+        "id": "claim-fees-v2",
+        "title": "变更后诉请2：相关费用",
+        "text": "请求承担诉讼及执行过程的案件受理费、执行费等费用；判决书这一版本未列保全费。",
+        "proceeding_id": "proc-first",
+        "actor_id": "party-ma",
+        "version": 2,
+        "status": "last_recorded",
+        "supersedes": [
+          "claim-fees-v1"
+        ],
+        "amount_ids": [],
+        "support_span_ids": [
+          "doc-judgment:p-007"
+        ]
+      },
+      {
+        "id": "assert-deception",
+        "title": "原告主张受欺骗",
+        "text": "原告称原本仅帮助朋友，被告未经其同意安排以其名义申请贷款，并自述曾报警；不将该说法提升为已证实欺诈。",
+        "actor_id": "party-ma",
+        "proceeding_id": "proc-first",
+        "fact_ids": [
+          "fact-deception"
+        ],
+        "stance": "asserted",
+        "source_kind": "judgment_restatement",
+        "support_span_ids": [
+          "doc-judgment:p-007",
+          "doc-judgment:p-018"
+        ]
+      },
+      {
+        "id": "assert-withheld",
+        "title": "原告说明预扣利息",
+        "text": "原告自述50.20万元系贷款54.40万元扣除一年利息4.20万元所得。",
+        "actor_id": "party-ma",
+        "proceeding_id": "proc-first",
+        "fact_ids": [
+          "fact-first",
+          "fact-withheld"
+        ],
+        "amount_ids": [
+          "amt-first",
+          "amt-withheld"
+        ],
+        "stance": "asserted",
+        "support_span_ids": [
+          "doc-judgment:p-016"
+        ]
+      },
+      {
+        "id": "assert-refund",
+        "title": "原告将2.21万元解释为退还利息",
+        "text": "原告称2022年12月交付的2.21万元是退还部分预扣利息。",
+        "actor_id": "party-ma",
+        "proceeding_id": "proc-first",
+        "fact_ids": [
+          "fact-later-role"
+        ],
+        "amount_ids": [
+          "amt-later"
+        ],
+        "stance": "asserted",
+        "support_span_ids": [
+          "doc-judgment:p-007",
+          "doc-judgment:p-020"
+        ]
+      },
+      {
+        "id": "assert-net-interest",
+        "title": "原告自述累计利息2.19万元",
+        "text": "原文自述被告累计支付原告利息2.19万元。保留这一说法，与4.20减2.21等于1.99万元的算术差异列入待核问题。",
+        "actor_id": "party-ma",
+        "proceeding_id": "proc-first",
+        "fact_ids": [
+          "fact-net-interest"
+        ],
+        "amount_ids": [
+          "amt-claimed-net"
+        ],
+        "stance": "asserted_unverified",
+        "support_span_ids": [
+          "doc-judgment:p-007"
+        ]
+      },
+      {
+        "id": "assert-rates",
+        "title": "原告所述银行利率",
+        "text": "原告所述年利率分别为广发5.80%、农商11.016%、江苏5.13%；本包未取得贷款合同原件核验。",
+        "actor_id": "party-ma",
+        "proceeding_id": "proc-first",
+        "fact_ids": [
+          "fact-bank"
+        ],
+        "amount_ids": [
+          "rate-gf",
+          "rate-sh",
+          "rate-js"
+        ],
+        "stance": "asserted_unverified",
+        "support_span_ids": [
+          "doc-judgment:p-007"
+        ]
+      }
+    ],
+    "court_found_facts": [
+      {
+        "id": "assess-relation",
+        "title": "双方系朋友",
+        "text": "一审法院查明双方系朋友关系。",
+        "proceeding_id": "proc-first",
+        "actor_id": "court-first",
+        "fact_ids": [
+          "fact-relation"
+        ],
+        "evidence_ids": [],
+        "support_span_ids": [
+          "doc-judgment:p-011"
+        ]
+      },
+      {
+        "id": "assess-bank",
+        "title": "银行贷款来源",
+        "text": "法院查明原告分别获得广发14.40万元、江苏20万元、农商20万元贷款。",
+        "proceeding_id": "proc-first",
+        "actor_id": "court-first",
+        "fact_ids": [
+          "fact-bank"
+        ],
+        "evidence_ids": [
+          "evidence-loan"
+        ],
+        "amount_ids": [
+          "amt-bank-total"
+        ],
+        "support_span_ids": [
+          "doc-judgment:p-012",
+          "doc-judgment:p-013",
+          "doc-judgment:p-014"
+        ]
+      },
+      {
+        "id": "assess-note",
+        "title": "借条和收条内容",
+        "text": "法院查明被告出具借条、收条，均记载54.40万元；借条期限为2022年8月24日至2023年8月23日，月息3500元，逾期违约金0.005%天，并负担额外费用。",
+        "proceeding_id": "proc-first",
+        "actor_id": "court-first",
+        "fact_ids": [
+          "fact-note"
+        ],
+        "evidence_ids": [
+          "evidence-note",
+          "evidence-receipt"
+        ],
+        "amount_ids": [
+          "amt-face",
+          "amt-monthly",
+          "rate-contract"
+        ],
+        "support_span_ids": [
+          "doc-judgment:p-015"
+        ]
+      },
+      {
+        "id": "assess-first",
+        "title": "首次实际交付50.20万元",
+        "text": "法院查明四笔实际转账合计50.20万元。",
+        "proceeding_id": "proc-first",
+        "actor_id": "court-first",
+        "fact_ids": [
+          "fact-first"
+        ],
+        "evidence_ids": [
+          "evidence-bank"
+        ],
+        "amount_ids": [
+          "amt-first"
+        ],
+        "support_span_ids": [
+          "doc-judgment:p-016"
+        ]
+      },
+      {
+        "id": "assess-later",
+        "title": "追加交付2.21万元",
+        "text": "法院查明750元、1350元和2万元三笔追加交付；在裁判理由中结合原告退款说法认定资金亦来自原告银行贷款。",
+        "proceeding_id": "proc-first",
+        "actor_id": "court-first",
+        "fact_ids": [
+          "fact-later",
+          "fact-later-role"
+        ],
+        "evidence_ids": [
+          "evidence-alipay",
+          "evidence-wechat"
+        ],
+        "amount_ids": [
+          "amt-later"
+        ],
+        "support_span_ids": [
+          "doc-judgment:p-017",
+          "doc-judgment:p-020"
+        ]
+      },
+      {
+        "id": "assess-withheld",
+        "title": "预扣部分不是被告实际取得财产",
+        "text": "法院认为预扣利息实际未交付、被告未实际利用；合同及利息约定无效，不作为应返还的实际取得财产。",
+        "proceeding_id": "proc-first",
+        "actor_id": "court-first",
+        "fact_ids": [
+          "fact-withheld"
+        ],
+        "evidence_ids": [],
+        "amount_ids": [
+          "amt-withheld"
+        ],
+        "authority_ids": [
+          "authority-157",
+          "authority-loan-13"
+        ],
+        "support_span_ids": [
+          "doc-judgment:p-020",
+          "doc-judgment:p-022"
+        ]
+      },
+      {
+        "id": "assess-evidence-general",
+        "title": "法院整体确认在卷证据",
+        "text": "法院整体记载提交的借条、收条、银行明细、贷款合同、支付宝及微信截图予以确认并在卷佐证。未逐项披露三性审查，不为每份原件伪造逐项采信理由。",
+        "proceeding_id": "proc-first",
+        "actor_id": "court-first",
+        "fact_ids": [],
+        "evidence_ids": [
+          "evidence-note",
+          "evidence-receipt",
+          "evidence-bank",
+          "evidence-loan",
+          "evidence-alipay",
+          "evidence-wechat"
+        ],
+        "assessment_scope": "collective_statement_only",
+        "support_span_ids": [
+          "doc-judgment:p-009"
+        ]
+      },
+      {
+        "id": "assess-default",
+        "title": "缺席的程序后果",
+        "text": "法院认为被告无正当理由拒不到庭系放弃相应诉讼权利；不将此改写为承认所有事实。",
+        "proceeding_id": "proc-first",
+        "actor_id": "court-first",
+        "fact_ids": [
+          "fact-attendance"
+        ],
+        "evidence_ids": [],
+        "authority_ids": [
+          "authority-cpl-147"
+        ],
+        "support_span_ids": [
+          "doc-judgment:p-021",
+          "doc-judgment:p-022"
+        ]
+      }
+    ],
+    "disputed_or_unresolved_facts": [
+      {
+        "id": "gap-pleadings",
+        "title": "起诉状及诉请变更材料未取得",
+        "text": "仅有判决书转述诉请，未取得原始起诉状或变更申请及其日期。",
+        "status": "not_available",
+        "support_span_ids": [
+          "doc-judgment:p-007"
+        ]
+      },
+      {
+        "id": "gap-evidence",
+        "title": "六类证据原件未取得",
+        "text": "原始银行明细、合同、借条、收条和截图未取得；不能把文书提及当成证据文件已入库。",
+        "status": "not_available",
+        "support_span_ids": [
+          "doc-judgment:p-009"
+        ]
+      },
+      {
+        "id": "gap-cross",
+        "title": "完整举证质证记录未取得",
+        "text": "未取得庭审笔录、送达记录和逐项质证。空质证数组不表示无异议或默认自认。",
+        "status": "not_available",
+        "support_span_ids": [
+          "doc-judgment:p-006",
+          "doc-judgment:p-008",
+          "doc-judgment:p-009"
+        ]
+      },
+      {
+        "id": "gap-later",
+        "title": "后续程序和生效情况未知",
+        "text": "未取得上诉、二审、再审、执行或履行材料；不判定这些程序没有发生。",
+        "status": "unresolved",
+        "support_span_ids": [
+          "doc-judgment:p-023",
+          "doc-judgment:p-026"
+        ]
+      },
+      {
+        "id": "gap-net-interest",
+        "title": "2.19万元净利息自述存在算术差异",
+        "text": "原告事实与理由同时出现4.20万元预扣、2.21万元退还和2.19万元累计利息。42000-22100=19900，不等于21900；可能存在未披露事实或原文错误，暂不纠正文书。",
+        "status": "unresolved",
+        "support_span_ids": [
+          "doc-judgment:p-007"
+        ]
+      },
+      {
+        "id": "gap-transfer-detail",
+        "title": "四笔首次转账明细未知",
+        "text": "50.20万元仅为四笔合计，不能虚构逐笔金额、时间或收款账户。",
+        "status": "not_mentioned",
+        "support_span_ids": [
+          "doc-judgment:p-016"
+        ]
+      },
+      {
+        "id": "gap-authorities",
+        "title": "法律版本和完整条文未核验",
+        "text": "保留判决书引称；未将条号核对、当时版本或当前效力标为通过。",
+        "status": "unresolved",
+        "support_span_ids": [
+          "doc-judgment:p-022",
+          "doc-judgment:p-024"
+        ]
+      },
+      {
+        "id": "gap-permission",
+        "title": "训练及外部传输权限未确认",
+        "text": "公开访问不等于训练、再分发或外部模型传输许可。该包仅为本地研究整理，训练准入阻断。",
+        "status": "unresolved",
+        "support_span_ids": []
+      },
+      {
+        "id": "gap-cutoff",
+        "title": "无法还原真实庭前知识状态",
+        "text": "仅有事后判决书，不能凭事件日期重构当事人在庭前能获得的全部信息。",
+        "status": "not_available",
+        "support_span_ids": []
+      }
+    ],
+    "evidence_items": [
+      {
+        "id": "evidence-note",
+        "title": "借条",
+        "text": "判决书转述记载54.40万元、借期、月息、逾期违约金等。证明目的为整理者依据裁判上下文归纳，并非原始证据目录全文。",
+        "document_id": "doc-note",
+        "proceeding_id": "proc-first",
+        "original_obtained": false,
+        "submitted_by": "party-ma",
+        "submission_at": null,
+        "exhibit_number": null,
+        "proof_purpose_origin": "analyst_inferred",
+        "fact_ids": [
+          "fact-note"
+        ],
+        "support_span_ids": [
+          "doc-judgment:p-009",
+          "doc-judgment:p-015"
+        ]
+      },
+      {
+        "id": "evidence-receipt",
+        "title": "收条",
+        "text": "判决书转述收条记载收到54.40万元、资金周转、转账收款。记载收到不等于证明实际交付该金额。",
+        "document_id": "doc-receipt",
+        "proceeding_id": "proc-first",
+        "original_obtained": false,
+        "submitted_by": "party-ma",
+        "submission_at": null,
+        "exhibit_number": null,
+        "proof_purpose_origin": "analyst_inferred",
+        "fact_ids": [
+          "fact-note",
+          "fact-first"
+        ],
+        "support_span_ids": [
+          "doc-judgment:p-009",
+          "doc-judgment:p-015"
+        ]
+      },
+      {
+        "id": "evidence-bank",
+        "title": "银行明细",
+        "text": "法院查明四笔转账合计50.20万元；明细原件和各笔完整信息未取得。",
+        "document_id": "doc-bank",
+        "proceeding_id": "proc-first",
+        "original_obtained": false,
+        "submitted_by": "party-ma",
+        "submission_at": null,
+        "exhibit_number": null,
+        "proof_purpose_origin": "analyst_inferred",
+        "fact_ids": [
+          "fact-first"
+        ],
+        "support_span_ids": [
+          "doc-judgment:p-009",
+          "doc-judgment:p-016"
+        ]
+      },
+      {
+        "id": "evidence-loan",
+        "title": "贷款合同",
+        "text": "法院查明三家银行贷款关系及结清信息，未取得三份合同全文。",
+        "document_id": "doc-loan",
+        "proceeding_id": "proc-first",
+        "original_obtained": false,
+        "submitted_by": "party-ma",
+        "submission_at": null,
+        "exhibit_number": null,
+        "proof_purpose_origin": "analyst_inferred",
+        "fact_ids": [
+          "fact-bank"
+        ],
+        "support_span_ids": [
+          "doc-judgment:p-009",
+          "doc-judgment:p-012",
+          "doc-judgment:p-013",
+          "doc-judgment:p-014"
+        ]
+      },
+      {
+        "id": "evidence-alipay",
+        "title": "支付宝付款截图",
+        "text": "法院查明三笔追加付款合计22100元；截图原件未取得。",
+        "document_id": "doc-alipay",
+        "proceeding_id": "proc-first",
+        "original_obtained": false,
+        "submitted_by": "party-ma",
+        "submission_at": null,
+        "exhibit_number": null,
+        "proof_purpose_origin": "analyst_inferred",
+        "fact_ids": [
+          "fact-later"
+        ],
+        "support_span_ids": [
+          "doc-judgment:p-009",
+          "doc-judgment:p-017"
+        ]
+      },
+      {
+        "id": "evidence-wechat",
+        "title": "微信聊天记录截图",
+        "text": "法院记载配合贷款审批及追加借款的聊天经过；完整聊天截图未取得。",
+        "document_id": "doc-wechat",
+        "proceeding_id": "proc-first",
+        "original_obtained": false,
+        "submitted_by": "party-ma",
+        "submission_at": null,
+        "exhibit_number": null,
+        "proof_purpose_origin": "analyst_inferred",
+        "fact_ids": [
+          "fact-later",
+          "fact-later-role"
+        ],
+        "support_span_ids": [
+          "doc-judgment:p-009",
+          "doc-judgment:p-017"
+        ]
+      }
+    ],
+    "timeline": [
+      {
+        "id": "ev-contact",
+        "title": "请求陪同提贷",
+        "text": "原告称被告于微信提出陪同提款并携带征信报告。",
+        "kind": "fact",
+        "date_start": "2022-08-22",
+        "date_end": null,
+        "date_precision": "day",
+        "attribution": "原告陈述，判决书转述",
+        "actor_id": "party-pi",
+        "proceeding_id": "proc-first",
+        "support_span_ids": [
+          "doc-judgment:p-007"
+        ]
+      },
+      {
+        "id": "ev-loans",
+        "title": "贷款发放与借条收条",
+        "text": "三家银行贷款合计54.40万元；被告同日出具记载54.40万元的借条和收条。",
+        "kind": "fact",
+        "date_start": "2022-08-24",
+        "date_end": null,
+        "date_precision": "day",
+        "attribution": "一审法院查明",
+        "amount_ids": [
+          "amt-bank-total",
+          "amt-face"
+        ],
+        "proceeding_id": "proc-first",
+        "support_span_ids": [
+          "doc-judgment:p-012",
+          "doc-judgment:p-013",
+          "doc-judgment:p-014",
+          "doc-judgment:p-015"
+        ]
+      },
+      {
+        "id": "ev-first-transfer",
+        "title": "四笔首次转账",
+        "text": "原告向被告转账四笔合计50.20万元，各笔金额及时间未取得。",
+        "kind": "fact",
+        "date_start": "2022-08-24",
+        "date_end": "2022-08-25",
+        "date_precision": "range",
+        "attribution": "一审法院查明",
+        "amount_ids": [
+          "amt-first"
+        ],
+        "proceeding_id": "proc-first",
+        "support_span_ids": [
+          "doc-judgment:p-016"
+        ]
+      },
+      {
+        "id": "ev-dec5",
+        "title": "追加转款750元与1350元",
+        "text": "法院记载被告提出水电费、还花呗资金需求，原告于当日通过支付宝打款。",
+        "kind": "fact",
+        "date_start": "2022-12-05",
+        "date_end": null,
+        "date_precision": "day",
+        "attribution": "一审法院查明",
+        "amount_ids": [
+          "amt-750",
+          "amt-1350"
+        ],
+        "proceeding_id": "proc-first",
+        "support_span_ids": [
+          "doc-judgment:p-017"
+        ]
+      },
+      {
+        "id": "ev-dec9",
+        "title": "追加转款2万元",
+        "text": "法院记载被告表示资金不够，原告于当日通过支付宝打款2万元。",
+        "kind": "fact",
+        "date_start": "2022-12-09",
+        "date_end": null,
+        "date_precision": "day",
+        "attribution": "一审法院查明",
+        "amount_ids": [
+          "amt-20000"
+        ],
+        "proceeding_id": "proc-first",
+        "support_span_ids": [
+          "doc-judgment:p-017"
+        ]
+      },
+      {
+        "id": "ev-pay-gf",
+        "title": "广发贷款结清",
+        "text": "原告于2023年2月9日结清广发银行贷款。",
+        "kind": "fact",
+        "date_start": "2023-02-09",
+        "date_end": null,
+        "date_precision": "day",
+        "attribution": "一审法院查明",
+        "proceeding_id": "proc-first",
+        "support_span_ids": [
+          "doc-judgment:p-012"
+        ]
+      },
+      {
+        "id": "ev-pay-js",
+        "title": "江苏贷款结清",
+        "text": "原告于2023年2月13日结清江苏银行贷款。",
+        "kind": "fact",
+        "date_start": "2023-02-13",
+        "date_end": null,
+        "date_precision": "day",
+        "attribution": "一审法院查明",
+        "proceeding_id": "proc-first",
+        "support_span_ids": [
+          "doc-judgment:p-013"
+        ]
+      },
+      {
+        "id": "ev-pay-sh",
+        "title": "农商贷款已结清",
+        "text": "判决书记载该贷款已结清，未提供具体日期。",
+        "kind": "fact",
+        "date_start": null,
+        "date_end": null,
+        "date_precision": "unresolved",
+        "attribution": "一审法院查明",
+        "proceeding_id": "proc-first",
+        "support_span_ids": [
+          "doc-judgment:p-014"
+        ]
+      },
+      {
+        "id": "ev-police",
+        "title": "报警与民事处理选择",
+        "text": "原告自述曾报警、警方不予立案，后表示不再进行刑事立案。未取得公安决定或记录，不作刑事定性。",
+        "kind": "fact",
+        "date_start": null,
+        "date_end": null,
+        "date_precision": "unresolved",
+        "attribution": "原告自述，判决书转述",
+        "proceeding_id": "proc-first",
+        "support_span_ids": [
+          "doc-judgment:p-018"
+        ]
+      },
+      {
+        "id": "ev-file",
+        "title": "一审立案",
+        "text": "法院于2023年5月6日立案。",
+        "kind": "procedure",
+        "date_start": "2023-05-06",
+        "date_end": null,
+        "date_precision": "day",
+        "attribution": "法院程序记载",
+        "proceeding_id": "proc-first",
+        "support_span_ids": [
+          "doc-judgment:p-006"
+        ]
+      },
+      {
+        "id": "ev-mode",
+        "title": "简易程序转普通程序",
+        "text": "法院认为存在不宜适用简易程序的情形，转普通程序独任审理；具体转换日期未提及。",
+        "kind": "procedure",
+        "date_start": null,
+        "date_end": null,
+        "date_precision": "unresolved",
+        "attribution": "法院程序记载",
+        "proceeding_id": "proc-first",
+        "support_span_ids": [
+          "doc-judgment:p-006"
+        ]
+      },
+      {
+        "id": "ev-claim-change",
+        "title": "诉讼请求变更",
+        "text": "原告在诉讼中变更为本金及相关费用请求；具体变更日期与书面申请未取得。",
+        "kind": "procedure",
+        "date_start": null,
+        "date_end": null,
+        "date_precision": "unresolved",
+        "attribution": "判决书转述诉请",
+        "proceeding_id": "proc-first",
+        "support_span_ids": [
+          "doc-judgment:p-007"
+        ]
+      },
+      {
+        "id": "ev-hearing",
+        "title": "公开开庭与缺席审理",
+        "text": "原告到庭，被告经公告送达开庭传票未到庭，法院依法缺席审判。",
+        "kind": "procedure",
+        "date_start": "2023-09-25",
+        "date_end": null,
+        "date_precision": "day",
+        "attribution": "法院程序记载",
+        "proceeding_id": "proc-first",
+        "support_span_ids": [
+          "doc-judgment:p-006",
+          "doc-judgment:p-008"
+        ]
+      },
+      {
+        "id": "ev-judgment",
+        "title": "一审判决作出",
+        "text": "判决书落款为2023年11月21日；送达、生效和履行日期未知。",
+        "kind": "procedure",
+        "date_start": "2023-11-21",
+        "date_end": null,
+        "date_precision": "day",
+        "attribution": "判决书落款",
+        "proceeding_id": "proc-first",
+        "support_span_ids": [
+          "doc-judgment:p-031"
+        ]
+      }
+    ],
+    "amount_items": [
+      {
+        "id": "amt-gf",
+        "title": "广发贷款发放",
+        "text": "法院查明贷款14.40万元。",
+        "value": "144000.00",
+        "currency": "CNY",
+        "role": "bank_disbursement",
+        "ledger_kind": "transaction",
+        "from_id": "bank-gf",
+        "to_id": "party-ma",
+        "support_span_ids": [
+          "doc-judgment:p-012"
+        ]
+      },
+      {
+        "id": "amt-js",
+        "title": "江苏贷款发放",
+        "text": "法院查明贷款20万元。",
+        "value": "200000.00",
+        "currency": "CNY",
+        "role": "bank_disbursement",
+        "ledger_kind": "transaction",
+        "from_id": "bank-js",
+        "to_id": "party-ma",
+        "support_span_ids": [
+          "doc-judgment:p-013"
+        ]
+      },
+      {
+        "id": "amt-sh",
+        "title": "农商贷款发放",
+        "text": "法院查明贷款20万元。",
+        "value": "200000.00",
+        "currency": "CNY",
+        "role": "bank_disbursement",
+        "ledger_kind": "transaction",
+        "from_id": "bank-sh",
+        "to_id": "party-ma",
+        "support_span_ids": [
+          "doc-judgment:p-014"
+        ]
+      },
+      {
+        "id": "amt-bank-total",
+        "title": "银行贷款合计",
+        "text": "三家贷款合计54.40万元。",
+        "value": "544000.00",
+        "currency": "CNY",
+        "role": "bank_disbursement",
+        "ledger_kind": "aggregate",
+        "components": [
+          "amt-gf",
+          "amt-js",
+          "amt-sh"
+        ],
+        "support_span_ids": [
+          "doc-judgment:p-012",
+          "doc-judgment:p-013",
+          "doc-judgment:p-014",
+          "doc-judgment:p-020"
+        ]
+      },
+      {
+        "id": "amt-face",
+        "title": "借条/收条记载金额",
+        "text": "54.40万元，不能作为已实际交付金额。",
+        "value": "544000.00",
+        "currency": "CNY",
+        "role": "contract_face",
+        "ledger_kind": "contract",
+        "support_span_ids": [
+          "doc-judgment:p-015"
+        ]
+      },
+      {
+        "id": "amt-claim-principal",
+        "title": "诉请本金",
+        "text": "两版诉请均为54.40万元，身份不同于借条金额和实际交付。",
+        "value": "544000.00",
+        "currency": "CNY",
+        "role": "claimed_principal",
+        "ledger_kind": "claim",
+        "support_span_ids": [
+          "doc-judgment:p-007"
+        ]
+      },
+      {
+        "id": "amt-first",
+        "title": "首次交付合计",
+        "text": "四笔转账合计50.20万元，逐笔金额未披露；p-007、p-016、p-020 是同一汇总的重复叙述。",
+        "value": "502000.00",
+        "currency": "CNY",
+        "role": "actual_transfer",
+        "ledger_kind": "aggregate",
+        "from_id": "party-ma",
+        "to_id": "party-pi",
+        "transaction_count": 4,
+        "components": [],
+        "support_span_ids": [
+          "doc-judgment:p-007",
+          "doc-judgment:p-016",
+          "doc-judgment:p-020"
+        ]
+      },
+      {
+        "id": "amt-750",
+        "title": "12月5日转款750元",
+        "text": "法院查明当日打款。",
+        "value": "750.00",
+        "currency": "CNY",
+        "role": "actual_transfer",
+        "ledger_kind": "transaction",
+        "from_id": "party-ma",
+        "to_id": "party-pi",
+        "support_span_ids": [
+          "doc-judgment:p-017"
+        ]
+      },
+      {
+        "id": "amt-1350",
+        "title": "12月5日转款1350元",
+        "text": "法院查明当日打款。",
+        "value": "1350.00",
+        "currency": "CNY",
+        "role": "actual_transfer",
+        "ledger_kind": "transaction",
+        "from_id": "party-ma",
+        "to_id": "party-pi",
+        "support_span_ids": [
+          "doc-judgment:p-017"
+        ]
+      },
+      {
+        "id": "amt-20000",
+        "title": "12月9日转款2万元",
+        "text": "法院查明当日打款。",
+        "value": "20000.00",
+        "currency": "CNY",
+        "role": "actual_transfer",
+        "ledger_kind": "transaction",
+        "from_id": "party-ma",
+        "to_id": "party-pi",
+        "support_span_ids": [
+          "doc-judgment:p-017"
+        ]
+      },
+      {
+        "id": "amt-later",
+        "title": "追加交付合计",
+        "text": "22100元；退款与再次借款是对同一实际交付的不同解释，不另加一笔。",
+        "value": "22100.00",
+        "currency": "CNY",
+        "role": "actual_transfer",
+        "ledger_kind": "aggregate",
+        "components": [
+          "amt-750",
+          "amt-1350",
+          "amt-20000"
+        ],
+        "support_span_ids": [
+          "doc-judgment:p-007",
+          "doc-judgment:p-017",
+          "doc-judgment:p-020"
+        ]
+      },
+      {
+        "id": "amt-total",
+        "title": "法院按实际取得确定的返还金额",
+        "text": "502000 + 22100 = 524100元，不再叠加追加款子项或银行贷款合计。",
+        "value": "524100.00",
+        "currency": "CNY",
+        "role": "court_return",
+        "ledger_kind": "assessment",
+        "components": [
+          "amt-first",
+          "amt-later"
+        ],
+        "support_span_ids": [
+          "doc-judgment:p-020",
+          "doc-judgment:p-023"
+        ]
+      },
+      {
+        "id": "amt-withheld",
+        "title": "预扣一年利息",
+        "text": "原告称预扣4.20万元；法院认为相关部分未实际交付，不计入返还金额。",
+        "value": "42000.00",
+        "currency": "CNY",
+        "role": "prepaid_interest",
+        "ledger_kind": "contract",
+        "support_span_ids": [
+          "doc-judgment:p-007",
+          "doc-judgment:p-016",
+          "doc-judgment:p-020"
+        ]
+      },
+      {
+        "id": "amt-claimed-net",
+        "title": "原告自述累计利息",
+        "text": "原告自述2.19万元，未被本包修正或认证。",
+        "value": "21900.00",
+        "currency": "CNY",
+        "role": "claimed_net_interest",
+        "ledger_kind": "claim",
+        "support_span_ids": [
+          "doc-judgment:p-007"
+        ]
+      },
+      {
+        "id": "amt-claim-interest",
+        "title": "原诉请利息",
+        "text": "暂计利息2.21万元，与追加实际交付同值但不同事项。",
+        "value": "22100.00",
+        "currency": "CNY",
+        "role": "claimed_interest",
+        "ledger_kind": "claim",
+        "support_span_ids": [
+          "doc-judgment:p-007"
+        ]
+      },
+      {
+        "id": "amt-claim-penalty",
+        "title": "原诉请逾期违约金",
+        "text": "暂计4787.20元。",
+        "value": "4787.20",
+        "currency": "CNY",
+        "role": "claimed_penalty",
+        "ledger_kind": "claim",
+        "support_span_ids": [
+          "doc-judgment:p-007"
+        ]
+      },
+      {
+        "id": "amt-monthly",
+        "title": "借条约定月息",
+        "text": "3500元/月，不转为已发生实际交易。",
+        "value": "3500.00",
+        "currency": "CNY",
+        "role": "contract_interest",
+        "ledger_kind": "contract",
+        "support_span_ids": [
+          "doc-judgment:p-015"
+        ]
+      },
+      {
+        "id": "amt-fee-total",
+        "title": "案件受理费",
+        "text": "9508.87元，由两方分担。",
+        "value": "9508.87",
+        "currency": "CNY",
+        "role": "fee",
+        "ledger_kind": "fee",
+        "components": [
+          "amt-fee-ma",
+          "amt-fee-pi"
+        ],
+        "support_span_ids": [
+          "doc-judgment:p-025"
+        ]
+      },
+      {
+        "id": "amt-fee-ma",
+        "title": "原告负担受理费",
+        "text": "779.30元。",
+        "value": "779.30",
+        "currency": "CNY",
+        "role": "fee",
+        "ledger_kind": "fee",
+        "support_span_ids": [
+          "doc-judgment:p-025"
+        ]
+      },
+      {
+        "id": "amt-fee-pi",
+        "title": "被告负担受理费",
+        "text": "8729.57元。",
+        "value": "8729.57",
+        "currency": "CNY",
+        "role": "fee",
+        "ledger_kind": "fee",
+        "support_span_ids": [
+          "doc-judgment:p-025"
+        ]
+      },
+      {
+        "id": "amt-announcement",
+        "title": "公告费",
+        "text": "560元由被告负担，不与案件受理费混为同一总额。",
+        "value": "560.00",
+        "currency": "CNY",
+        "role": "fee",
+        "ledger_kind": "fee",
+        "support_span_ids": [
+          "doc-judgment:p-025"
+        ]
+      },
+      {
+        "id": "rate-gf",
+        "title": "广发年利率自述",
+        "text": "原告所述5.80%。",
+        "value": "5.80",
+        "currency": "PERCENT",
+        "role": "rate",
+        "ledger_kind": "rate",
+        "unit": "percent/year",
+        "support_span_ids": [
+          "doc-judgment:p-007"
+        ]
+      },
+      {
+        "id": "rate-sh",
+        "title": "农商年利率自述",
+        "text": "原告所述11.016%，保留精度。",
+        "value": "11.016",
+        "currency": "PERCENT",
+        "role": "rate",
+        "ledger_kind": "rate",
+        "unit": "percent/year",
+        "support_span_ids": [
+          "doc-judgment:p-007"
+        ]
+      },
+      {
+        "id": "rate-js",
+        "title": "江苏年利率自述",
+        "text": "原告所述5.13%。",
+        "value": "5.13",
+        "currency": "PERCENT",
+        "role": "rate",
+        "ledger_kind": "rate",
+        "unit": "percent/year",
+        "support_span_ids": [
+          "doc-judgment:p-007"
+        ]
+      },
+      {
+        "id": "rate-contract",
+        "title": "借条逾期违约金率",
+        "text": "原文为0.005%天，不以两位小数截断。",
+        "value": "0.005",
+        "currency": "PERCENT",
+        "role": "rate",
+        "ledger_kind": "rate",
+        "unit": "percent/day",
+        "support_span_ids": [
+          "doc-judgment:p-015"
+        ]
+      }
+    ],
+    "issues": [
+      {
+        "id": "issue-civil",
+        "title": "为何按民间借贷民事处理",
+        "text": "法院允许原告不再进行刑事报案、按民间借贷处理的权益处分；本包不判断刑事犯罪是否成立。",
+        "proceeding_id": "proc-first",
+        "origin": "analyst_organized_court_reasoning",
+        "claim_ids": [
+          "claim-principal-v2"
+        ],
+        "fact_ids": [
+          "fact-deception"
+        ],
+        "assertion_ids": [
+          "assert-deception"
+        ],
+        "evidence_ids": [],
+        "assessment_ids": [],
+        "authority_ids": [],
+        "decision_ids": [],
+        "court_conclusion": "准许按民间借贷处理。",
+        "open_questions": [
+          "未取得公安记录，不能推导刑事实体结论。"
+        ],
+        "support_span_ids": [
+          "doc-judgment:p-018",
+          "doc-judgment:p-019"
+        ]
+      },
+      {
+        "id": "issue-validity",
+        "title": "贷款转贷的合同效力",
+        "text": "法院以款项来源于金融机构贷款并转贷，认定双方民间借贷合同无效。此处复述原裁判，不声称当前法律通用结论。",
+        "proceeding_id": "proc-first",
+        "origin": "analyst_organized_court_reasoning",
+        "claim_ids": [
+          "claim-principal-v2"
+        ],
+        "fact_ids": [
+          "fact-bank",
+          "fact-first",
+          "fact-later-role"
+        ],
+        "assertion_ids": [
+          "assert-refund"
+        ],
+        "evidence_ids": [
+          "evidence-loan",
+          "evidence-bank",
+          "evidence-alipay",
+          "evidence-wechat"
+        ],
+        "assessment_ids": [
+          "assess-bank",
+          "assess-first",
+          "assess-later"
+        ],
+        "authority_ids": [
+          "authority-loan-13"
+        ],
+        "decision_ids": [
+          "decision-return"
+        ],
+        "court_conclusion": "一审认定民间借贷合同无效。",
+        "open_questions": [
+          "适用规范全文及版本尚未独立核验。"
+        ],
+        "support_span_ids": [
+          "doc-judgment:p-020",
+          "doc-judgment:p-022"
+        ]
+      },
+      {
+        "id": "issue-return",
+        "title": "实际应返还金额及预扣利息",
+        "text": "法院区分借条/诉请金额和实际交付，计入50.20万元与追加2.21万元，不计入未实际交付的预扣部分。",
+        "proceeding_id": "proc-first",
+        "origin": "analyst_organized_court_reasoning",
+        "claim_ids": [
+          "claim-principal-v1",
+          "claim-principal-v2",
+          "claim-interest-v1"
+        ],
+        "fact_ids": [
+          "fact-note",
+          "fact-first",
+          "fact-later",
+          "fact-later-role",
+          "fact-withheld"
+        ],
+        "assertion_ids": [
+          "assert-withheld",
+          "assert-refund"
+        ],
+        "evidence_ids": [
+          "evidence-note",
+          "evidence-receipt",
+          "evidence-bank",
+          "evidence-alipay",
+          "evidence-wechat"
+        ],
+        "assessment_ids": [
+          "assess-note",
+          "assess-first",
+          "assess-later",
+          "assess-withheld"
+        ],
+        "authority_ids": [
+          "authority-157",
+          "authority-loan-13",
+          "authority-loan-31"
+        ],
+        "amount_ids": [
+          "amt-face",
+          "amt-first",
+          "amt-later",
+          "amt-total",
+          "amt-withheld"
+        ],
+        "decision_ids": [
+          "decision-return"
+        ],
+        "court_conclusion": "合同无效后按实际取得财产返还52.41万元。",
+        "open_questions": [
+          "实际转账原件未取得；原告净利息自述存在另行待核的算术差异。"
+        ],
+        "support_span_ids": [
+          "doc-judgment:p-015",
+          "doc-judgment:p-016",
+          "doc-judgment:p-017",
+          "doc-judgment:p-020",
+          "doc-judgment:p-022",
+          "doc-judgment:p-023"
+        ]
+      },
+      {
+        "id": "issue-default",
+        "title": "未到庭的法律后果范围",
+        "text": "法院缺席审判并认为被告放弃相应诉讼权利，仍依据证据和实际交付确定返还金额。",
+        "proceeding_id": "proc-first",
+        "origin": "analyst_organized_court_reasoning",
+        "claim_ids": [
+          "claim-principal-v2"
+        ],
+        "fact_ids": [
+          "fact-attendance"
+        ],
+        "assertion_ids": [],
+        "evidence_ids": [],
+        "assessment_ids": [
+          "assess-default"
+        ],
+        "authority_ids": [
+          "authority-cpl-147"
+        ],
+        "decision_ids": [
+          "decision-return"
+        ],
+        "court_conclusion": "缺席程序后果不被整理为事实自认。",
+        "open_questions": [
+          "未取得送达材料、庭审笔录和完整质证过程。"
+        ],
+        "support_span_ids": [
+          "doc-judgment:p-006",
+          "doc-judgment:p-008",
+          "doc-judgment:p-021",
+          "doc-judgment:p-022"
+        ]
+      }
+    ],
+    "court_reasoning": [
+      {
+        "id": "p-019",
+        "sourceLine": 19,
+        "text": "本院认为，合法的民间借贷关系应受法律保护。本案中，原告虽称系受被告欺骗办理贷款手续，但原告明确不再进行刑事报案，按民间借贷处理本案，系原告对自身权益的处分，于法不悖，本院予以准许。",
+        "section": "裁判理由"
+      },
+      {
+        "id": "p-020",
+        "sourceLine": 20,
+        "text": "根据法律规定，套取金融机构贷款转贷的民间借贷合同无效。原告通过向银行贷款取得款项54.40万元，并于取得款项当日交付被告50.20万元。原告另于2022年12月5日、2022年12月9日因被告再次借款而交付被告2.21万元，并在诉状中自述该些款项属于预扣4.20万元的利息的退还，故本院认定该2.21万元资金亦来源于原告向银行贷款所得，故原告实际向被告出借的52.41万元款项，双方之间的民间借贷合同无效，但原告提供的证据，可以证明原告实际向被告交付上述款项，双方之间民间借贷合同无效后，因该合同取得的财产，应当予以返还，故该52.41万元款项，被告应向原告返还。至于原告预扣利息部分，因实际未向被告交付，被告亦实际未能利用该笔款项，且双方之间民间借贷合同无效，相关借款利息约定亦无效，故该笔款项不应作为被告实际取得的财产予以返还。",
+        "section": "裁判理由"
+      },
+      {
+        "id": "p-021",
+        "sourceLine": 21,
+        "text": "被告皮某经本院传票传唤，无正当理由拒不到庭参加诉讼，系其放弃相应的诉讼权利，因此产生的法律后果由其自行承担。",
+        "section": "裁判理由"
+      },
+      {
+        "id": "p-022",
+        "sourceLine": 22,
+        "text": "据此，依照《中华人民共和国民法典》第一百五十七条，《最高人民法院关于审理民间借贷案件适用法律若干问题的规定》第十三条第一款、第三十一条第一款，《中华人民共和国民事诉讼法》第一百四十七条规定，判决如下：",
+        "section": "裁判理由"
+      }
+    ],
+    "holdings": [
+      {
+        "id": "decision-return",
+        "title": "返还52.41万元",
+        "text": "被告于本判决生效之日起十日内归还原告52.41万元。生效日期未知，不生成绝对到期日。",
+        "kind": "judgment_order",
+        "proceeding_id": "proc-first",
+        "document_id": "doc-judgment",
+        "obligor_id": "party-pi",
+        "beneficiary_id": "party-ma",
+        "amount_ids": [
+          "amt-total"
+        ],
+        "effective_status": "unresolved",
+        "deadline": {
+          "trigger": "judgment_effective",
+          "days": 10,
+          "absolute_date": null
+        },
+        "later_changes": [],
+        "support_span_ids": [
+          "doc-judgment:p-023"
+        ]
+      },
+      {
+        "id": "decision-delay",
+        "title": "迟延履行债务利息",
+        "text": "如未按指定期间履行给付金钱义务，依引称民事诉讼法第二百六十条加倍支付迟延履行期间债务利息；未取得实际履行数据，不算金额。",
+        "kind": "conditional_order",
+        "proceeding_id": "proc-first",
+        "document_id": "doc-judgment",
+        "authority_ids": [
+          "authority-cpl-260"
+        ],
+        "effective_status": "unresolved",
+        "later_changes": [],
+        "support_span_ids": [
+          "doc-judgment:p-024"
+        ]
+      },
+      {
+        "id": "decision-fees",
+        "title": "受理费与公告费分担",
+        "text": "案件受理费9508.87元，原告779.30元、被告8729.57元；公告费560元由被告负担。",
+        "kind": "cost_order",
+        "proceeding_id": "proc-first",
+        "document_id": "doc-judgment",
+        "amount_ids": [
+          "amt-fee-total",
+          "amt-fee-ma",
+          "amt-fee-pi",
+          "amt-announcement"
+        ],
+        "effective_status": "unresolved",
+        "later_changes": [],
+        "support_span_ids": [
+          "doc-judgment:p-025"
+        ]
+      },
+      {
+        "id": "decision-appeal-notice",
+        "title": "上诉权利告知",
+        "text": "送达之日起十五日内可提出上诉，上诉于上海市第一中级人民法院。只是权利告知，不证明实际发生二审。",
+        "kind": "remedy_notice",
+        "proceeding_id": "proc-first",
+        "document_id": "doc-judgment",
+        "effective_status": "unresolved",
+        "deadline": {
+          "trigger": "judgment_served",
+          "days": 15,
+          "absolute_date": null
+        },
+        "later_changes": [],
+        "support_span_ids": [
+          "doc-judgment:p-026"
+        ]
+      }
+    ],
+    "cited_authorities": [
+      {
+        "id": "authority-157",
+        "title": "民法典第一百五十七条",
+        "text": "《中华人民共和国民法典》第一百五十七条，判决书引称；未独立取得适用版本全文。",
+        "version_status": "unresolved",
+        "full_text": null,
+        "legal_as_of": null,
+        "support_span_ids": [
+          "doc-judgment:p-022"
+        ]
+      },
+      {
+        "id": "authority-loan-13",
+        "title": "民间借贷规定第十三条第一款",
+        "text": "《最高人民法院关于审理民间借贷案件适用法律若干问题的规定》第十三条第一款，保留原文引称，不自行改写款项编号。",
+        "version_status": "unresolved",
+        "full_text": null,
+        "legal_as_of": null,
+        "support_span_ids": [
+          "doc-judgment:p-022"
+        ]
+      },
+      {
+        "id": "authority-loan-31",
+        "title": "民间借贷规定第三十一条第一款",
+        "text": "同一司法解释第三十一条第一款，判决书引称；适用版本未核验。",
+        "version_status": "unresolved",
+        "full_text": null,
+        "legal_as_of": null,
+        "support_span_ids": [
+          "doc-judgment:p-022"
+        ]
+      },
+      {
+        "id": "authority-cpl-147",
+        "title": "民事诉讼法第一百四十七条",
+        "text": "《中华人民共和国民事诉讼法》第一百四十七条，判决书引称；适用版本未核验。",
+        "version_status": "unresolved",
+        "full_text": null,
+        "legal_as_of": null,
+        "support_span_ids": [
+          "doc-judgment:p-022"
+        ]
+      },
+      {
+        "id": "authority-cpl-260",
+        "title": "民事诉讼法第二百六十条",
+        "text": "《中华人民共和国民事诉讼法》第二百六十条，迟延履行事项中的引称；适用版本未核验。",
+        "version_status": "unresolved",
+        "full_text": null,
+        "legal_as_of": null,
+        "support_span_ids": [
+          "doc-judgment:p-024"
+        ]
+      }
+    ],
+    "conditions_and_exceptions": [
+      {
+        "text": "材料取得范围限定；资金来源为原案推断，非逐笔原始流水鉴定",
+        "support_span_ids": [
+          "doc-judgment:p-020"
+        ]
+      }
+    ]
+  },
+  "authority_data": null,
+  "guidance_data": null,
+  "source_spans": [
+    {
+      "id": "doc-judgment:p-001",
+      "document_id": "doc-judgment",
+      "text_version": "redacted-view-1",
+      "locator": {
+        "paragraph_id": "p-001",
+        "source_line": 1
+      },
+      "quote": "上海市闵行区人民法院",
+      "view_sha256": "5735df246160af2f3f6cc854cbff91ea2719e26bbebdb940604b34be10efbbeb"
+    },
+    {
+      "id": "doc-judgment:p-002",
+      "document_id": "doc-judgment",
+      "text_version": "redacted-view-1",
+      "locator": {
+        "paragraph_id": "p-002",
+        "source_line": 2
+      },
+      "quote": "民事判决书",
+      "view_sha256": "5735df246160af2f3f6cc854cbff91ea2719e26bbebdb940604b34be10efbbeb"
+    },
+    {
+      "id": "doc-judgment:p-003",
+      "document_id": "doc-judgment",
+      "text_version": "redacted-view-1",
+      "locator": {
+        "paragraph_id": "p-003",
+        "source_line": 3
+      },
+      "quote": "案号：（2023）沪0112民初23060号",
+      "view_sha256": "5735df246160af2f3f6cc854cbff91ea2719e26bbebdb940604b34be10efbbeb"
+    },
+    {
+      "id": "doc-judgment:p-004",
+      "document_id": "doc-judgment",
+      "text_version": "redacted-view-1",
+      "locator": {
+        "paragraph_id": "p-004",
+        "source_line": 4
+      },
+      "quote": "原告：马某。",
+      "view_sha256": "5735df246160af2f3f6cc854cbff91ea2719e26bbebdb940604b34be10efbbeb"
+    },
+    {
+      "id": "doc-judgment:p-005",
+      "document_id": "doc-judgment",
+      "text_version": "redacted-view-1",
+      "locator": {
+        "paragraph_id": "p-005",
+        "source_line": 5
+      },
+      "quote": "被告：皮某。",
+      "view_sha256": "5735df246160af2f3f6cc854cbff91ea2719e26bbebdb940604b34be10efbbeb"
+    },
+    {
+      "id": "doc-judgment:p-006",
+      "document_id": "doc-judgment",
+      "text_version": "redacted-view-1",
+      "locator": {
+        "paragraph_id": "p-006",
+        "source_line": 6
+      },
+      "quote": "原告马某与被告皮某民间借贷纠纷一案，本院于2023年5月6日立案后，先适用简易程序，经审理发现有不宜适用简易程序的情形，裁定转为普通程序并由审判员独任审理，于2023年9月25日公开开庭进行了审理。原告马某到庭参加诉讼。被告皮某经公告送达开庭传票，未到庭参加诉讼，本案依法缺席审判。本案现已审理终结。",
+      "view_sha256": "5735df246160af2f3f6cc854cbff91ea2719e26bbebdb940604b34be10efbbeb"
+    },
+    {
+      "id": "doc-judgment:p-007",
+      "document_id": "doc-judgment",
+      "text_version": "redacted-view-1",
+      "locator": {
+        "paragraph_id": "p-007",
+        "source_line": 7
+      },
+      "quote": "原告马某向本院提出诉讼请求：1.判令被告立即返还原告借款本金54.40万元；2.判令被告立即支付自2023年3月至还款时的利息，暂计至2023年8月23日为2.21万元；3.判令被告支付从2023年3月1日至还款时所产生的逾期违约金，暂计至2023年8月23日为4,787.20元；4.判令被告承担本案诉讼及执行过程中涉及的案件受理费、保全费、执行费等全部相关诉讼费用。诉讼中，原告变更诉讼请求为：1.判令被告归还借款本金54.40万元；2.判令被告承担本案诉讼及执行过程中涉及的案件受理费、执行费等全部相关诉讼费用。事实与理由：原、被告双方为普通朋友关系，2022年8月22日被告微信上与原告联系，告知自己申请的贷款已批，但提款时需要第三方在场方可提款，并以此为由要求原告以普通朋友身份陪同前往银行提取贷款，并要求原告携带原告本人四大银行征信报告提供给贷款银行查看。原告出于朋友帮忙之心同意了被告的请求，并于2022年8月24日与被告一同前往，但当天被告并未带原告前往银行，而是前往位于静安区XX广场XX楼的XX易融公司（金融贷款中介公司，以下简称“中介公司”）。在未经原告同意的情况下，被告私下告知中介公司原告是其男友，让中介公司协助以原告本人的身份向银行申请贷款审批。因原告从未有过贷款经历、不熟悉相关流程且出于帮助朋友的善意，在未清楚了解状况的情况下，以原告个人名义贷款了54.40万元本金，分别为广发银行14.40万元（年利率5.80%）、上海农商银行20万元（年利率11.016%）元、江苏银行20万元（年利率5.13%）。2022年8月24日，中介公司现场计算54.40万元在一年期间产生的利息共4.20万元，均摊至每月利息为3,500元，中介公司与被告一同私下写好借条交给原告，借条内容为：约定1年期间按月付利息3,500元、到期还款。贷款审批到账后，原告于2022年8月24日至25日分批将本金扣除利息后的50.20万元转至被告工商银行（账户已脱敏）账户中，被告预支1年期间产生的利息。2022年12月5日至9日，被告因资金紧张请求原告退还部分利息2.21万，原告通过支付宝转2.21万给被告，故被告累计支付原告利息2.19万。后原告多次催讨，被告电话关机或停机，微信不回。现原告为维护自身合法权益，诉至法院。",
+      "view_sha256": "5735df246160af2f3f6cc854cbff91ea2719e26bbebdb940604b34be10efbbeb"
+    },
+    {
+      "id": "doc-judgment:p-008",
+      "document_id": "doc-judgment",
+      "text_version": "redacted-view-1",
+      "locator": {
+        "paragraph_id": "p-008",
+        "source_line": 8
+      },
+      "quote": "被告皮某未到庭答辩亦未提供证据。",
+      "view_sha256": "5735df246160af2f3f6cc854cbff91ea2719e26bbebdb940604b34be10efbbeb"
+    },
+    {
+      "id": "doc-judgment:p-009",
+      "document_id": "doc-judgment",
+      "text_version": "redacted-view-1",
+      "locator": {
+        "paragraph_id": "p-009",
+        "source_line": 9
+      },
+      "quote": "当事人围绕诉讼请求依法提交了借条、收条、银行明细、贷款合同、支付宝付款截图、微信聊天记录截图等证据，本院予以确认并在卷佐证。",
+      "view_sha256": "5735df246160af2f3f6cc854cbff91ea2719e26bbebdb940604b34be10efbbeb"
+    },
+    {
+      "id": "doc-judgment:p-010",
+      "document_id": "doc-judgment",
+      "text_version": "redacted-view-1",
+      "locator": {
+        "paragraph_id": "p-010",
+        "source_line": 10
+      },
+      "quote": "本院经审理查明如下事实：",
+      "view_sha256": "5735df246160af2f3f6cc854cbff91ea2719e26bbebdb940604b34be10efbbeb"
+    },
+    {
+      "id": "doc-judgment:p-011",
+      "document_id": "doc-judgment",
+      "text_version": "redacted-view-1",
+      "locator": {
+        "paragraph_id": "p-011",
+        "source_line": 11
+      },
+      "quote": "原、被告系朋友关系。",
+      "view_sha256": "5735df246160af2f3f6cc854cbff91ea2719e26bbebdb940604b34be10efbbeb"
+    },
+    {
+      "id": "doc-judgment:p-012",
+      "document_id": "doc-judgment",
+      "text_version": "redacted-view-1",
+      "locator": {
+        "paragraph_id": "p-012",
+        "source_line": 12
+      },
+      "quote": "2022年8月24日，原告与广发银行签订贷款合同，由原告向广发银行贷款，当日，广发银行向原告发放贷款14.40万元，后原告于2023年2月9日结清该贷款。",
+      "view_sha256": "5735df246160af2f3f6cc854cbff91ea2719e26bbebdb940604b34be10efbbeb"
+    },
+    {
+      "id": "doc-judgment:p-013",
+      "document_id": "doc-judgment",
+      "text_version": "redacted-view-1",
+      "locator": {
+        "paragraph_id": "p-013",
+        "source_line": 13
+      },
+      "quote": "2022年8月24日，原告与江苏银行签订贷款合同，由原告向江苏银行贷款，当日，江苏银行向原告发放贷款20万元，后原告于2023年2月13日结清该贷款。",
+      "view_sha256": "5735df246160af2f3f6cc854cbff91ea2719e26bbebdb940604b34be10efbbeb"
+    },
+    {
+      "id": "doc-judgment:p-014",
+      "document_id": "doc-judgment",
+      "text_version": "redacted-view-1",
+      "locator": {
+        "paragraph_id": "p-014",
+        "source_line": 14
+      },
+      "quote": "2022年8月24日，原告与上海农商业银行签订贷款合同，由原告向农商银行贷款20万元，当日，上海农商银行向原告发放贷款20万元，现贷款已结清。",
+      "view_sha256": "5735df246160af2f3f6cc854cbff91ea2719e26bbebdb940604b34be10efbbeb"
+    },
+    {
+      "id": "doc-judgment:p-015",
+      "document_id": "doc-judgment",
+      "text_version": "redacted-view-1",
+      "locator": {
+        "paragraph_id": "p-015",
+        "source_line": 15
+      },
+      "quote": "2022年8月24日，被告向原告出具《借条》一份，载明：“今皮某（杨X）向马某借款人民币544000.00/，大写伍拾肆万肆仟元，自2022年8月24日起至2023年8月23日止，双方约定按月付息，到期一次性归还全部本金，每月利息3500./，双方按约定日期定期还款，不得拖欠，如不能按时归还，逾期违约金0.005%天，并承担所产生的额外一切费用及法律责任。借款人：皮某、出借人：马某。”当日，被告向原告出具收条一份，载明收到原告54.40万元，用于资金周转，收款方式为转账。",
+      "view_sha256": "5735df246160af2f3f6cc854cbff91ea2719e26bbebdb940604b34be10efbbeb"
+    },
+    {
+      "id": "doc-judgment:p-016",
+      "document_id": "doc-judgment",
+      "text_version": "redacted-view-1",
+      "locator": {
+        "paragraph_id": "p-016",
+        "source_line": 16
+      },
+      "quote": "2022年8月24日至2022年8月25日，原告通过其名下账户信息已脱敏的账户向被告名下账户信息已脱敏的账户转账四笔，共计50.20万元。诉讼中，原告自述上述金额系扣除贷款54.40万元一年的利息4.20万元。",
+      "view_sha256": "5735df246160af2f3f6cc854cbff91ea2719e26bbebdb940604b34be10efbbeb"
+    },
+    {
+      "id": "doc-judgment:p-017",
+      "document_id": "doc-judgment",
+      "text_version": "redacted-view-1",
+      "locator": {
+        "paragraph_id": "p-017",
+        "source_line": 17
+      },
+      "quote": "被告曾通过微信指导原告配合办理贷款审批手续，2022年12月5日，被告通过微信向原告借款750元用于缴纳家中水电费，并向原告提供支付宝账户，当日又表示要借款1,350元还花呗。2022年12月9日，被告表示钱不够，原告展示支付宝余额后，被告表示取2万元。上述款项，原告均通过支付宝于当日向被告打款，合计22,100元。",
+      "view_sha256": "5735df246160af2f3f6cc854cbff91ea2719e26bbebdb940604b34be10efbbeb"
+    },
+    {
+      "id": "doc-judgment:p-018",
+      "document_id": "doc-judgment",
+      "text_version": "redacted-view-1",
+      "locator": {
+        "paragraph_id": "p-018",
+        "source_line": 18
+      },
+      "quote": "诉讼中，原告自述系受被告欺骗，办理了贷款手续，曾向警方报警，警方表示双方相识且原告持有被告出具的借条，不予立案，原告亦表示不再进行刑事立案。现因被告未能还款，原告以民间借贷为由诉至本院。",
+      "view_sha256": "5735df246160af2f3f6cc854cbff91ea2719e26bbebdb940604b34be10efbbeb"
+    },
+    {
+      "id": "doc-judgment:p-019",
+      "document_id": "doc-judgment",
+      "text_version": "redacted-view-1",
+      "locator": {
+        "paragraph_id": "p-019",
+        "source_line": 19
+      },
+      "quote": "本院认为，合法的民间借贷关系应受法律保护。本案中，原告虽称系受被告欺骗办理贷款手续，但原告明确不再进行刑事报案，按民间借贷处理本案，系原告对自身权益的处分，于法不悖，本院予以准许。",
+      "view_sha256": "5735df246160af2f3f6cc854cbff91ea2719e26bbebdb940604b34be10efbbeb"
+    },
+    {
+      "id": "doc-judgment:p-020",
+      "document_id": "doc-judgment",
+      "text_version": "redacted-view-1",
+      "locator": {
+        "paragraph_id": "p-020",
+        "source_line": 20
+      },
+      "quote": "根据法律规定，套取金融机构贷款转贷的民间借贷合同无效。原告通过向银行贷款取得款项54.40万元，并于取得款项当日交付被告50.20万元。原告另于2022年12月5日、2022年12月9日因被告再次借款而交付被告2.21万元，并在诉状中自述该些款项属于预扣4.20万元的利息的退还，故本院认定该2.21万元资金亦来源于原告向银行贷款所得，故原告实际向被告出借的52.41万元款项，双方之间的民间借贷合同无效，但原告提供的证据，可以证明原告实际向被告交付上述款项，双方之间民间借贷合同无效后，因该合同取得的财产，应当予以返还，故该52.41万元款项，被告应向原告返还。至于原告预扣利息部分，因实际未向被告交付，被告亦实际未能利用该笔款项，且双方之间民间借贷合同无效，相关借款利息约定亦无效，故该笔款项不应作为被告实际取得的财产予以返还。",
+      "view_sha256": "5735df246160af2f3f6cc854cbff91ea2719e26bbebdb940604b34be10efbbeb"
+    },
+    {
+      "id": "doc-judgment:p-021",
+      "document_id": "doc-judgment",
+      "text_version": "redacted-view-1",
+      "locator": {
+        "paragraph_id": "p-021",
+        "source_line": 21
+      },
+      "quote": "被告皮某经本院传票传唤，无正当理由拒不到庭参加诉讼，系其放弃相应的诉讼权利，因此产生的法律后果由其自行承担。",
+      "view_sha256": "5735df246160af2f3f6cc854cbff91ea2719e26bbebdb940604b34be10efbbeb"
+    },
+    {
+      "id": "doc-judgment:p-022",
+      "document_id": "doc-judgment",
+      "text_version": "redacted-view-1",
+      "locator": {
+        "paragraph_id": "p-022",
+        "source_line": 22
+      },
+      "quote": "据此，依照《中华人民共和国民法典》第一百五十七条，《最高人民法院关于审理民间借贷案件适用法律若干问题的规定》第十三条第一款、第三十一条第一款，《中华人民共和国民事诉讼法》第一百四十七条规定，判决如下：",
+      "view_sha256": "5735df246160af2f3f6cc854cbff91ea2719e26bbebdb940604b34be10efbbeb"
+    },
+    {
+      "id": "doc-judgment:p-023",
+      "document_id": "doc-judgment",
+      "text_version": "redacted-view-1",
+      "locator": {
+        "paragraph_id": "p-023",
+        "source_line": 23
+      },
+      "quote": "被告皮某于本判决生效之日起十日内归还原告马某52.41万元。",
+      "view_sha256": "5735df246160af2f3f6cc854cbff91ea2719e26bbebdb940604b34be10efbbeb"
+    },
+    {
+      "id": "doc-judgment:p-024",
+      "document_id": "doc-judgment",
+      "text_version": "redacted-view-1",
+      "locator": {
+        "paragraph_id": "p-024",
+        "source_line": 24
+      },
+      "quote": "如果未按本判决指定的期间履行给付金钱义务，应当依照《中华人民共和国民事诉讼法》第二百六十条之规定，加倍支付迟延履行期间的债务利息。",
+      "view_sha256": "5735df246160af2f3f6cc854cbff91ea2719e26bbebdb940604b34be10efbbeb"
+    },
+    {
+      "id": "doc-judgment:p-025",
+      "document_id": "doc-judgment",
+      "text_version": "redacted-view-1",
+      "locator": {
+        "paragraph_id": "p-025",
+        "source_line": 25
+      },
+      "quote": "案件受理费9,508.87元，由原告马某负担779.30元，由被告皮某负担8,729.57元；公告费560元，由被告皮某负担。",
+      "view_sha256": "5735df246160af2f3f6cc854cbff91ea2719e26bbebdb940604b34be10efbbeb"
+    },
+    {
+      "id": "doc-judgment:p-026",
+      "document_id": "doc-judgment",
+      "text_version": "redacted-view-1",
+      "locator": {
+        "paragraph_id": "p-026",
+        "source_line": 26
+      },
+      "quote": "如不服本判决，可在判决书送达之日起十五日内，向本院递交上诉状，并按对方当事人或代表人的人数提出副本，上诉于上海市第一中级人民法院。",
+      "view_sha256": "5735df246160af2f3f6cc854cbff91ea2719e26bbebdb940604b34be10efbbeb"
+    },
+    {
+      "id": "doc-judgment:p-027",
+      "document_id": "doc-judgment",
+      "text_version": "redacted-view-1",
+      "locator": {
+        "paragraph_id": "p-027",
+        "source_line": 27
+      },
+      "quote": "审判员及书记员署名已省略",
+      "view_sha256": "5735df246160af2f3f6cc854cbff91ea2719e26bbebdb940604b34be10efbbeb"
+    },
+    {
+      "id": "doc-judgment:p-031",
+      "document_id": "doc-judgment",
+      "text_version": "redacted-view-1",
+      "locator": {
+        "paragraph_id": "p-031",
+        "source_line": 31
+      },
+      "quote": "二○二三年十一月二十一日",
+      "view_sha256": "5735df246160af2f3f6cc854cbff91ea2719e26bbebdb940604b34be10efbbeb"
+    }
+  ],
+  "normalization_quality": {
+    "status": "partial",
+    "missing_fields": [
+      "证据原件",
+      "首次四笔逐笔金额",
+      "追加款银行来源逐笔追踪",
+      "净利息冲突解释"
+    ],
+    "conflicts": [
+      "原告自述21900与42000-22100=19900不符"
+    ],
+    "alignment_check": "pass",
+    "review_run_id": "dossier-map-and-existing-semantic-check",
+    "unit_scope": "返还范围只以已记载交付事实与明示资金来源推断为前提，不恢复未知原件"
+  }
+}

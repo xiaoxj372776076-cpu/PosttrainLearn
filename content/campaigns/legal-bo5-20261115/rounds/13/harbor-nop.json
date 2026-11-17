@@ -1,0 +1,30 @@
+{
+  "job": "legal-bo5-13-nop",
+  "finished_at": "2026-11-15T00:34:58.123062Z",
+  "exceptions": [],
+  "completed_answer": false,
+  "infrastructure_failure": false,
+  "report": {
+    "passed": false,
+    "score": 0,
+    "failure_class": "format_only_pending_semantic_review",
+    "error": "Expecting value: line 1 column 1 (char 0)",
+    "checks": {},
+    "failed_checks": [
+      "A_valid",
+      "A_restitution",
+      "A_guarantee",
+      "B_initial_principal",
+      "B_protected_total",
+      "B_guarantee",
+      "C_outstanding_principal",
+      "C_outstanding_interest",
+      "C_outstanding_expenses",
+      "C_guarantee",
+      "borrower_total",
+      "B_second_guarantee",
+      "B_joint_payment_limit"
+    ]
+  },
+  "reward": 0.0
+}

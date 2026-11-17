@@ -1,0 +1,27 @@
+{
+  "round": 13,
+  "status": "completed_not_confirmed",
+  "full_chain_completed": true,
+  "skill_version": "1.2.12",
+  "measured": {
+    "valid": false,
+    "correct": 4,
+    "n": 5,
+    "target_hit": false,
+    "deterministic_successes": 4,
+    "reason": "reference_not_supported"
+  },
+  "confirmation": null,
+  "confirmed_target_hit": false,
+  "next_level": 6,
+  "training_rows": 0,
+  "release_status": "quarantine",
+  "assessed_difficulty": "D4",
+  "analysis": "依据随题事实、规范摘录及日期和算式复核，题面能够支持唯一的必要法律状态及最终金额，question_valid=true。工程参考answer中的状态和金额可获支持，但proof.shared_cutoff_payment.basis援引“later S14”；学生材料没有S14，也没有该所谓后来事件，因此完整参考的来源对齐不通过，reference_supported=false。SP-01归属仅凭S06、S10、S13即可确定，这一参考瑕疵不计为学生错误。按用户要求，当前冻结参考存在错误时拒绝难度验收，故difficulty_mechanism_valid=false；D4仅表示题面包含保证分别行权、内部追偿前提、担保比较与抵充、跨时利率及结息限额等必要依赖的结构性评估，不是经验难度认证。五份均为有效完成答案，未见截断、基础设施失败或应计为实质错误的格式问题。法律层5/5、最终金额层4/5、依据层4/5，整体4/5；不能记为1—2/5。唯一实质失败来自第4份的B结息运算，不能据此声称法律推理能力不足。分项核验同时覆盖B余额、C本金和利息以及戊付款上限，没有仅凭总额判定。此次未调用工具、联网核验规范页面或验证所附哈希，也不能仅凭答卷确认盲答模型及上下文的独立性；不构成专家审核或法律金标。",
+  "remaining_gates": [
+    "expert_review",
+    "source_and_export_permissions",
+    "independent_family_confirmation",
+    "benchmark_source_overlap"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "version": "0.1.0",
+  "skill_version": "1.1.0",
+  "title": "从真实案件到可验证训练样本",
+  "note": "这是链路研究看板，不是自动执行器。案件包是整案层，P1 前需按任务范围映射为 material_pack 并通过准入。模型调用、few-shot 选择和专家审计日志尚未产生。",
+  "stages": [
+    {"id":"source","code":"S0","title":"原始材料与使用边界","subtitle":"冻结来源，先知道手里有什么","input":"法院公开页面及来源记录","output":"冻结文本、脱敏展示视图、来源指纹与取得范围","gate":"记录来源和版本；训练、再分发、外部传输权限独立确认；私有身份与原件不进入公开包。","prompt_key":null},
+    {"id":"dossier","code":"P0","title":"统一格式整理","subtitle":"把整案关系保留下来，而不是只写摘要","input":"冻结展示视图、来源定位、Case Dossier Schema 0.1","output":"案件包 JSON 0.1.0、同底稿生成的 casebook.md、字段与来源检查","gate":"区分陈述/认定、交易/诉请、提及/原件；来源对齐；缺口显式记录。partial 不等于训练 ready。","prompt_key":"P0"},
+    {"id":"units","code":"P1","title":"提取可命题判断点","subtitle":"先找到值得判断的问题","input":"已准入的 material_pack、必要原文、任务规格与法律时点；当前仅有案件包中的研究争点卡","output":"decision_unit：issue、court_conclusion、decisive_facts、conditions_and_exceptions、support_spans、answerability、unresolved_issues","gate":"一个主要判断点；决定性事实有来源；明确答案侧信息与可见上下文；不足时弃用。当前 4 张争点卡不等于已批准单元。","prompt_key":"P1"},
+    {"id":"seeds","code":"FS","title":"种子筛选与 Few-Shot","subtitle":"示范推理结构，不迁移法律结论","input":"PLawBench 开发种子、任务类型、目标难度、推理操作与使用权限","output":"few_shot_run_id、seed_ids、匹配/排除理由、示例输入快照与指纹","gate":"先隔离保留评测，再检查答案、权限与难度；优先匹配推理结构。没有合适种子时记录缺口，不自动挪用 benchmark。","prompt_key":null},
+    {"id":"questions","code":"P2","title":"候选问题生成","subtitle":"难度来自必要关系，不来自题面长度","input":"已批准 decision_unit、任务规格、目标难度、已筛选 few-shot","output":"候选问题、required_fact_ids、seed_ids、seed_structure_transfer、difficulty_basis、shortcut_risks、leakage_risks","gate":"保持决定性事实；不泄露原裁判；D3 要求确有必要的多个推理操作。材料撑不起难度则返回 difficulty_not_supported。","prompt_key":"P2"},
+    {"id":"sufficiency","code":"P3","title":"题面与难度检查","subtitle":"只看学生实际能看到的内容","input":"最终问题、student_context、任务输出规格；不提供预设答案和法院结论","output":"question_sufficiency、missing_information、ambiguities、answer_leakage、assessed_difficulty、required_repairs","gate":"自包含且不泄漏；用最短合理解答检查捷径；题面长或示例难不算难度证据。","prompt_key":"P3"},
+    {"id":"answer","code":"P4","title":"有据答案与短解释","subtitle":"每个结论都要能找到依据","input":"合格问题、证据单元、独立核验的法律全文/版本；默认不再传出题种子的答案","output":"answer、rationale、answer_support_span_ids、authority_refs、assumptions；金额题增加 calculation_items 和 expression","gate":"事实与法律都可追溯，前提和例外明确；不足则 insufficient；短依据不是模型内部思维链。","prompt_key":"P4"},
+    {"id":"blind","code":"P5","title":"独立盲答","subtitle":"另一个上下文，独立走一遍","input":"问题和学生可见上下文，以及任务允许的权威检索范围；不给旧答案或历史会话","output":"blind_answer、brief_basis、support_sources、missing_information、cannot_determine","gate":"独立会话与输入留痕；结论一致但无来源仍不通过；不靠字符串相同认证法律一致。","prompt_key":"P5"},
+    {"id":"audit","code":"P6","title":"证据、法律与答案审计","subtitle":"机器复算与专家判断各自留痕","input":"问题、答案、短解释、盲答、已核验来源与版本","output":"8 维审计 pass/fail/unresolved/not_applicable、remaining_issues、repair_scope、专家审核记录","gate":"检查事实冒认、版本错用、漏例外、数字重复、盲答分歧和难度；P0 的结构通过不等于这里通过。","prompt_key":"P6"},
+    {"id":"variants","code":"G0","title":"变体一致性与分组切分","subtitle":"同案变体不能跨训练与测试","input":"已审计样本、改写日志、case_id/unit_id/group_id、开发种子和保留评测清单","output":"变体复核记录、group_id、按案件/来源家族分组的切分与近重复检查","gate":"仅样式改写可沿用标签，事实变化必须重做审计；同单元与来源家族分组；检查 benchmark 重叠。","prompt_key":null},
+    {"id":"export","code":"E0","title":"导出与验收","subtitle":"输出可训练数据，而不是看板内容","input":"所有必要检查通过的 accepted 样本和运行/版本记录","output":"训练样本契约 1.1 JSONL、发布统计、排除原因、许可与审核追溯","gate":"权限、隐私、材料、题面、证据、法律、答案、盲答、数值、变体和难度逐项准入；不得将本案整理稿当训练样本。","prompt_key":null},
+    {"id":"negative","code":"P7","title":"可选：证据约束错误主张","subtitle":"只构造可被明确反驳的主张","input":"已验证主张、同问题的核验来源；仅在需要 claim_verification 时启用","output":"false_claim、changed_proposition、refuting_span_ids、why_refuted、ambiguity_risks","gate":"未知不等于被反驳；没有明确反证就放弃；重做 P3/P5/P6 并同组切分，不默认转为 DPO 对。","prompt_key":"P7","optional":true}
+  ]
+}

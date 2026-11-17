@@ -1,0 +1,51 @@
+{
+  "seed_ids": [
+    "case-068"
+  ],
+  "benchmark_sent": true,
+  "full_context": true,
+  "full_question": true,
+  "full_original_rubrics": true,
+  "full_answer": true,
+  "answer_origin": "rubric_derived_reconstruction",
+  "not_expert_gold": true,
+  "supplemental_eligibility_review": {
+    "id": "case-068",
+    "source_supported": true,
+    "legal_core_supported": true,
+    "target_has_substantive_error": true,
+    "target_error": {
+      "answer_quote": "法院应部分支持甲公司的知情权请求：判令丙银行向其提供持股期间依法属于股份有限公司股东可查阅范围的公司章程、股东大会会议记录、财务会计报告等文件供查阅；对复制上述文件及查阅、复制会计账簿的请求不予支持；驳回甲公司要求补足分红差额及其他收益3000万元及利息的诉讼请求。",
+      "expected": "应驳回甲公司的全部诉讼请求，包括查阅、复制公司章程、股东大会会议记录、会计账簿及补足分红差额等请求；司法解释（四）第7条的初步证据仅涉及受理例外，不能替代实体审查，差异已有合理解释，未证明持股期间合法权益受损。",
+      "reason": "目标回答把原股东知情权的受理例外直接转化为实体知情权支持，未按公开案例最终裁判认定甲公司未证明持股期间权益受损，且与两份财务报告差异已有合理解释的事实相矛盾，属于结论层面的决定性法律错误。"
+    },
+    "eligible_dev_seed": true,
+    "critical_unresolved": [],
+    "noncritical_corrections": [
+      "在独立附注中补充案涉行为时《公司法》第97条（股份公司股东查阅公司章程、股东大会会议记录、财务会计报告）、第99条结合第37条（股东大会审议批准利润分配方案）及第20条，并注明司法解释（四）第7条是受理例外而非实体胜诉依据。",
+      "注明应按2013年《公司法》等历史规则分析，避免将旧法条号与现行条文混同。",
+      "附注说明两份财务报告差异的三项原因已足以解释，不能仅凭净利润差异认定持股期间权益受损或利润分配方案违法。",
+      "保留原题和rubric不变，不把补正说明伪装成原benchmark内容。"
+    ],
+    "release_limitations": [
+      "公开发布许可仍未解决；本结论仅支持本地开发参考，不构成公开再发布许可。",
+      "来源为法院公开案例说明及司法解释文本，不是完整卷宗或独立专家审核。",
+      "补正附注不得表述为原benchmark的既有内容或现行法全文。"
+    ],
+    "reason": "公开法院案例与司法解释文本支持原benchmark的核心裁判结论，即驳回甲公司全部诉讼请求；目标模型实际回答却部分支持知情权查阅请求，存在实体结论错误。原rubric未列股份公司知情权准用条文等法条引用缺口，可通过独立附注补正，不修改原题/rubric，故在本地开发中可作为有补正说明的种子使用；公开许可问题另列为发布限制。",
+    "source_urls": [
+      "https://kfzy.hncourt.gov.cn/public/detail.php?id=9945",
+      "https://www.court.gov.cn/zixun/xiangqing/57402.html"
+    ],
+    "method": "same_family_new_context_explicit_target_error_and_seed_eligibility",
+    "expert_review": false,
+    "previous_audits_unchanged": true
+  },
+  "selection": "Observed substantive errors in target-model probes; original audits retained, supplemental source-supported eligibility review shown separately; no human expert review.",
+  "hashes": [
+    {
+      "id": "case-068",
+      "sha256": "c434610154a2612e7abf51d005fcc685d089e9343c2474f777b388d94ad33849"
+    }
+  ]
+}

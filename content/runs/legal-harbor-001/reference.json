@@ -1,0 +1,203 @@
+{
+  "schema_version": "harbor-legal-audit-0.1",
+  "legal": {
+    "lending_version": "lending-2020-12",
+    "invalidity_article": "13(1)",
+    "transition_article": "31(1)",
+    "civil_code_article": "157",
+    "validity": "invalid",
+    "needs_2015_extra_conditions": false,
+    "source_ids": [
+      "lending-2020-12",
+      "civil-code-2020",
+      "p-006",
+      "p-012",
+      "p-013",
+      "p-014",
+      "p-016",
+      "p-007"
+    ],
+    "reason": "受理及行为均在2021后，适用第二次修正版；原告银行借款转贷，附加款按其退还预扣款自述推断同源；无效后返还实际取得财产。旧版高利和知情不是现行此条的额外要件。"
+  },
+  "ledger": [
+    {
+      "id": "m01",
+      "value": "144000.00",
+      "role": "bank_disbursement",
+      "treatment": "exclude",
+      "source_ids": [
+        "p-012"
+      ],
+      "reason": "非本题实际取得的新增本金"
+    },
+    {
+      "id": "m02",
+      "value": "200000.00",
+      "role": "bank_disbursement",
+      "treatment": "exclude",
+      "source_ids": [
+        "p-013"
+      ],
+      "reason": "非本题实际取得的新增本金"
+    },
+    {
+      "id": "m03",
+      "value": "200000.00",
+      "role": "bank_disbursement",
+      "treatment": "exclude",
+      "source_ids": [
+        "p-014"
+      ],
+      "reason": "非本题实际取得的新增本金"
+    },
+    {
+      "id": "m04",
+      "value": "544000.00",
+      "role": "contract_face",
+      "treatment": "exclude",
+      "source_ids": [
+        "p-015"
+      ],
+      "reason": "非本题实际取得的新增本金"
+    },
+    {
+      "id": "m05",
+      "value": "544000.00",
+      "role": "receipt_face",
+      "treatment": "exclude",
+      "source_ids": [
+        "p-015"
+      ],
+      "reason": "非本题实际取得的新增本金"
+    },
+    {
+      "id": "m06",
+      "value": "502000.00",
+      "role": "actual_transfer",
+      "treatment": "include",
+      "source_ids": [
+        "p-016"
+      ],
+      "reason": "已记载实际交付，纳入一次"
+    },
+    {
+      "id": "m07",
+      "value": "502000.00",
+      "role": "transfer_duplicate",
+      "treatment": "duplicate",
+      "source_ids": [
+        "p-007"
+      ],
+      "reason": "同一交付事件重复叙述，不新增"
+    },
+    {
+      "id": "m08",
+      "value": "750.00",
+      "role": "actual_transfer",
+      "treatment": "include",
+      "source_ids": [
+        "p-017"
+      ],
+      "reason": "已记载实际交付，纳入一次"
+    },
+    {
+      "id": "m09",
+      "value": "1350.00",
+      "role": "actual_transfer",
+      "treatment": "include",
+      "source_ids": [
+        "p-017"
+      ],
+      "reason": "已记载实际交付，纳入一次"
+    },
+    {
+      "id": "m10",
+      "value": "20000.00",
+      "role": "actual_transfer",
+      "treatment": "include",
+      "source_ids": [
+        "p-017"
+      ],
+      "reason": "已记载实际交付，纳入一次"
+    },
+    {
+      "id": "m11",
+      "value": "22100.00",
+      "role": "transfer_summary",
+      "treatment": "aggregate",
+      "source_ids": [
+        "p-017"
+      ],
+      "reason": "明细已纳入，合计不能再计"
+    },
+    {
+      "id": "m12",
+      "value": "22100.00",
+      "role": "transfer_duplicate",
+      "treatment": "duplicate",
+      "source_ids": [
+        "p-007"
+      ],
+      "reason": "同一交付事件重复叙述，不新增"
+    },
+    {
+      "id": "m13",
+      "value": "22100.00",
+      "role": "claimed_interest",
+      "treatment": "exclude",
+      "source_ids": [
+        "p-007"
+      ],
+      "reason": "非本题实际取得的新增本金"
+    },
+    {
+      "id": "m14",
+      "value": "42000.00",
+      "role": "withheld_interest",
+      "treatment": "exclude",
+      "source_ids": [
+        "p-016"
+      ],
+      "reason": "非本题实际取得的新增本金"
+    },
+    {
+      "id": "m15",
+      "value": "21900.00",
+      "role": "asserted_net_interest",
+      "treatment": "exclude",
+      "source_ids": [
+        "p-007"
+      ],
+      "reason": "非本题实际取得的新增本金"
+    }
+  ],
+  "restitution_total": "524100.00",
+  "not_delivered_net": "19900.00",
+  "interest_conflict": {
+    "reported": "21900.00",
+    "computed": "19900.00",
+    "difference": "2000.00",
+    "status": "unresolved",
+    "source_ids": [
+      "p-007",
+      "p-016",
+      "p-017"
+    ],
+    "reason": "42000-22100=19900，与自述21900相差2000；不能据此推断实收利息或补造一笔交易。"
+  },
+  "evidence_limits": {
+    "first_transfer_breakdown": null,
+    "actual_interest_paid": null,
+    "additional_origin": "inferred_not_independently_traced",
+    "defendant_admission": "not_established",
+    "evidence_originals": "not_obtained",
+    "source_ids": [
+      "p-007",
+      "p-008",
+      "p-009",
+      "p-016",
+      "p-017"
+    ],
+    "reason": "首次仅合计，追加来源按自述推断；证据原件未提供、缺席不等于自认；净额算术不是实际利息证明。"
+  }
+}

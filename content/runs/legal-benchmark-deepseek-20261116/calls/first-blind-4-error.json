@@ -1,0 +1,25 @@
+{
+  "message": "Incomplete response: incomplete",
+  "response": {
+    "requestedModel": "deepseek-v4.1-1017",
+    "actualModel": "deepseek-v4-1-flash-261017",
+    "text": "",
+    "usage": {
+      "input_tokens": 1880,
+      "input_tokens_details": {
+        "cached_tokens": 1792
+      },
+      "output_tokens": 10000,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 11880
+    },
+    "latencyMs": 81514,
+    "completedAt": "2026-11-16T08:12:19.310Z",
+    "status": "incomplete",
+    "incompleteDetails": {
+      "reason": "max_output_tokens"
+    }
+  }
+}

@@ -1,0 +1,91 @@
+[
+  {
+    "seed_id": "independent-ledger-001",
+    "role": "independent",
+    "jurisdiction": "假设规则，不是真实法律",
+    "question": "假设审计规则只计实际取得的本金，扣除已归还本金，费用不计。材料 A：借据写18000；转账实际10000及5000；材料 B 重复提及同一5000，另有归还本金3000和费用500。未清偿本金多少？为何不能按借据或重复叙述计算？",
+    "answer": "12000；10000+5000-3000。借据18000不是交付，5000重复不另计，500费用排除。",
+    "rationale": "先以交付识别项目，再跨材料去重，再扣本金归还。",
+    "reasoning_patterns": [
+      "amount_classification",
+      "evidence_comparison",
+      "arithmetic_computation"
+    ],
+    "difficulty_level": "D3",
+    "difficulty_basis": "金额角色和重复关系影响净額；非直接加法",
+    "checks": {
+      "expression": "10000+5000-3000",
+      "expected": 12000
+    },
+    "permission": "original_logic_example_for_this_pilot",
+    "content_sha256": "2b909d98ce30a45b96a49559f6d052b57fdf03a147809ee9552025e4d71a854e",
+    "quality_review": {
+      "status": "eligible_for_structure_only",
+      "review_level": "auto_checked",
+      "method": "explicit_hypothetical_rules_and_deterministic_arithmetic",
+      "human_review": null,
+      "limitations": "非真实法律金标；非独立实测高难种子"
+    }
+  },
+  {
+    "seed_id": "independent-version-002",
+    "role": "independent",
+    "jurisdiction": "假设规则，不是真实法律",
+    "question": "假设封闭规则：V1在2020年前适用，需A+B才排除；V2自2020起适用，仅需A；过渡条款规定2020后受理使用V2。受理2022，事件2021。记录证明A，有人声称无B所以不得排除。该主张成立吗？未取得B证据要补造B吗？",
+    "answer": "不成立。按受理时间过渡规则适用V2，A足够；不补造B，不能把旧版附加条件搬入新版。",
+    "rationale": "受理时间选版本，版本决定必要条件，证据只证明所需条件。",
+    "reasoning_patterns": [
+      "temporal_applicability",
+      "rule_application",
+      "exception_check"
+    ],
+    "difficulty_level": "D3",
+    "difficulty_basis": "版本会改变条件集合",
+    "checks": {
+      "filed": 2022,
+      "threshold": 2020,
+      "expected_version": "V2"
+    },
+    "permission": "original_logic_example_for_this_pilot",
+    "content_sha256": "c5ae35386f0a868f0f6eaf2158ea091a30a68795b953ca61919e7034d4052cc7",
+    "quality_review": {
+      "status": "eligible_for_structure_only",
+      "review_level": "auto_checked",
+      "method": "explicit_hypothetical_rules_and_deterministic_arithmetic",
+      "human_review": null,
+      "limitations": "非真实法律金标；非独立实测高难种子"
+    }
+  },
+  {
+    "seed_id": "independent-integrated-003",
+    "role": "independent",
+    "jurisdiction": "假设规则，不是真实法律",
+    "question": "假设V2自2021受理起替代V1。V2规定来自账户Z且实际交付的财产纳入返还，不要求V1的盈利条件；未交付款不纳入。2022受理：凭证写9000，记录实际交付8000；持有人称预留1000后退回600，付款记录分别200、400，另处再提600；声称剩余700。按此明确自述前提审计返还范围、旧条件、矛盾和不能确认的资金逐笔追踪。",
+    "answer": "8600=8000+200+400，600汇总不重复，凭证9000非实际交付。V2不要求盈利。1000-600=400，不等于自述700，差300，原因未知。自述可支持来源推断但未取得逐笔追踪。",
+    "rationale": "版本选择控制条件，交付和重复控制范围，源款自述只支撑限定推断，矛盾不能自动变成事实。",
+    "reasoning_patterns": [
+      "temporal_applicability",
+      "rule_application",
+      "amount_classification",
+      "evidence_comparison",
+      "arithmetic_computation"
+    ],
+    "difficulty_level": "D4",
+    "difficulty_basis": "同一返还范围依赖版本、来源前提、交付去重与证据边界；结构标签待实测",
+    "checks": {
+      "expression": "8000+200+400",
+      "expected": 8600,
+      "conflict_expression": "1000-600",
+      "conflict_expected": 400
+    },
+    "permission": "original_logic_example_for_this_pilot",
+    "content_sha256": "d812ec8147e1b313cd8418113ca7fa41e74f1e56d92c2271c3ce9792d152bb29",
+    "quality_review": {
+      "status": "eligible_for_structure_only",
+      "review_level": "auto_checked",
+      "method": "explicit_hypothetical_rules_and_deterministic_arithmetic",
+      "human_review": null,
+      "limitations": "非真实法律金标；非独立实测高难种子"
+    }
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "fields": {
+    "restitution": "限定前提下可返还财产数额",
+    "unadvanced_arithmetic": "该口径算术未交付余额",
+    "interest_statement_gap": "余额与净利息陈述差异绝对值",
+    "loan_valid": "合同是否有效",
+    "additional_origin_independently_traced": "是否已独立追踪追加款来源",
+    "defendant_substantive_admission": "是否已建立实体自认"
+  },
+  "money": "数字或十进制金额字符串均可，人民币元，最终四舍五入至分",
+  "basis": "简短事实、法律与算式说明，不要求内部思维链"
+}

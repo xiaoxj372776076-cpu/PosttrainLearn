@@ -1,0 +1,367 @@
+[
+  {
+    "index": 1,
+    "stage": "Bo5-1",
+    "job": "legal-bo5-07-bo5-1",
+    "finished_at": "2026-11-14T22:32:09.845506Z",
+    "exceptions": [],
+    "completed_answer": true,
+    "infrastructure_failure": false,
+    "report": {
+      "passed": true,
+      "score": 1,
+      "checks": {
+        "A_valid": true,
+        "A_restitution": true,
+        "A_guarantee": true,
+        "B_initial_principal": true,
+        "B_protected_total": true,
+        "B_guarantee": true,
+        "C_outstanding_principal": true,
+        "C_outstanding_interest": true,
+        "C_outstanding_expenses": true,
+        "C_guarantee": true,
+        "borrower_total": true
+      },
+      "failed_checks": [],
+      "note": "金额或状态固定核对，不证明法律解释；语义等价与错误类型由P6另审，不以此直接计低成功率。"
+    },
+    "reward": 1,
+    "model": "deployment-gpt-6-astra-platform-global",
+    "usage": {
+      "input_tokens": 12451,
+      "input_tokens_details": {
+        "cache_write_tokens": 12448,
+        "cached_tokens": 0
+      },
+      "output_tokens": 4103,
+      "output_tokens_details": {
+        "reasoning_tokens": 2588
+      },
+      "total_tokens": 16554
+    },
+    "latency_ms": 75092,
+    "answer_text": "{\n  \"A_valid\": \"invalid\",\n  \"A_restitution\": \"122888.00\",\n  \"A_guarantee\": \"invalid_accessory\",\n  \"B_initial_principal\": \"182590.00\",\n  \"B_protected_total\": \"224494.66\",\n  \"B_guarantee\": \"expired\",\n  \"C_outstanding_principal\": \"199998.88\",\n  \"C_outstanding_interest\": \"10056.93\",\n  \"C_outstanding_expenses\": \"0.00\",\n  \"C_guarantee\": \"general_preserved_not_yet_enforceable\",\n  \"borrower_total\": \"557438.47\",\n  \"basis\": {\n    \"适用规则\": \"三笔借款均发生于2022年，本案于2023-08-01新受理。依lending-2020-12第31条及civil-code-2020第1260条，适用所给2020年12月版民间借贷规定和民法典，不适用2015年版的旧无效条件。全部利息计算截至2023-08-01，不计当日。\",\n    \"A\": \"S01、S02、S12：银行资金被套取后转贷，依lending-2020-12第13条第（一）项，A无效；乙事先不知来源及利率仅6%均不改变结论。依民法典第157条及清算协议，返还额为142919.00－20031.00＝122888.00元。同交易号收据不重复计算，未交付票面差额不计入。依第682条，丁的从属保证无效，要求丁依保证合同立即支付不成立；无效后过错赔偿不在诉请范围。\",\n    \"B金额\": {\n      \"本金与效力\": \"S03—S06：B借款关系有效，但超限利息不受保护。依民法典第670、679、680条及lending-2020-12第25、26条，初始本金为194793.00－12203.00＝182590.00元，成立日为2022-01-12，保护年利率为3.70%×4＝14.80%，而非约定的22%。\",\n      \"结息与总限额\": \"S04、S05明确各归档日新增交付为零、不构成债务更新，故不能直接采用纸面本金或重定成立日。依lending-2020-12第27条，逐期剔除超限利息后允许合法利息结入后期本金，并另受整个期间本息上限约束；第28条支持按受保护的借期内利率计算逾期利息。\",\n      \"算式\": \"四段实际日数为175、103、84、204日，共566日。令R0＝182590，依次按Rn＝R(n－1)×(1＋0.148×该段日数/365)计算。该逐期结息结果超过整体上限，故最终保护额为182590×(1＋0.148×566/365)＝224494.655123…元，取分为224494.66元，已包含全部可保护本金及利息。\"\n    },\n    \"戊保证\": \"S06：戊的连带责任保证本来有效且已同意合法结息机制，但未书面同意展期。依民法典第688、692、693、695条，保证期间仍按原到期日2023-01-12起算六个月，于2023-07-12届满；2023-07-18首次要求戊承担责任已逾期。戊不再承担保证责任，立即支付请求不成立。\",\n    \"C金额\": {\n      \"效力与付款认定\": \"S07—S11：C有效，约定借期内及逾期年利率11.40%低于14.80%上限，依lending-2020-12第25、28条均受保护。仅T-01至T-04为实际付款，共49950.00元；S11的T-01截图、收据均为同笔交易，不重复抵扣。X-01未执行且无到账，提交操作不产生清偿。\",\n      \"清偿顺序\": \"依民法典第560条，各笔付款指定用于C，不跨债务冲抵。依第561条及S09，只有T-02依双方补充协议优先清偿本金；其他各笔按费用、利息、本金顺序清偿，乙单方备注不能改变该顺序。\",\n      \"计算核验\": \"各段日数为70、127、83、99、161日，按当时未偿本金×0.114×日数/365计息，全程不提前取分。T-01先付费用1680元、利息4872.609863…元，其余冲本金，余本金219531.609863…元。T-02全额11622元冲本金，余本金207909.609863…元，保留此前未付利息8707.886706…元。T-03全部冲利息后仍欠利息744.587332…元，本金不变。T-04清偿累计利息7173.266392…元，其余冲本金，余本金199998.876255…元、未付利息归零。此后161日利息为199998.876255…×0.114×161/365＝10056.929796…元。因此截日未偿本金199998.88元、利息10056.93元、费用0.00元。\"\n    },\n    \"己保证\": \"S07、S10：依民法典第682、686、691、692条，己的保证有效，未约定方式的属一般保证，保证期间至2023-06-15。依第693条，2023-05-08向己发短信不能替代对乙起诉，但甲已于2023-06-08在期间内有效起诉乙，保证权利得到保全。依第687条，截日前诉尚未审判执行，且无先诉抗辩例外、己未放弃抗辩，故己目前可以拒绝承担保证责任，立即支付请求不成立，并非保证责任已经消灭。\",\n    \"汇总\": \"依S12，各输出分项最终四舍五入至分后相加：122888.00＋224494.66＋199998.88＋10056.93＋0.00＝557438.47元。B_initial_principal已包含在B_protected_total中，不重复加计；不叠加保证责任金额。\"\n  }\n}",
+    "trace": {
+      "actions": [
+        {
+          "action": "adapter_read_file",
+          "path": "/app/input/dossier.md",
+          "sha256": "9bd370b20ba2621b3f38cebbf8544636e3cac70c1f71e18f42458144b7c4fdca"
+        },
+        {
+          "action": "adapter_read_file",
+          "path": "/app/input/rules.json",
+          "sha256": "deaf2aabd02014bbe259c915ff9305c12bca7c276a7197c8ec5b02db5ed8a20b"
+        },
+        {
+          "action": "adapter_read_file",
+          "path": "/app/input/answer-contract.json",
+          "sha256": "d80489a0c14a1b12d9627689a8be5fe1e53fd9e9c969247217d359399d834c25"
+        },
+        {
+          "action": "adapter_submit_answer",
+          "path": "/app/output/answer.json",
+          "sha256": "56e6bc3bc4ca2262738d3ef57ac35cb2f5a5b4c0b7c30b8e92e74e4522f9777e"
+        }
+      ],
+      "adapter_version": "0.3.0",
+      "host_writes_answer": true,
+      "fresh_api_completion": true,
+      "arbitrary_shell_enabled": false,
+      "hidden_answer_input": false
+    }
+  },
+  {
+    "index": 2,
+    "stage": "Bo5-2",
+    "job": "legal-bo5-07-bo5-2",
+    "finished_at": "2026-11-14T22:34:08.956129Z",
+    "exceptions": [],
+    "completed_answer": true,
+    "infrastructure_failure": false,
+    "report": {
+      "passed": true,
+      "score": 1,
+      "checks": {
+        "A_valid": true,
+        "A_restitution": true,
+        "A_guarantee": true,
+        "B_initial_principal": true,
+        "B_protected_total": true,
+        "B_guarantee": true,
+        "C_outstanding_principal": true,
+        "C_outstanding_interest": true,
+        "C_outstanding_expenses": true,
+        "C_guarantee": true,
+        "borrower_total": true
+      },
+      "failed_checks": [],
+      "note": "金额或状态固定核对，不证明法律解释；语义等价与错误类型由P6另审，不以此直接计低成功率。"
+    },
+    "reward": 1,
+    "model": "deployment-gpt-6-astra-platform-global",
+    "usage": {
+      "input_tokens": 12451,
+      "input_tokens_details": {
+        "cache_write_tokens": 12448,
+        "cached_tokens": 0
+      },
+      "output_tokens": 5481,
+      "output_tokens_details": {
+        "reasoning_tokens": 4142
+      },
+      "total_tokens": 17932
+    },
+    "latency_ms": 111412,
+    "answer_text": "{\n  \"A_valid\": \"invalid\",\n  \"A_restitution\": \"122888.00\",\n  \"A_guarantee\": \"invalid_accessory\",\n  \"B_initial_principal\": \"182590.00\",\n  \"B_protected_total\": \"224494.66\",\n  \"B_guarantee\": \"expired\",\n  \"C_outstanding_principal\": \"199998.88\",\n  \"C_outstanding_interest\": \"10056.93\",\n  \"C_outstanding_expenses\": \"0.00\",\n  \"C_guarantee\": \"general_preserved_not_yet_enforceable\",\n  \"borrower_total\": \"557438.47\",\n  \"basis\": {\n    \"适用版本\": \"合同均发生于2022年，本案于2023-08-01新受理。依lending-2020-12第31条及民法典第1260条，适用所给现行民间借贷规则和民法典，不适用2015年版本的无效条件。\",\n    \"A及丁\": \"S01、S02、S12：A资金系套取银行信贷后转贷，依lending-2020-12第13条第（一）项无效，不以高利转贷或乙事先知情为条件。依民法典第157条，返还额为142919.00－20031.00＝122888.00元；同交易号收据不构成另一次交付。依第682条，丁的保证随主合同无效，立即依保证合同支付的请求不成立；保证无效后的过错赔偿不在诉请范围内。\",\n    \"B金额\": \"S03—S06：B借款合同有效，依民法典第670、679、680条及lending-2020-12第25、26条，初始本金为194793.00－12203.00＝182590.00元，保护年利率为3.70%×4＝14.80%，22%中的超额部分不受保护。各次归档无新增交付、无债务更新，依第27条逐期剔除超额利息后结息，四段日数为175、103、84、204，共566日。逐期结息结果182590×∏(1＋14.8%×各段日数/365)超过第27条第二款整体上限，故取182590×(1＋14.8%×566/365)＝224494.655123…元，最终为224494.66元；其中已包含合法前期结息，不另加纸面本金或预扣利息。逾期计息适用第28条，仍受上述保护限制。\",\n    \"戊\": \"S06：戊原为有效的连带责任保证人，但未约定保证期间。依民法典第688、692、695条，未经戊书面同意的展期不改变其保证期间，仍从原到期日2023-01-12计算六个月，至2023-07-12届满。首次要求戊承担责任于2023-07-18到达，已逾期；依第693条，戊不再承担保证责任，立即支付请求不成立。\",\n    \"C清偿规则与证据\": \"S07—S11：C合同有效，约定借期及逾期年利率11.40%均低于14.80%，依lending-2020-12第25、28条可予保护。依民法典第560条，四笔已结算付款均用于C；第561条决定债务内部清偿顺序。仅T-02有双方本金优先协议，其余付款按费用、利息、本金顺序清偿，乙单方备注不能改变该顺序。T-01截图、收据与主表同号，只计一次；X-01已撤销且未执行，不计为付款。\",\n    \"C计算\": \"令r＝11.4%/365，各相邻节点日数为70、127、83、99、161。T-01先清费用1680元及70日利息，余额本金P1＝222870－(9891－1680－222870×r×70)。T-02全部冲本，P2＝P1－11622。T-03前累计利息＝P1×r×127＋P2×r×83＝14097.587333…元，超过13353元，故T-03不减本金。T-04付清剩余利息后，本金P4＝P2＋r×[127×P1＋(83＋99)×P2]－13353－15084＝199998.876254…元。截日未偿利息＝P4×r×161，取分为10056.93元；未偿本金取分为199998.88元，费用已清。各阶段保留精度，不对欠息计息，付款当日被偿还本金及2023-08-01均不计息。\",\n    \"己\": \"S07、S10：保证方式未约定，依民法典第686条为一般保证。依第692、693条，保证期间至2023-06-15；2023-05-08向己发短信不能替代对乙起诉，但甲已于2023-06-08有效起诉乙，故保证责任已保全。依第687条，截至截日前诉未经审判及执行，且无例外或放弃先诉抗辩，己可拒绝立即支付；这不是保证无效或期间届满免责。\",\n    \"汇总\": \"依S12，各输出分项取分后相加：122888.00＋224494.66＋199998.88＋10056.93＋0.00＝557438.47元。B初始本金已包含在B可保护本息中，不重复汇总，各债务不交叉冲抵。\"\n  }\n}",
+    "trace": {
+      "actions": [
+        {
+          "action": "adapter_read_file",
+          "path": "/app/input/dossier.md",
+          "sha256": "9bd370b20ba2621b3f38cebbf8544636e3cac70c1f71e18f42458144b7c4fdca"
+        },
+        {
+          "action": "adapter_read_file",
+          "path": "/app/input/rules.json",
+          "sha256": "deaf2aabd02014bbe259c915ff9305c12bca7c276a7197c8ec5b02db5ed8a20b"
+        },
+        {
+          "action": "adapter_read_file",
+          "path": "/app/input/answer-contract.json",
+          "sha256": "d80489a0c14a1b12d9627689a8be5fe1e53fd9e9c969247217d359399d834c25"
+        },
+        {
+          "action": "adapter_submit_answer",
+          "path": "/app/output/answer.json",
+          "sha256": "c30a14a64b48e379c7d92b7601ba1409d7674e640db3ca84f46b0483d97b21f9"
+        }
+      ],
+      "adapter_version": "0.3.0",
+      "host_writes_answer": true,
+      "fresh_api_completion": true,
+      "arbitrary_shell_enabled": false,
+      "hidden_answer_input": false
+    }
+  },
+  {
+    "index": 3,
+    "stage": "Bo5-3",
+    "job": "legal-bo5-07-bo5-3",
+    "finished_at": "2026-11-14T22:36:12.344528Z",
+    "exceptions": [],
+    "completed_answer": true,
+    "infrastructure_failure": false,
+    "report": {
+      "passed": true,
+      "score": 1,
+      "checks": {
+        "A_valid": true,
+        "A_restitution": true,
+        "A_guarantee": true,
+        "B_initial_principal": true,
+        "B_protected_total": true,
+        "B_guarantee": true,
+        "C_outstanding_principal": true,
+        "C_outstanding_interest": true,
+        "C_outstanding_expenses": true,
+        "C_guarantee": true,
+        "borrower_total": true
+      },
+      "failed_checks": [],
+      "note": "金额或状态固定核对，不证明法律解释；语义等价与错误类型由P6另审，不以此直接计低成功率。"
+    },
+    "reward": 1,
+    "model": "deployment-gpt-6-astra-platform-global",
+    "usage": {
+      "input_tokens": 12451,
+      "input_tokens_details": {
+        "cache_write_tokens": 12448,
+        "cached_tokens": 0
+      },
+      "output_tokens": 6157,
+      "output_tokens_details": {
+        "reasoning_tokens": 4660
+      },
+      "total_tokens": 18608
+    },
+    "latency_ms": 115706,
+    "answer_text": "{\n  \"A_valid\": \"invalid\",\n  \"A_restitution\": \"122888.00\",\n  \"A_guarantee\": \"invalid_accessory\",\n  \"B_initial_principal\": \"182590.00\",\n  \"B_protected_total\": \"224494.66\",\n  \"B_guarantee\": \"expired\",\n  \"C_outstanding_principal\": \"199998.88\",\n  \"C_outstanding_interest\": \"10056.93\",\n  \"C_outstanding_expenses\": \"0.00\",\n  \"C_guarantee\": \"general_preserved_not_yet_enforceable\",\n  \"borrower_total\": \"557438.47\",\n  \"basis\": {\n    \"适用版本\": \"三笔借款均发生于2022年，案件于2023-08-01新受理。依lending-2020-12第31条、civil-code-2020第1260条，适用所给现行民间借贷解释及民法典，不适用旧版关于高利转贷、借款人知情的附加条件。\",\n    \"A\": {\n      \"合同及返还\": \"S01证实甲套取银行信贷资金转贷，依lending-2020-12第13条第（一）项，A无效；乙不知资金来源及利率仅6%不改变结论。依civil-code-2020第157条及S02、S12，返还额＝142919.00－20031.00＝122888.00。票面未交付差额不计，同交易号收据不构成另一笔交付。\",\n      \"丁的保证\": \"依civil-code-2020第682条，主合同无效导致保证合同无效，要求丁依保证合同立即支付不成立。S12明确不请求保证无效后的过错赔偿。\"\n    },\n    \"B\": {\n      \"本金及利率\": \"S03—S05显示实际交付182590.00元，后续借据均无新增交付且不构成债务更新。依civil-code-2020第670、679、680条及lending-2020-12第25、26条，初始本金＝194793.00－12203.00＝182590.00元；B合同有效，22%利率中仅14.80%（3.70%×4）以内受保护。\",\n      \"本息计算\": \"依S04、S06及lending-2020-12第27、28条，合法前期利息可结入后期本金，但还须受全期本息上限约束。四段日数依次为175、103、84、204，共566日。逐期合法结息所得为182590×∏(1＋0.148×d/365)，d取上述四段日数；该值高于全期上限182590×(1＋0.148×566/365)。因此取全期上限，最终四舍五入为224494.66元，不另叠加纸面本金或预扣利息。\",\n      \"戊的保证\": \"S06及civil-code-2020第688、692、693、695条：戊原为有效连带责任保证，且已同意合法结息；但未书面同意展期，保证期间仍从原到期日2023-01-12起算六个月，至2023-07-12届满。首次要求承担责任于2023-07-18到达，已经逾期，戊不再承担保证责任，立即支付请求不成立。\"\n    },\n    \"C\": {\n      \"合同及清偿规则\": \"S07—S09及civil-code-2020第560、561条：C合同有效，付款指定偿还C，不跨债务抵扣；债务内部原则上依费用、利息、本金顺序清偿。仅T-02有双方补充协议，优先还本；其他付款的单方‘还本金’备注不能改变法定顺序。11.40%低于14.80%上限，依lending-2020-12第25、28条，借期及逾期均按11.40%计算。\",\n      \"流水核对\": \"S08、S11：T-01的截图与收据是同一交易，只计一次；X-01已撤销且未执行，不作还款。有效付款仅T-01至T-04。\",\n      \"计算\": [\n        \"相邻计息节点日数为70、127、83、99、161；利息均按当时未偿本金×0.114×日数/365计算，不对未付利息计息。\",\n        \"T-01付款9891.00元：清偿费用1680.00元、利息4872.61元、本金3338.39元；本金余219531.61元。\",\n        \"T-02依补充协议全部偿还本金11622.00元；本金余207909.61元，该段利息留存。\",\n        \"T-03前累计未付利息14097.59元，付款13353.00元全部抵息，利息余744.59元，本金不变。\",\n        \"T-04前未付利息共7173.27元，付款15084.00元先结清利息，余7910.73元还本；本金余199998.88元。\",\n        \"此后至截日计息161日，按未舍入的剩余本金计算，未偿利息为10056.93元，未偿费用为0.00元。以上中间金额仅为到分展示，实际计算保留全部精度。\"\n      ],\n      \"己的保证\": \"S07、S10及civil-code-2020第686、687、692、693条：未约定保证方式，属于有效一般保证；保证期间至2023-06-15。2023-05-08短信不能替代期间内对乙起诉，但2023-06-08已有效提起诉讼，保证权利得到保全。截日前诉尚未审判，亦未执行不能清偿，且无先诉抗辩例外，故己可拒绝立即承担责任，立即支付请求暂不成立，并非保证责任已消灭。\"\n    },\n    \"汇总\": \"依S12，各最终分项取分后相加：122888.00＋224494.66＋199998.88＋10056.93＋0.00＝557438.47元。B初始本金已包含在B全部可保护本息中，不重复计入；三名保证人的立即支付请求均不成立，但法律原因各异。\"\n  }\n}",
+    "trace": {
+      "actions": [
+        {
+          "action": "adapter_read_file",
+          "path": "/app/input/dossier.md",
+          "sha256": "9bd370b20ba2621b3f38cebbf8544636e3cac70c1f71e18f42458144b7c4fdca"
+        },
+        {
+          "action": "adapter_read_file",
+          "path": "/app/input/rules.json",
+          "sha256": "deaf2aabd02014bbe259c915ff9305c12bca7c276a7197c8ec5b02db5ed8a20b"
+        },
+        {
+          "action": "adapter_read_file",
+          "path": "/app/input/answer-contract.json",
+          "sha256": "d80489a0c14a1b12d9627689a8be5fe1e53fd9e9c969247217d359399d834c25"
+        },
+        {
+          "action": "adapter_submit_answer",
+          "path": "/app/output/answer.json",
+          "sha256": "9f09af47b14f019278de787a0c2bce5f1d7a264065da18385be424a86cbd094f"
+        }
+      ],
+      "adapter_version": "0.3.0",
+      "host_writes_answer": true,
+      "fresh_api_completion": true,
+      "arbitrary_shell_enabled": false,
+      "hidden_answer_input": false
+    }
+  },
+  {
+    "index": 4,
+    "stage": "Bo5-4",
+    "job": "legal-bo5-07-bo5-4",
+    "finished_at": "2026-11-14T22:37:44.921194Z",
+    "exceptions": [],
+    "completed_answer": true,
+    "infrastructure_failure": false,
+    "report": {
+      "passed": true,
+      "score": 1,
+      "checks": {
+        "A_valid": true,
+        "A_restitution": true,
+        "A_guarantee": true,
+        "B_initial_principal": true,
+        "B_protected_total": true,
+        "B_guarantee": true,
+        "C_outstanding_principal": true,
+        "C_outstanding_interest": true,
+        "C_outstanding_expenses": true,
+        "C_guarantee": true,
+        "borrower_total": true
+      },
+      "failed_checks": [],
+      "note": "金额或状态固定核对，不证明法律解释；语义等价与错误类型由P6另审，不以此直接计低成功率。"
+    },
+    "reward": 1,
+    "model": "deployment-gpt-6-astra-platform-global",
+    "usage": {
+      "input_tokens": 12451,
+      "input_tokens_details": {
+        "cache_write_tokens": 12448,
+        "cached_tokens": 0
+      },
+      "output_tokens": 4397,
+      "output_tokens_details": {
+        "reasoning_tokens": 2997
+      },
+      "total_tokens": 16848
+    },
+    "latency_ms": 85591,
+    "answer_text": "{\n  \"A_valid\": \"invalid\",\n  \"A_restitution\": \"122888.00\",\n  \"A_guarantee\": \"invalid_accessory\",\n  \"B_initial_principal\": \"182590.00\",\n  \"B_protected_total\": \"224494.66\",\n  \"B_guarantee\": \"expired\",\n  \"C_outstanding_principal\": \"199998.88\",\n  \"C_outstanding_interest\": \"10056.93\",\n  \"C_outstanding_expenses\": \"0.00\",\n  \"C_guarantee\": \"general_preserved_not_yet_enforceable\",\n  \"borrower_total\": \"557438.47\",\n  \"basis\": {\n    \"适用规则\": \"三笔借款均发生于2022年，本案于2023-08-01新受理。依lending-2020-12第31条及民法典第1260条，适用所给现行借贷规则和民法典，不适用2015年版本关于高利转贷、借款人知情的旧条件。\",\n    \"A\": \"S01、S02：A资金系套取银行信贷后转贷，依lending-2020-12第13条第（一）项无效；乙不知情、约定利率仅6%不改变结论。依民法典第157条及清算协议，返还额为142919.00－20031.00＝122888.00元。同交易号收据不构成新增交付；未交付票面差额及其他赔偿不在诉请内。\",\n    \"B\": \"S03—S06：B借款有效，但超过法定利率上限的利息不受保护。依民法典第670、679、680条及lending-2020-12第25、26条，初始本金为194793.00－12203.00＝182590.00元，保护年利率为3.70%×4＝14.80%。三次归档均无新增交付、无债务更新；依第27条，仅限额内利息可结入后期本金。四段日数为175、103、84、204天，共566天。逐次合法结息候选额为182590×(1＋0.148×175/365)×(1＋0.148×103/365)×(1＋0.148×84/365)×(1＋0.148×204/365)，高于第27条第二款全程上限，故取182590×(1＋0.148×566/365)＝224494.655123…元，最终224494.66元，已包含初始本金及全部受保护利息。逾期利息依第28条仍受上述利率限制。\",\n    \"C付款与清偿顺序\": \"S07—S11：C借款有效，借期及逾期年利率11.40%均低于14.80%，依lending-2020-12第25、28条受保护。民法典第560条允许乙指定清偿C，但不使其单方备注改变第561条规定的费用、利息、本金顺序。仅T-02有双方补充协议，11622元全部先抵本金；其余三笔依法定顺序。T-01截图、收据与流水系同一交易，只计一次；X-01已撤销且未到账，不计付款。\",\n    \"C计算\": \"设r＝0.114/365，全程保留计算精度。五段日数依次为70、127、83、99、161天。T-01先清费用1680元、利息222870×r×70，付款后本金P1＝222870－(9891－1680－222870×r×70)＝219531.609863…元。T-02后本金P2＝P1－11622＝207909.609863…元，利息未清。T-03前累计未付利息r×(P1×127＋P2×83)＝14097.587332…元，故13353元全抵利息、不减本金。T-04清偿剩余利息后，本金P4＝P2－[15084－(r×(P1×127＋P2×182)－13353)]＝199998.876255…元。截日未偿利息为P4×r×161＝10056.929795…元，费用已清零；付款当日不再对已偿本金计息，截日不计息。\",\n    \"丁\": \"S01、S12及民法典第682条：A主合同无效，丁的从属性保证合同亦无效，要求其依保证合同立即支付不成立；保证无效后的过错赔偿不在诉请范围内。\",\n    \"戊\": \"S06及民法典第688、692、693、695条：戊原为有效连带责任保证，且书面同意合法结息机制；但未书面同意展期，保证期间仍以原到期日2023-01-12起算六个月，至2023-07-12届满。首次请求于2023-07-18到达，已逾期，戊不再承担保证责任，立即支付请求不成立。\",\n    \"己\": \"S07、S10及民法典第686、687、691—693条：未约定保证方式，依法为一般保证；未约定保证期间，期间至2023-06-15届满。2023-05-08短信不能替代对债务人起诉，但甲已于2023-06-08有效起诉乙，保证权利获保全。前诉尚未审判、执行，且无先诉抗辩例外或放弃，己目前有权拒绝支付；这不同于保证无效或保证期间届满免责。\",\n    \"汇总\": \"依S12，各输出分项先取分，再相加；B初始本金不重复计入：122888.00＋224494.66＋199998.88＋10056.93＋0.00＝557438.47元，不跨债务冲抵。\"\n  }\n}",
+    "trace": {
+      "actions": [
+        {
+          "action": "adapter_read_file",
+          "path": "/app/input/dossier.md",
+          "sha256": "9bd370b20ba2621b3f38cebbf8544636e3cac70c1f71e18f42458144b7c4fdca"
+        },
+        {
+          "action": "adapter_read_file",
+          "path": "/app/input/rules.json",
+          "sha256": "deaf2aabd02014bbe259c915ff9305c12bca7c276a7197c8ec5b02db5ed8a20b"
+        },
+        {
+          "action": "adapter_read_file",
+          "path": "/app/input/answer-contract.json",
+          "sha256": "d80489a0c14a1b12d9627689a8be5fe1e53fd9e9c969247217d359399d834c25"
+        },
+        {
+          "action": "adapter_submit_answer",
+          "path": "/app/output/answer.json",
+          "sha256": "f88428118f32ac6d9e8af711eddde9b4eae2dcca7a74b26a1cb95620779ea8ad"
+        }
+      ],
+      "adapter_version": "0.3.0",
+      "host_writes_answer": true,
+      "fresh_api_completion": true,
+      "arbitrary_shell_enabled": false,
+      "hidden_answer_input": false
+    }
+  },
+  {
+    "index": 5,
+    "stage": "Bo5-5",
+    "job": "legal-bo5-07-bo5-5",
+    "finished_at": "2026-11-14T22:40:42.419615Z",
+    "exceptions": [],
+    "completed_answer": true,
+    "infrastructure_failure": false,
+    "report": {
+      "passed": true,
+      "score": 1,
+      "checks": {
+        "A_valid": true,
+        "A_restitution": true,
+        "A_guarantee": true,
+        "B_initial_principal": true,
+        "B_protected_total": true,
+        "B_guarantee": true,
+        "C_outstanding_principal": true,
+        "C_outstanding_interest": true,
+        "C_outstanding_expenses": true,
+        "C_guarantee": true,
+        "borrower_total": true
+      },
+      "failed_checks": [],
+      "note": "金额或状态固定核对，不证明法律解释；语义等价与错误类型由P6另审，不以此直接计低成功率。"
+    },
+    "reward": 1,
+    "model": "deployment-gpt-6-astra-platform-global",
+    "usage": {
+      "input_tokens": 12451,
+      "input_tokens_details": {
+        "cache_write_tokens": 12448,
+        "cached_tokens": 0
+      },
+      "output_tokens": 8169,
+      "output_tokens_details": {
+        "reasoning_tokens": 6732
+      },
+      "total_tokens": 20620
+    },
+    "latency_ms": 169828,
+    "answer_text": "{\n  \"A_valid\": \"无效\",\n  \"A_restitution\": \"122888.00\",\n  \"A_guarantee\": \"invalid_accessory\",\n  \"B_initial_principal\": \"182590.00\",\n  \"B_protected_total\": \"224494.66\",\n  \"B_guarantee\": \"expired\",\n  \"C_outstanding_principal\": \"199998.88\",\n  \"C_outstanding_interest\": \"10056.93\",\n  \"C_outstanding_expenses\": \"0.00\",\n  \"C_guarantee\": \"general_preserved_not_yet_enforceable\",\n  \"borrower_total\": \"557438.47\",\n  \"basis\": {\n    \"适用规则\": \"三笔借款均发生于2022年，本案于2023-08-01新受理。依lending-2020-12第31条及民法典第1260条，适用所给2020年12月版民间借贷解释和民法典；结算不计2023-08-01当日利息。\",\n    \"A及丁\": \"S01、S02、S12：A资金系套取银行信贷后转贷，依lending-2020-12第13条第（一）项无效，不以高利转贷或乙事先知情为条件。依民法典第157条及付款核对协议，仅返还实际取得财产的余额：142919.00－20031.00＝122888.00元。同交易号收据不构成新增交付，票面未交付差额不计。依第682条，丁的保证随主合同无效，要求丁依保证合同立即支付不成立；无效保证的过错赔偿不在诉请范围。\",\n    \"B本息\": \"S03—S06：B借款有效。依民法典第670、679、680条及lending-2020-12第25、26条，初始本金为194793.00－12203.00＝182590.00元，保护年利率为3.70%×4＝14.80%，22%的超出部分不受保护。三次换据均无新增交付、不构成债务更新，按第27条仅将限内利息逐次入本。四段自然日为175、103、84、204天，合计566天；逐次结算额为182590×(1＋0.148×175/365)×(1＋0.148×103/365)×(1＋0.148×84/365)×(1＋0.148×204/365)，超过第27条整体上限。结合第28条，截日全部可保护本息以182590×(1＋0.148×566/365)＝224494.655123…元为限，取分为224494.66元，不另加纸面本金、预扣利息或已入本利息。\",\n    \"戊保证\": \"S06：戊原为有效连带责任保证人，且已同意合法结息机制，但未书面同意展期。依民法典第688、691、692、695条，保证期间仍按原到期日2023-01-12起算六个月，于2023-07-12届满。甲首次要求戊承担责任于2023-07-18到达，已逾期间；依第693条，戊不再承担保证责任，立即支付请求不成立。\",\n    \"C效力及付款归属\": \"S07—S11：C借款有效，借期及逾期年利率11.40%低于14.80%上限，依lending-2020-12第25、28条予以保护。依民法典第560条，四笔已结算付款均归C；依第561条，除T-02外按费用、利息、本金顺序清偿。T-02有双方有效补充协议，11622.00元全部先抵本金；其他单方“还本金”备注不改变法定顺序。T-01截图、收据与主表系同笔交易，仅计一次；X-01已撤销且未执行，不计还款。\",\n    \"C核算\": \"依S07—S09，令q＝0.114/365，各段日数为70、127、83、99、161。T-01先清费用1680元，付款后本金P1＝222870－(9891－1680－222870×q×70)。T-02后本金P2＝P1－11622，其前段利息保留。T-03前利息I3＝P1×q×127＋P2×q×83＝14097.587331…元，大于13353元，故该笔付款不减本金。T-04前利息I4＝I3－13353＋P2×q×99；付款后本金P4＝P2－(15084－I4)＝199998.876254…元。截日未偿利息为P4×q×161＝10056.929791…元，未偿费用为0元。全程不对未付利息计息，中间不取分，最终本金、利息分别取199998.88元、10056.93元。\",\n    \"己保证\": \"S07、S10：依民法典第686、691、692条，己的保证有效，未约定方式，属于一般保证；未约定期间，保证期间至2023-06-15届满。2023-05-08短信并非第693条要求的对债务人起诉或仲裁，但甲已于2023-06-08有效起诉乙，保证权利已在期间内保全。截日前诉未经审判、无已执行款，乙有可执行财产且不存在第687条例外，己未放弃先诉抗辩，因此暂可拒绝立即支付，不能认定保证责任已因期间届满而消灭。\",\n    \"汇总\": \"依S12，各请求分项取分后相加且不跨债务冲抵：122888.00＋224494.66＋199998.88＋10056.93＋0.00＝557438.47元。B初始本金仅为核算基数，已包含于B可保护本息，不重复加计。\"\n  }\n}",
+    "trace": {
+      "actions": [
+        {
+          "action": "adapter_read_file",
+          "path": "/app/input/dossier.md",
+          "sha256": "9bd370b20ba2621b3f38cebbf8544636e3cac70c1f71e18f42458144b7c4fdca"
+        },
+        {
+          "action": "adapter_read_file",
+          "path": "/app/input/rules.json",
+          "sha256": "deaf2aabd02014bbe259c915ff9305c12bca7c276a7197c8ec5b02db5ed8a20b"
+        },
+        {
+          "action": "adapter_read_file",
+          "path": "/app/input/answer-contract.json",
+          "sha256": "d80489a0c14a1b12d9627689a8be5fe1e53fd9e9c969247217d359399d834c25"
+        },
+        {
+          "action": "adapter_submit_answer",
+          "path": "/app/output/answer.json",
+          "sha256": "69a0694dbe5dc3d587592f0bc7c2f43781f651cd1b100a2e08061a7a7333ab43"
+        }
+      ],
+      "adapter_version": "0.3.0",
+      "host_writes_answer": true,
+      "fresh_api_completion": true,
+      "arbitrary_shell_enabled": false,
+      "hidden_answer_input": false
+    }
+  }
+]

@@ -1,0 +1,68 @@
+{
+  "loans": {
+    "A": {
+      "actual": "142902",
+      "returned": "20008"
+    },
+    "B": {
+      "original_actual": "182220",
+      "paper": "194394",
+      "rate": "0.22",
+      "rolls": [
+        {
+          "id": "B-1",
+          "date": "2022-07-06",
+          "face_value": "214898.57",
+          "new_cash": "0.00"
+        },
+        {
+          "id": "B-2",
+          "date": "2023-01-09",
+          "face_value": "239120.29",
+          "new_cash": "0.00"
+        }
+      ]
+    },
+    "C": {
+      "actual": "222460",
+      "payments": [
+        {
+          "id": "T-01",
+          "date": "2022-04-18",
+          "amount": "9878.00",
+          "debt": "C",
+          "status": "settled",
+          "principal_first_agreement": false
+        },
+        {
+          "id": "T-02",
+          "date": "2022-08-23",
+          "amount": "11609.00",
+          "debt": "C",
+          "status": "settled",
+          "principal_first_agreement": true
+        },
+        {
+          "id": "T-03",
+          "date": "2022-11-14",
+          "amount": "13340.00",
+          "debt": "C",
+          "status": "settled",
+          "principal_first_agreement": false
+        },
+        {
+          "id": "T-04",
+          "date": "2023-02-21",
+          "amount": "15071.00",
+          "debt": "C",
+          "status": "settled",
+          "principal_first_agreement": false
+        }
+      ]
+    }
+  },
+  "level": 3,
+  "round": 6,
+  "cap": "0.148",
+  "cutoff": "2023-08-01"
+}

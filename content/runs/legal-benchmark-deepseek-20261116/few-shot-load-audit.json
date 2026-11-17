@@ -1,0 +1,9 @@
+{
+  "exact_examples_match": true,
+  "input_sha256": "9b84256e9a4a2f24514c778638f9b7b09eb8e1e386d9159fd0673296e50608bd",
+  "seed_sha256": "6d0ff7c0e447d35ed4312429dfe3e878f9cdf05906110dd1d304fccae32f6115",
+  "ids": [
+    "case-068"
+  ],
+  "original_question_and_rubric_preserved": true
+}

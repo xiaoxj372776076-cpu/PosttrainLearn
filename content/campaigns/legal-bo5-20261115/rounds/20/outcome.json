@@ -1,0 +1,27 @@
+{
+  "round": 20,
+  "status": "completed_not_confirmed",
+  "full_chain_completed": true,
+  "skill_version": "1.2.19",
+  "measured": {
+    "valid": true,
+    "correct": 4,
+    "n": 5,
+    "target_hit": false,
+    "deterministic_successes": 0,
+    "reason": "semantic_five_answer_measurement"
+  },
+  "confirmation": null,
+  "confirmed_target_hit": false,
+  "next_level": 6,
+  "training_rows": 0,
+  "release_status": "quarantine",
+  "assessed_difficulty": "D4",
+  "analysis": "题面在闭卷范围内可回答。独立核对的关键结果为：A返还122810.00元；B逐期候选本息228672.300232…元，整体上限230408.556712…元；C本金153521.78元、利息1421.65元、费用0.00元。付款时戊、庚及己的保证均存续，己享有先诉抗辩不等于C无担保，故依S13附件以13.2%与13%比较，将25000元抵充B，余额203672.30元。之后S14构成经甲同意的部分债务转移，辛承担77471.72元，乙保留C债务77471.71元，乙总额403954.01元。工程参考金额和核心结论受支持；其C保证简写须结合S14及民法典第697条理解为仅对乙保留部分继续存续，不得扩张至辛承接部分。五份均为完整有效作答：法律正确5/5、必答最终金额正确5/5、依据正确4/5、综合正确4/5。唯一实质错误是第3份整体上限复算超出冻结容差，不能据此声称法律推理失败或命中1–2/5。原自动核对的六个状态失败均为固定标签匹配误报。D4仅是多层依赖结构评估；机制有效不代表实测低成功率。本次未联网核验来源元数据、未执行代码或独立模型复答，依据限于随题规范摘录、事实定位及算式核对，不构成专家金标。",
+  "remaining_gates": [
+    "expert_review",
+    "source_and_export_permissions",
+    "independent_family_confirmation",
+    "benchmark_source_overlap"
+  ]
+}

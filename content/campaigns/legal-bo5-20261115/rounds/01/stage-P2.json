@@ -1,0 +1,41 @@
+{
+  "question": "依据提供的 dossier.md、rules.json 和 answer-contract.json，就马某对皮某的请求完成一项整体财产返还及责任审查。结论应由相关法律状态和材料的证明程度支撑，并完整回应 answer-contract.json 要求的全部事项。遵守 dossier.md 末尾的范围限定，不得新增或改变材料中的事实、法条或约定。本任务是限定材料下的规则适用与证据审查，不是复述或预测原案判决。\n\n交付格式：提交一个有效 JSON 对象，包含 restitution、unadvanced_arithmetic、interest_statement_gap、loan_valid、additional_origin_independently_traced、defendant_substantive_admission 和 basis。各字段含义遵循 answer-contract.json；金额使用人民币元的数字或十进制金额字符串，最终四舍五入至分；三个状态字段使用布尔值。basis 提供支持整体结论的简短事实、法律依据和必要算式，引用材料段落及规范来源、版本和条号。只提供公开可核验的依据说明，不要求内部思维链。",
+  "reasoning_dependencies": [
+    {
+      "dependency": "财产请求的法律评价依赖案件时点、相关法律关系状态与适用规范的共同支持。",
+      "sources": [
+        "dossier.md:p-006",
+        "dossier.md:p-007",
+        "dossier.md:p-012至p-017",
+        "rules.json"
+      ]
+    },
+    {
+      "dependency": "各金额字段须与整体财产范围判断保持同一限定口径，并与材料记载相互核对。",
+      "sources": [
+        "dossier.md:p-007",
+        "dossier.md:p-015至p-017",
+        "dossier.md:范围",
+        "answer-contract.json"
+      ]
+    },
+    {
+      "dependency": "证据状态字段依赖不同材料记载的证明范围，不能仅由财产数额结论替代。",
+      "sources": [
+        "dossier.md:p-007至p-010",
+        "dossier.md:p-012至p-018",
+        "dossier.md:范围",
+        "answer-contract.json"
+      ]
+    }
+  ],
+  "shortcut_audit": [
+    "题面仅依赖三个学生文件，不向学生提供命题单元结论或示例答案。",
+    "未添加金额角色表、运算公式、条文选择提示、结果提示或逐项解题清单。",
+    "原有范围限定及输出契约仍提供一定结构信息；为保持事实与任务口径不变，未删除或改写。",
+    "未因规则文件包含其他制度条文而新增事实关系或责任主体。",
+    "实体自认字段的专门规范覆盖需在后续题面审查中复核，不以本阶段输出宣称依据已全部核验。",
+    "本阶段仅生成一个候选任务，未执行盲答或确认实测难度。"
+  ],
+  "source_mode": "original_case_excerpt_conditional_rule_application"
+}

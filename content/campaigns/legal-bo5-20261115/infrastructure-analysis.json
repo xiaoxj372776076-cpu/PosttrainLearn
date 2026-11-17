@@ -1,0 +1,23 @@
+{
+  "recorded_at": "2026-11-15T02:00:00Z",
+  "affected_rounds": [15, 16],
+  "observation": "Round 15 five blind calls and their one bounded retry each timed out without a terminal response; round 16 P1 also timed out.",
+  "evidence": {
+    "request_records": ["rounds/15/Bo5-1-error.json", "rounds/15/Bo5-1-retry-error.json", "rounds/16/P1-error.json"],
+    "read_only_system_log": "pmset -g log",
+    "local_timezone": "Asia/Shanghai",
+    "events": [
+      {"local_time": "2026-11-15 09:05:06", "event": "Clamshell Sleep"},
+      {"local_time": "2026-11-15 09:22:20", "event": "DarkWake; first blind-call timeouts recorded at the same time"},
+      {"local_time": "2026-11-15 09:24:31", "event": "Sleep Service Back to Sleep"},
+      {"local_time": "2026-11-15 09:40:06", "event": "DarkWake; bounded-retry timeouts recorded at the same time"},
+      {"local_time": "2026-11-15 09:42:25", "event": "Maintenance Sleep"},
+      {"local_time": "2026-11-15 09:58:02", "event": "DarkWake; round 16 P1 timeout recorded at the same time"}
+    ]
+  },
+  "diagnosis": "Request failures coincide with host sleep/wake, consistent with interrupted streaming connectivity. This does not independently exclude gateway failures.",
+  "difficulty_policy": "Round 15 has zero completed answers; substantive correctness is not measurable, not 0/5. Preserve all failed calls and unknown usage.",
+  "recovery": "One bounded round 16 P1-retry under a temporary, process-scoped caffeinate assertion; no permanent power-setting change, no weaker model, no prompt or token-budget change. If it fails again, stop submissions and report the environmental blocker.",
+  "recovery_result": "Round 16 P1-retry completed (29594 total tokens), followed by a completed P2 (29643 total tokens), after host wake and a temporary process-scoped sleep assertion. This is operational recovery, not difficulty evidence.",
+  "local_only": true
+}

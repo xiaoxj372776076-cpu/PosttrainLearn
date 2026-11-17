@@ -5,6 +5,11 @@ import { fileURLToPath } from 'node:url';
 import { createHash, randomUUID } from 'node:crypto';
 import { Store } from './lib/store.mjs';
 import { compareLines, validateReview, seedExport } from './lib/domain.mjs';
+import { validateDossier, renderCasebook } from './lib/dossier.mjs';
+import { buildExploration } from './lib/exploration.mjs';
+import { synthesisRun, runArtifact } from './lib/synthesis-runs.mjs';
+import { hardnessCampaign, hardnessArtifact } from './lib/hardness-campaign.mjs';
+import { benchmarkPilot, benchmarkArtifact } from './lib/benchmark-pilot.mjs';
 
 const DEFAULT_ROOT = fileURLToPath(new URL('./', import.meta.url));
 const VERSION = /^\d{1,4}\.\d{1,4}\.\d{1,4}$/;
@@ -39,6 +44,15 @@ export async function createApp({ root = DEFAULT_ROOT, stateDir = path.join(root
   const dataset = await json(path.join(root, 'content/datasets/plawbench.json'));
   const evaluation = await json(path.join(root, 'content/evaluations/summary.json'));
   const caseData = await json(path.join(root, 'content/cases/shanghai-2023-23060.json'));
+  const dossier = await json(path.join(root, 'content/dossiers/shanghai-2023-23060/0.1.0.json'));
+  const dossierSchema = await json(path.join(root, 'schemas/case-dossier-0.1.schema.json'));
+  const dossierGuide = await fs.readFile(path.join(root, 'docs/case-dossier-v0.1.md'), 'utf8');
+  const pipeline = await json(path.join(root, 'content/pipelines/case-study-0.1.json'));
+  if (!VERSION.test(pipeline.skill_version)) throw new Error('链路 Skill 版本无效');
+  const prompts = await fs.readFile(path.join(root, 'content/skills', pipeline.skill_version, 'references/prompts.md'), 'utf8');
+  const fewShotGuide = await fs.readFile(path.join(root, 'content/skills', pipeline.skill_version, 'references/few-shot-and-difficulty.md'), 'utf8');
+  validateDossier(dossier, dossierSchema, caseData);
+  const casebook = renderCasebook(dossier);
   const recordsById = new Map(dataset.records.map(r => [r.id, r]));
   const store = new Store(stateDir);
   let versionQueue = Promise.resolve();
@@ -71,7 +85,7 @@ export async function createApp({ root = DEFAULT_ROOT, stateDir = path.join(root
       }
       if (req.method === 'GET' && route === '/api/bootstrap') {
         const state = await store.read();
-        return sendJson(res, { appVersion: '0.1.0', dataset: dataset.meta, evaluation, versions: await readVersions(), case: { ...caseData, paragraphs: undefined, redactions: undefined }, state });
+        return sendJson(res, { appVersion: '0.4.0', dataset: dataset.meta, evaluation, versions: await readVersions(), case: { ...caseData, paragraphs: undefined, redactions: undefined }, dossier: { version: dossier.dossier_version, schemaVersion: dossier.schema_version, normalization: dossier.case_metadata.normalization_status, gaps: dossier.gaps_and_review.gaps.length }, state });
       }
       if (req.method === 'GET' && route === '/api/records') {
         const state = await store.read();
@@ -96,6 +110,32 @@ export async function createApp({ root = DEFAULT_ROOT, stateDir = path.join(root
         return sendJson(res, { ...record, review: state.reviews[id] ?? null, evaluation: await json(path.join(root, 'content/evaluations/plawbench', `${id}.json`)) });
       }
       if (req.method === 'GET' && route === '/api/case') return sendJson(res, caseData);
+      if (req.method === 'GET' && route === '/api/benchmark-pilot') return sendJson(res,await benchmarkPilot(root,url.searchParams.get('id')??undefined));
+      if (req.method === 'GET' && route === '/api/benchmark-pilot/artifact') {
+        const artifact=await benchmarkArtifact(root,url.searchParams.get('file'),url.searchParams.get('run')??undefined);
+        res.writeHead(200,{'Content-Type':'text/plain; charset=utf-8'});return res.end(artifact.text);
+      }
+      if (req.method === 'GET' && route === '/api/hardness/campaign') return sendJson(res,await hardnessCampaign(root,url.searchParams.get('round')??undefined));
+      if (req.method === 'GET' && route === '/api/hardness/artifact') {
+        const artifact=await hardnessArtifact(root,url.searchParams.get('round'),url.searchParams.get('file'));
+        res.writeHead(200,{'Content-Type':'text/plain; charset=utf-8','Content-Disposition':`attachment; filename="${artifact.filename}"`});
+        return res.end(artifact.text);
+      }
+      if (req.method === 'GET' && route === '/api/synthesis/run') return sendJson(res, await synthesisRun(root, url.searchParams.get('id') ?? 'legal-harbor-001'));
+      if (req.method === 'GET' && route === '/api/synthesis/artifact') {
+        const artifact = await runArtifact(root, url.searchParams.get('run'), url.searchParams.get('file'));
+        res.writeHead(200, { 'Content-Type': 'text/plain; charset=utf-8', 'Content-Disposition': `attachment; filename="${artifact.filename}"` });
+        return res.end(artifact.text);
+      }
+      if (req.method === 'GET' && route === '/api/dossier') return sendJson(res, dossier);
+      if (req.method === 'GET' && route === '/api/dossier/schema') return sendJson(res, { schema: dossierSchema, guide: dossierGuide, note: '基础结构 schema 配合本地有类型引用、来源对齐及金额公式检查；不替代完整语义验证与法律审核。' });
+      if (req.method === 'GET' && route === '/api/exploration') return sendJson(res, buildExploration({ pipeline, dossier, dataset, state: await store.read(), prompts, fewShotGuide }));
+      if (req.method === 'GET' && route === '/api/export/dossier') return sendJson(res, dossier, 200, 'case-dossier-0.1.0.json');
+      if (req.method === 'GET' && route === '/api/export/casebook') {
+        res.writeHead(200, { 'Content-Type': mime['.md'], 'Content-Disposition': 'attachment; filename="casebook-0.1.0.md"' });
+        return res.end(casebook);
+      }
+      if (req.method === 'GET' && route === '/api/export/dossier-schema') return sendJson(res, dossierSchema, 200, 'case-dossier-0.1.schema.json');
       if (req.method === 'GET' && route.startsWith('/api/skills/')) {
         const version = route.slice('/api/skills/'.length); const meta = await getVersion(version);
         const files = await filesUnder(versionDir(version));
@@ -181,7 +221,13 @@ export async function createApp({ root = DEFAULT_ROOT, stateDir = path.join(root
           for (const name of await filesUnder(versionDir(meta.version))) files[name] = await fs.readFile(path.join(versionDir(meta.version), name), 'utf8');
           snapshots.push({ meta, files });
         }
-        return sendJson(res, { formatVersion: '1.0', exportedAt: new Date().toISOString(), dataset: dataset.meta, case: caseData, skillSnapshots: snapshots, state: await store.read(), note: '本地研究备份含专家记录，请审查个人信息后再共享。原始私有源文件未包含。' }, 200, 'legal-research-backup.json');
+        const synthesisRuns=[await synthesisRun(root)];
+        const hardness=[];
+        try {
+          const campaign=await hardnessCampaign(root);
+          for(const round of campaign.summary.rounds)hardness.push(await hardnessCampaign(root,String(round.round).padStart(2,'0')));
+        } catch(error) {if(error.code!=='ENOENT')throw error;}
+        return sendJson(res, { formatVersion: '1.3', exportedAt: new Date().toISOString(), dataset: dataset.meta, case: caseData, dossier, dossierSchema, dossierGuide, pipeline, synthesisRuns, hardnessCampaignRounds:hardness, skillSnapshots: snapshots, state: await store.read(), note: '本地研究备份含专家记录、实际合成迭代及隐藏答案，请审查个人信息后再共享，勿用于学生输入。原始私有源文件、凭证及VM运行状态未包含。隔离产物不是已准入训练样本。' }, 200, 'legal-research-backup.json');
       }
       if (req.method !== 'GET' && req.method !== 'HEAD') throw Object.assign(new Error('不支持此操作'), { status: 405 });
       if (route.startsWith('/api/')) throw Object.assign(new Error('接口不存在'), { status: 404 });

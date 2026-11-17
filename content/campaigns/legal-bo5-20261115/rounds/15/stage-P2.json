@@ -1,0 +1,96 @@
+{
+  "question": "这是一个已明示虚构的法律研究情景，不涉及真实案件裁判预测。仅依据随附学生文件 dossier.md、rules.json 和 answer-contract.json，对甲的最终实体请求完成一份整体财产与责任审查。\n\n结算截至2023-08-01，不计当日利息，并涵盖材料记载的当日付款、签署文书及追加请求。确定甲对乙尚可请求的各项金额及总额，以及对丁、戊、庚、己、辛分别可以立即请求的责任范围；用相关法律状态和可核验依据支持金额与责任结论，并说明各主体责任之间的关系，使整体债权不因请求对象增加而重复计数。审查范围以材料列明的实体请求为限，不判断合并审理的程序合法性，不增补或改写事实、法条及当事人约定。\n\n只返回一个有效JSON对象，包含 answer-contract.json 的 fields 所列全部字段，并在 basis 中提供简短事实依据、法条引用及足以复算的必要算式，解释决定结论的法律分支。事实引用使用 dossier.md 的段落编号，规范引用使用 rules.json 的 source_id 与 provision。金额、取分及状态表达遵循 answer-contract.json；不要求内部思维链。不得附加Markdown或JSON之外的文字。学生只需返回JSON，由宿主负责落盘，无须自行写文件。",
+  "reasoning_dependencies": [
+    {
+      "dependency": "合同成立、资金交付及规范适用时间共同影响各笔请求的基础与范围。",
+      "fact_sources": [
+        "S01",
+        "S02",
+        "S03",
+        "S07"
+      ],
+      "rule_sources": [
+        "lending-2020-12:13",
+        "lending-2020-12:31",
+        "civil-code-2020:157",
+        "civil-code-2020:670",
+        "civil-code-2020:679"
+      ]
+    },
+    {
+      "dependency": "结算文件、付款证据与清偿约定的法律处理相互关联，影响最终余额及其计算依据。",
+      "fact_sources": [
+        "S04",
+        "S05",
+        "S07",
+        "S08",
+        "S09",
+        "S11",
+        "S13"
+      ],
+      "rule_sources": [
+        "lending-2015:26",
+        "lending-2020-12:25",
+        "lending-2020-12:27",
+        "lending-2020-12:28",
+        "lending-2020-12:31",
+        "civil-code-2020:560",
+        "civil-code-2020:561"
+      ]
+    },
+    {
+      "dependency": "保证条款、履行期限变更及分别行权记录所支持的法律状态，关联付款约定的适用和各人的即时责任范围。",
+      "fact_sources": [
+        "S06",
+        "S10",
+        "S12",
+        "S13"
+      ],
+      "rule_sources": [
+        "civil-code-2020:687",
+        "civil-code-2020:688",
+        "civil-code-2020:692",
+        "civil-code-2020:693",
+        "civil-code-2020:695",
+        "guarantee-2020:13",
+        "guarantee-2020:29",
+        "guarantee-2020:31",
+        "guarantee-2020:32",
+        "guarantee-2020:34"
+      ]
+    },
+    {
+      "dependency": "付款与第三人文书的时序、文书义务内容及最终余额共同影响多主体责任和整体债权的对应关系。",
+      "fact_sources": [
+        "S12",
+        "S13",
+        "S14"
+      ],
+      "rule_sources": [
+        "civil-code-2020:552",
+        "civil-code-2020:682",
+        "civil-code-2020:697",
+        "guarantee-2020:36"
+      ]
+    }
+  ],
+  "shortcut_audit": [
+    {
+      "check": "题面泄漏",
+      "observation": "题面仅给任务目标、范围和交付格式；未复制研究者判断节点、种子答案、付款归属、适用利率、具体公式或参考结果。"
+    },
+    {
+      "check": "学生材料保真",
+      "observation": "未修改学生文件。S06、S07、S12、S14已有明确约定或范围说明，可能降低部分判断难度，但不得为加难删除必要信息。"
+    },
+    {
+      "check": "接口与覆盖",
+      "observation": "通过引用完整answer-contract.json覆盖必答字段，并明确学生只返回JSON、宿主落盘；不另设状态标签菜单或键顺序要求。"
+    },
+    {
+      "check": "待续审事项",
+      "observation": "首段受理日期概述与S10、S14具体程序记录的表述差异仍需P3核对；本题未另造日期。当前仅生成P2候选，未完成金额复算、联网来源核验或独立盲答，不据此宣称实测难度或发布合格。"
+    }
+  ],
+  "source_mode": "new_scenario"
+}

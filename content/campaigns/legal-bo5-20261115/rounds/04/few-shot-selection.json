@@ -1,0 +1,11 @@
+{
+  "seed_ids": [
+    "structure-double-cap",
+    "structure-preservation-vs-exigibility",
+    "structure-payment-agreement"
+  ],
+  "source_role": "independent_hypothetical_structure",
+  "not_expert_gold": true,
+  "benchmark_sent": false,
+  "reason": "分别示范双层限额、保全与即时执行的区分、付款顺序例外；仅P2加载"
+}

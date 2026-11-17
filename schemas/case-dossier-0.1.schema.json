@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:posttrainlearn:case-dossier:0.1",
+  "title": "诉讼案件全景记录 0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "dossier_version", "case_metadata", "proceedings", "documents", "participants", "events", "claims", "fact_propositions", "assertions", "evidence_items", "evidence_responses", "court_assessments", "issues", "authorities", "amount_ledger", "decisions", "gaps_and_review", "source_spans"],
+  "properties": {
+    "schema_version": {"const": "0.1"},
+    "dossier_version": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"},
+    "case_metadata": {"type": "object", "required": ["case_id", "title", "scope", "normalization_status", "training_readiness", "permission_status", "expert_review_status"], "properties": {
+      "case_id": {"type": "string", "minLength": 1}, "title": {"type": "string", "minLength": 1},
+      "normalization_status": {"enum": ["partial", "ready", "quarantine"]},
+      "training_readiness": {"enum": ["blocked", "unreviewed", "eligible_for_unit_review"]},
+      "permission_status": {"enum": ["unresolved", "restricted", "verified"]},
+      "expert_review_status": {"enum": ["not_reviewed", "partially_reviewed", "reviewed"]}
+    }},
+    "proceedings": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/record"}},
+    "documents": {"type": "array", "minItems": 1, "items": {"type": "object", "required": ["id", "title", "kind", "acquisition", "original_obtained", "proceeding_id"], "properties": {"id": {"type": "string"}, "original_obtained": {"type": "boolean"}, "acquisition": {"enum": ["published_judgment_view", "judgment_reference", "original_obtained"]}}}},
+    "participants": {"type": "array", "items": {"$ref": "#/$defs/record"}},
+    "events": {"type": "array", "items": {"$ref": "#/$defs/record"}},
+    "claims": {"type": "array", "items": {"$ref": "#/$defs/record"}},
+    "fact_propositions": {"type": "array", "items": {"$ref": "#/$defs/record"}},
+    "assertions": {"type": "array", "items": {"$ref": "#/$defs/record"}},
+    "evidence_items": {"type": "array", "items": {"type": "object", "required": ["id", "title", "text", "support_span_ids", "original_obtained", "document_id", "fact_ids"], "properties": {"original_obtained": {"type": "boolean"}}}},
+    "evidence_responses": {"type": "array", "items": {"$ref": "#/$defs/record"}},
+    "court_assessments": {"type": "array", "items": {"$ref": "#/$defs/record"}},
+    "issues": {"type": "array", "items": {"$ref": "#/$defs/record"}},
+    "authorities": {"type": "array", "items": {"$ref": "#/$defs/record"}},
+    "amount_ledger": {"type": "array", "items": {"type": "object", "required": ["id", "title", "text", "support_span_ids", "value", "role", "currency", "ledger_kind"], "properties": {"value": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+$"}, "ledger_kind": {"enum": ["transaction", "aggregate", "contract", "claim", "assessment", "fee", "rate"]}}}},
+    "decisions": {"type": "array", "items": {"$ref": "#/$defs/record"}},
+    "gaps_and_review": {"type": "object", "required": ["gaps", "reviews", "checks"], "properties": {"gaps": {"type": "array", "items": {"$ref": "#/$defs/record"}}, "reviews": {"type": "array"}, "checks": {"type": "array"}}},
+    "source_spans": {"type": "array", "minItems": 1, "items": {"type": "object", "required": ["id", "document_id", "text_version", "locator", "quote", "view_sha256"], "properties": {"quote": {"type": "string", "minLength": 1}, "view_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}}}}
+  },
+  "$defs": {
+    "record": {"type": "object", "required": ["id", "title", "text", "support_span_ids"], "properties": {"id": {"type": "string", "minLength": 1}, "title": {"type": "string", "minLength": 1}, "text": {"type": "string", "minLength": 1}, "support_span_ids": {"type": "array", "items": {"type": "string"}, "uniqueItems": true}}}
+  }
+}

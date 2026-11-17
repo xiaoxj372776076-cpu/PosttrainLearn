@@ -1,0 +1,83 @@
+{
+  "benchmark": {
+    "name": "PLawBench",
+    "snapshotDate": "2026-11-10",
+    "repository": "https://github.com/SKYLENAGE-AI/PLawBench",
+    "commit": "f6ee07b36c1f4c0bfc2af8ca27183d3dd3175c56",
+    "total": 280,
+    "taskTypes": [
+      {
+        "key": "case",
+        "label": "案例分析",
+        "count": 250
+      },
+      {
+        "key": "consultation",
+        "label": "法律咨询",
+        "count": 18
+      },
+      {
+        "key": "plaintiff",
+        "label": "起诉状",
+        "count": 6
+      },
+      {
+        "key": "defendant",
+        "label": "答辩状",
+        "count": 6
+      }
+    ],
+    "sourceHashes": {
+      "practical_case_analysis_250.jsonl": "44a69190ba08f0a4b68ea208b57b403e6b7f9aa01b105cf0fc3a34c06f4a832e",
+      "public_legal_consultation_18.json": "7decbb5a14c6373e0c31310fa434936cb7c4465867cd631598fa994abbd7fa5e",
+      "Plantiffs_Statement.json": "59816a91bd54f0ccde2a679af3546ec98c28d5c1161bb5533584f7c9b054a77b",
+      "Defendants_Statement.json": "81bfe63337c3a05f89c8202a8fe81409ffc437c2b403484ceb1eeb74b4862b7b"
+    },
+    "referenceAnswerNote": "公开快照没有独立参考答案字段。rubric 含参考结论和依据，但不等于单独核验过的标准答案。",
+    "licenseStatus": "unresolved",
+    "role": "public_benchmark_unassigned",
+    "paperTotal": 850,
+    "rubricGroups": 1000,
+    "labels": [
+      "个人生活",
+      "婚姻家事",
+      "诉讼仲裁",
+      "公司治理",
+      "劳动人事",
+      "刑事实务",
+      "知识产权",
+      "环保安全",
+      "法律科技",
+      "跨国事务",
+      "法律时效敏感度",
+      "法律理论应用"
+    ]
+  },
+  "probe_ids": [
+    "case-024",
+    "case-025",
+    "case-061",
+    "case-066",
+    "case-068",
+    "case-072",
+    "case-074",
+    "case-076",
+    "case-112",
+    "case-186"
+  ],
+  "all_same_context_ids": [
+    "case-024",
+    "case-025",
+    "case-061",
+    "case-066",
+    "case-068",
+    "case-072",
+    "case-074",
+    "case-076",
+    "case-112",
+    "case-186"
+  ],
+  "source_role": "adaptive_development_probe",
+  "never_unseen_holdout": true,
+  "reason": "User explicitly requests benchmark error-guided generation; no held-out performance claim."
+}

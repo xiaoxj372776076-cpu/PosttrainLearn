@@ -1,0 +1,23 @@
+{
+  "fields": {
+    "A_valid": "合同或保证状态",
+    "A_restitution": "金额，人民币元",
+    "A_guarantee": "合同或保证状态",
+    "B_initial_principal": "B最初实际交付本金，不是付款后的未偿本金，人民币元",
+    "B_protected_total": "截日全部已付金额抵充后，B仍可请求的受保护本息余额，人民币元",
+    "B_guarantee": "合同或保证状态",
+    "C_outstanding_principal": "金额，人民币元",
+    "C_outstanding_interest": "金额，人民币元",
+    "C_outstanding_expenses": "金额，人民币元",
+    "C_guarantee": "合同或保证状态",
+    "borrower_total": "金额，人民币元"
+  },
+  "guarantee_states": [
+    "invalid_accessory",
+    "expired",
+    "joint",
+    "general_preserved_not_yet_enforceable"
+  ],
+  "money": "数字或十进制金额字符串均可；最终每项四舍五入至分，分项取分后计算总额",
+  "basis": "简短事实、法条、必要算式，须解释决定性法律分支；不要求内部思维链"
+}

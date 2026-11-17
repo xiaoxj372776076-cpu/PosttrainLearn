@@ -1,0 +1,261 @@
+{
+  "batch": "first",
+  "valid": false,
+  "correct": null,
+  "strict_criteria_correct": 0,
+  "target_hit": false,
+  "grader_answer_complete_count": 2,
+  "criterion_pass_counts": [
+    {
+      "id": "C1-contract-invalid",
+      "pass_count": 1,
+      "n": 5
+    },
+    {
+      "id": "C2-principal-actual-delivery",
+      "pass_count": 5,
+      "n": 5
+    },
+    {
+      "id": "C3-fee-discretion",
+      "pass_count": 0,
+      "n": 5
+    }
+  ],
+  "n_completed": 5,
+  "legal_core_correct": 0,
+  "transport_complete": true,
+  "grades": [
+    {
+      "index": 1,
+      "call": "first-grade-1",
+      "answer_call": "first-blind-1",
+      "measurement_valid": true,
+      "answer_complete": false,
+      "legal_core_correct": false,
+      "overall_correct": false,
+      "criteria": [
+        {
+          "id": "C1-contract-invalid",
+          "pass": true,
+          "answer_quote": "应认定双方民间借贷合同因“套取金融机构贷款转贷”而无效；无效后按实际交付返还本金。……马某请求的约定利息、违约金不应支持；马某变更后未再请求利息、违约金，法院不主动判付。",
+          "reason": "学生明确认定合同因套取金融机构贷款转贷而无效，并按无效返还处理，未按有效借款合同支持54.40万元本金及约定利息，符合C1。"
+        },
+        {
+          "id": "C2-principal-actual-delivery",
+          "pass": true,
+          "answer_quote": "实际交付为首次转账50.20万元加后续支付宝2.21万元，合计52.41万元。故应判令皮某返还马某本金52.41万元，驳回其余本金请求（约1.99万元）。",
+          "reason": "学生以实际交付为限计算52.41万元，明确驳回54.40万元中超出部分约1.99万元，未仅凭借条、收条判全额，符合C2。"
+        },
+        {
+          "id": "C3-fee-discretion",
+          "pass": false,
+          "answer_quote": "诉讼费用中，案件受理费按胜败比例分担；马某请求的“执行费”不属于本案审理中的诉讼费用，本案不判，待执行程序依法处理。……诉讼费用应依胜败比例分担；执行费不属于本案诉讼费用，不能在审理判决中一并判由被告承担。",
+          "reason": "学生仅处理案件受理费和执行费，未说明公告费应依《诉讼费用交纳办法》第12条按谁主张、谁负担原则由法院决定直接支付；且“按胜败比例分担”未体现第29条要求根据案件具体情况酌定。该必答费用分支遗漏，C3不通过。"
+        }
+      ],
+      "substantive_errors": [
+        "诉讼费用部分遗漏公告费处理：未说明公告费依《诉讼费用交纳办法》第12条按谁主张、谁负担原则由法院决定直接支付，也未体现第29条按具体情况酌定而非机械按胜败比例分担的要求。"
+      ],
+      "minor_issues": [
+        "依据法条部分未列《诉讼费用交纳办法》第12条；另引用民法典第670条、民间借贷司法解释第26条对合同无效后的返还处理并非必要，但不影响C1、C2核心结论。"
+      ],
+      "reference_problems": [],
+      "reason": "C1、C2核验通过；C3因遗漏公告费依第12条按谁主张谁负担处理这一必答法律分支，且仅表述按胜败比例分担，未通过。故legal_core_correct与overall_correct均为false，答案不完整。材料足以核验该遗漏，未发现参考错误或必要材料缺失导致测量无效。"
+    },
+    {
+      "index": 2,
+      "call": "first-grade-2-retry-1",
+      "answer_call": "first-blind-2",
+      "measurement_valid": true,
+      "answer_complete": false,
+      "legal_core_correct": false,
+      "overall_correct": false,
+      "criteria": [
+        {
+          "id": "C1-contract-invalid",
+          "pass": false,
+          "answer_quote": "依民法典第670条及民间借贷司法解释第26条，预先扣除的利息不得计入本金。……即使因资金来源于银行贷款而涉及转贷合同效力问题，合同无效的法律后果亦仅为返还实际取得的财产，本金上限仍按实际取得认定",
+          "reason": "学生答案主要按有效借款合同的预扣利息规则处理，仅以“即使”假设方式提及转贷合同无效，未明确认定案涉民间借贷合同因套取金融机构贷款转贷而无效，也未将无效返还作为裁判基础；不符合C1要求。"
+        },
+        {
+          "id": "C2-principal-actual-delivery",
+          "pass": true,
+          "answer_quote": "应以实际交付认定为借款本金52.41万元（首次转账50.20万元＋后续支付宝2.21万元），判令皮某返还52.41万元，驳回其余1.99万元本金请求。",
+          "reason": "答案明确以实际交付为本金上限，合计50.20万元加2.21万元为52.41万元，并驳回未实际交付的净额1.99万元，符合C2关于实际交付和返还范围的要求。"
+        },
+        {
+          "id": "C3-fee-discretion",
+          "pass": false,
+          "answer_quote": "案件受理费按胜败比例分担；执行费不属于本案诉讼费用，应另在执行程序中依法处理；保全费以实际发生并举证为限……案件受理费按支持与驳回比例由双方分担；执行费在执行阶段依法处理，不宜在本案中预判；保全费须以实际发生并举证为前提。",
+          "reason": "答案未处理公告费，未按《诉讼费用交纳办法》第12条说明公告费依谁主张、谁负担原则由法院决定直接支付；受理费分担表述偏于按比例，未充分体现第29条根据具体情况酌定。遗漏C3必答费用分支。"
+        }
+      ],
+      "substantive_errors": [
+        "未明确认定案涉民间借贷合同因套取金融机构贷款转贷而无效，错误以有效合同的预扣利息规则作为主要分析路径。",
+        "遗漏公告费的处理，未依《诉讼费用交纳办法》第12条说明谁主张、谁负担及由法院决定直接支付。"
+      ],
+      "minor_issues": [],
+      "reference_problems": [],
+      "reason": "参考结论与冻结critical_criteria有官方依据支持，材料足以核验，measurement_valid为true。学生答案在C2本金实际交付及52.41万元结论上通过，但C1未认定合同无效、C3遗漏公告费处理，故legal_core_correct与overall_correct均为false，答案亦不完整。"
+    },
+    {
+      "index": 3,
+      "call": "first-grade-3",
+      "answer_call": "first-blind-3-retry-1",
+      "measurement_valid": true,
+      "answer_complete": true,
+      "legal_core_correct": false,
+      "overall_correct": false,
+      "criteria": [
+        {
+          "id": "C1-contract-invalid",
+          "pass": false,
+          "answer_quote": "即使认定本案存在套取金融机构贷款转贷而影响合同效力，依民法典第157条，皮某仍应返还实际取得的资金，本金结论不变。",
+          "reason": "学生未明确认定案涉民间借贷合同因套取金融机构贷款转贷而无效，而是将合同效力受影响作为“即使”假设；分析过程主要依民法典第670条及民间借贷规定第26条按有效借款合同处理预扣利息，不符合C1要求认定无效并按无效返还处理。"
+        },
+        {
+          "id": "C2-principal-actual-delivery",
+          "pass": true,
+          "answer_quote": "判令皮某返还实际借款本金52.41万元；驳回其余1.99万元本金请求。",
+          "reason": "学生明确支持实际交付合计52.41万元（首次50.20万元加后续支付宝2.21万元），驳回54.40万元中未实际交付的1.99万元；两种后续款项定性下均得出52.41万元，符合C2。"
+        },
+        {
+          "id": "C3-fee-discretion",
+          "pass": false,
+          "answer_quote": "案件受理费等诉讼费用按胜败比例分担；原告主张的执行费因不属于本案审理阶段可预判的费用，不予支持，保全费如实际发生并有依据，按比例分担。",
+          "reason": "学生仅称按胜败比例分担，未依据《诉讼费用交纳办法》第29条说明根据案件具体情况酌定，也未处理公告费依第12条按谁主张、谁负担原则由法院决定直接支付的必答分支；费用部分不完整，不符合C3。"
+        }
+      ],
+      "substantive_errors": [
+        "未认定套取金融机构贷款转贷导致案涉民间借贷合同无效，反而将无效作为假设，并以预扣利息规则按有效合同处理本金，违反C1的核心法律认定要求。",
+        "诉讼费用部分遗漏公告费依《诉讼费用交纳办法》第12条按谁主张、谁负担原则处理的必答分支，且仅表述为按胜败比例分担，未体现第29条根据具体情况酌定。"
+      ],
+      "minor_issues": [
+        "非关键项N3：答案区分了诉状自述与微信记录，但未引用或结合p-020-fact关于2.21万元亦来源于银行贷款的裁判理由事实认定。"
+      ],
+      "reference_problems": [],
+      "reason": "C2关于实际交付本金52.41万元及驳回1.99万元的结论正确；但C1未认定合同因套取金融机构贷款转贷而无效，C3未完整处理诉讼费用酌定及公告费负担原则。因critical_criteria未全部通过，overall_correct为false。参考材料与冻结标准未发现需使measurement_valid为false的错误或缺失。"
+    },
+    {
+      "index": 4,
+      "call": "first-grade-4",
+      "answer_call": "first-blind-4-retry-1",
+      "measurement_valid": true,
+      "answer_complete": false,
+      "legal_core_correct": false,
+      "overall_correct": false,
+      "criteria": [
+        {
+          "id": "C1-contract-invalid",
+          "pass": false,
+          "answer_quote": "若进一步认定构成套取金融机构贷款转贷，合同无效，依无效返还规则亦仅返还实际取得的52.41万元，不影响本案本金结论。",
+          "reason": "学生仅以“若进一步认定”作条件性假设，未明确认定案涉民间借贷合同因套取金融机构贷款转贷而无效；主路径仍按有效借贷的实际交付认定本金，并引用《民间借贷规定》第26条，不符合C1要求。"
+        },
+        {
+          "id": "C2-principal-actual-delivery",
+          "pass": true,
+          "answer_quote": "应认定实际借款本金为52.41万元（50.20万元首次转账＋2.21万元后续支付宝转账；也可表述为54.40万元扣除净预扣利息1.99万元），判令皮某返还马某借款本金52.41万元，驳回其余1.99万元本金请求。",
+          "reason": "明确按实际交付认定首次50.20万元加后续2.21万元合计52.41万元，并驳回54.40万元中未实际交付的1.99万元，符合C2。"
+        },
+        {
+          "id": "C3-fee-discretion",
+          "pass": false,
+          "answer_quote": "案件受理费按胜败比例由皮某负担支持部分、马某负担未支持部分；执行费尚未发生且不属本案审理范围，本案不予处理，执行阶段依法由被执行人负担。",
+          "reason": "仅处理案件受理费和执行费，遗漏公告费及《诉讼费用交纳办法》第12条按谁主张、谁负担原则由法院决定直接支付的要求；也未说明具体金额须依实际发生和缴费凭证确定，不符合C3。"
+        }
+      ],
+      "substantive_errors": [
+        "未明确认定案涉民间借贷合同因套取金融机构贷款转贷而无效，仅以“若进一步认定”作条件性表述，并以有效借贷的实际交付规则作为主路径。",
+        "诉讼费用部分遗漏公告费，未依《诉讼费用交纳办法》第12条按谁主张、谁负担原则说明由法院决定直接支付，也未说明具体金额须依缴费凭证确定。"
+      ],
+      "minor_issues": [
+        "引用《民间借贷规定》第26条及《民法典》第670条、第679条作为主路径，与合同无效返还路径不一致，法律依据有冗余。",
+        "未引用《民间借贷规定》第31条说明时间效力，但非critical。"
+      ],
+      "reference_problems": [],
+      "reason": "C2本金核验通过；C1未明确认定合同无效，仅条件假设，故不通过；C3遗漏公告费及第12条谁主张谁负担处理，故不通过。参考材料未发现错误或必要材料缺失，measurement_valid为true；全部critical未通过，overall_correct为false；答案虽有四段式但遗漏必答法律分支，answer_complete为false，legal_core_correct为false。"
+    },
+    {
+      "index": 5,
+      "call": "first-grade-5",
+      "answer_call": "first-blind-5",
+      "measurement_valid": true,
+      "answer_complete": true,
+      "legal_core_correct": false,
+      "overall_correct": false,
+      "criteria": [
+        {
+          "id": "C1-contract-invalid",
+          "pass": false,
+          "answer_quote": "即使因资金来源涉及套取金融机构贷款转贷而需评价合同效力，依《民法典》第157条，无效后仍应返还实际取得的财产，不影响按实际交付认定52.41万元及剔除预扣利息的结论",
+          "reason": "学生答案仅以“即使……需评价合同效力”作假设性表述，未明确认定案涉民间借贷合同因套取金融机构贷款转贷而无效；其主要分析仍按有效合同下的预扣利息规则（民法典第670条、民间借贷规定第26条）处理，不符合C1要求的无效定性。"
+        },
+        {
+          "id": "C2-principal-actual-delivery",
+          "pass": true,
+          "answer_quote": "法院不应按《借条》《收条》载明的54.40万元全额支持，而应认定马某实际交付的借款本金为52.41万元，判令皮某返还52.41万元；驳回马某其余1.99万元本金请求。",
+          "reason": "学生答案以首次实际交付50.20万元加后续支付宝2.21万元计算为52.41万元，并明确驳回54.40万元中超出52.41万元的1.99万元，符合C2实际交付为本金且不得按借条收条全额认定的要求。"
+        },
+        {
+          "id": "C3-fee-discretion",
+          "pass": false,
+          "answer_quote": "诉讼费用按部分胜诉、部分败诉的比例分担：案件受理费由皮某负担支持部分对应比例、马某负担未支持部分；保全费如实际发生并按程序申请，可按同一比例处理；执行费不属于本案诉讼费用，应待执行程序依法处理，原告该部分请求不予支持。",
+          "reason": "学生答案未处理公告费依《诉讼费用交纳办法》第12条按谁主张、谁负担原则由法院决定直接支付的分支，也未说明具体费用须依实际发生和缴费凭证确定；对保全费采用“同一比例”处理，未体现根据具体情况酌定，故未满足C3。"
+        }
+      ],
+      "substantive_errors": [
+        "未认定案涉民间借贷合同因套取金融机构贷款转贷而无效，反而以有效合同下的预扣利息规则作为主要依据，法律定性错误。",
+        "诉讼费用处理遗漏公告费依《诉讼费用交纳办法》第12条按谁主张、谁负担原则由法院决定直接支付的分支，并对部分费用作机械比例处理，未说明实际发生及缴费凭证。"
+      ],
+      "minor_issues": [
+        {
+          "id": "N1-structure",
+          "pass": true,
+          "note": "答案按【结论】【案情简述】【分析过程】【依据法条】四段式呈现。"
+        },
+        {
+          "id": "N2-scope",
+          "pass": true,
+          "note": "明确仅处理变更后的本金及诉讼费用请求，未主动判付已撤回的利息、违约金。"
+        },
+        {
+          "id": "N3-fact-attribution",
+          "pass": true,
+          "note": "区分马某自述与法院查明摘录，并对2.21万元资金来源及定性作了分析。"
+        },
+        {
+          "id": "N4-absence",
+          "pass": true,
+          "note": "说明被告缺席不影响法院依证据审查，且不能因缺席全额支持原告主张。"
+        }
+      ],
+      "reference_problems": [],
+      "reason": "测量有效；C2通过，但C1未认定合同无效、C3遗漏公告费及凭证/酌定要求，全部critical未通过，故legal_core_correct与overall_correct均为false。答案四段完整且未截断，故answer_complete为true。"
+    }
+  ],
+  "identical_input_sha256": "cfa434e45101c5acc6089073365a5667293ef0179553de2c39a20a10aeb803b0",
+  "answer_calls": [
+    {
+      "index": 1,
+      "call": "first-blind-1"
+    },
+    {
+      "index": 2,
+      "call": "first-blind-2"
+    },
+    {
+      "index": 3,
+      "call": "first-blind-3-retry-1"
+    },
+    {
+      "index": 4,
+      "call": "first-blind-4-retry-1"
+    },
+    {
+      "index": 5,
+      "call": "first-blind-5"
+    }
+  ],
+  "caveat": "Same-family automated semantic audit; no expert gold; no out-of-family generalization claim."
+}

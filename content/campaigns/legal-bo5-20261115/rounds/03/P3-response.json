@@ -1,0 +1,22 @@
+{
+  "requestedModel": "gpt-6-astra",
+  "actualModel": "deployment-gpt-6-astra-platform-global",
+  "text": "{\n  \"question_sufficiency\": \"fail\",\n  \"answer_leakage\": true,\n  \"required_repairs\": [\n    \"明确B实际交付181110元的日期、首次计息起点及首段计息的起止日口径。S03仅明确最初借据日期，S04规定后续从上次结算日起算，但未明确首次实际交付是否也在2022-01-12。依据所给civil-code-2020第679条，不能无条件将借据日期等同于自然人借款合同成立及实际交付日期。该缺口影响B_protected_total、borrower_total及对戊请求支付的金额边界。\",\n    \"将S02“在本次无效清算中”改为条件式表述，例如“若A被认定无效，双方同意此前19939元全部作为已返还财产冲抵”。保留付款金额、冲抵约定及不请求其他赔偿的限制，避免直接以“无效清算”为待判断的A_valid预先定性。\"\n  ],\n  \"assessed_difficulty\": \"D4\",\n  \"reasoning_dependencies\": [\n    \"合同与受理时点、资金来源及请求范围共同决定A的效力审查、返还范围和从属保证状态；依据S01、S02、S12，lending-2020-12第13、31条及civil-code-2020第157、682条。\",\n    \"B实际交付本金与计息起点决定各次合法结息基数，再与整个期间的本息保护上限比较；依据S03—S05，civil-code-2020第670、679条及lending-2020-12第25—28条。\",\n    \"B结息机制的书面同意、展期是否获得书面同意、原到期日及请求到达日，分别影响保证范围、保证期间与即时支付资格；依据S06及civil-code-2020第688、692、693、695条。\",\n    \"C付款真实性与交易去重、指定清偿债务、费用与利息的清偿顺序，共同决定每次付款后的本金及后续单利基数；依据S07—S09、S11及civil-code-2020第560、561条。\",\n    \"C保证方式、保证期间及相应权利行使方式须先行判断，再判断先诉抗辩是否仍有讨论必要；依据S07、S10及civil-code-2020第686、687、692、693条。\",\n    \"各债务可支持分项须分别最终取分，再依S12及输出契约合计，不得重复计入凭证金额或跨债务冲抵。\"\n  ],\n  \"reason\": \"主要充分性缺口是B首次实际交付及起息日期，而非任务复杂。允许填写unresolved可以避免猜测，但不能使相关精确金额获得唯一依据。其余费用可收取性、LPR、付款归属、年基数、截止日及保证相关关键事件已有题设支持，应作为虚构情景的明确条件处理，不要求其具有原案证据身份。S02存在局部结论提示。D4仅评价多项相互影响的法律与计算依赖，不将缺失信息计作难度，也不代表实测成功率；本次仅审查所给学生输入，不独立认证法条全文。\"\n}",
+  "usage": {
+    "input_tokens": 14482,
+    "input_tokens_details": {
+      "cache_write_tokens": 14479,
+      "cached_tokens": 0
+    },
+    "output_tokens": 3285,
+    "output_tokens_details": {
+      "reasoning_tokens": 2516
+    },
+    "total_tokens": 17767
+  },
+  "latencyMs": 82598,
+  "completedAt": "2026-11-14T21:13:04.726Z",
+  "status": "completed",
+  "input_sha256": "0dbe0bacea55e45d1f7fde1ae3d565c1409c2c77f6a0aa870849c79491467eb3",
+  "output_sha256": "9d90016710825571896f09bdd2d3e6d87458f81ee7b14b18aef9b51ebce2006c"
+}

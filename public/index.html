@@ -8,6 +8,9 @@
   <title>法律数据合成研究学习</title>
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/exploration.css">
+  <link rel="stylesheet" href="/hardness-explorer.css">
+  <link rel="stylesheet" href="/run-explorer.css">
   <script type="module" src="/app.js"></script>
 </head>
 <body>
@@ -22,11 +25,12 @@
       <a href="#skills" data-nav="skills">Skill 版本</a>
       <a href="#cases" data-nav="cases">案例材料</a>
       <a href="#benchmarks" data-nav="benchmarks">评测与种子<span class="nav-dot"></span></a>
+      <a href="#exploration?run=legal-benchmark-deepseek-20261116" data-nav="exploration">合成链路探索</a>
     </nav>
     <div class="top-actions"><span class="local-badge"><i></i>本地研究空间</span><a class="button small ghost" href="/api/export/research" download>导出研究备份</a></div>
   </header>
   <main id="main" tabindex="-1"><div class="loading-state"><span class="loader"></span>正在读取研究材料…</div></main>
-  <footer><span>法律数据合成研究学习</span><span>证据先行 · 专家共建 · 版本可追溯</span><span>本地应用 v0.1.0</span></footer>
+  <footer><span>法律数据合成研究学习</span><span>证据先行 · 专家共建 · 版本可追溯</span><span>本地应用 v0.4.0</span></footer>
   <dialog id="modal" aria-labelledby="modal-title"><div id="modal-content"></div></dialog>
   <div id="toast" role="status" aria-live="polite"></div>
 </body>

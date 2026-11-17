@@ -1,0 +1,58 @@
+{
+  "reviewer": "coding_agent_research_review_not_legal_expert",
+  "expert_review": false,
+  "summary": "五份完整答卷及逐答评分已取得：实际金额5/5通过、明确合同无效1/5通过、费用项0/5通过。出现值得研究的法律定性缺口，但评分器完整性标记不一致，且公告费细节被设为整题硬门槛，本轮不能作为已验证的1-2/5高难样本。",
+  "effective_difficulty_measurement": "invalid_unconfirmed",
+  "observations": [
+    {
+      "criterion": "C2-principal-actual-delivery",
+      "pass_count": 5,
+      "n": 5,
+      "finding": "五答均得到502000+22100=524100，驳回19900。证据清单式题面及显式资金交付信息使金额问题容易，不应继续靠增加算术包装来宣称高难度。"
+    },
+    {
+      "criterion": "C1-contract-invalid",
+      "pass_count": 1,
+      "n": 5,
+      "finding": "只有第一答明确认定转贷合同无效；其余四答仅用即使、若进一步认定、如涉及等条件性表述，主要沿有效借贷的预扣利息规则处理。金额相同掩盖了裁判法律基础的差异。该逐项现象不是事后删除费用项后重算的整题1/5。",
+      "evidence_artifacts": [
+        "calls/first-blind-1-response.json",
+        "calls/first-blind-2-response.json",
+        "calls/first-blind-3-retry-1-response.json",
+        "calls/first-blind-4-retry-1-response.json",
+        "calls/first-blind-5-response.json"
+      ]
+    },
+    {
+      "criterion": "C3-fee-discretion",
+      "pass_count": 0,
+      "n": 5,
+      "finding": "冻结标准把公告费第12条及具体费用证明设为关键要求。五答虽均讨论受理费与胜败分担，仍因未明确公告费等而失败。第29条也不支持强制机械比例，但一般按胜败分担的概括表述是否已构成决定性错误需专家判断；不能仅凭未逐一提及费用细节制造法律难度。标准保持不变，未改分。"
+    }
+  ],
+  "measurement_problems": [
+    "全部五答API均为completed，哈希、目标配置及服务身份一致，但评分器把第一、第二、第四答的法律覆盖遗漏标记为answer_complete=false，第三、第五答类似遗漏却为true。原有效性门槛要求五份均为true，因此correct为null，不能绕开门槛报告成功率。",
+    "费用标准的关键性需要复核，尤其公告费遗漏与合理概括表述。当前没有专家审核，不能将所有C3失败确认为决定性法律错误。",
+    "仅有一道公司股东知情权错误种子，新材料是借贷效力纠纷；模仿了综合法院裁判题型，不等于成功迁移同一法律错误机制。",
+    "没有zero-shot或正确题few-shot对照；一题五答及两个截断重试不证明稳定成功率或benchmark示例的因果收益。"
+  ],
+  "preservation": {
+    "frozen_reference_changed": false,
+    "frozen_student_input_changed": false,
+    "target_config_changed": false,
+    "raw_grades_changed": false,
+    "truncated_attempts_retained": true,
+    "invalid_grade_response_retained": true,
+    "training_rows": 0,
+    "original_skill_version": "1.4.0"
+  },
+  "next_round_changes": [
+    "下一轮在盲答前分开定义传输完整性、法律必答覆盖和整题正确：传输完整性优先由API终态验证，法律遗漏只进入对应criterion。",
+    "逐项检查critical与题目的关系：只有决定请求处理或必需法律推理的要求才是硬门槛；公告费等细节若非专门考点，降为非关键观察或在题面中明确要求，再重新冻结测试。",
+    "保留benchmark完整原题、答案及rubric示范，同时区分题型相似与错误机制相似；扩充2-4道有据同类错题，不能把当前one-shot当成多示例实验。",
+    "研究合同效力这一缺口时，必须在新一轮盲答前单独确定效力与本金的关键判据，不能事后移除C3把本轮改报为整题1/5。",
+    "减少题面证据清单和不限于首次转账的解题引导；任何新问题都要先核验事实充分性，再跑全新的五答。",
+    "重新测试需要新的明确预算；有效首批命中后再做原题新五答确认，并设置zero-shot对照后才能分析few-shot收益。"
+  ],
+  "confirmation": "未执行。本轮首批测量无效，且51/52提交后不足完整十次确认调用；不启动半批。"
+}

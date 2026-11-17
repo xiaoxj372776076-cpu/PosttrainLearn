@@ -1,0 +1,22 @@
+{
+  "requestedModel": "gpt-6-astra",
+  "actualModel": "deployment-gpt-6-astra-platform-global",
+  "text": "{\n  \"question_sufficiency\": \"pass\",\n  \"answer_leakage\": false,\n  \"required_repairs\": [\n    \"仅统一交付文字：将末句“写入/app/output/answer.json”改为“由宿主适配器写入/app/output/answer.json”，避免与学生无需写文件的说明冲突。此项不影响法律问题的可回答性。\"\n  ],\n  \"assessed_difficulty\": \"D4\",\n  \"reasoning_dependencies\": [\n    \"合同与受理时点、资金来源→适用规范版本及A效力→返还范围与从属保证状态。依据：S01、S02、S12；lending-2020-12第13、31条，civil-code-2020第157、682条。\",\n    \"B实际交付与预扣利息→初始本金→结息的可保护范围及整体上限→付款前余额。依据：S03—S06；civil-code-2020第670条，lending-2020-12第25—28条。\",\n    \"交易号、到账结果及双方协议→识别有效付款与适用的清偿顺序→C分段本金、利息和费用余额。依据：S07—S09、S11；civil-code-2020第561条。\",\n    \"保证方式、原到期日、展期同意及行权方式和日期→区分保证责任是否存续与能否立即请求。依据：S06、S10；civil-code-2020第686—688、692、693、695条。\",\n    \"B、C保证存续状态与到期状态→SP-01在两债之间的抵充→付款后余额及总额。依据：S13、S12；civil-code-2020第560、561条及输出契约。该依赖不能把一般保证的先诉抗辩等同于担保消灭。\"\n  ],\n  \"reason\": \"学生输入提供了实际交付、结算、付款、到期及行权日期，以及自然日/365、付款日处理、费用到期、利率、最终取分和汇总口径；保证范围有明确约定或第691条的默认规则，足以开展闭卷审查。虚构的双方约定属于题设条件，附条件无效清算不构成答案泄漏，也不是原案证据。D4仅为跨保证状态、债务抵充和动态余额计算的结构性暂评；B整体上限可能使逐次结息求值不再必要，不能按归档次数抬高难度。本次未独立认证法条全文、来源元数据或实测成功率。\"\n}",
+  "usage": {
+    "input_tokens": 16912,
+    "input_tokens_details": {
+      "cache_write_tokens": 16909,
+      "cached_tokens": 0
+    },
+    "output_tokens": 2673,
+    "output_tokens_details": {
+      "reasoning_tokens": 2070
+    },
+    "total_tokens": 19585
+  },
+  "latencyMs": 64378,
+  "completedAt": "2026-11-14T22:46:38.093Z",
+  "status": "completed",
+  "input_sha256": "4680b9d4ddd407b0def16d9fc05a7d40634220f0df3d56f4bf4ffb92800565f9",
+  "output_sha256": "6b6ec69df9ea2378520156ddd491a34f8b3ca69d726e49186be38bb7f75a9975"
+}

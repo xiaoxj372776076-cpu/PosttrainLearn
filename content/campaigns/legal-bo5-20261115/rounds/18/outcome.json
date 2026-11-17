@@ -1,0 +1,27 @@
+{
+  "round": 18,
+  "status": "completed_not_confirmed",
+  "full_chain_completed": true,
+  "skill_version": "1.2.17",
+  "measured": {
+    "valid": true,
+    "correct": 4,
+    "n": 5,
+    "target_hit": false,
+    "deterministic_successes": 0,
+    "reason": "semantic_five_answer_measurement"
+  },
+  "confirmation": null,
+  "confirmed_target_hit": false,
+  "next_level": 6,
+  "training_rows": 0,
+  "release_status": "quarantine",
+  "assessed_difficulty": "D4",
+  "analysis": "据随附事实与规范复核，未发现使题面不可回答或工程参考不成立的缺口。工程参考的B合法结息及整体上限、C分段单利与付款抵充、保证存续和最终责任金额均获支持。五份答案均为有效完成，无截断或基础设施失败；实质正确4/5，legal_correct为5/5，final_amount_correct为4/5，basis_correct为4/5。固定核对器反复拒绝的六类中文状态字段均可与契约要求语义对应，不应计作错误。唯一实质失败来自第3份B结息算术，属于法律金额计算错误，不能据此认定法律推理能力不足。本题包含保证类型与行权程序、担保存续与付款归属、时间法与清偿余额等真实依赖，故结构性评为D4，difficulty_mechanism_valid表示这些依赖有效，不表示命中低成功率目标。本轮未达到1—2/5，不得宣称难度校准成功。以上仅基于提供的材料进行闭卷审计，未重新联网核验来源网址、哈希或调用独立计算工具。",
+  "remaining_gates": [
+    "expert_review",
+    "source_and_export_permissions",
+    "independent_family_confirmation",
+    "benchmark_source_overlap"
+  ]
+}

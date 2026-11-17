@@ -1,0 +1,33 @@
+{
+  "exit_code": 1,
+  "command": "python3 content/skills/1.1.0/scripts/audit_release.py content/runs/legal-harbor-001/samples.jsonl",
+  "report": {
+    "passed": false,
+    "record_count": 1,
+    "status_counts": {
+      "quarantine": 1
+    },
+    "accepted_count": 0,
+    "unique_accepted_question_count": 0,
+    "accepted_task_counts": {},
+    "accepted_review_counts": {},
+    "accepted_difficulty_counts": {},
+    "accepted_generation_mode_counts": {},
+    "errors": [
+      {
+        "line": null,
+        "sample_id": null,
+        "code": "empty_release",
+        "detail": "No accepted records to export"
+      }
+    ],
+    "limitations": [
+      "Does not verify source text, authority validity or legal truth",
+      "Does not establish model independence or check upstream verification logs",
+      "Does not validate material/seed manifests, run configuration or genuine reasoning difficulty",
+      "Does not detect semantic near-duplicates or identity changes in case IDs",
+      "Input must be the final canonical sample view, not expanded training rows"
+    ]
+  },
+  "interpretation": "发布审计未通过：0条accepted，不导出训练；隔离记录只做计数和分组检查，不是上游质量认证。"
+}

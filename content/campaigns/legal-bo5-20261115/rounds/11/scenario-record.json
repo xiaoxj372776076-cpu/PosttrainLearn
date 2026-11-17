@@ -1,0 +1,149 @@
+{
+  "loans": {
+    "A": {
+      "actual": "142987",
+      "returned": "20123"
+    },
+    "B": {
+      "original_actual": "184070",
+      "paper": "196389",
+      "rate": "0.132",
+      "rolls": [
+        {
+          "id": "B-1",
+          "date": "2022-07-06",
+          "face_value": "208818.00",
+          "new_cash": "0.00"
+        },
+        {
+          "id": "B-2",
+          "date": "2022-10-17",
+          "face_value": "216596.33",
+          "new_cash": "0.00"
+        },
+        {
+          "id": "B-3",
+          "date": "2023-01-09",
+          "face_value": "223176.11",
+          "new_cash": "0.00"
+        }
+      ]
+    },
+    "C": {
+      "actual": "224510",
+      "payments": [
+        {
+          "id": "T-01",
+          "date": "2019-04-18",
+          "amount": "25143.00",
+          "debt": "C",
+          "status": "settled",
+          "principal_first_agreement": false
+        },
+        {
+          "id": "T-02",
+          "date": "2019-08-23",
+          "amount": "26874.00",
+          "debt": "C",
+          "status": "settled",
+          "principal_first_agreement": true
+        },
+        {
+          "id": "T-03",
+          "date": "2020-02-14",
+          "amount": "28605.00",
+          "debt": "C",
+          "status": "settled",
+          "principal_first_agreement": false
+        },
+        {
+          "id": "T-04",
+          "date": "2020-09-21",
+          "amount": "30336.00",
+          "debt": "C",
+          "status": "settled",
+          "principal_first_agreement": false
+        },
+        {
+          "id": "T-05",
+          "date": "2021-04-11",
+          "amount": "32067.00",
+          "debt": "C",
+          "status": "settled",
+          "principal_first_agreement": false
+        },
+        {
+          "id": "T-06",
+          "date": "2022-06-06",
+          "amount": "33798.00",
+          "debt": "C",
+          "status": "settled",
+          "principal_first_agreement": false
+        },
+        {
+          "id": "T-07",
+          "date": "2023-07-06",
+          "amount": "35529.00",
+          "debt": "C",
+          "status": "settled",
+          "principal_first_agreement": false
+        }
+      ],
+      "started_at": "2019-02-07",
+      "contractual_rate": "0.235",
+      "protected_rate_schedule": [
+        {
+          "from": "2019-02-07",
+          "rate": "0.235"
+        },
+        {
+          "from": "2020-08-20",
+          "rate": "0.142"
+        }
+      ],
+      "suit_lpr": "0.0355",
+      "old_period_request": true
+    }
+  },
+  "level": 6,
+  "round": 11,
+  "cap": "0.148",
+  "cutoff": "2023-08-01",
+  "shared_cutoff_payment": {
+    "id": "SP-01",
+    "date": "2023-08-01",
+    "amount": "25000.00",
+    "eligible_debts": [
+      "B",
+      "C"
+    ],
+    "engineering_recipient": "B",
+    "before": {
+      "B": "224608.913040339196593076197923667173",
+      "C_principal": "154260.054863883888175219303195574683",
+      "C_interest": "1560.35102070536798669290319835085405",
+      "C_expenses": "0"
+    },
+    "basis": "civil-code-2020:560; expired guarantee provides no security, preserved general guarantee remains security despite prior-action defense; if both expire, B has the heavier interest burden"
+  },
+  "procedural_mechanism": {
+    "B_type_clause": "immediate_unconditional",
+    "B_initial_maturity": "2023-01-12",
+    "B_filed": "2023-07-05",
+    "B_served": null,
+    "B_withdrawn": "2023-07-09",
+    "C_type_clause": "only_if_unable",
+    "C_initial_maturity": "2022-12-15",
+    "C_filed": "2023-06-08",
+    "C_withdrawn": "2023-06-12",
+    "C_refiled": "2023-06-14",
+    "C_later_signature": "receipt_only_not_new_promise",
+    "basis": [
+      "guarantee-2020:25",
+      "guarantee-2020:31",
+      "guarantee-2020:32",
+      "guarantee-2020:34"
+    ],
+    "C_guarantee_signed": "2022-02-07"
+  }
+}

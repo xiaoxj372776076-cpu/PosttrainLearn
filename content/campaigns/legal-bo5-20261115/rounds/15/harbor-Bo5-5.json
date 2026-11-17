@@ -1,0 +1,41 @@
+{
+  "job": "legal-bo5-15-bo5-5",
+  "finished_at": "2026-11-15T01:22:20.975297Z",
+  "exceptions": [
+    {
+      "exception_type": "RuntimeError",
+      "exception_message": "Gateway failed; see sanitized host request record",
+      "exception_traceback": "Traceback (most recent call last):\n  File \"/Users/bytedance/Desktop/codex-posttrain/harbor-ocr-demo/.venv/lib/python3.12/site-packages/harbor/trial/multi_step.py\", line 181, in _run_step_agent\n    await self._run_agent_phase(\n  File \"/Users/bytedance/Desktop/codex-posttrain/harbor-ocr-demo/.venv/lib/python3.12/site-packages/harbor/trial/trial.py\", line 769, in _run_agent_phase\n    await asyncio.wait_for(\n  File \"/opt/homebrew/Cellar/python@3.12/3.12.9/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/tasks.py\", line 520, in wait_for\n    return await fut\n           ^^^^^^^^^\n  File \"/Users/bytedance/Desktop/codex-posttrain/legal-data-synthesis-lab/legal_harbor/hardness_agent.py\", line 58, in run\n    raise RuntimeError(\"Gateway failed; see sanitized host request record\")\nRuntimeError: Gateway failed; see sanitized host request record\n",
+      "occurred_at": "2026-11-15T01:22:20.527506Z"
+    }
+  ],
+  "completed_answer": false,
+  "infrastructure_failure": true,
+  "failure_kind": "infrastructure",
+  "usage": null,
+  "report": {
+    "passed": false,
+    "score": 0,
+    "failure_class": "format_only_pending_semantic_review",
+    "error": "Expecting value: line 1 column 1 (char 0)",
+    "checks": {},
+    "failed_checks": [
+      "A_valid",
+      "A_restitution",
+      "A_guarantee",
+      "B_initial_principal",
+      "B_protected_total",
+      "B_guarantee",
+      "C_outstanding_principal",
+      "C_outstanding_interest",
+      "C_outstanding_expenses",
+      "C_guarantee",
+      "borrower_total",
+      "B_second_guarantee",
+      "B_joint_payment_limit",
+      "C_third_party_type",
+      "C_third_party_payment_limit"
+    ]
+  },
+  "reward": 0.0
+}

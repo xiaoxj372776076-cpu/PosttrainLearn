@@ -1,0 +1,42 @@
+{
+  "reviews": [
+    {
+      "candidate_id": "cand-001",
+      "sufficient": true,
+      "similar_task_type": true,
+      "source_supported": true,
+      "problems": [],
+      "imitation_assessment": "与benchmark同样要求按【结论】+【案情简述】+【分析过程】+【依据法条】进行裁判分析，提问方式接近法院裁判结论；但范围限于本金认定，窄于完整裁判。",
+      "shortcut_risk": "中低",
+      "selection_rank": 1
+    },
+    {
+      "candidate_id": "cand-002",
+      "sufficient": true,
+      "similar_task_type": true,
+      "source_supported": true,
+      "problems": [
+        "设问“能否因缺席而直接按全部诉讼请求裁判”带有答案倾向，容易暗示应作否定回答",
+        "争点集中于缺席判决/举证责任，单一且规则化，与benchmark完整裁判分析的复杂度有差距"
+      ],
+      "imitation_assessment": "沿用同一输出结构，但更像程序规则判断题，事实利用较少，存在套用“缺席不等于当然支持”的捷径。",
+      "shortcut_risk": "高",
+      "selection_rank": null
+    },
+    {
+      "candidate_id": "cand-003",
+      "sufficient": true,
+      "similar_task_type": true,
+      "source_supported": true,
+      "problems": [
+        "设问中“已不再主张”直接提示处理方向，答案暗示较明显",
+        "主要考查诉讼请求范围，事实与争点较单一，易直接套用“围绕变更后请求审理”的结论"
+      ],
+      "imitation_assessment": "格式仿制明显，但问题被压缩为诉讼请求范围判断，缺少benchmark式综合裁判分析。",
+      "shortcut_risk": "中高",
+      "selection_rank": null
+    }
+  ],
+  "recommended_candidate_id": "cand-001",
+  "reason": "cand-001与benchmark的裁判分析题型和输出结构最接近，事实均来自材料且归属清楚；虽范围限于本金认定、存在一定规则适用捷径，但无新事实或明显答案暗示。cand-002、cand-003虽材料充分，但设问带有答案倾向且争点单一，故不推荐。"
+}

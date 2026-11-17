@@ -1,0 +1,27 @@
+{
+  "round": 9,
+  "status": "completed_not_confirmed",
+  "full_chain_completed": true,
+  "skill_version": "1.2.8",
+  "measured": {
+    "valid": false,
+    "correct": 4,
+    "n": 5,
+    "target_hit": false,
+    "deterministic_successes": 5,
+    "reason": "difficulty_mechanism_not_valid"
+  },
+  "confirmation": null,
+  "confirmed_target_hit": false,
+  "next_level": 6,
+  "training_rows": 0,
+  "release_status": "quarantine",
+  "assessed_difficulty": "D3",
+  "analysis": "题面在给定闭卷范围内可回答，工程参考的法律状态、最终金额及主要计算节点得到支持。独立核对的关键依据是：A适用2020年12月版本无效规则；戊的连带保证经期间内送达保留，己的一般保证因撤诉后未在期间内再诉而消灭；据此SP-01依民法典第560条优先清偿C，再依第561条先息后本。C在T-04、T-05、T-06付款后的本金分别约为200809.6847922777、187041.8982148795、171741.3378811913元，截日新增利息约3003.8265781740元。最终分项合计498025.65元。五答有效完成5/5，法律分支正确5/5，最终金额字段正确5/5，公开计算依据实质正确4/5；按本次同时审查答案及basis的口径，整体正确4/5。原确定性检查均通过，P6仅对第5答的公开数值依据作不利判定，不改写原记录。没有格式、截断或基础设施失败。未命中1–2/5，且唯一实质错误未改变所要求的最终金额，不能据此认定必要法律推理具有低成功率。D3仅表示存在保证期间、撤诉效果、跨债务抵充及债务内部清偿的必要关联；difficulty_mechanism_valid=false表示本轮没有验证目标实测难度，不表示题面无效。B各段正利率下的乘积展开必然高于对应单利整体上限，因此精确求出全部结息中间值并非最终B金额的必要操作。题尾仍有写入文件的残留语句，与前文宿主落盘说明不一致，但未影响本轮五答完成，不作为实质难度。此次仅据提供的文本与算式复核，未联网核验网页、运行脚本或完成专家审核。",
+  "remaining_gates": [
+    "expert_review",
+    "source_and_export_permissions",
+    "independent_family_confirmation",
+    "benchmark_source_overlap"
+  ]
+}

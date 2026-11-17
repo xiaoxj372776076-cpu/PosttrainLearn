@@ -1,0 +1,182 @@
+[
+  {
+    "index": 1,
+    "trace": {
+      "adapter_not_model_tool_calls": true,
+      "input_sha256": "c2d351861551a2c400e6041628c1d7657729ac92eb8581190d5e4d484542a1c6",
+      "actions": [
+        {
+          "action": "adapter_read_file",
+          "path": "/app/input/scope.txt",
+          "sha256": "80a7f4dbec5606e2f7f2e47a4bf6e51aae93581f22ba20cfdf2f72dea6a020a9"
+        },
+        {
+          "action": "adapter_read_file",
+          "path": "/app/input/claims.txt",
+          "sha256": "5741aaaf6da5e54b2d8b9190c555e079e305666d48b5576cb5054e29d2dc3617"
+        },
+        {
+          "action": "adapter_read_file",
+          "path": "/app/input/findings.txt",
+          "sha256": "8f135cb387712ffa0a1e2589abc05fb95e2d53b6f9113843813ab7a8e0efc220"
+        },
+        {
+          "action": "adapter_read_file",
+          "path": "/app/input/rules.json",
+          "sha256": "ed171c1f6fe1d4e25c0cb8ee7b2ae58dd2c75593bd2faf0c9fb84807276cbb5b"
+        },
+        {
+          "action": "adapter_read_file",
+          "path": "/app/input/mentions.json",
+          "sha256": "de78d1d7c9b10d75034f49651e54a20d1054ae080d0dd6011e55e6352c88429e"
+        },
+        {
+          "action": "adapter_read_file",
+          "path": "/app/input/output-contract.json",
+          "sha256": "d2952d7e66ff5ac420fbaba17c1352910e9fb6bbf26449e52b2bd26884dc6ffe"
+        },
+        {
+          "action": "adapter_submit_json",
+          "path": "/app/output/audit.json",
+          "sha256": "b1043b308c336acc2d2c268f5b1430e7d677e19aeeba73ae92c48360fb8979c3"
+        }
+      ],
+      "model_usage": {
+        "input_tokens": 9544,
+        "input_tokens_details": {
+          "cache_write_tokens": 9541,
+          "cached_tokens": 0
+        },
+        "output_tokens": 4257,
+        "output_tokens_details": {
+          "reasoning_tokens": 1034
+        },
+        "total_tokens": 13801
+      }
+    },
+    "requested_model": "gpt-6-astra",
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "status": "completed",
+    "completed_at": "2026-11-14T09:48:34.683Z"
+  },
+  {
+    "index": 2,
+    "trace": {
+      "adapter_not_model_tool_calls": true,
+      "input_sha256": "c2d351861551a2c400e6041628c1d7657729ac92eb8581190d5e4d484542a1c6",
+      "actions": [
+        {
+          "action": "adapter_read_file",
+          "path": "/app/input/scope.txt",
+          "sha256": "80a7f4dbec5606e2f7f2e47a4bf6e51aae93581f22ba20cfdf2f72dea6a020a9"
+        },
+        {
+          "action": "adapter_read_file",
+          "path": "/app/input/claims.txt",
+          "sha256": "5741aaaf6da5e54b2d8b9190c555e079e305666d48b5576cb5054e29d2dc3617"
+        },
+        {
+          "action": "adapter_read_file",
+          "path": "/app/input/findings.txt",
+          "sha256": "8f135cb387712ffa0a1e2589abc05fb95e2d53b6f9113843813ab7a8e0efc220"
+        },
+        {
+          "action": "adapter_read_file",
+          "path": "/app/input/rules.json",
+          "sha256": "ed171c1f6fe1d4e25c0cb8ee7b2ae58dd2c75593bd2faf0c9fb84807276cbb5b"
+        },
+        {
+          "action": "adapter_read_file",
+          "path": "/app/input/mentions.json",
+          "sha256": "de78d1d7c9b10d75034f49651e54a20d1054ae080d0dd6011e55e6352c88429e"
+        },
+        {
+          "action": "adapter_read_file",
+          "path": "/app/input/output-contract.json",
+          "sha256": "d2952d7e66ff5ac420fbaba17c1352910e9fb6bbf26449e52b2bd26884dc6ffe"
+        },
+        {
+          "action": "adapter_submit_json",
+          "path": "/app/output/audit.json",
+          "sha256": "1ec6dc092bc971985e52e24aa085aab22a7c2be3d15b0e1e4244d1dda656ee20"
+        }
+      ],
+      "model_usage": {
+        "input_tokens": 9544,
+        "input_tokens_details": {
+          "cache_write_tokens": 9541,
+          "cached_tokens": 0
+        },
+        "output_tokens": 5000,
+        "output_tokens_details": {
+          "reasoning_tokens": 1796
+        },
+        "total_tokens": 14544
+      }
+    },
+    "requested_model": "gpt-6-astra",
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "status": "completed",
+    "completed_at": "2026-11-14T09:50:14.712Z"
+  },
+  {
+    "index": 3,
+    "trace": {
+      "adapter_not_model_tool_calls": true,
+      "input_sha256": "c2d351861551a2c400e6041628c1d7657729ac92eb8581190d5e4d484542a1c6",
+      "actions": [
+        {
+          "action": "adapter_read_file",
+          "path": "/app/input/scope.txt",
+          "sha256": "80a7f4dbec5606e2f7f2e47a4bf6e51aae93581f22ba20cfdf2f72dea6a020a9"
+        },
+        {
+          "action": "adapter_read_file",
+          "path": "/app/input/claims.txt",
+          "sha256": "5741aaaf6da5e54b2d8b9190c555e079e305666d48b5576cb5054e29d2dc3617"
+        },
+        {
+          "action": "adapter_read_file",
+          "path": "/app/input/findings.txt",
+          "sha256": "8f135cb387712ffa0a1e2589abc05fb95e2d53b6f9113843813ab7a8e0efc220"
+        },
+        {
+          "action": "adapter_read_file",
+          "path": "/app/input/rules.json",
+          "sha256": "ed171c1f6fe1d4e25c0cb8ee7b2ae58dd2c75593bd2faf0c9fb84807276cbb5b"
+        },
+        {
+          "action": "adapter_read_file",
+          "path": "/app/input/mentions.json",
+          "sha256": "de78d1d7c9b10d75034f49651e54a20d1054ae080d0dd6011e55e6352c88429e"
+        },
+        {
+          "action": "adapter_read_file",
+          "path": "/app/input/output-contract.json",
+          "sha256": "d2952d7e66ff5ac420fbaba17c1352910e9fb6bbf26449e52b2bd26884dc6ffe"
+        },
+        {
+          "action": "adapter_submit_json",
+          "path": "/app/output/audit.json",
+          "sha256": "ba3699627fb4d0e769c57b695ab2e14584d63ad28ec5abf43b4651a918796ba2"
+        }
+      ],
+      "model_usage": {
+        "input_tokens": 9544,
+        "input_tokens_details": {
+          "cache_write_tokens": 9541,
+          "cached_tokens": 0
+        },
+        "output_tokens": 5192,
+        "output_tokens_details": {
+          "reasoning_tokens": 2070
+        },
+        "total_tokens": 14736
+      }
+    },
+    "requested_model": "gpt-6-astra",
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "status": "completed",
+    "completed_at": "2026-11-14T11:40:03.752Z"
+  }
+]

@@ -1,0 +1,27 @@
+{
+  "round": 14,
+  "status": "completed_not_confirmed",
+  "full_chain_completed": true,
+  "skill_version": "1.2.13",
+  "measured": {
+    "valid": true,
+    "correct": 4,
+    "n": 5,
+    "target_hit": false,
+    "deterministic_successes": 5,
+    "reason": "semantic_five_answer_measurement"
+  },
+  "confirmation": null,
+  "confirmed_target_hit": false,
+  "next_level": 6,
+  "training_rows": 0,
+  "release_status": "quarantine",
+  "assessed_difficulty": "D4",
+  "analysis": "依据随题事实和规范摘录复核，题面可回答，工程参考的法律状态、付款归属和最终金额均获支持。关键依据包括：lending-2020-12第13条确定A无效；guarantee-2020第29、31条支持分别行权及不同保证方式下的撤诉效果；[S13]特别约定支持在两债全额保证存续时比较依法可请求利率，将SP-01抵B，而不是认定一般保证与连带保证在任何场景下价值当然相等。五份答案均有效完成，无截断、基础设施或纯格式失败。分层结果为法律正确5/5、最终金额正确4/5、依据正确4/5，整体实质正确4/5。唯一失败来自第2份的B乘积求值，不能归因于法律规则选择，也不能用确定性检查的通过标记覆盖该错误。本题存在保证状态、抵充条件、过渡利率与余额之间的真实依赖，结构评估为D4；但本批次未命中1–2/5区间，不能据此宣称已获得低成功率法律难题。本审计未联网核验来源页面或哈希，亦不构成专家审核。",
+  "remaining_gates": [
+    "expert_review",
+    "source_and_export_permissions",
+    "independent_family_confirmation",
+    "benchmark_source_overlap"
+  ]
+}

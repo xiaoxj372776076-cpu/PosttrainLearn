@@ -1,0 +1,22 @@
+{
+  "requestedModel": "gpt-6-astra",
+  "actualModel": "deployment-gpt-6-astra-platform-global",
+  "text": "{\"question\":null,\"blocked_reason\":\"缺口属于学生材料：S03仅记载B最初借据日期，未明确实际交付日期及首次计息起点；所附civil-code-2020第679条以提供借款为自然人借款合同成立时点，不能直接用借据日期替代。该缺口影响B_protected_total及borrower_total的唯一数值结果。原题虽允许将无法确定的字段列入unresolved，但不能据此补足材料。此外，S02“在本次无效清算中”预设待判断的合同效力，泄漏来自材料本身，无法仅修改任务表述消除。本阶段无权补充事实或改写材料。\"}",
+  "usage": {
+    "input_tokens": 15295,
+    "input_tokens_details": {
+      "cache_write_tokens": 15292,
+      "cached_tokens": 0
+    },
+    "output_tokens": 572,
+    "output_tokens_details": {
+      "reasoning_tokens": 405
+    },
+    "total_tokens": 15867
+  },
+  "latencyMs": 16030,
+  "completedAt": "2026-11-14T21:07:39.665Z",
+  "status": "completed",
+  "input_sha256": "04b640e4d319def8065fa4cd598accf16c667f2cf8776ee836e9e35f3e8e7604",
+  "output_sha256": "dfb40742085361d05cb63bdf9ef74c2bf0aa5c4dc4fb0a4998e8922e818d44bd"
+}

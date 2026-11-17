@@ -1,0 +1,17 @@
+{
+  "A_valid": false,
+  "A_restitution": "122828.00",
+  "A_guarantee": "invalid_accessory",
+  "B_initial_principal": "186290.00",
+  "B_protected_total": "202317.84",
+  "B_guarantee": "joint",
+  "C_outstanding_principal": "151539.07",
+  "C_outstanding_interest": "1403.29",
+  "C_outstanding_expenses": "0.00",
+  "C_guarantee": "general_preserved_not_yet_enforceable",
+  "borrower_total": "478088.20",
+  "B_second_guarantee": "joint",
+  "B_joint_payment_limit": "202317.84",
+  "C_third_party_type": "debt_joining",
+  "C_third_party_payment_limit": "76471.18"
+}

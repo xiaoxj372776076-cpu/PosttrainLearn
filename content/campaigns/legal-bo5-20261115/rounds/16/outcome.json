@@ -1,0 +1,27 @@
+{
+  "round": 16,
+  "status": "completed_not_confirmed",
+  "full_chain_completed": true,
+  "skill_version": "1.2.15",
+  "measured": {
+    "valid": true,
+    "correct": 5,
+    "n": 5,
+    "target_hit": false,
+    "deterministic_successes": 0,
+    "reason": "semantic_five_answer_measurement"
+  },
+  "confirmation": null,
+  "confirmed_target_hit": false,
+  "next_level": 6,
+  "training_rows": 0,
+  "release_status": "quarantine",
+  "assessed_difficulty": "D4",
+  "analysis": "依据随题事实和规则核对，未发现使问题不可回答或推翻工程参考实质结论的缺陷。关键法律依据为：A适用lending-2020-12第13条；戊、庚依据S06分别在保证期间内被依法行权，内部追偿份额不改变对外全额责任；己依据S10在期间届满前发生对乙再诉，保证存续但有先诉抗辩。故S13约定的比较条件成立，按13.2%与13%比较后SP-01全部抵充B，S14后签文书不改变此前抵充。辛依正文及guarantee-2020第25、36条属于一般保证，即时付款为0。数值核对要点：A为143072－20238＝122834.00元；B按175、103、84、204日递推得226866.350369元，低于185920×(1＋0.148×566/365)所得228588.894685元，付款后201866.35元；C按70、127、175、188、32、202、421、395、26日及相应利率、约定抵充顺序核算，最终本金150878.17元、利息1397.17元、费用0.00元；分项取分后乙总额476975.69元。五份均为有效完成，实质正确数5/5，legal_correct、final_amount_correct、basis_correct分别为5/5。确定性检查统一报出的六项状态失败，来自自由中文状态与固定标签不匹配，依契约不应算作错误。本题存在保证行权状态影响抵充、利率过渡与付款顺序影响余额等必要依赖，D4仅为结构性难度评定，difficulty_mechanism_valid不表示命中低成功率目标。本轮不支持1—2/5难度结论，也没有法律或计算失败可供归因。核验范围限随题文本与公开算式；未联网认证来源、运行程序化复算或完成专家审查，所给记录亦不足以独立确认五答调用的隔离程度。",
+  "remaining_gates": [
+    "expert_review",
+    "source_and_export_permissions",
+    "independent_family_confirmation",
+    "benchmark_source_overlap"
+  ]
+}

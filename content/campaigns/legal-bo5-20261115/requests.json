@@ -1,0 +1,4407 @@
+[
+  {
+    "round": "01",
+    "stage": "P1",
+    "status": "completed",
+    "submitted_at": "2026-11-14T20:53:11.722Z",
+    "input_sha256": "cc654b51d278076d9e7d4f0f7f1b44f06d87dd134bc54004a6cb80d80ec74e02",
+    "input_reservation": 28609,
+    "output_reservation": 10000,
+    "usage": {
+      "input_tokens": 14139,
+      "input_tokens_details": {
+        "cache_write_tokens": 14136,
+        "cached_tokens": 0
+      },
+      "output_tokens": 5330,
+      "output_tokens_details": {
+        "reasoning_tokens": 1316
+      },
+      "total_tokens": 19469
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-14T20:54:44.037Z"
+  },
+  {
+    "round": "01",
+    "stage": "P2",
+    "status": "completed",
+    "submitted_at": "2026-11-14T20:54:44.044Z",
+    "input_sha256": "30a84b7a660561a8442b35b71f9a61e62bf0c0b8584733a96741ce1cf2500002",
+    "input_reservation": 37334,
+    "output_reservation": 10000,
+    "usage": {
+      "input_tokens": 18270,
+      "input_tokens_details": {
+        "cache_write_tokens": 18267,
+        "cached_tokens": 0
+      },
+      "output_tokens": 1719,
+      "output_tokens_details": {
+        "reasoning_tokens": 1034
+      },
+      "total_tokens": 19989
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-14T20:55:19.264Z"
+  },
+  {
+    "round": "01",
+    "stage": "P3",
+    "status": "completed",
+    "submitted_at": "2026-11-14T20:55:19.268Z",
+    "input_sha256": "608baccf9d91fd5cb3ebc4cb85ccac5d08c7449b9bf17d024d7c8d39300864c5",
+    "input_reservation": 29247,
+    "output_reservation": 10000,
+    "usage": {
+      "input_tokens": 14469,
+      "input_tokens_details": {
+        "cache_write_tokens": 14466,
+        "cached_tokens": 0
+      },
+      "output_tokens": 1324,
+      "output_tokens_details": {
+        "reasoning_tokens": 844
+      },
+      "total_tokens": 15793
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-14T20:55:50.022Z"
+  },
+  {
+    "round": "01",
+    "stage": "P4",
+    "status": "completed",
+    "submitted_at": "2026-11-14T20:55:50.028Z",
+    "input_sha256": "f0cd25277dfc6e99a7b848f50169cf5c11d0fd7e6a9c8e14b2de5fc30b55fc25",
+    "input_reservation": 29586,
+    "output_reservation": 10000,
+    "usage": {
+      "input_tokens": 14539,
+      "input_tokens_details": {
+        "cache_write_tokens": 14536,
+        "cached_tokens": 0
+      },
+      "output_tokens": 3301,
+      "output_tokens_details": {
+        "reasoning_tokens": 1034
+      },
+      "total_tokens": 17840
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-14T20:56:55.985Z"
+  },
+  {
+    "round": "01",
+    "stage": "Bo5-1",
+    "status": "completed",
+    "submitted_at": "2026-11-14T20:57:28.159Z",
+    "input_sha256": "fdc6e06376b42225fca943f21b26a09c43e8b1f4d79c49cede393e13f13e3c58",
+    "input_reservation": 29107,
+    "output_reservation": 10000,
+    "usage": {
+      "input_tokens": 12285,
+      "input_tokens_details": {
+        "cache_write_tokens": 12282,
+        "cached_tokens": 0
+      },
+      "output_tokens": 1974,
+      "output_tokens_details": {
+        "reasoning_tokens": 1023
+      },
+      "total_tokens": 14259
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-14T20:58:13.488Z"
+  },
+  {
+    "round": "01",
+    "stage": "Bo5-2",
+    "status": "completed",
+    "submitted_at": "2026-11-14T20:58:21.878Z",
+    "input_sha256": "fdc6e06376b42225fca943f21b26a09c43e8b1f4d79c49cede393e13f13e3c58",
+    "input_reservation": 29107,
+    "output_reservation": 10000,
+    "usage": {
+      "input_tokens": 12285,
+      "input_tokens_details": {
+        "cache_write_tokens": 12282,
+        "cached_tokens": 0
+      },
+      "output_tokens": 1722,
+      "output_tokens_details": {
+        "reasoning_tokens": 860
+      },
+      "total_tokens": 14007
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-14T20:59:02.792Z"
+  },
+  {
+    "round": "01",
+    "stage": "Bo5-3",
+    "status": "completed",
+    "submitted_at": "2026-11-14T20:59:10.725Z",
+    "input_sha256": "fdc6e06376b42225fca943f21b26a09c43e8b1f4d79c49cede393e13f13e3c58",
+    "input_reservation": 29107,
+    "output_reservation": 10000,
+    "usage": {
+      "input_tokens": 12285,
+      "input_tokens_details": {
+        "cache_write_tokens": 12282,
+        "cached_tokens": 0
+      },
+      "output_tokens": 1950,
+      "output_tokens_details": {
+        "reasoning_tokens": 1034
+      },
+      "total_tokens": 14235
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-14T20:59:51.654Z"
+  },
+  {
+    "round": "01",
+    "stage": "Bo5-4",
+    "status": "completed",
+    "submitted_at": "2026-11-14T20:59:59.112Z",
+    "input_sha256": "fdc6e06376b42225fca943f21b26a09c43e8b1f4d79c49cede393e13f13e3c58",
+    "input_reservation": 29107,
+    "output_reservation": 10000,
+    "usage": {
+      "input_tokens": 12285,
+      "input_tokens_details": {
+        "cache_write_tokens": 12282,
+        "cached_tokens": 0
+      },
+      "output_tokens": 1834,
+      "output_tokens_details": {
+        "reasoning_tokens": 886
+      },
+      "total_tokens": 14119
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-14T21:00:34.971Z"
+  },
+  {
+    "round": "01",
+    "stage": "Bo5-5",
+    "status": "completed",
+    "submitted_at": "2026-11-14T21:00:42.477Z",
+    "input_sha256": "fdc6e06376b42225fca943f21b26a09c43e8b1f4d79c49cede393e13f13e3c58",
+    "input_reservation": 29107,
+    "output_reservation": 10000,
+    "usage": {
+      "input_tokens": 12285,
+      "input_tokens_details": {
+        "cache_write_tokens": 12282,
+        "cached_tokens": 0
+      },
+      "output_tokens": 1849,
+      "output_tokens_details": {
+        "reasoning_tokens": 909
+      },
+      "total_tokens": 14134
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-14T21:01:25.299Z"
+  },
+  {
+    "round": "01",
+    "stage": "P6",
+    "status": "completed",
+    "submitted_at": "2026-11-14T21:01:26.101Z",
+    "input_sha256": "9bb32864b22b8d13fb0d21727f96d071f2e54c41dd4f6ad15c13be8c9a6bb9ed",
+    "input_reservation": 44071,
+    "output_reservation": 10000,
+    "usage": {
+      "input_tokens": 21900,
+      "input_tokens_details": {
+        "cache_write_tokens": 21897,
+        "cached_tokens": 0
+      },
+      "output_tokens": 3283,
+      "output_tokens_details": {
+        "reasoning_tokens": 1034
+      },
+      "total_tokens": 25183
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-14T21:02:28.413Z"
+  },
+  {
+    "round": "02",
+    "stage": "P1",
+    "status": "completed",
+    "submitted_at": "2026-11-14T21:02:28.561Z",
+    "input_sha256": "92e3ab7df1d304e80e94d57bc1d2b6f281fe341cfcb7f759ced642ad7678f91c",
+    "input_reservation": 29078,
+    "output_reservation": 10000,
+    "usage": {
+      "input_tokens": 14333,
+      "input_tokens_details": {
+        "cache_write_tokens": 14330,
+        "cached_tokens": 0
+      },
+      "output_tokens": 8019,
+      "output_tokens_details": {
+        "reasoning_tokens": 2070
+      },
+      "total_tokens": 22352
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-14T21:04:44.684Z"
+  },
+  {
+    "round": "02",
+    "stage": "P2",
+    "status": "completed",
+    "submitted_at": "2026-11-14T21:04:44.689Z",
+    "input_sha256": "a13357cb4cc77ac35090410072e7ac290103ed90d5b134dc1968bf95494ace8d",
+    "input_reservation": 42318,
+    "output_reservation": 10000,
+    "usage": {
+      "input_tokens": 20657,
+      "input_tokens_details": {
+        "cache_write_tokens": 20654,
+        "cached_tokens": 0
+      },
+      "output_tokens": 2736,
+      "output_tokens_details": {
+        "reasoning_tokens": 1770
+      },
+      "total_tokens": 23393
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-14T21:05:54.809Z"
+  },
+  {
+    "round": "02",
+    "stage": "P3",
+    "status": "completed",
+    "submitted_at": "2026-11-14T21:05:54.824Z",
+    "input_sha256": "5c1411ce09dd03ab40aceeb6ef652a38e456de7ea45fd7929aaf11906cc16d32",
+    "input_reservation": 29765,
+    "output_reservation": 10000,
+    "usage": {
+      "input_tokens": 14717,
+      "input_tokens_details": {
+        "cache_write_tokens": 14714,
+        "cached_tokens": 0
+      },
+      "output_tokens": 3272,
+      "output_tokens_details": {
+        "reasoning_tokens": 2588
+      },
+      "total_tokens": 17989
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-14T21:07:23.629Z"
+  },
+  {
+    "round": "02",
+    "stage": "P2-repair",
+    "status": "completed",
+    "submitted_at": "2026-11-14T21:07:23.632Z",
+    "input_sha256": "04b640e4d319def8065fa4cd598accf16c667f2cf8776ee836e9e35f3e8e7604",
+    "input_reservation": 30722,
+    "output_reservation": 10000,
+    "usage": {
+      "input_tokens": 15295,
+      "input_tokens_details": {
+        "cache_write_tokens": 15292,
+        "cached_tokens": 0
+      },
+      "output_tokens": 572,
+      "output_tokens_details": {
+        "reasoning_tokens": 405
+      },
+      "total_tokens": 15867
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-14T21:07:39.665Z"
+  },
+  {
+    "round": "03",
+    "stage": "P1",
+    "status": "completed",
+    "submitted_at": "2026-11-14T21:07:39.746Z",
+    "input_sha256": "8adde7fc2a67e1b350ecc31277f4a28df01f3d6fa369e0dd57822dd9b76cb026",
+    "input_reservation": 28766,
+    "output_reservation": 10000,
+    "usage": {
+      "input_tokens": 14098,
+      "input_tokens_details": {
+        "cache_write_tokens": 14095,
+        "cached_tokens": 0
+      },
+      "output_tokens": 8862,
+      "output_tokens_details": {
+        "reasoning_tokens": 3624
+      },
+      "total_tokens": 22960
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-14T21:10:43.439Z"
+  },
+  {
+    "round": "03",
+    "stage": "P2",
+    "status": "completed",
+    "submitted_at": "2026-11-14T21:10:43.444Z",
+    "input_sha256": "449e16c0b8feac02389918e9cb375f2b87e04a4d021876f440c62d103cba57dd",
+    "input_reservation": 39588,
+    "output_reservation": 10000,
+    "usage": {
+      "input_tokens": 19313,
+      "input_tokens_details": {
+        "cache_write_tokens": 19310,
+        "cached_tokens": 0
+      },
+      "output_tokens": 2356,
+      "output_tokens_details": {
+        "reasoning_tokens": 1449
+      },
+      "total_tokens": 21669
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-14T21:11:42.121Z"
+  },
+  {
+    "round": "03",
+    "stage": "P3",
+    "status": "completed",
+    "submitted_at": "2026-11-14T21:11:42.125Z",
+    "input_sha256": "0dbe0bacea55e45d1f7fde1ae3d565c1409c2c77f6a0aa870849c79491467eb3",
+    "input_reservation": 29400,
+    "output_reservation": 10000,
+    "usage": {
+      "input_tokens": 14482,
+      "input_tokens_details": {
+        "cache_write_tokens": 14479,
+        "cached_tokens": 0
+      },
+      "output_tokens": 3285,
+      "output_tokens_details": {
+        "reasoning_tokens": 2516
+      },
+      "total_tokens": 17767
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-14T21:13:04.726Z"
+  },
+  {
+    "round": "03",
+    "stage": "P2-repair",
+    "status": "completed",
+    "submitted_at": "2026-11-14T21:13:04.729Z",
+    "input_sha256": "91fd8f24cc336fe1a32dc60da4328deb75a53b3667b7594ba16d2d9af0f71317",
+    "input_reservation": 30483,
+    "output_reservation": 10000,
+    "usage": {
+      "input_tokens": 15145,
+      "input_tokens_details": {
+        "cache_write_tokens": 15142,
+        "cached_tokens": 0
+      },
+      "output_tokens": 477,
+      "output_tokens_details": {
+        "reasoning_tokens": 288
+      },
+      "total_tokens": 15622
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-14T21:13:16.827Z"
+  },
+  {
+    "round": "04",
+    "stage": "P1",
+    "status": "completed",
+    "submitted_at": "2026-11-14T21:13:16.911Z",
+    "input_sha256": "f6c41a38c94f590889278cc9eb690c487403a8a9fdca7e8996e38458e095246e",
+    "input_reservation": 29186,
+    "output_reservation": 10000,
+    "usage": {
+      "input_tokens": 14353,
+      "input_tokens_details": {
+        "cache_write_tokens": 14350,
+        "cached_tokens": 0
+      },
+      "output_tokens": 7538,
+      "output_tokens_details": {
+        "reasoning_tokens": 2070
+      },
+      "total_tokens": 21891
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-14T21:15:23.752Z"
+  },
+  {
+    "round": "04",
+    "stage": "P2",
+    "status": "completed",
+    "submitted_at": "2026-11-14T21:15:23.757Z",
+    "input_sha256": "5d31af6aaf19db76ae29bfe686a6fa9fa9013c65cad19d3110b8bc68d2a443f1",
+    "input_reservation": 39740,
+    "output_reservation": 10000,
+    "usage": {
+      "input_tokens": 19359,
+      "input_tokens_details": {
+        "cache_write_tokens": 19356,
+        "cached_tokens": 0
+      },
+      "output_tokens": 1881,
+      "output_tokens_details": {
+        "reasoning_tokens": 1034
+      },
+      "total_tokens": 21240
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-14T21:16:05.437Z"
+  },
+  {
+    "round": "04",
+    "stage": "P3",
+    "status": "completed",
+    "submitted_at": "2026-11-14T21:16:05.440Z",
+    "input_sha256": "7349717241ada27a1a7ccefa78cde4380b642ef3cb15a67423190e87ea78ecc2",
+    "input_reservation": 29609,
+    "output_reservation": 10000,
+    "usage": {
+      "input_tokens": 14638,
+      "input_tokens_details": {
+        "cache_write_tokens": 14635,
+        "cached_tokens": 0
+      },
+      "output_tokens": 1559,
+      "output_tokens_details": {
+        "reasoning_tokens": 955
+      },
+      "total_tokens": 16197
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-14T21:16:41.833Z"
+  },
+  {
+    "round": "04",
+    "stage": "P4",
+    "status": "completed",
+    "submitted_at": "2026-11-14T21:16:41.836Z",
+    "input_sha256": "d284c18c1ca639605e900b5ea650d9239d59222faf15967e9903dc0ad7b4e086",
+    "input_reservation": 32736,
+    "output_reservation": 10000,
+    "usage": {
+      "input_tokens": 15488,
+      "input_tokens_details": {
+        "cache_write_tokens": 15485,
+        "cached_tokens": 0
+      },
+      "output_tokens": 5114,
+      "output_tokens_details": {
+        "reasoning_tokens": 2851
+      },
+      "total_tokens": 20602
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-14T21:18:15.649Z"
+  },
+  {
+    "round": "04",
+    "stage": "Bo5-1",
+    "status": "failed_usage_unknown",
+    "submitted_at": "2026-11-14T21:18:47.238Z",
+    "input_sha256": "516065ec94db46d50c544a60a403e363b2bb9d16d8432440840f3017259951d0",
+    "input_reservation": 29414,
+    "output_reservation": 10000,
+    "usage": null,
+    "error": "Incomplete response: incomplete",
+    "failed_at": "2026-11-14T21:22:05.769Z"
+  },
+  {
+    "round": "04",
+    "stage": "Bo5-1-retry",
+    "status": "completed",
+    "submitted_at": "2026-11-14T21:22:12.861Z",
+    "input_sha256": "516065ec94db46d50c544a60a403e363b2bb9d16d8432440840f3017259951d0",
+    "input_reservation": 29414,
+    "output_reservation": 10000,
+    "usage": {
+      "input_tokens": 12354,
+      "input_tokens_details": {
+        "cache_write_tokens": 12351,
+        "cached_tokens": 0
+      },
+      "output_tokens": 7744,
+      "output_tokens_details": {
+        "reasoning_tokens": 5048
+      },
+      "total_tokens": 20098
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-14T21:24:30.972Z"
+  },
+  {
+    "round": "04",
+    "stage": "Bo5-2",
+    "status": "completed",
+    "submitted_at": "2026-11-14T21:24:37.606Z",
+    "input_sha256": "516065ec94db46d50c544a60a403e363b2bb9d16d8432440840f3017259951d0",
+    "input_reservation": 29414,
+    "output_reservation": 10000,
+    "usage": {
+      "input_tokens": 12354,
+      "input_tokens_details": {
+        "cache_write_tokens": 12351,
+        "cached_tokens": 0
+      },
+      "output_tokens": 7988,
+      "output_tokens_details": {
+        "reasoning_tokens": 5696
+      },
+      "total_tokens": 20342
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-14T21:27:01.460Z"
+  },
+  {
+    "round": "04",
+    "stage": "Bo5-3",
+    "status": "completed",
+    "submitted_at": "2026-11-14T21:27:15.677Z",
+    "input_sha256": "516065ec94db46d50c544a60a403e363b2bb9d16d8432440840f3017259951d0",
+    "input_reservation": 29414,
+    "output_reservation": 10000,
+    "usage": {
+      "input_tokens": 12354,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 12351
+      },
+      "output_tokens": 7677,
+      "output_tokens_details": {
+        "reasoning_tokens": 6214
+      },
+      "total_tokens": 20031
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-14T21:29:52.611Z"
+  },
+  {
+    "round": "04",
+    "stage": "Bo5-4",
+    "status": "completed",
+    "submitted_at": "2026-11-14T21:30:00.710Z",
+    "input_sha256": "516065ec94db46d50c544a60a403e363b2bb9d16d8432440840f3017259951d0",
+    "input_reservation": 29414,
+    "output_reservation": 10000,
+    "usage": {
+      "input_tokens": 12354,
+      "input_tokens_details": {
+        "cache_write_tokens": 12351,
+        "cached_tokens": 0
+      },
+      "output_tokens": 8202,
+      "output_tokens_details": {
+        "reasoning_tokens": 5696
+      },
+      "total_tokens": 20556
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-14T21:32:35.079Z"
+  },
+  {
+    "round": "04",
+    "stage": "Bo5-5",
+    "status": "failed_with_known_usage",
+    "submitted_at": "2026-11-14T21:32:41.903Z",
+    "input_sha256": "516065ec94db46d50c544a60a403e363b2bb9d16d8432440840f3017259951d0",
+    "input_reservation": 29414,
+    "output_reservation": 10000,
+    "usage": {
+      "input_tokens": 12354,
+      "input_tokens_details": {
+        "cache_write_tokens": 12351,
+        "cached_tokens": 0
+      },
+      "output_tokens": 10000,
+      "output_tokens_details": {
+        "reasoning_tokens": 8705
+      },
+      "total_tokens": 22354
+    },
+    "failure_kind": "truncation",
+    "error": "Incomplete response: incomplete",
+    "failed_at": "2026-11-14T21:35:58.632Z",
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "incomplete_details": {
+      "reason": "max_output_tokens"
+    }
+  },
+  {
+    "round": "04",
+    "stage": "Bo5-5-retry",
+    "status": "completed",
+    "submitted_at": "2026-11-14T21:36:05.623Z",
+    "input_sha256": "516065ec94db46d50c544a60a403e363b2bb9d16d8432440840f3017259951d0",
+    "input_reservation": 29414,
+    "output_reservation": 10000,
+    "usage": {
+      "input_tokens": 12354,
+      "input_tokens_details": {
+        "cache_write_tokens": 12351,
+        "cached_tokens": 0
+      },
+      "output_tokens": 7359,
+      "output_tokens_details": {
+        "reasoning_tokens": 4980
+      },
+      "total_tokens": 19713
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-14T21:38:12.387Z"
+  },
+  {
+    "round": "04",
+    "stage": "P6",
+    "status": "completed",
+    "submitted_at": "2026-11-14T21:38:13.151Z",
+    "input_sha256": "188b1ac5df897cfee16b4fd2a6e97807490ead1595d980795913e0867fa649c2",
+    "input_reservation": 70990,
+    "output_reservation": 10000,
+    "usage": {
+      "input_tokens": 30700,
+      "input_tokens_details": {
+        "cache_write_tokens": 30697,
+        "cached_tokens": 0
+      },
+      "output_tokens": 4585,
+      "output_tokens_details": {
+        "reasoning_tokens": 2070
+      },
+      "total_tokens": 35285
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-14T21:39:39.539Z"
+  },
+  {
+    "round": "05",
+    "stage": "P1",
+    "status": "failed_usage_unknown",
+    "submitted_at": "2026-11-14T21:41:11.375Z",
+    "input_sha256": "868edd70908ccbdc45854353c923a9b00c18773f9cdfbb788c3a9df15da817b9",
+    "input_reservation": 29754,
+    "output_reservation": 20000,
+    "usage": null,
+    "failure_kind": "infrastructure",
+    "error": "fetch failed",
+    "failed_at": "2026-11-14T21:41:11.404Z"
+  },
+  {
+    "round": "05",
+    "stage": "P1-retry",
+    "status": "completed",
+    "submitted_at": "2026-11-14T21:42:47.270Z",
+    "input_sha256": "868edd70908ccbdc45854353c923a9b00c18773f9cdfbb788c3a9df15da817b9",
+    "input_reservation": 29754,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 14762,
+      "input_tokens_details": {
+        "cache_write_tokens": 14759,
+        "cached_tokens": 0
+      },
+      "output_tokens": 6982,
+      "output_tokens_details": {
+        "reasoning_tokens": 1552
+      },
+      "total_tokens": 21744
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-14T21:44:59.427Z"
+  },
+  {
+    "round": "05",
+    "stage": "P2",
+    "status": "completed",
+    "submitted_at": "2026-11-14T21:44:59.432Z",
+    "input_sha256": "03d83fba56566ef31fde7a4839597aedad0da7c37c9de4554d914a0b8e8c82b9",
+    "input_reservation": 41884,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 20472,
+      "input_tokens_details": {
+        "cache_write_tokens": 20469,
+        "cached_tokens": 0
+      },
+      "output_tokens": 1772,
+      "output_tokens_details": {
+        "reasoning_tokens": 1034
+      },
+      "total_tokens": 22244
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-14T21:45:37.515Z"
+  },
+  {
+    "round": "05",
+    "stage": "P3",
+    "status": "completed",
+    "submitted_at": "2026-11-14T21:45:37.518Z",
+    "input_sha256": "03fc8483b5ae4c656c1a93d0eda4ffa81f5f6f7b415f38c1863b298a9829f2eb",
+    "input_reservation": 30127,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 15021,
+      "input_tokens_details": {
+        "cache_write_tokens": 15018,
+        "cached_tokens": 0
+      },
+      "output_tokens": 1837,
+      "output_tokens_details": {
+        "reasoning_tokens": 1277
+      },
+      "total_tokens": 16858
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-14T21:46:18.179Z"
+  },
+  {
+    "round": "05",
+    "stage": "P4",
+    "status": "completed",
+    "submitted_at": "2026-11-14T21:46:18.183Z",
+    "input_sha256": "0da4b3546a00fcf4af09b974db1debe99d6e470508a25ca0fe2732463bb062c4",
+    "input_reservation": 33180,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 15840,
+      "input_tokens_details": {
+        "cache_write_tokens": 15837,
+        "cached_tokens": 0
+      },
+      "output_tokens": 4421,
+      "output_tokens_details": {
+        "reasoning_tokens": 2070
+      },
+      "total_tokens": 20261
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-14T21:47:45.384Z"
+  },
+  {
+    "round": "05",
+    "stage": "Bo5-1",
+    "status": "completed",
+    "submitted_at": "2026-11-14T21:48:13.231Z",
+    "input_sha256": "c167c7b951d45298321a437b8ad22250c1cef37d337ed4484f7d7fd7ae403fd6",
+    "input_reservation": 29439,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 12386,
+      "input_tokens_details": {
+        "cache_write_tokens": 12383,
+        "cached_tokens": 0
+      },
+      "output_tokens": 7755,
+      "output_tokens_details": {
+        "reasoning_tokens": 5696
+      },
+      "total_tokens": 20141
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-14T21:50:38.246Z"
+  },
+  {
+    "round": "05",
+    "stage": "Bo5-2",
+    "status": "completed",
+    "submitted_at": "2026-11-14T21:50:44.612Z",
+    "input_sha256": "c167c7b951d45298321a437b8ad22250c1cef37d337ed4484f7d7fd7ae403fd6",
+    "input_reservation": 29439,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 12386,
+      "input_tokens_details": {
+        "cache_write_tokens": 12383,
+        "cached_tokens": 0
+      },
+      "output_tokens": 5360,
+      "output_tokens_details": {
+        "reasoning_tokens": 3624
+      },
+      "total_tokens": 17746
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-14T21:52:29.205Z"
+  },
+  {
+    "round": "05",
+    "stage": "Bo5-3",
+    "status": "completed",
+    "submitted_at": "2026-11-14T21:52:35.976Z",
+    "input_sha256": "c167c7b951d45298321a437b8ad22250c1cef37d337ed4484f7d7fd7ae403fd6",
+    "input_reservation": 29439,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 12386,
+      "input_tokens_details": {
+        "cache_write_tokens": 12383,
+        "cached_tokens": 0
+      },
+      "output_tokens": 7988,
+      "output_tokens_details": {
+        "reasoning_tokens": 6214
+      },
+      "total_tokens": 20374
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-14T21:55:09.646Z"
+  },
+  {
+    "round": "05",
+    "stage": "Bo5-4",
+    "status": "completed",
+    "submitted_at": "2026-11-14T21:55:16.328Z",
+    "input_sha256": "c167c7b951d45298321a437b8ad22250c1cef37d337ed4484f7d7fd7ae403fd6",
+    "input_reservation": 29439,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 12386,
+      "input_tokens_details": {
+        "cache_write_tokens": 12383,
+        "cached_tokens": 0
+      },
+      "output_tokens": 6237,
+      "output_tokens_details": {
+        "reasoning_tokens": 4142
+      },
+      "total_tokens": 18623
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-14T21:57:01.269Z"
+  },
+  {
+    "round": "05",
+    "stage": "Bo5-5",
+    "status": "completed",
+    "submitted_at": "2026-11-14T21:57:14.472Z",
+    "input_sha256": "c167c7b951d45298321a437b8ad22250c1cef37d337ed4484f7d7fd7ae403fd6",
+    "input_reservation": 29439,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 12386,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 12383
+      },
+      "output_tokens": 6617,
+      "output_tokens_details": {
+        "reasoning_tokens": 4635
+      },
+      "total_tokens": 19003
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-14T21:59:20.128Z"
+  },
+  {
+    "round": "05",
+    "stage": "P6",
+    "status": "completed",
+    "submitted_at": "2026-11-14T21:59:20.895Z",
+    "input_sha256": "fea461aaf96113ffce4a3401fbf351589abc8c6cedd53f3765fb48d7709ee4ce",
+    "input_reservation": 61505,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 29204,
+      "input_tokens_details": {
+        "cache_write_tokens": 29201,
+        "cached_tokens": 0
+      },
+      "output_tokens": 4846,
+      "output_tokens_details": {
+        "reasoning_tokens": 2070
+      },
+      "total_tokens": 34050
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-14T22:00:52.520Z"
+  },
+  {
+    "round": "06",
+    "stage": "P1",
+    "status": "completed",
+    "submitted_at": "2026-11-14T22:00:52.752Z",
+    "input_sha256": "a91fd45b4ae63a3822ff93442dcd38bb3828c5d94d7c4b867b44f1328d5f2490",
+    "input_reservation": 30767,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 15415,
+      "input_tokens_details": {
+        "cache_write_tokens": 15412,
+        "cached_tokens": 0
+      },
+      "output_tokens": 7756,
+      "output_tokens_details": {
+        "reasoning_tokens": 2479
+      },
+      "total_tokens": 23171
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-14T22:03:16.031Z"
+  },
+  {
+    "round": "06",
+    "stage": "P2",
+    "status": "completed",
+    "submitted_at": "2026-11-14T22:03:16.035Z",
+    "input_sha256": "fb42664a5c2eefefa845145d3c5a99d0f7adc6e03f4c1bac8983d106eb805478",
+    "input_reservation": 42961,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 21481,
+      "input_tokens_details": {
+        "cache_write_tokens": 21478,
+        "cached_tokens": 0
+      },
+      "output_tokens": 2076,
+      "output_tokens_details": {
+        "reasoning_tokens": 1034
+      },
+      "total_tokens": 23557
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-14T22:04:02.478Z"
+  },
+  {
+    "round": "06",
+    "stage": "P3",
+    "status": "completed",
+    "submitted_at": "2026-11-14T22:04:02.482Z",
+    "input_sha256": "ed5331c38504e91ac8e5c6a8105e46533ce5cf8a7e08c1cdf061af008ab1d70d",
+    "input_reservation": 31115,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 15666,
+      "input_tokens_details": {
+        "cache_write_tokens": 15663,
+        "cached_tokens": 0
+      },
+      "output_tokens": 1910,
+      "output_tokens_details": {
+        "reasoning_tokens": 1248
+      },
+      "total_tokens": 17576
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-14T22:04:45.122Z"
+  },
+  {
+    "round": "06",
+    "stage": "P4",
+    "status": "completed",
+    "submitted_at": "2026-11-14T22:04:45.126Z",
+    "input_sha256": "c83b55756cd9cbae07a065764e80fba44f542274116ee33e7c4c9964b5103b1d",
+    "input_reservation": 34170,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 16485,
+      "input_tokens_details": {
+        "cache_write_tokens": 16482,
+        "cached_tokens": 0
+      },
+      "output_tokens": 4261,
+      "output_tokens_details": {
+        "reasoning_tokens": 2020
+      },
+      "total_tokens": 20746
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-14T22:09:32.379Z"
+  },
+  {
+    "round": "06",
+    "stage": "Bo5-1",
+    "status": "completed",
+    "submitted_at": "2026-11-14T22:09:56.225Z",
+    "input_sha256": "765dcef21f4866b0dbcc64d0f27bdfd7265b2a38013d53f557671c05bddf0be8",
+    "input_reservation": 29587,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 12417,
+      "input_tokens_details": {
+        "cache_write_tokens": 12414,
+        "cached_tokens": 0
+      },
+      "output_tokens": 8935,
+      "output_tokens_details": {
+        "reasoning_tokens": 7250
+      },
+      "total_tokens": 21352
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-14T22:12:38.611Z"
+  },
+  {
+    "round": "06",
+    "stage": "Bo5-2",
+    "status": "completed",
+    "submitted_at": "2026-11-14T22:12:52.876Z",
+    "input_sha256": "765dcef21f4866b0dbcc64d0f27bdfd7265b2a38013d53f557671c05bddf0be8",
+    "input_reservation": 29587,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 12417,
+      "input_tokens_details": {
+        "cache_write_tokens": 12414,
+        "cached_tokens": 0
+      },
+      "output_tokens": 7456,
+      "output_tokens_details": {
+        "reasoning_tokens": 5537
+      },
+      "total_tokens": 19873
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-14T22:14:59.163Z"
+  },
+  {
+    "round": "06",
+    "stage": "Bo5-3",
+    "status": "completed",
+    "submitted_at": "2026-11-14T22:15:06.882Z",
+    "input_sha256": "765dcef21f4866b0dbcc64d0f27bdfd7265b2a38013d53f557671c05bddf0be8",
+    "input_reservation": 29587,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 12417,
+      "input_tokens_details": {
+        "cache_write_tokens": 12414,
+        "cached_tokens": 0
+      },
+      "output_tokens": 5760,
+      "output_tokens_details": {
+        "reasoning_tokens": 4142
+      },
+      "total_tokens": 18177
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-14T22:17:13.301Z"
+  },
+  {
+    "round": "06",
+    "stage": "Bo5-4",
+    "status": "completed",
+    "submitted_at": "2026-11-14T22:17:20.425Z",
+    "input_sha256": "765dcef21f4866b0dbcc64d0f27bdfd7265b2a38013d53f557671c05bddf0be8",
+    "input_reservation": 29587,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 12417,
+      "input_tokens_details": {
+        "cache_write_tokens": 12414,
+        "cached_tokens": 0
+      },
+      "output_tokens": 7881,
+      "output_tokens_details": {
+        "reasoning_tokens": 6214
+      },
+      "total_tokens": 20298
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-14T22:20:17.990Z"
+  },
+  {
+    "round": "06",
+    "stage": "Bo5-5",
+    "status": "completed",
+    "submitted_at": "2026-11-14T22:20:24.805Z",
+    "input_sha256": "765dcef21f4866b0dbcc64d0f27bdfd7265b2a38013d53f557671c05bddf0be8",
+    "input_reservation": 29587,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 12417,
+      "input_tokens_details": {
+        "cache_write_tokens": 12414,
+        "cached_tokens": 0
+      },
+      "output_tokens": 8570,
+      "output_tokens_details": {
+        "reasoning_tokens": 6852
+      },
+      "total_tokens": 20987
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-14T22:23:02.511Z"
+  },
+  {
+    "round": "06",
+    "stage": "P6",
+    "status": "completed",
+    "submitted_at": "2026-11-14T22:23:03.272Z",
+    "input_sha256": "85f1479494d06f4a9fb83e18989a26d3f7148b11234082ac7cb19e3e9fcc8a10",
+    "input_reservation": 57677,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 28277,
+      "input_tokens_details": {
+        "cache_write_tokens": 28274,
+        "cached_tokens": 0
+      },
+      "output_tokens": 6173,
+      "output_tokens_details": {
+        "reasoning_tokens": 3106
+      },
+      "total_tokens": 34450
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-14T22:25:16.617Z"
+  },
+  {
+    "round": "07",
+    "stage": "P1",
+    "status": "completed",
+    "submitted_at": "2026-11-14T22:25:16.811Z",
+    "input_sha256": "7b81211776d7352b18dd1e95864d51819ca28422605ca3a2d23917ab233a46e4",
+    "input_reservation": 31488,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 15916,
+      "input_tokens_details": {
+        "cache_write_tokens": 15913,
+        "cached_tokens": 0
+      },
+      "output_tokens": 7220,
+      "output_tokens_details": {
+        "reasoning_tokens": 2070
+      },
+      "total_tokens": 23136
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-14T22:27:30.385Z"
+  },
+  {
+    "round": "07",
+    "stage": "P2",
+    "status": "completed",
+    "submitted_at": "2026-11-14T22:27:30.390Z",
+    "input_sha256": "b9d3de68f5868f0970aee93d93ea01d7cc0b33d776e4871d033a888165451b83",
+    "input_reservation": 44278,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 21969,
+      "input_tokens_details": {
+        "cache_write_tokens": 21966,
+        "cached_tokens": 0
+      },
+      "output_tokens": 1828,
+      "output_tokens_details": {
+        "reasoning_tokens": 1157
+      },
+      "total_tokens": 23797
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-14T22:28:10.486Z"
+  },
+  {
+    "round": "07",
+    "stage": "P3",
+    "status": "completed",
+    "submitted_at": "2026-11-14T22:28:10.495Z",
+    "input_sha256": "fbf6ab42ca9c168079ea05dfcba1064e4bcc03683be6917171627b2f1b0d4cb6",
+    "input_reservation": 31673,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 16124,
+      "input_tokens_details": {
+        "cache_write_tokens": 16121,
+        "cached_tokens": 0
+      },
+      "output_tokens": 2106,
+      "output_tokens_details": {
+        "reasoning_tokens": 1552
+      },
+      "total_tokens": 18230
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-14T22:28:58.489Z"
+  },
+  {
+    "round": "07",
+    "stage": "P4",
+    "status": "completed",
+    "submitted_at": "2026-11-14T22:28:58.493Z",
+    "input_sha256": "d4e3a2c6c6aee3f4075e288719bde462753cf7ac29fcee210553b4dea0bee530",
+    "input_reservation": 34995,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 17022,
+      "input_tokens_details": {
+        "cache_write_tokens": 17019,
+        "cached_tokens": 0
+      },
+      "output_tokens": 4834,
+      "output_tokens_details": {
+        "reasoning_tokens": 2565
+      },
+      "total_tokens": 21856
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-14T22:30:26.576Z"
+  },
+  {
+    "round": "07",
+    "stage": "Bo5-1",
+    "status": "completed",
+    "submitted_at": "2026-11-14T22:30:54.454Z",
+    "input_sha256": "17054ed5afa9bd64c5807bff4f4d5e3877e352d310ead906fc2d5de8294f9f5c",
+    "input_reservation": 29557,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 12451,
+      "input_tokens_details": {
+        "cache_write_tokens": 12448,
+        "cached_tokens": 0
+      },
+      "output_tokens": 4103,
+      "output_tokens_details": {
+        "reasoning_tokens": 2588
+      },
+      "total_tokens": 16554
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-14T22:32:09.550Z"
+  },
+  {
+    "round": "07",
+    "stage": "Bo5-2",
+    "status": "completed",
+    "submitted_at": "2026-11-14T22:32:17.249Z",
+    "input_sha256": "17054ed5afa9bd64c5807bff4f4d5e3877e352d310ead906fc2d5de8294f9f5c",
+    "input_reservation": 29557,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 12451,
+      "input_tokens_details": {
+        "cache_write_tokens": 12448,
+        "cached_tokens": 0
+      },
+      "output_tokens": 5481,
+      "output_tokens_details": {
+        "reasoning_tokens": 4142
+      },
+      "total_tokens": 17932
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-14T22:34:08.665Z"
+  },
+  {
+    "round": "07",
+    "stage": "Bo5-3",
+    "status": "completed",
+    "submitted_at": "2026-11-14T22:34:16.333Z",
+    "input_sha256": "17054ed5afa9bd64c5807bff4f4d5e3877e352d310ead906fc2d5de8294f9f5c",
+    "input_reservation": 29557,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 12451,
+      "input_tokens_details": {
+        "cache_write_tokens": 12448,
+        "cached_tokens": 0
+      },
+      "output_tokens": 6157,
+      "output_tokens_details": {
+        "reasoning_tokens": 4660
+      },
+      "total_tokens": 18608
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-14T22:36:12.043Z"
+  },
+  {
+    "round": "07",
+    "stage": "Bo5-4",
+    "status": "completed",
+    "submitted_at": "2026-11-14T22:36:19.031Z",
+    "input_sha256": "17054ed5afa9bd64c5807bff4f4d5e3877e352d310ead906fc2d5de8294f9f5c",
+    "input_reservation": 29557,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 12451,
+      "input_tokens_details": {
+        "cache_write_tokens": 12448,
+        "cached_tokens": 0
+      },
+      "output_tokens": 4397,
+      "output_tokens_details": {
+        "reasoning_tokens": 2997
+      },
+      "total_tokens": 16848
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-14T22:37:44.626Z"
+  },
+  {
+    "round": "07",
+    "stage": "Bo5-5",
+    "status": "completed",
+    "submitted_at": "2026-11-14T22:37:52.295Z",
+    "input_sha256": "17054ed5afa9bd64c5807bff4f4d5e3877e352d310ead906fc2d5de8294f9f5c",
+    "input_reservation": 29557,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 12451,
+      "input_tokens_details": {
+        "cache_write_tokens": 12448,
+        "cached_tokens": 0
+      },
+      "output_tokens": 8169,
+      "output_tokens_details": {
+        "reasoning_tokens": 6732
+      },
+      "total_tokens": 20620
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-14T22:40:42.127Z"
+  },
+  {
+    "round": "07",
+    "stage": "P6",
+    "status": "completed",
+    "submitted_at": "2026-11-14T22:40:42.882Z",
+    "input_sha256": "b5d4d9dd70e41a9f797d988764b035ffca0ea241e7c063a87dfafe4c7ac42813",
+    "input_reservation": 55813,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 27458,
+      "input_tokens_details": {
+        "cache_write_tokens": 27455,
+        "cached_tokens": 0
+      },
+      "output_tokens": 5211,
+      "output_tokens_details": {
+        "reasoning_tokens": 2588
+      },
+      "total_tokens": 32669
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-14T22:42:35.672Z"
+  },
+  {
+    "round": "08",
+    "stage": "P1",
+    "status": "completed",
+    "submitted_at": "2026-11-14T22:42:35.773Z",
+    "input_sha256": "02c5546d107aca4ff620ad24ab8709d93c1a7d2310dd423ab12d0eada366e222",
+    "input_reservation": 32781,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 16760,
+      "input_tokens_details": {
+        "cache_write_tokens": 16757,
+        "cached_tokens": 0
+      },
+      "output_tokens": 7274,
+      "output_tokens_details": {
+        "reasoning_tokens": 2070
+      },
+      "total_tokens": 24034
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-14T22:44:44.441Z"
+  },
+  {
+    "round": "08",
+    "stage": "P2",
+    "status": "completed",
+    "submitted_at": "2026-11-14T22:44:44.455Z",
+    "input_sha256": "ff225b60080d4c3c0f54139ff79538be27cf1cad789da3817cfb7683f9e187a3",
+    "input_reservation": 44528,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 22435,
+      "input_tokens_details": {
+        "cache_write_tokens": 22432,
+        "cached_tokens": 0
+      },
+      "output_tokens": 2363,
+      "output_tokens_details": {
+        "reasoning_tokens": 1397
+      },
+      "total_tokens": 24798
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-14T22:45:33.710Z"
+  },
+  {
+    "round": "08",
+    "stage": "P3",
+    "status": "completed",
+    "submitted_at": "2026-11-14T22:45:33.713Z",
+    "input_sha256": "4680b9d4ddd407b0def16d9fc05a7d40634220f0df3d56f4bf4ffb92800565f9",
+    "input_reservation": 32800,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 16912,
+      "input_tokens_details": {
+        "cache_write_tokens": 16909,
+        "cached_tokens": 0
+      },
+      "output_tokens": 2673,
+      "output_tokens_details": {
+        "reasoning_tokens": 2070
+      },
+      "total_tokens": 19585
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-14T22:46:38.093Z"
+  },
+  {
+    "round": "08",
+    "stage": "P4",
+    "status": "completed",
+    "submitted_at": "2026-11-14T22:46:38.097Z",
+    "input_sha256": "fc347fd91b5a725f17151c8adaee6a190cf737e9cbcc2a38b13d591e53a5fda7",
+    "input_reservation": 37551,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 18199,
+      "input_tokens_details": {
+        "cache_write_tokens": 18196,
+        "cached_tokens": 0
+      },
+      "output_tokens": 5216,
+      "output_tokens_details": {
+        "reasoning_tokens": 2874
+      },
+      "total_tokens": 23415
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-14T22:48:21.774Z"
+  },
+  {
+    "round": "08",
+    "stage": "Bo5-1",
+    "status": "completed",
+    "submitted_at": "2026-11-14T22:48:42.369Z",
+    "input_sha256": "08862440e079bf6da3ed7190666088cd924cb2736bf4a899ace7f59626d1cb80",
+    "input_reservation": 29982,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 12734,
+      "input_tokens_details": {
+        "cache_write_tokens": 12731,
+        "cached_tokens": 0
+      },
+      "output_tokens": 7619,
+      "output_tokens_details": {
+        "reasoning_tokens": 5134
+      },
+      "total_tokens": 20353
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-14T22:51:07.771Z"
+  },
+  {
+    "round": "08",
+    "stage": "Bo5-2",
+    "status": "completed",
+    "submitted_at": "2026-11-14T22:51:14.710Z",
+    "input_sha256": "08862440e079bf6da3ed7190666088cd924cb2736bf4a899ace7f59626d1cb80",
+    "input_reservation": 29982,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 12734,
+      "input_tokens_details": {
+        "cache_write_tokens": 12731,
+        "cached_tokens": 0
+      },
+      "output_tokens": 6591,
+      "output_tokens_details": {
+        "reasoning_tokens": 4449
+      },
+      "total_tokens": 19325
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-14T22:53:34.320Z"
+  },
+  {
+    "round": "08",
+    "stage": "Bo5-3",
+    "status": "completed",
+    "submitted_at": "2026-11-14T22:53:41.274Z",
+    "input_sha256": "08862440e079bf6da3ed7190666088cd924cb2736bf4a899ace7f59626d1cb80",
+    "input_reservation": 29982,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 12734,
+      "input_tokens_details": {
+        "cache_write_tokens": 12731,
+        "cached_tokens": 0
+      },
+      "output_tokens": 8839,
+      "output_tokens_details": {
+        "reasoning_tokens": 6214
+      },
+      "total_tokens": 21573
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-14T22:56:43.409Z"
+  },
+  {
+    "round": "08",
+    "stage": "Bo5-4",
+    "status": "completed",
+    "submitted_at": "2026-11-14T22:56:56.357Z",
+    "input_sha256": "08862440e079bf6da3ed7190666088cd924cb2736bf4a899ace7f59626d1cb80",
+    "input_reservation": 29982,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 12734,
+      "input_tokens_details": {
+        "cache_write_tokens": 12731,
+        "cached_tokens": 0
+      },
+      "output_tokens": 6974,
+      "output_tokens_details": {
+        "reasoning_tokens": 4489
+      },
+      "total_tokens": 19708
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-14T22:59:19.130Z"
+  },
+  {
+    "round": "08",
+    "stage": "Bo5-5",
+    "status": "completed",
+    "submitted_at": "2026-11-14T22:59:27.757Z",
+    "input_sha256": "08862440e079bf6da3ed7190666088cd924cb2736bf4a899ace7f59626d1cb80",
+    "input_reservation": 29982,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 12734,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 12731
+      },
+      "output_tokens": 8354,
+      "output_tokens_details": {
+        "reasoning_tokens": 6044
+      },
+      "total_tokens": 21088
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-14T23:02:18.249Z"
+  },
+  {
+    "round": "08",
+    "stage": "P6",
+    "status": "completed",
+    "submitted_at": "2026-11-14T23:02:19.007Z",
+    "input_sha256": "dce49b02b3e0635eee4ebd971340389d58e9e38343f407e8c68c9c7b4da238be",
+    "input_reservation": 80606,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 34602,
+      "input_tokens_details": {
+        "cache_write_tokens": 34599,
+        "cached_tokens": 0
+      },
+      "output_tokens": 8303,
+      "output_tokens_details": {
+        "reasoning_tokens": 5696
+      },
+      "total_tokens": 42905
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-14T23:05:19.728Z"
+  },
+  {
+    "round": "09",
+    "stage": "P1",
+    "status": "completed",
+    "submitted_at": "2026-11-14T23:05:42.432Z",
+    "input_sha256": "764da9fb692fcfd6af506340726b844dd2e3313abdf26da1f4e23eb3616ac935",
+    "input_reservation": 37422,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 19104,
+      "input_tokens_details": {
+        "cache_write_tokens": 19101,
+        "cached_tokens": 0
+      },
+      "output_tokens": 7747,
+      "output_tokens_details": {
+        "reasoning_tokens": 2588
+      },
+      "total_tokens": 26851
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-14T23:08:04.131Z"
+  },
+  {
+    "round": "09",
+    "stage": "P2",
+    "status": "completed",
+    "submitted_at": "2026-11-14T23:08:04.137Z",
+    "input_sha256": "624c22395c2d8467abc6d0837b55315b708c595071b108eb1387ee3a121d42cc",
+    "input_reservation": 48535,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 24744,
+      "input_tokens_details": {
+        "cache_write_tokens": 24741,
+        "cached_tokens": 0
+      },
+      "output_tokens": 1729,
+      "output_tokens_details": {
+        "reasoning_tokens": 931
+      },
+      "total_tokens": 26473
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-14T23:08:41.445Z"
+  },
+  {
+    "round": "09",
+    "stage": "P3",
+    "status": "completed",
+    "submitted_at": "2026-11-14T23:08:41.448Z",
+    "input_sha256": "1fe6e9eb09d07124bfc90e0c4dec5c59ca9d9b04381720c2c923fe0a9d98dc3f",
+    "input_reservation": 37013,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 19096,
+      "input_tokens_details": {
+        "cache_write_tokens": 19093,
+        "cached_tokens": 0
+      },
+      "output_tokens": 2675,
+      "output_tokens_details": {
+        "reasoning_tokens": 1983
+      },
+      "total_tokens": 21771
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-14T23:09:41.396Z"
+  },
+  {
+    "round": "09",
+    "stage": "P4",
+    "status": "completed",
+    "submitted_at": "2026-11-14T23:09:41.402Z",
+    "input_sha256": "8b8ee07260032fd664b857c4157efd03b94a2918de31e043c4fe4dd06b6358b7",
+    "input_reservation": 41697,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 20364,
+      "input_tokens_details": {
+        "cache_write_tokens": 20361,
+        "cached_tokens": 0
+      },
+      "output_tokens": 3464,
+      "output_tokens_details": {
+        "reasoning_tokens": 1471
+      },
+      "total_tokens": 23828
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-14T23:10:41.728Z"
+  },
+  {
+    "round": "09",
+    "stage": "Bo5-1",
+    "status": "completed",
+    "submitted_at": "2026-11-14T23:11:03.320Z",
+    "input_sha256": "690627621b9c01f79f25c678bed91a3a53cd1782983023140170398111b8b17a",
+    "input_reservation": 34526,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 14707,
+      "input_tokens_details": {
+        "cache_write_tokens": 14704,
+        "cached_tokens": 0
+      },
+      "output_tokens": 5086,
+      "output_tokens_details": {
+        "reasoning_tokens": 3624
+      },
+      "total_tokens": 19793
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-14T23:12:43.870Z"
+  },
+  {
+    "round": "09",
+    "stage": "Bo5-2",
+    "status": "completed",
+    "submitted_at": "2026-11-14T23:12:56.236Z",
+    "input_sha256": "690627621b9c01f79f25c678bed91a3a53cd1782983023140170398111b8b17a",
+    "input_reservation": 34526,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 14707,
+      "input_tokens_details": {
+        "cache_write_tokens": 14704,
+        "cached_tokens": 0
+      },
+      "output_tokens": 5922,
+      "output_tokens_details": {
+        "reasoning_tokens": 4421
+      },
+      "total_tokens": 20629
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-14T23:14:57.570Z"
+  },
+  {
+    "round": "09",
+    "stage": "Bo5-3",
+    "status": "completed",
+    "submitted_at": "2026-11-14T23:15:06.261Z",
+    "input_sha256": "690627621b9c01f79f25c678bed91a3a53cd1782983023140170398111b8b17a",
+    "input_reservation": 34526,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 14707,
+      "input_tokens_details": {
+        "cache_write_tokens": 14704,
+        "cached_tokens": 0
+      },
+      "output_tokens": 7044,
+      "output_tokens_details": {
+        "reasoning_tokens": 5483
+      },
+      "total_tokens": 21751
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-14T23:17:09.033Z"
+  },
+  {
+    "round": "09",
+    "stage": "Bo5-4",
+    "status": "completed",
+    "submitted_at": "2026-11-14T23:17:16.715Z",
+    "input_sha256": "690627621b9c01f79f25c678bed91a3a53cd1782983023140170398111b8b17a",
+    "input_reservation": 34526,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 14707,
+      "input_tokens_details": {
+        "cache_write_tokens": 14704,
+        "cached_tokens": 0
+      },
+      "output_tokens": 7687,
+      "output_tokens_details": {
+        "reasoning_tokens": 6159
+      },
+      "total_tokens": 22394
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-14T23:19:45.504Z"
+  },
+  {
+    "round": "09",
+    "stage": "Bo5-5",
+    "status": "completed",
+    "submitted_at": "2026-11-14T23:19:53.402Z",
+    "input_sha256": "690627621b9c01f79f25c678bed91a3a53cd1782983023140170398111b8b17a",
+    "input_reservation": 34526,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 14707,
+      "input_tokens_details": {
+        "cache_write_tokens": 14704,
+        "cached_tokens": 0
+      },
+      "output_tokens": 6200,
+      "output_tokens_details": {
+        "reasoning_tokens": 4660
+      },
+      "total_tokens": 20907
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-14T23:21:49.569Z"
+  },
+  {
+    "round": "09",
+    "stage": "P6",
+    "status": "completed",
+    "submitted_at": "2026-11-14T23:21:50.360Z",
+    "input_sha256": "80b2374d99a180f6aa11b9ac62a05c4df6048015e6c11a44e8144f4f7ce1a73f",
+    "input_reservation": 62337,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 30945,
+      "input_tokens_details": {
+        "cache_write_tokens": 30942,
+        "cached_tokens": 0
+      },
+      "output_tokens": 6298,
+      "output_tokens_details": {
+        "reasoning_tokens": 3624
+      },
+      "total_tokens": 37243
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-14T23:24:10.423Z"
+  },
+  {
+    "round": "10",
+    "stage": "P1",
+    "status": "completed",
+    "submitted_at": "2026-11-14T23:25:20.680Z",
+    "input_sha256": "6019e596df8d22cb2fe0ce712d63e63da8e8d4e33e1dc77892e171b94b1aa41d",
+    "input_reservation": 38641,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 19911,
+      "input_tokens_details": {
+        "cache_write_tokens": 19908,
+        "cached_tokens": 0
+      },
+      "output_tokens": 8308,
+      "output_tokens_details": {
+        "reasoning_tokens": 1552
+      },
+      "total_tokens": 28219
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-14T23:27:31.652Z"
+  },
+  {
+    "round": "10",
+    "stage": "P2",
+    "status": "completed",
+    "submitted_at": "2026-11-14T23:27:31.659Z",
+    "input_sha256": "707af0791f9806ff002e522084fc6be383a291e72e29152fcb7fa33829d8fc30",
+    "input_reservation": 52452,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 26654,
+      "input_tokens_details": {
+        "cache_write_tokens": 26651,
+        "cached_tokens": 0
+      },
+      "output_tokens": 2237,
+      "output_tokens_details": {
+        "reasoning_tokens": 1552
+      },
+      "total_tokens": 28891
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-14T23:28:23.668Z"
+  },
+  {
+    "round": "10",
+    "stage": "P3",
+    "status": "completed",
+    "submitted_at": "2026-11-14T23:28:23.673Z",
+    "input_sha256": "4ba1485691f99d4ed5d4528d2a1583ef489ac1a67dc8d9571b1c507ba627c43e",
+    "input_reservation": 38136,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 19878,
+      "input_tokens_details": {
+        "cache_write_tokens": 19875,
+        "cached_tokens": 0
+      },
+      "output_tokens": 1982,
+      "output_tokens_details": {
+        "reasoning_tokens": 1367
+      },
+      "total_tokens": 21860
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-14T23:29:08.443Z"
+  },
+  {
+    "round": "10",
+    "stage": "P4",
+    "status": "completed",
+    "submitted_at": "2026-11-14T23:29:08.448Z",
+    "input_sha256": "162f934912d34d11aa1a24d7c0c40eced8a471c79125a898de21358d5badf812",
+    "input_reservation": 42820,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 21146,
+      "input_tokens_details": {
+        "cache_write_tokens": 21143,
+        "cached_tokens": 0
+      },
+      "output_tokens": 3753,
+      "output_tokens_details": {
+        "reasoning_tokens": 1552
+      },
+      "total_tokens": 24899
+    },
+    "actual_model": "ptu_2126",
+    "completed_at": "2026-11-14T23:30:01.258Z"
+  },
+  {
+    "round": "10",
+    "stage": "Bo5-2",
+    "status": "completed",
+    "submitted_at": "2026-11-14T23:30:28.349Z",
+    "input_sha256": "1a7f053708b73c3dd9e89b44349d3bb1eb2fc11d81e04dc252344710b49739f7",
+    "input_reservation": 34691,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 14794,
+      "input_tokens_details": {
+        "cache_write_tokens": 14791,
+        "cached_tokens": 0
+      },
+      "output_tokens": 11242,
+      "output_tokens_details": {
+        "reasoning_tokens": 9322
+      },
+      "total_tokens": 26036
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-14T23:34:11.777Z"
+  },
+  {
+    "round": "10",
+    "stage": "Bo5-1",
+    "status": "completed",
+    "submitted_at": "2026-11-14T23:30:29.378Z",
+    "input_sha256": "1a7f053708b73c3dd9e89b44349d3bb1eb2fc11d81e04dc252344710b49739f7",
+    "input_reservation": 34691,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 14794,
+      "input_tokens_details": {
+        "cache_write_tokens": 14791,
+        "cached_tokens": 0
+      },
+      "output_tokens": 9054,
+      "output_tokens_details": {
+        "reasoning_tokens": 6214
+      },
+      "total_tokens": 23848
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-14T23:33:18.980Z"
+  },
+  {
+    "round": "10",
+    "stage": "Bo5-4",
+    "status": "completed",
+    "submitted_at": "2026-11-14T23:34:18.917Z",
+    "input_sha256": "1a7f053708b73c3dd9e89b44349d3bb1eb2fc11d81e04dc252344710b49739f7",
+    "input_reservation": 34691,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 14794,
+      "input_tokens_details": {
+        "cache_write_tokens": 14791,
+        "cached_tokens": 0
+      },
+      "output_tokens": 8702,
+      "output_tokens_details": {
+        "reasoning_tokens": 6214
+      },
+      "total_tokens": 23496
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-14T23:36:56.087Z"
+  },
+  {
+    "round": "10",
+    "stage": "Bo5-3",
+    "status": "completed",
+    "submitted_at": "2026-11-14T23:34:18.917Z",
+    "input_sha256": "1a7f053708b73c3dd9e89b44349d3bb1eb2fc11d81e04dc252344710b49739f7",
+    "input_reservation": 34691,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 14794,
+      "input_tokens_details": {
+        "cache_write_tokens": 14791,
+        "cached_tokens": 0
+      },
+      "output_tokens": 9670,
+      "output_tokens_details": {
+        "reasoning_tokens": 7052
+      },
+      "total_tokens": 24464
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-14T23:37:33.253Z"
+  },
+  {
+    "round": "10",
+    "stage": "Bo5-5",
+    "status": "completed",
+    "submitted_at": "2026-11-14T23:37:41.208Z",
+    "input_sha256": "1a7f053708b73c3dd9e89b44349d3bb1eb2fc11d81e04dc252344710b49739f7",
+    "input_reservation": 34691,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 14794,
+      "input_tokens_details": {
+        "cache_write_tokens": 14791,
+        "cached_tokens": 0
+      },
+      "output_tokens": 12558,
+      "output_tokens_details": {
+        "reasoning_tokens": 10358
+      },
+      "total_tokens": 27352
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-14T23:41:30.741Z"
+  },
+  {
+    "round": "10",
+    "stage": "P6",
+    "status": "completed",
+    "submitted_at": "2026-11-14T23:41:31.521Z",
+    "input_sha256": "3e0785c852d80e1c4e6004b54e8160b4d32ce72bb83c390c4f73e2a17650bac3",
+    "input_reservation": 77301,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 36977,
+      "input_tokens_details": {
+        "cache_write_tokens": 36974,
+        "cached_tokens": 0
+      },
+      "output_tokens": 7306,
+      "output_tokens_details": {
+        "reasoning_tokens": 4488
+      },
+      "total_tokens": 44283
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-14T23:44:08.323Z"
+  },
+  {
+    "round": "11",
+    "stage": "P1",
+    "status": "completed",
+    "submitted_at": "2026-11-14T23:44:08.415Z",
+    "input_sha256": "f89ae9723b4c3996bc6865215951c2c038429c1e016f5b7fd26eea20df5da332",
+    "input_reservation": 37763,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 18903,
+      "input_tokens_details": {
+        "cache_write_tokens": 18900,
+        "cached_tokens": 0
+      },
+      "output_tokens": 7920,
+      "output_tokens_details": {
+        "reasoning_tokens": 2758
+      },
+      "total_tokens": 26823
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-14T23:46:40.349Z"
+  },
+  {
+    "round": "11",
+    "stage": "P2",
+    "status": "completed",
+    "submitted_at": "2026-11-14T23:46:40.354Z",
+    "input_sha256": "6d50e32e3460f84613fe3af07a1db594cc2128475d315bf01d10bfd04eff2fb6",
+    "input_reservation": 48216,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 24283,
+      "input_tokens_details": {
+        "cache_write_tokens": 24280,
+        "cached_tokens": 0
+      },
+      "output_tokens": 1816,
+      "output_tokens_details": {
+        "reasoning_tokens": 1034
+      },
+      "total_tokens": 26099
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-14T23:47:16.263Z"
+  },
+  {
+    "round": "11",
+    "stage": "P3",
+    "status": "completed",
+    "submitted_at": "2026-11-14T23:47:16.267Z",
+    "input_sha256": "ab5f769a08506e50ea6ad410e9c3dd8f50c4e41e7e118da16f173d0faf04c6e9",
+    "input_reservation": 36740,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 18702,
+      "input_tokens_details": {
+        "cache_write_tokens": 18699,
+        "cached_tokens": 0
+      },
+      "output_tokens": 2603,
+      "output_tokens_details": {
+        "reasoning_tokens": 1943
+      },
+      "total_tokens": 21305
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-14T23:48:22.217Z"
+  },
+  {
+    "round": "11",
+    "stage": "P4",
+    "status": "completed",
+    "submitted_at": "2026-11-14T23:48:22.222Z",
+    "input_sha256": "a2a388f0d655da4cd0575ab1c0cd7844ea78ede7737de1643f768a143c96208e",
+    "input_reservation": 41897,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 20099,
+      "input_tokens_details": {
+        "cache_write_tokens": 20096,
+        "cached_tokens": 0
+      },
+      "output_tokens": 7560,
+      "output_tokens_details": {
+        "reasoning_tokens": 4660
+      },
+      "total_tokens": 27659
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-14T23:51:04.096Z"
+  },
+  {
+    "round": "11",
+    "stage": "Bo5-1",
+    "status": "completed",
+    "submitted_at": "2026-11-14T23:51:25.465Z",
+    "input_sha256": "8824ddd693cb4f965b198eed684ad7b7fcda52386e42d249ff38b0f96b8d5f57",
+    "input_reservation": 35854,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 15323,
+      "input_tokens_details": {
+        "cache_write_tokens": 15320,
+        "cached_tokens": 0
+      },
+      "output_tokens": 11479,
+      "output_tokens_details": {
+        "reasoning_tokens": 9840
+      },
+      "total_tokens": 26802
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-14T23:55:14.804Z"
+  },
+  {
+    "round": "11",
+    "stage": "Bo5-2",
+    "status": "completed",
+    "submitted_at": "2026-11-14T23:51:25.465Z",
+    "input_sha256": "8824ddd693cb4f965b198eed684ad7b7fcda52386e42d249ff38b0f96b8d5f57",
+    "input_reservation": 35854,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 15323,
+      "input_tokens_details": {
+        "cache_write_tokens": 15320,
+        "cached_tokens": 0
+      },
+      "output_tokens": 13390,
+      "output_tokens_details": {
+        "reasoning_tokens": 11394
+      },
+      "total_tokens": 28713
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-14T23:55:13.898Z"
+  },
+  {
+    "round": "11",
+    "stage": "Bo5-3",
+    "status": "completed",
+    "submitted_at": "2026-11-14T23:55:21.752Z",
+    "input_sha256": "8824ddd693cb4f965b198eed684ad7b7fcda52386e42d249ff38b0f96b8d5f57",
+    "input_reservation": 35854,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 15323,
+      "input_tokens_details": {
+        "cache_write_tokens": 15320,
+        "cached_tokens": 0
+      },
+      "output_tokens": 11094,
+      "output_tokens_details": {
+        "reasoning_tokens": 9322
+      },
+      "total_tokens": 26417
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-14T23:59:05.023Z"
+  },
+  {
+    "round": "11",
+    "stage": "Bo5-4",
+    "status": "completed",
+    "submitted_at": "2026-11-14T23:55:23.264Z",
+    "input_sha256": "8824ddd693cb4f965b198eed684ad7b7fcda52386e42d249ff38b0f96b8d5f57",
+    "input_reservation": 35854,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 15323,
+      "input_tokens_details": {
+        "cache_write_tokens": 15320,
+        "cached_tokens": 0
+      },
+      "output_tokens": 10582,
+      "output_tokens_details": {
+        "reasoning_tokens": 8804
+      },
+      "total_tokens": 25905
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-14T23:59:00.301Z"
+  },
+  {
+    "round": "11",
+    "stage": "Bo5-5",
+    "status": "completed",
+    "submitted_at": "2026-11-14T23:59:18.828Z",
+    "input_sha256": "8824ddd693cb4f965b198eed684ad7b7fcda52386e42d249ff38b0f96b8d5f57",
+    "input_reservation": 35854,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 15323,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 15320
+      },
+      "output_tokens": 13173,
+      "output_tokens_details": {
+        "reasoning_tokens": 11394
+      },
+      "total_tokens": 28496
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-15T00:04:05.926Z"
+  },
+  {
+    "round": "11",
+    "stage": "P6",
+    "status": "completed",
+    "submitted_at": "2026-11-15T00:04:06.720Z",
+    "input_sha256": "c53a61cc6cac55d094376c8f12e1e8c706f6a59d45c307d306ab22ae1d14c97a",
+    "input_reservation": 67476,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 33015,
+      "input_tokens_details": {
+        "cache_write_tokens": 33012,
+        "cached_tokens": 0
+      },
+      "output_tokens": 7333,
+      "output_tokens_details": {
+        "reasoning_tokens": 4597
+      },
+      "total_tokens": 40348
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-15T00:06:57.466Z"
+  },
+  {
+    "round": "12",
+    "stage": "P1",
+    "status": "completed",
+    "submitted_at": "2026-11-15T00:06:57.759Z",
+    "input_sha256": "fa3f4d3bb6c9b18b31a7f1b74a411e33d7c5b323be697ed0ea750df6b2d26728",
+    "input_reservation": 40319,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 20252,
+      "input_tokens_details": {
+        "cache_write_tokens": 20249,
+        "cached_tokens": 0
+      },
+      "output_tokens": 7644,
+      "output_tokens_details": {
+        "reasoning_tokens": 2588
+      },
+      "total_tokens": 27896
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-15T00:09:05.042Z"
+  },
+  {
+    "round": "12",
+    "stage": "P2",
+    "status": "completed",
+    "submitted_at": "2026-11-15T00:09:05.048Z",
+    "input_sha256": "5fa77c27d8109628c4c12a8c9d7368e4481f15edd893e0e1725eda0b88d9503f",
+    "input_reservation": 50562,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 25432,
+      "input_tokens_details": {
+        "cache_write_tokens": 25429,
+        "cached_tokens": 0
+      },
+      "output_tokens": 2633,
+      "output_tokens_details": {
+        "reasoning_tokens": 1552
+      },
+      "total_tokens": 28065
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-15T00:10:02.630Z"
+  },
+  {
+    "round": "12",
+    "stage": "P3",
+    "status": "completed",
+    "submitted_at": "2026-11-15T00:10:02.634Z",
+    "input_sha256": "e70bdf256a0978909b28a3ebb402eb7b104dde6946259924386e1b8e3fe1a3e0",
+    "input_reservation": 39608,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 20219,
+      "input_tokens_details": {
+        "cache_write_tokens": 20216,
+        "cached_tokens": 0
+      },
+      "output_tokens": 2764,
+      "output_tokens_details": {
+        "reasoning_tokens": 1993
+      },
+      "total_tokens": 22983
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-15T00:10:59.451Z"
+  },
+  {
+    "round": "12",
+    "stage": "P4",
+    "status": "completed",
+    "submitted_at": "2026-11-15T00:10:59.458Z",
+    "input_sha256": "b39782029412dd10ba4a7852b251db28c8ccbc010ab296e3f06641445bc845c6",
+    "input_reservation": 44831,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 21641,
+      "input_tokens_details": {
+        "cache_write_tokens": 21638,
+        "cached_tokens": 0
+      },
+      "output_tokens": 5647,
+      "output_tokens_details": {
+        "reasoning_tokens": 2588
+      },
+      "total_tokens": 27288
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-15T00:12:31.627Z"
+  },
+  {
+    "round": "12",
+    "stage": "Bo5-2",
+    "status": "completed",
+    "submitted_at": "2026-11-15T00:12:59.706Z",
+    "input_sha256": "b660fcecd4544cdd3f0adbd9b38848159c205e38d82ce8d7ca9cd02854f9979d",
+    "input_reservation": 39142,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 16881,
+      "input_tokens_details": {
+        "cache_write_tokens": 16878,
+        "cached_tokens": 0
+      },
+      "output_tokens": 11172,
+      "output_tokens_details": {
+        "reasoning_tokens": 8804
+      },
+      "total_tokens": 28053
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-15T00:16:16.760Z"
+  },
+  {
+    "round": "12",
+    "stage": "Bo5-1",
+    "status": "completed",
+    "submitted_at": "2026-11-15T00:12:59.706Z",
+    "input_sha256": "b660fcecd4544cdd3f0adbd9b38848159c205e38d82ce8d7ca9cd02854f9979d",
+    "input_reservation": 39142,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 16881,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 16878
+      },
+      "output_tokens": 14279,
+      "output_tokens_details": {
+        "reasoning_tokens": 11912
+      },
+      "total_tokens": 31160
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-15T00:17:24.158Z"
+  },
+  {
+    "round": "12",
+    "stage": "Bo5-3",
+    "status": "completed",
+    "submitted_at": "2026-11-15T00:17:31.224Z",
+    "input_sha256": "b660fcecd4544cdd3f0adbd9b38848159c205e38d82ce8d7ca9cd02854f9979d",
+    "input_reservation": 39142,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 16881,
+      "input_tokens_details": {
+        "cache_write_tokens": 16878,
+        "cached_tokens": 0
+      },
+      "output_tokens": 12564,
+      "output_tokens_details": {
+        "reasoning_tokens": 9559
+      },
+      "total_tokens": 29445
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-15T00:21:12.543Z"
+  },
+  {
+    "round": "12",
+    "stage": "Bo5-4",
+    "status": "completed",
+    "submitted_at": "2026-11-15T00:17:31.224Z",
+    "input_sha256": "b660fcecd4544cdd3f0adbd9b38848159c205e38d82ce8d7ca9cd02854f9979d",
+    "input_reservation": 39142,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 16881,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 16878
+      },
+      "output_tokens": 15075,
+      "output_tokens_details": {
+        "reasoning_tokens": 12841
+      },
+      "total_tokens": 31956
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-15T00:21:52.331Z"
+  },
+  {
+    "round": "12",
+    "stage": "Bo5-5",
+    "status": "completed",
+    "submitted_at": "2026-11-15T00:22:00.207Z",
+    "input_sha256": "b660fcecd4544cdd3f0adbd9b38848159c205e38d82ce8d7ca9cd02854f9979d",
+    "input_reservation": 39142,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 16881,
+      "input_tokens_details": {
+        "cache_write_tokens": 16878,
+        "cached_tokens": 0
+      },
+      "output_tokens": 11189,
+      "output_tokens_details": {
+        "reasoning_tokens": 8804
+      },
+      "total_tokens": 28070
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-15T00:25:24.338Z"
+  },
+  {
+    "round": "12",
+    "stage": "P6",
+    "status": "completed",
+    "submitted_at": "2026-11-15T00:25:25.135Z",
+    "input_sha256": "0e1bbbc829052dedea4ffb19ada1673fd8e5035c1c5acdc6b896bb8240609224",
+    "input_reservation": 79112,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 38429,
+      "input_tokens_details": {
+        "cache_write_tokens": 38426,
+        "cached_tokens": 0
+      },
+      "output_tokens": 6578,
+      "output_tokens_details": {
+        "reasoning_tokens": 4142
+      },
+      "total_tokens": 45007
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-15T00:27:32.518Z"
+  },
+  {
+    "round": "13",
+    "stage": "P1",
+    "status": "completed",
+    "submitted_at": "2026-11-15T00:28:06.708Z",
+    "input_sha256": "b88de70ccbd6e99ae9196ff0f4a0ea153939a3f92445dc4e3659509950dd4d10",
+    "input_reservation": 41143,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 20706,
+      "input_tokens_details": {
+        "cache_write_tokens": 20703,
+        "cached_tokens": 0
+      },
+      "output_tokens": 9615,
+      "output_tokens_details": {
+        "reasoning_tokens": 2070
+      },
+      "total_tokens": 30321
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-15T00:30:41.845Z"
+  },
+  {
+    "round": "13",
+    "stage": "P2",
+    "status": "completed",
+    "submitted_at": "2026-11-15T00:30:41.852Z",
+    "input_sha256": "a9f6f44655bb4c884b3da82dc033061649a7c7613854b02e2debf3ab4458268c",
+    "input_reservation": 54913,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 27785,
+      "input_tokens_details": {
+        "cache_write_tokens": 27782,
+        "cached_tokens": 0
+      },
+      "output_tokens": 2264,
+      "output_tokens_details": {
+        "reasoning_tokens": 1399
+      },
+      "total_tokens": 30049
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-15T00:31:29.013Z"
+  },
+  {
+    "round": "13",
+    "stage": "P3",
+    "status": "completed",
+    "submitted_at": "2026-11-15T00:31:29.017Z",
+    "input_sha256": "56d2d63189ea85869d7f8bb9fff6bc233dada2f59dedd48edbd4b563c6106699",
+    "input_reservation": 39691,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 20436,
+      "input_tokens_details": {
+        "cache_write_tokens": 20433,
+        "cached_tokens": 0
+      },
+      "output_tokens": 3183,
+      "output_tokens_details": {
+        "reasoning_tokens": 2477
+      },
+      "total_tokens": 23619
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-15T00:32:40.105Z"
+  },
+  {
+    "round": "13",
+    "stage": "P4",
+    "status": "completed",
+    "submitted_at": "2026-11-15T00:32:40.109Z",
+    "input_sha256": "34cb03df4d5fd305270c7ac048fb437768eb2346fe31f5cda9428e24e8407955",
+    "input_reservation": 44897,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 21854,
+      "input_tokens_details": {
+        "cache_write_tokens": 21851,
+        "cached_tokens": 0
+      },
+      "output_tokens": 6278,
+      "output_tokens_details": {
+        "reasoning_tokens": 3624
+      },
+      "total_tokens": 28132
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-15T00:34:41.766Z"
+  },
+  {
+    "round": "13",
+    "stage": "Bo5-1",
+    "status": "completed",
+    "submitted_at": "2026-11-15T00:35:10.680Z",
+    "input_sha256": "0c935cc8196d2403da153d4bba6efee5154dfb1616e59e7ddfc36c31706eb19f",
+    "input_reservation": 38907,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 16861,
+      "input_tokens_details": {
+        "cache_write_tokens": 16858,
+        "cached_tokens": 0
+      },
+      "output_tokens": 12324,
+      "output_tokens_details": {
+        "reasoning_tokens": 10358
+      },
+      "total_tokens": 29185
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-15T00:38:57.858Z"
+  },
+  {
+    "round": "13",
+    "stage": "Bo5-5",
+    "status": "completed",
+    "submitted_at": "2026-11-15T00:35:10.680Z",
+    "input_sha256": "0c935cc8196d2403da153d4bba6efee5154dfb1616e59e7ddfc36c31706eb19f",
+    "input_reservation": 38907,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 16861,
+      "input_tokens_details": {
+        "cache_write_tokens": 16858,
+        "cached_tokens": 0
+      },
+      "output_tokens": 10261,
+      "output_tokens_details": {
+        "reasoning_tokens": 7768
+      },
+      "total_tokens": 27122
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-15T00:38:34.972Z"
+  },
+  {
+    "round": "13",
+    "stage": "Bo5-3",
+    "status": "completed",
+    "submitted_at": "2026-11-15T00:35:10.680Z",
+    "input_sha256": "0c935cc8196d2403da153d4bba6efee5154dfb1616e59e7ddfc36c31706eb19f",
+    "input_reservation": 38907,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 16861,
+      "input_tokens_details": {
+        "cache_write_tokens": 16858,
+        "cached_tokens": 0
+      },
+      "output_tokens": 10377,
+      "output_tokens_details": {
+        "reasoning_tokens": 8493
+      },
+      "total_tokens": 27238
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-15T00:38:30.361Z"
+  },
+  {
+    "round": "13",
+    "stage": "Bo5-4",
+    "status": "completed",
+    "submitted_at": "2026-11-15T00:35:10.682Z",
+    "input_sha256": "0c935cc8196d2403da153d4bba6efee5154dfb1616e59e7ddfc36c31706eb19f",
+    "input_reservation": 38907,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 16861,
+      "input_tokens_details": {
+        "cache_write_tokens": 16858,
+        "cached_tokens": 0
+      },
+      "output_tokens": 9619,
+      "output_tokens_details": {
+        "reasoning_tokens": 7161
+      },
+      "total_tokens": 26480
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-15T00:38:26.683Z"
+  },
+  {
+    "round": "13",
+    "stage": "Bo5-2",
+    "status": "completed",
+    "submitted_at": "2026-11-15T00:35:11.465Z",
+    "input_sha256": "0c935cc8196d2403da153d4bba6efee5154dfb1616e59e7ddfc36c31706eb19f",
+    "input_reservation": 38907,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 16861,
+      "input_tokens_details": {
+        "cache_write_tokens": 16858,
+        "cached_tokens": 0
+      },
+      "output_tokens": 11232,
+      "output_tokens_details": {
+        "reasoning_tokens": 9322
+      },
+      "total_tokens": 28093
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-15T00:38:54.220Z"
+  },
+  {
+    "round": "13",
+    "stage": "P6",
+    "status": "completed",
+    "submitted_at": "2026-11-15T00:38:58.623Z",
+    "input_sha256": "b50069c4100f02f041961bbface16cf0662cbbab97ade2c064765f8e3401b33a",
+    "input_reservation": 75575,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 36603,
+      "input_tokens_details": {
+        "cache_write_tokens": 36600,
+        "cached_tokens": 0
+      },
+      "output_tokens": 7209,
+      "output_tokens_details": {
+        "reasoning_tokens": 4142
+      },
+      "total_tokens": 43812
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-15T00:41:30.277Z"
+  },
+  {
+    "round": "14",
+    "stage": "P1",
+    "status": "completed",
+    "submitted_at": "2026-11-15T00:42:46.830Z",
+    "input_sha256": "aa04e4de146786ebc72192f7c8b5ebf5f387dc6c0ad94d5a202846887227e2ac",
+    "input_reservation": 41329,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 20790,
+      "input_tokens_details": {
+        "cache_write_tokens": 20787,
+        "cached_tokens": 0
+      },
+      "output_tokens": 9258,
+      "output_tokens_details": {
+        "reasoning_tokens": 2070
+      },
+      "total_tokens": 30048
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-15T00:45:19.493Z"
+  },
+  {
+    "round": "14",
+    "stage": "P2",
+    "status": "completed",
+    "submitted_at": "2026-11-15T00:45:19.499Z",
+    "input_sha256": "be209b8b8a0375b18971ad8ce682386f0e648866e0551089c8f4264ebc465eef",
+    "input_reservation": 53981,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 27573,
+      "input_tokens_details": {
+        "cache_write_tokens": 27570,
+        "cached_tokens": 0
+      },
+      "output_tokens": 2290,
+      "output_tokens_details": {
+        "reasoning_tokens": 1371
+      },
+      "total_tokens": 29863
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-15T00:46:11.625Z"
+  },
+  {
+    "round": "14",
+    "stage": "P3",
+    "status": "completed",
+    "submitted_at": "2026-11-15T00:46:11.629Z",
+    "input_sha256": "a00f0f78dc1b465654789754898f9a5aa109d8b23e7afcf4a32967c26ce6c86d",
+    "input_reservation": 39336,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 20103,
+      "input_tokens_details": {
+        "cache_write_tokens": 20100,
+        "cached_tokens": 0
+      },
+      "output_tokens": 2104,
+      "output_tokens_details": {
+        "reasoning_tokens": 1340
+      },
+      "total_tokens": 22207
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-15T00:47:01.161Z"
+  },
+  {
+    "round": "14",
+    "stage": "P4",
+    "status": "completed",
+    "submitted_at": "2026-11-15T00:47:01.166Z",
+    "input_sha256": "1091920ee0fd588ef2ee3191b5763e61a8240862e48982ccb7329f7b26850e55",
+    "input_reservation": 45149,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 21672,
+      "input_tokens_details": {
+        "cache_write_tokens": 21669,
+        "cached_tokens": 0
+      },
+      "output_tokens": 7045,
+      "output_tokens_details": {
+        "reasoning_tokens": 2552
+      },
+      "total_tokens": 28717
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-15T00:49:02.914Z"
+  },
+  {
+    "round": "14",
+    "stage": "Bo5-1",
+    "status": "completed",
+    "submitted_at": "2026-11-15T00:49:25.460Z",
+    "input_sha256": "176c97e99321f417a42ea32911036ac779a850ea71dfeba8298c300298cb8bde",
+    "input_reservation": 38852,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 16770,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 16767
+      },
+      "output_tokens": 10387,
+      "output_tokens_details": {
+        "reasoning_tokens": 7768
+      },
+      "total_tokens": 27157
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-15T00:52:52.634Z"
+  },
+  {
+    "round": "14",
+    "stage": "Bo5-3",
+    "status": "completed",
+    "submitted_at": "2026-11-15T00:49:25.482Z",
+    "input_sha256": "176c97e99321f417a42ea32911036ac779a850ea71dfeba8298c300298cb8bde",
+    "input_reservation": 38852,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 16770,
+      "input_tokens_details": {
+        "cache_write_tokens": 16767,
+        "cached_tokens": 0
+      },
+      "output_tokens": 7677,
+      "output_tokens_details": {
+        "reasoning_tokens": 5696
+      },
+      "total_tokens": 24447
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-15T00:52:07.516Z"
+  },
+  {
+    "round": "14",
+    "stage": "Bo5-2",
+    "status": "completed",
+    "submitted_at": "2026-11-15T00:49:25.488Z",
+    "input_sha256": "176c97e99321f417a42ea32911036ac779a850ea71dfeba8298c300298cb8bde",
+    "input_reservation": 38852,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 16770,
+      "input_tokens_details": {
+        "cache_write_tokens": 16767,
+        "cached_tokens": 0
+      },
+      "output_tokens": 12057,
+      "output_tokens_details": {
+        "reasoning_tokens": 9772
+      },
+      "total_tokens": 28827
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-15T00:53:25.771Z"
+  },
+  {
+    "round": "14",
+    "stage": "Bo5-5",
+    "status": "completed",
+    "submitted_at": "2026-11-15T00:49:25.460Z",
+    "input_sha256": "176c97e99321f417a42ea32911036ac779a850ea71dfeba8298c300298cb8bde",
+    "input_reservation": 38852,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 16770,
+      "input_tokens_details": {
+        "cache_write_tokens": 16767,
+        "cached_tokens": 0
+      },
+      "output_tokens": 10511,
+      "output_tokens_details": {
+        "reasoning_tokens": 7768
+      },
+      "total_tokens": 27281
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-15T00:52:38.631Z"
+  },
+  {
+    "round": "14",
+    "stage": "Bo5-4",
+    "status": "completed",
+    "submitted_at": "2026-11-15T00:49:25.460Z",
+    "input_sha256": "176c97e99321f417a42ea32911036ac779a850ea71dfeba8298c300298cb8bde",
+    "input_reservation": 38852,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 16770,
+      "input_tokens_details": {
+        "cache_write_tokens": 16767,
+        "cached_tokens": 0
+      },
+      "output_tokens": 12651,
+      "output_tokens_details": {
+        "reasoning_tokens": 10358
+      },
+      "total_tokens": 29421
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-15T00:53:33.643Z"
+  },
+  {
+    "round": "14",
+    "stage": "P6",
+    "status": "completed",
+    "submitted_at": "2026-11-15T00:53:34.435Z",
+    "input_sha256": "544df7d3f737afe3f31de12954ce2793d05378a69e5e1c6986a22d008245bc2e",
+    "input_reservation": 83163,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 39173,
+      "input_tokens_details": {
+        "cache_write_tokens": 39170,
+        "cached_tokens": 0
+      },
+      "output_tokens": 4433,
+      "output_tokens_details": {
+        "reasoning_tokens": 1865
+      },
+      "total_tokens": 43606
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-15T00:55:03.198Z"
+  },
+  {
+    "round": "15",
+    "stage": "P1",
+    "status": "completed",
+    "submitted_at": "2026-11-15T00:55:26.120Z",
+    "input_sha256": "8ea8450b623d97fffe61e8e90b86dc7b2137a1d74f43bb20aad3130df45d38c9",
+    "input_reservation": 45574,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 22867,
+      "input_tokens_details": {
+        "cache_write_tokens": 22864,
+        "cached_tokens": 0
+      },
+      "output_tokens": 8347,
+      "output_tokens_details": {
+        "reasoning_tokens": 2070
+      },
+      "total_tokens": 31214
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-15T00:58:02.887Z"
+  },
+  {
+    "round": "15",
+    "stage": "P2",
+    "status": "completed",
+    "submitted_at": "2026-11-15T00:58:02.894Z",
+    "input_sha256": "ebf151c397de0815e6b6ebeb7d354ef0fae0dffb8a1c5d231ddd1e3df03f22db",
+    "input_reservation": 56962,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 28796,
+      "input_tokens_details": {
+        "cache_write_tokens": 28793,
+        "cached_tokens": 0
+      },
+      "output_tokens": 2174,
+      "output_tokens_details": {
+        "reasoning_tokens": 1034
+      },
+      "total_tokens": 30970
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-15T00:58:51.231Z"
+  },
+  {
+    "round": "15",
+    "stage": "P3",
+    "status": "completed",
+    "submitted_at": "2026-11-15T00:58:51.235Z",
+    "input_sha256": "f5a15efc67e3a403a2235ab91a63995b977d1be6fd7825544f22955028a21a79",
+    "input_reservation": 43151,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 22056,
+      "input_tokens_details": {
+        "cache_write_tokens": 22053,
+        "cached_tokens": 0
+      },
+      "output_tokens": 2494,
+      "output_tokens_details": {
+        "reasoning_tokens": 1789
+      },
+      "total_tokens": 24550
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-15T00:59:54.501Z"
+  },
+  {
+    "round": "15",
+    "stage": "P4",
+    "status": "completed",
+    "submitted_at": "2026-11-15T00:59:54.506Z",
+    "input_sha256": "a0d1cdb2df02bb95e40b7ecd3a64cb8298ecacaf1ac18596b9f421687c652f88",
+    "input_reservation": 48441,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 23497,
+      "input_tokens_details": {
+        "cache_write_tokens": 23494,
+        "cached_tokens": 0
+      },
+      "output_tokens": 8846,
+      "output_tokens_details": {
+        "reasoning_tokens": 4142
+      },
+      "total_tokens": 32343
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-15T01:02:29.571Z"
+  },
+  {
+    "round": "15",
+    "stage": "Bo5-1",
+    "status": "failed_usage_unknown",
+    "submitted_at": "2026-11-15T01:02:57.966Z",
+    "input_sha256": "45e1836e605d09738f123ad43f07b245e8daa797a1e03fcb11402e33af19cae6",
+    "input_reservation": 43320,
+    "output_reservation": 20000,
+    "usage": null,
+    "failure_kind": "infrastructure",
+    "error": "The operation was aborted due to timeout",
+    "failed_at": "2026-11-15T01:22:20.443Z"
+  },
+  {
+    "round": "15",
+    "stage": "Bo5-5",
+    "status": "failed_usage_unknown",
+    "submitted_at": "2026-11-15T01:02:57.988Z",
+    "input_sha256": "45e1836e605d09738f123ad43f07b245e8daa797a1e03fcb11402e33af19cae6",
+    "input_reservation": 43320,
+    "output_reservation": 20000,
+    "usage": null,
+    "failure_kind": "infrastructure",
+    "error": "The operation was aborted due to timeout",
+    "failed_at": "2026-11-15T01:22:20.443Z"
+  },
+  {
+    "round": "15",
+    "stage": "Bo5-4",
+    "status": "failed_usage_unknown",
+    "submitted_at": "2026-11-15T01:02:57.989Z",
+    "input_sha256": "45e1836e605d09738f123ad43f07b245e8daa797a1e03fcb11402e33af19cae6",
+    "input_reservation": 43320,
+    "output_reservation": 20000,
+    "usage": null,
+    "failure_kind": "infrastructure",
+    "error": "The operation was aborted due to timeout",
+    "failed_at": "2026-11-15T01:22:20.443Z"
+  },
+  {
+    "round": "15",
+    "stage": "Bo5-2",
+    "status": "failed_usage_unknown",
+    "submitted_at": "2026-11-15T01:02:57.991Z",
+    "input_sha256": "45e1836e605d09738f123ad43f07b245e8daa797a1e03fcb11402e33af19cae6",
+    "input_reservation": 43320,
+    "output_reservation": 20000,
+    "usage": null,
+    "failure_kind": "infrastructure",
+    "error": "The operation was aborted due to timeout",
+    "failed_at": "2026-11-15T01:22:20.443Z"
+  },
+  {
+    "round": "15",
+    "stage": "Bo5-3",
+    "status": "failed_usage_unknown",
+    "submitted_at": "2026-11-15T01:02:58.492Z",
+    "input_sha256": "45e1836e605d09738f123ad43f07b245e8daa797a1e03fcb11402e33af19cae6",
+    "input_reservation": 43320,
+    "output_reservation": 20000,
+    "usage": null,
+    "failure_kind": "infrastructure",
+    "error": "The operation was aborted due to timeout",
+    "failed_at": "2026-11-15T01:22:20.443Z"
+  },
+  {
+    "round": "15",
+    "stage": "Bo5-4-retry",
+    "status": "failed_usage_unknown",
+    "submitted_at": "2026-11-15T01:22:33.090Z",
+    "input_sha256": "45e1836e605d09738f123ad43f07b245e8daa797a1e03fcb11402e33af19cae6",
+    "input_reservation": 43320,
+    "output_reservation": 20000,
+    "usage": null,
+    "failure_kind": "infrastructure",
+    "error": "The operation was aborted due to timeout",
+    "failed_at": "2026-11-15T01:40:06.393Z"
+  },
+  {
+    "round": "15",
+    "stage": "Bo5-5-retry",
+    "status": "failed_usage_unknown",
+    "submitted_at": "2026-11-15T01:22:33.091Z",
+    "input_sha256": "45e1836e605d09738f123ad43f07b245e8daa797a1e03fcb11402e33af19cae6",
+    "input_reservation": 43320,
+    "output_reservation": 20000,
+    "usage": null,
+    "failure_kind": "infrastructure",
+    "error": "The operation was aborted due to timeout",
+    "failed_at": "2026-11-15T01:40:06.393Z"
+  },
+  {
+    "round": "15",
+    "stage": "Bo5-1-retry",
+    "status": "failed_usage_unknown",
+    "submitted_at": "2026-11-15T01:22:33.091Z",
+    "input_sha256": "45e1836e605d09738f123ad43f07b245e8daa797a1e03fcb11402e33af19cae6",
+    "input_reservation": 43320,
+    "output_reservation": 20000,
+    "usage": null,
+    "failure_kind": "infrastructure",
+    "error": "The operation was aborted due to timeout",
+    "failed_at": "2026-11-15T01:40:06.584Z"
+  },
+  {
+    "round": "15",
+    "stage": "Bo5-2-retry",
+    "status": "failed_usage_unknown",
+    "submitted_at": "2026-11-15T01:22:33.092Z",
+    "input_sha256": "45e1836e605d09738f123ad43f07b245e8daa797a1e03fcb11402e33af19cae6",
+    "input_reservation": 43320,
+    "output_reservation": 20000,
+    "usage": null,
+    "failure_kind": "infrastructure",
+    "error": "The operation was aborted due to timeout",
+    "failed_at": "2026-11-15T01:40:06.595Z"
+  },
+  {
+    "round": "15",
+    "stage": "Bo5-3-retry",
+    "status": "failed_usage_unknown",
+    "submitted_at": "2026-11-15T01:22:33.092Z",
+    "input_sha256": "45e1836e605d09738f123ad43f07b245e8daa797a1e03fcb11402e33af19cae6",
+    "input_reservation": 43320,
+    "output_reservation": 20000,
+    "usage": null,
+    "failure_kind": "infrastructure",
+    "error": "The operation was aborted due to timeout",
+    "failed_at": "2026-11-15T01:40:06.393Z"
+  },
+  {
+    "round": "15",
+    "stage": "P6",
+    "status": "completed",
+    "submitted_at": "2026-11-15T01:40:07.598Z",
+    "input_sha256": "60180cb70854fc7a4129e9f19f03aefecc2af0df0865856dbd81967d9fff4027",
+    "input_reservation": 66864,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 30009,
+      "input_tokens_details": {
+        "cache_write_tokens": 30006,
+        "cached_tokens": 0
+      },
+      "output_tokens": 3443,
+      "output_tokens_details": {
+        "reasoning_tokens": 1503
+      },
+      "total_tokens": 33452
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-15T01:41:14.160Z"
+  },
+  {
+    "round": "16",
+    "stage": "P1",
+    "status": "failed_usage_unknown",
+    "submitted_at": "2026-11-15T01:41:14.468Z",
+    "input_sha256": "4f468c7f2b6685eab0a5fb356eded0fd281f66fe4b8d8321b333201993bbe79c",
+    "input_reservation": 45576,
+    "output_reservation": 20000,
+    "usage": null,
+    "failure_kind": "infrastructure",
+    "error": "The operation was aborted due to timeout",
+    "failed_at": "2026-11-15T01:58:02.504Z"
+  },
+  {
+    "round": "16",
+    "stage": "P1-retry",
+    "status": "completed",
+    "submitted_at": "2026-11-15T02:25:04.865Z",
+    "input_sha256": "4f468c7f2b6685eab0a5fb356eded0fd281f66fe4b8d8321b333201993bbe79c",
+    "input_reservation": 45576,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 22808,
+      "input_tokens_details": {
+        "cache_write_tokens": 22805,
+        "cached_tokens": 0
+      },
+      "output_tokens": 6786,
+      "output_tokens_details": {
+        "reasoning_tokens": 2070
+      },
+      "total_tokens": 29594
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-15T02:27:17.263Z"
+  },
+  {
+    "round": "16",
+    "stage": "P2",
+    "status": "completed",
+    "submitted_at": "2026-11-15T02:27:17.270Z",
+    "input_sha256": "875f3ae354a4629d2e4bb938bbfd247241620b74abb0c3e50dd64ffbbe1d8811",
+    "input_reservation": 54645,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 27686,
+      "input_tokens_details": {
+        "cache_write_tokens": 27683,
+        "cached_tokens": 0
+      },
+      "output_tokens": 1957,
+      "output_tokens_details": {
+        "reasoning_tokens": 980
+      },
+      "total_tokens": 29643
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-15T02:27:58.175Z"
+  },
+  {
+    "round": "16",
+    "stage": "P3",
+    "status": "completed",
+    "submitted_at": "2026-11-15T02:27:58.180Z",
+    "input_sha256": "a135d49eb0166b49c2a18b0292f6a55fba84cb84730f767dbeb543f1770a4a71",
+    "input_reservation": 43119,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 22042,
+      "input_tokens_details": {
+        "cache_write_tokens": 22039,
+        "cached_tokens": 0
+      },
+      "output_tokens": 2086,
+      "output_tokens_details": {
+        "reasoning_tokens": 1349
+      },
+      "total_tokens": 24128
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-15T02:28:47.020Z"
+  },
+  {
+    "round": "16",
+    "stage": "P4",
+    "status": "completed",
+    "submitted_at": "2026-11-15T02:28:47.026Z",
+    "input_sha256": "6c7cdb7a7095b2647db7b25d93367d621a76baf20ed1adaf2c45fb073445e794",
+    "input_reservation": 48401,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 23481,
+      "input_tokens_details": {
+        "cache_write_tokens": 23478,
+        "cached_tokens": 0
+      },
+      "output_tokens": 7129,
+      "output_tokens_details": {
+        "reasoning_tokens": 3106
+      },
+      "total_tokens": 30610
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-15T02:30:58.897Z"
+  },
+  {
+    "round": "16",
+    "stage": "Bo5-2",
+    "status": "completed",
+    "submitted_at": "2026-11-15T02:31:30.146Z",
+    "input_sha256": "df0512d77aa16c0a08de4915391507bb7f70f3653bc6e1bec10ac9d96c58b0ba",
+    "input_reservation": 43288,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 18800,
+      "input_tokens_details": {
+        "cache_write_tokens": 18797,
+        "cached_tokens": 0
+      },
+      "output_tokens": 10031,
+      "output_tokens_details": {
+        "reasoning_tokens": 6214
+      },
+      "total_tokens": 28831
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-15T02:34:52.508Z"
+  },
+  {
+    "round": "16",
+    "stage": "Bo5-3",
+    "status": "completed",
+    "submitted_at": "2026-11-15T02:31:30.159Z",
+    "input_sha256": "df0512d77aa16c0a08de4915391507bb7f70f3653bc6e1bec10ac9d96c58b0ba",
+    "input_reservation": 43288,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 18800,
+      "input_tokens_details": {
+        "cache_write_tokens": 18797,
+        "cached_tokens": 0
+      },
+      "output_tokens": 12849,
+      "output_tokens_details": {
+        "reasoning_tokens": 8758
+      },
+      "total_tokens": 31649
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-15T02:35:20.413Z"
+  },
+  {
+    "round": "16",
+    "stage": "Bo5-4",
+    "status": "completed",
+    "submitted_at": "2026-11-15T02:31:30.170Z",
+    "input_sha256": "df0512d77aa16c0a08de4915391507bb7f70f3653bc6e1bec10ac9d96c58b0ba",
+    "input_reservation": 43288,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 18800,
+      "input_tokens_details": {
+        "cache_write_tokens": 18797,
+        "cached_tokens": 0
+      },
+      "output_tokens": 13742,
+      "output_tokens_details": {
+        "reasoning_tokens": 9840
+      },
+      "total_tokens": 32542
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-15T02:36:11.790Z"
+  },
+  {
+    "round": "16",
+    "stage": "Bo5-5",
+    "status": "completed",
+    "submitted_at": "2026-11-15T02:31:30.159Z",
+    "input_sha256": "df0512d77aa16c0a08de4915391507bb7f70f3653bc6e1bec10ac9d96c58b0ba",
+    "input_reservation": 43288,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 18800,
+      "input_tokens_details": {
+        "cache_write_tokens": 18797,
+        "cached_tokens": 0
+      },
+      "output_tokens": 14118,
+      "output_tokens_details": {
+        "reasoning_tokens": 10093
+      },
+      "total_tokens": 32918
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-15T02:36:15.886Z"
+  },
+  {
+    "round": "16",
+    "stage": "Bo5-1",
+    "status": "completed",
+    "submitted_at": "2026-11-15T02:31:30.159Z",
+    "input_sha256": "df0512d77aa16c0a08de4915391507bb7f70f3653bc6e1bec10ac9d96c58b0ba",
+    "input_reservation": 43288,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 18800,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 18797
+      },
+      "output_tokens": 11682,
+      "output_tokens_details": {
+        "reasoning_tokens": 7733
+      },
+      "total_tokens": 30482
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-15T02:35:25.710Z"
+  },
+  {
+    "round": "16",
+    "stage": "P6",
+    "status": "completed",
+    "submitted_at": "2026-11-15T02:36:16.670Z",
+    "input_sha256": "33f6d5028b3ef8eb809d93dc26174bd35f323348a1017bab85d42aa7d686243d",
+    "input_reservation": 119155,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 50145,
+      "input_tokens_details": {
+        "cache_write_tokens": 50142,
+        "cached_tokens": 0
+      },
+      "output_tokens": 5380,
+      "output_tokens_details": {
+        "reasoning_tokens": 2474
+      },
+      "total_tokens": 55525
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-15T02:38:11.611Z"
+  },
+  {
+    "round": "17",
+    "stage": "P1",
+    "status": "completed",
+    "submitted_at": "2026-11-15T02:38:11.769Z",
+    "input_sha256": "34474270abf557e9c0aa88a1ef2275415559f9e58cdf69f8481209f2452e58bf",
+    "input_reservation": 45558,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 22857,
+      "input_tokens_details": {
+        "cache_write_tokens": 22854,
+        "cached_tokens": 0
+      },
+      "output_tokens": 7746,
+      "output_tokens_details": {
+        "reasoning_tokens": 1552
+      },
+      "total_tokens": 30603
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-15T02:40:38.921Z"
+  },
+  {
+    "round": "17",
+    "stage": "P2",
+    "status": "completed",
+    "submitted_at": "2026-11-15T02:40:38.927Z",
+    "input_sha256": "3f8492db2834fc0818ed4dbf936f110e7295948dd1de5ef9f9c5f3bf05991150",
+    "input_reservation": 56886,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 28638,
+      "input_tokens_details": {
+        "cache_write_tokens": 28635,
+        "cached_tokens": 0
+      },
+      "output_tokens": 1963,
+      "output_tokens_details": {
+        "reasoning_tokens": 1034
+      },
+      "total_tokens": 30601
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-15T02:41:20.865Z"
+  },
+  {
+    "round": "17",
+    "stage": "P3",
+    "status": "completed",
+    "submitted_at": "2026-11-15T02:41:20.870Z",
+    "input_sha256": "f62568cd97b9ccc92131cca460a3275528059ed9a73762d35d5df4912b010a81",
+    "input_reservation": 43383,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 22136,
+      "input_tokens_details": {
+        "cache_write_tokens": 22133,
+        "cached_tokens": 0
+      },
+      "output_tokens": 2893,
+      "output_tokens_details": {
+        "reasoning_tokens": 1945
+      },
+      "total_tokens": 25029
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-15T02:42:27.177Z"
+  },
+  {
+    "round": "17",
+    "stage": "P4",
+    "status": "completed",
+    "submitted_at": "2026-11-15T02:42:27.182Z",
+    "input_sha256": "dcb15744a8d60bc0cab69e69eed293eb30d23bbab020dfb53e0956851ab73c3a",
+    "input_reservation": 48672,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 23577,
+      "input_tokens_details": {
+        "cache_write_tokens": 23574,
+        "cached_tokens": 0
+      },
+      "output_tokens": 8002,
+      "output_tokens_details": {
+        "reasoning_tokens": 3624
+      },
+      "total_tokens": 31579
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-15T02:44:45.883Z"
+  },
+  {
+    "round": "17",
+    "stage": "Bo5-5",
+    "status": "completed",
+    "submitted_at": "2026-11-15T02:45:06.566Z",
+    "input_sha256": "1d147453d03f4796b945d3d0c3961e4730acc105e0d709634881b8837d64d6fb",
+    "input_reservation": 43550,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 18892,
+      "input_tokens_details": {
+        "cache_write_tokens": 18889,
+        "cached_tokens": 0
+      },
+      "output_tokens": 12306,
+      "output_tokens_details": {
+        "reasoning_tokens": 9019
+      },
+      "total_tokens": 31198
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-15T02:48:59.644Z"
+  },
+  {
+    "round": "17",
+    "stage": "Bo5-2",
+    "status": "completed",
+    "submitted_at": "2026-11-15T02:45:06.570Z",
+    "input_sha256": "1d147453d03f4796b945d3d0c3961e4730acc105e0d709634881b8837d64d6fb",
+    "input_reservation": 43550,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 18892,
+      "input_tokens_details": {
+        "cache_write_tokens": 18889,
+        "cached_tokens": 0
+      },
+      "output_tokens": 15354,
+      "output_tokens_details": {
+        "reasoning_tokens": 11912
+      },
+      "total_tokens": 34246
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-15T02:49:32.013Z"
+  },
+  {
+    "round": "17",
+    "stage": "Bo5-1",
+    "status": "completed",
+    "submitted_at": "2026-11-15T02:45:06.570Z",
+    "input_sha256": "1d147453d03f4796b945d3d0c3961e4730acc105e0d709634881b8837d64d6fb",
+    "input_reservation": 43550,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 18892,
+      "input_tokens_details": {
+        "cache_write_tokens": 18889,
+        "cached_tokens": 0
+      },
+      "output_tokens": 9089,
+      "output_tokens_details": {
+        "reasoning_tokens": 5696
+      },
+      "total_tokens": 27981
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-15T02:47:49.649Z"
+  },
+  {
+    "round": "17",
+    "stage": "Bo5-4",
+    "status": "completed",
+    "submitted_at": "2026-11-15T02:45:07.478Z",
+    "input_sha256": "1d147453d03f4796b945d3d0c3961e4730acc105e0d709634881b8837d64d6fb",
+    "input_reservation": 43550,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 18892,
+      "input_tokens_details": {
+        "cache_write_tokens": 18889,
+        "cached_tokens": 0
+      },
+      "output_tokens": 11328,
+      "output_tokens_details": {
+        "reasoning_tokens": 7768
+      },
+      "total_tokens": 30220
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-15T02:49:02.628Z"
+  },
+  {
+    "round": "17",
+    "stage": "Bo5-3",
+    "status": "completed",
+    "submitted_at": "2026-11-15T02:45:07.478Z",
+    "input_sha256": "1d147453d03f4796b945d3d0c3961e4730acc105e0d709634881b8837d64d6fb",
+    "input_reservation": 43550,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 18892,
+      "input_tokens_details": {
+        "cache_write_tokens": 18889,
+        "cached_tokens": 0
+      },
+      "output_tokens": 10819,
+      "output_tokens_details": {
+        "reasoning_tokens": 8286
+      },
+      "total_tokens": 29711
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-15T02:48:25.160Z"
+  },
+  {
+    "round": "17",
+    "stage": "P6",
+    "status": "completed",
+    "submitted_at": "2026-11-15T02:49:32.792Z",
+    "input_sha256": "6b5507da0498641b2a4d1e169f9dc36117c8bd26fcad4336e2725a7a5130f354",
+    "input_reservation": 98340,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 45914,
+      "input_tokens_details": {
+        "cache_write_tokens": 45911,
+        "cached_tokens": 0
+      },
+      "output_tokens": 5655,
+      "output_tokens_details": {
+        "reasoning_tokens": 2588
+      },
+      "total_tokens": 51569
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-15T02:51:30.741Z"
+  },
+  {
+    "round": "18",
+    "stage": "P1",
+    "status": "completed",
+    "submitted_at": "2026-11-15T02:51:30.849Z",
+    "input_sha256": "21189e7263f72ff0a1801425bc241064cc296c39c60f5062ecc5528c812861f9",
+    "input_reservation": 45586,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 22833,
+      "input_tokens_details": {
+        "cache_write_tokens": 22830,
+        "cached_tokens": 0
+      },
+      "output_tokens": 8151,
+      "output_tokens_details": {
+        "reasoning_tokens": 1552
+      },
+      "total_tokens": 30984
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-15T02:53:43.204Z"
+  },
+  {
+    "round": "18",
+    "stage": "P2",
+    "status": "completed",
+    "submitted_at": "2026-11-15T02:53:43.210Z",
+    "input_sha256": "4f7caf585a1dd5086c2ef3cd867b890490a317a4b4a28dc1a8d57cfe7591d0e4",
+    "input_reservation": 57111,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 29100,
+      "input_tokens_details": {
+        "cache_write_tokens": 29097,
+        "cached_tokens": 0
+      },
+      "output_tokens": 2249,
+      "output_tokens_details": {
+        "reasoning_tokens": 1431
+      },
+      "total_tokens": 31349
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-15T02:54:42.903Z"
+  },
+  {
+    "round": "18",
+    "stage": "P3",
+    "status": "completed",
+    "submitted_at": "2026-11-15T02:54:42.908Z",
+    "input_sha256": "94f8666653e6ecfcd19062523a0618bfb7b32f3c3be720900997edd8340d0e4b",
+    "input_reservation": 43214,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 22101,
+      "input_tokens_details": {
+        "cache_write_tokens": 22098,
+        "cached_tokens": 0
+      },
+      "output_tokens": 3192,
+      "output_tokens_details": {
+        "reasoning_tokens": 2461
+      },
+      "total_tokens": 25293
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-15T02:55:59.018Z"
+  },
+  {
+    "round": "18",
+    "stage": "P4",
+    "status": "completed",
+    "submitted_at": "2026-11-15T02:55:59.024Z",
+    "input_sha256": "0c3ba0f6723a07098af3cb509bd3f6612aa03f34a3328f6e674517e0e0a648e5",
+    "input_reservation": 48496,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 23540,
+      "input_tokens_details": {
+        "cache_write_tokens": 23537,
+        "cached_tokens": 0
+      },
+      "output_tokens": 8093,
+      "output_tokens_details": {
+        "reasoning_tokens": 3624
+      },
+      "total_tokens": 31633
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-15T02:58:20.945Z"
+  },
+  {
+    "round": "18",
+    "stage": "Bo5-4",
+    "status": "completed",
+    "submitted_at": "2026-11-15T02:58:49.650Z",
+    "input_sha256": "3581db82d020c80dd5cc0361dfc28a81fb5b6675f220544746c790a97676ef71",
+    "input_reservation": 43383,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 18859,
+      "input_tokens_details": {
+        "cache_write_tokens": 18856,
+        "cached_tokens": 0
+      },
+      "output_tokens": 11075,
+      "output_tokens_details": {
+        "reasoning_tokens": 7232
+      },
+      "total_tokens": 29934
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-15T03:02:37.872Z"
+  },
+  {
+    "round": "18",
+    "stage": "Bo5-5",
+    "status": "completed",
+    "submitted_at": "2026-11-15T02:58:49.650Z",
+    "input_sha256": "3581db82d020c80dd5cc0361dfc28a81fb5b6675f220544746c790a97676ef71",
+    "input_reservation": 43383,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 18859,
+      "input_tokens_details": {
+        "cache_write_tokens": 18856,
+        "cached_tokens": 0
+      },
+      "output_tokens": 11432,
+      "output_tokens_details": {
+        "reasoning_tokens": 7438
+      },
+      "total_tokens": 30291
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-15T03:02:40.067Z"
+  },
+  {
+    "round": "18",
+    "stage": "Bo5-3",
+    "status": "completed",
+    "submitted_at": "2026-11-15T02:58:49.650Z",
+    "input_sha256": "3581db82d020c80dd5cc0361dfc28a81fb5b6675f220544746c790a97676ef71",
+    "input_reservation": 43383,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 18859,
+      "input_tokens_details": {
+        "cache_write_tokens": 18856,
+        "cached_tokens": 0
+      },
+      "output_tokens": 13115,
+      "output_tokens_details": {
+        "reasoning_tokens": 9100
+      },
+      "total_tokens": 31974
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-15T03:02:47.761Z"
+  },
+  {
+    "round": "18",
+    "stage": "Bo5-1",
+    "status": "completed",
+    "submitted_at": "2026-11-15T02:58:50.928Z",
+    "input_sha256": "3581db82d020c80dd5cc0361dfc28a81fb5b6675f220544746c790a97676ef71",
+    "input_reservation": 43383,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 18859,
+      "input_tokens_details": {
+        "cache_write_tokens": 18856,
+        "cached_tokens": 0
+      },
+      "output_tokens": 11551,
+      "output_tokens_details": {
+        "reasoning_tokens": 7250
+      },
+      "total_tokens": 30410
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-15T03:02:39.544Z"
+  },
+  {
+    "round": "18",
+    "stage": "Bo5-2",
+    "status": "completed",
+    "submitted_at": "2026-11-15T02:58:51.019Z",
+    "input_sha256": "3581db82d020c80dd5cc0361dfc28a81fb5b6675f220544746c790a97676ef71",
+    "input_reservation": 43383,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 18859,
+      "input_tokens_details": {
+        "cache_write_tokens": 18856,
+        "cached_tokens": 0
+      },
+      "output_tokens": 14755,
+      "output_tokens_details": {
+        "reasoning_tokens": 11247
+      },
+      "total_tokens": 33614
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-15T03:03:48.986Z"
+  },
+  {
+    "round": "18",
+    "stage": "P6",
+    "status": "completed",
+    "submitted_at": "2026-11-15T03:03:49.761Z",
+    "input_sha256": "bdcbf8d9d2d97ef1753134ac7480caf082a1c39a645010bc334713ffcb2cc373",
+    "input_reservation": 109723,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 49992,
+      "input_tokens_details": {
+        "cache_write_tokens": 49989,
+        "cached_tokens": 0
+      },
+      "output_tokens": 5851,
+      "output_tokens_details": {
+        "reasoning_tokens": 3106
+      },
+      "total_tokens": 55843
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-15T03:05:40.180Z"
+  },
+  {
+    "round": "19",
+    "stage": "P1",
+    "status": "completed",
+    "submitted_at": "2026-11-15T03:05:40.357Z",
+    "input_sha256": "240d04fc89f9561c2a994d3e0ea5c2afc3270b69816ad3cbccba3731859ae6fd",
+    "input_reservation": 45878,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 23077,
+      "input_tokens_details": {
+        "cache_write_tokens": 23074,
+        "cached_tokens": 0
+      },
+      "output_tokens": 7644,
+      "output_tokens_details": {
+        "reasoning_tokens": 2588
+      },
+      "total_tokens": 30721
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-15T03:08:19.054Z"
+  },
+  {
+    "round": "19",
+    "stage": "P2",
+    "status": "completed",
+    "submitted_at": "2026-11-15T03:08:19.060Z",
+    "input_sha256": "61ef0f33fce6b26381a195a632bc06686707d4cbfee65b0cc4568763718523b4",
+    "input_reservation": 55293,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 28067,
+      "input_tokens_details": {
+        "cache_write_tokens": 28064,
+        "cached_tokens": 0
+      },
+      "output_tokens": 2949,
+      "output_tokens_details": {
+        "reasoning_tokens": 1833
+      },
+      "total_tokens": 31016
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-15T03:09:24.036Z"
+  },
+  {
+    "round": "19",
+    "stage": "P3",
+    "status": "completed",
+    "submitted_at": "2026-11-15T03:09:24.042Z",
+    "input_sha256": "a5021b5dea6136970da279678d0e868b110fec6962162fc1ff3ae10455343580",
+    "input_reservation": 43624,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 22344,
+      "input_tokens_details": {
+        "cache_write_tokens": 22341,
+        "cached_tokens": 0
+      },
+      "output_tokens": 3614,
+      "output_tokens_details": {
+        "reasoning_tokens": 2972
+      },
+      "total_tokens": 25958
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-15T03:11:01.749Z"
+  },
+  {
+    "round": "19",
+    "stage": "P4",
+    "status": "completed",
+    "submitted_at": "2026-11-15T03:11:01.755Z",
+    "input_sha256": "6ddfb4a6cc54b083daae6bc151a07729ba0ea5ff1d31eb97454495615c67661f",
+    "input_reservation": 48947,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 23792,
+      "input_tokens_details": {
+        "cache_write_tokens": 23789,
+        "cached_tokens": 0
+      },
+      "output_tokens": 8426,
+      "output_tokens_details": {
+        "reasoning_tokens": 3818
+      },
+      "total_tokens": 32218
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-15T03:13:26.533Z"
+  },
+  {
+    "round": "19",
+    "stage": "Bo5-4",
+    "status": "completed",
+    "submitted_at": "2026-11-15T03:13:54.726Z",
+    "input_sha256": "8aa8905956e760ae59811b257d8476a882a8d86ebf729703a9eca970840e8787",
+    "input_reservation": 43562,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 18921,
+      "input_tokens_details": {
+        "cache_write_tokens": 18918,
+        "cached_tokens": 0
+      },
+      "output_tokens": 15539,
+      "output_tokens_details": {
+        "reasoning_tokens": 11912
+      },
+      "total_tokens": 34460
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-15T03:19:24.806Z"
+  },
+  {
+    "round": "19",
+    "stage": "Bo5-2",
+    "status": "completed",
+    "submitted_at": "2026-11-15T03:13:54.736Z",
+    "input_sha256": "8aa8905956e760ae59811b257d8476a882a8d86ebf729703a9eca970840e8787",
+    "input_reservation": 43562,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 18921,
+      "input_tokens_details": {
+        "cache_write_tokens": 18918,
+        "cached_tokens": 0
+      },
+      "output_tokens": 11833,
+      "output_tokens_details": {
+        "reasoning_tokens": 7768
+      },
+      "total_tokens": 30754
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-15T03:17:17.029Z"
+  },
+  {
+    "round": "19",
+    "stage": "Bo5-3",
+    "status": "completed",
+    "submitted_at": "2026-11-15T03:13:54.744Z",
+    "input_sha256": "8aa8905956e760ae59811b257d8476a882a8d86ebf729703a9eca970840e8787",
+    "input_reservation": 43562,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 18921,
+      "input_tokens_details": {
+        "cache_write_tokens": 18918,
+        "cached_tokens": 0
+      },
+      "output_tokens": 9680,
+      "output_tokens_details": {
+        "reasoning_tokens": 6622
+      },
+      "total_tokens": 28601
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-15T03:17:11.394Z"
+  },
+  {
+    "round": "19",
+    "stage": "Bo5-1",
+    "status": "completed",
+    "submitted_at": "2026-11-15T03:13:54.727Z",
+    "input_sha256": "8aa8905956e760ae59811b257d8476a882a8d86ebf729703a9eca970840e8787",
+    "input_reservation": 43562,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 18921,
+      "input_tokens_details": {
+        "cache_write_tokens": 18918,
+        "cached_tokens": 0
+      },
+      "output_tokens": 10938,
+      "output_tokens_details": {
+        "reasoning_tokens": 7768
+      },
+      "total_tokens": 29859
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-15T03:17:34.826Z"
+  },
+  {
+    "round": "19",
+    "stage": "Bo5-5",
+    "status": "completed",
+    "submitted_at": "2026-11-15T03:13:54.736Z",
+    "input_sha256": "8aa8905956e760ae59811b257d8476a882a8d86ebf729703a9eca970840e8787",
+    "input_reservation": 43562,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 18921,
+      "input_tokens_details": {
+        "cache_write_tokens": 18918,
+        "cached_tokens": 0
+      },
+      "output_tokens": 12908,
+      "output_tokens_details": {
+        "reasoning_tokens": 9322
+      },
+      "total_tokens": 31829
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-15T03:17:36.817Z"
+  },
+  {
+    "round": "19",
+    "stage": "P6",
+    "status": "completed",
+    "submitted_at": "2026-11-15T03:19:25.584Z",
+    "input_sha256": "16042afb83598754f11ba6c4e86d3a1f2d376cf2b67ec077452242fcbb09fe4a",
+    "input_reservation": 109832,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 48308,
+      "input_tokens_details": {
+        "cache_write_tokens": 48305,
+        "cached_tokens": 0
+      },
+      "output_tokens": 5094,
+      "output_tokens_details": {
+        "reasoning_tokens": 2588
+      },
+      "total_tokens": 53402
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-15T03:21:01.681Z"
+  },
+  {
+    "round": "20",
+    "stage": "P1",
+    "status": "completed",
+    "submitted_at": "2026-11-15T03:21:01.786Z",
+    "input_sha256": "156d06bf0e27d6c3aac5478e5e57cabc8eb708a3ff59787c4bcb455ebb29d803",
+    "input_reservation": 47209,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 23583,
+      "input_tokens_details": {
+        "cache_write_tokens": 23580,
+        "cached_tokens": 0
+      },
+      "output_tokens": 7224,
+      "output_tokens_details": {
+        "reasoning_tokens": 2070
+      },
+      "total_tokens": 30807
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-15T03:23:15.767Z"
+  },
+  {
+    "round": "20",
+    "stage": "P2",
+    "status": "completed",
+    "submitted_at": "2026-11-15T03:23:15.773Z",
+    "input_sha256": "e78981308f14576e9bb51b7e09685e088e1690d2026454bfcef798c6a8c2c3ef",
+    "input_reservation": 56071,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 28628,
+      "input_tokens_details": {
+        "cache_write_tokens": 28625,
+        "cached_tokens": 0
+      },
+      "output_tokens": 2577,
+      "output_tokens_details": {
+        "reasoning_tokens": 1470
+      },
+      "total_tokens": 31205
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-15T03:24:09.044Z"
+  },
+  {
+    "round": "20",
+    "stage": "P3",
+    "status": "completed",
+    "submitted_at": "2026-11-15T03:24:09.049Z",
+    "input_sha256": "0d4dcdc8d1669eee2f58a976d273aec21fb7431e3c1f6abb6ee923a3a82e9c7c",
+    "input_reservation": 44666,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 22842,
+      "input_tokens_details": {
+        "cache_write_tokens": 22839,
+        "cached_tokens": 0
+      },
+      "output_tokens": 2903,
+      "output_tokens_details": {
+        "reasoning_tokens": 2266
+      },
+      "total_tokens": 25745
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-15T03:25:19.755Z"
+  },
+  {
+    "round": "20",
+    "stage": "P4",
+    "status": "completed",
+    "submitted_at": "2026-11-15T03:25:19.761Z",
+    "input_sha256": "e3bcc5cb0ede9404f31e2e4a04a6c598dbcaba1020e28e05896ae45d52ea2067",
+    "input_reservation": 50004,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 24295,
+      "input_tokens_details": {
+        "cache_write_tokens": 24292,
+        "cached_tokens": 0
+      },
+      "output_tokens": 8265,
+      "output_tokens_details": {
+        "reasoning_tokens": 4552
+      },
+      "total_tokens": 32560
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-15T03:27:48.662Z"
+  },
+  {
+    "round": "20",
+    "stage": "Bo5-1",
+    "status": "completed",
+    "submitted_at": "2026-11-15T03:28:19.024Z",
+    "input_sha256": "6d2705facdfe117e3cee99416eacc25f7d134ce79cb0ffddf3184200608c395e",
+    "input_reservation": 44782,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 19409,
+      "input_tokens_details": {
+        "cache_write_tokens": 19406,
+        "cached_tokens": 0
+      },
+      "output_tokens": 10034,
+      "output_tokens_details": {
+        "reasoning_tokens": 7129
+      },
+      "total_tokens": 29443
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-15T03:31:21.082Z"
+  },
+  {
+    "round": "20",
+    "stage": "Bo5-2",
+    "status": "completed",
+    "submitted_at": "2026-11-15T03:28:19.037Z",
+    "input_sha256": "6d2705facdfe117e3cee99416eacc25f7d134ce79cb0ffddf3184200608c395e",
+    "input_reservation": 44782,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 19409,
+      "input_tokens_details": {
+        "cache_write_tokens": 19406,
+        "cached_tokens": 0
+      },
+      "output_tokens": 14710,
+      "output_tokens_details": {
+        "reasoning_tokens": 11394
+      },
+      "total_tokens": 34119
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-15T03:32:43.199Z"
+  },
+  {
+    "round": "20",
+    "stage": "Bo5-5",
+    "status": "completed",
+    "submitted_at": "2026-11-15T03:28:19.038Z",
+    "input_sha256": "6d2705facdfe117e3cee99416eacc25f7d134ce79cb0ffddf3184200608c395e",
+    "input_reservation": 44782,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 19409,
+      "input_tokens_details": {
+        "cache_write_tokens": 19406,
+        "cached_tokens": 0
+      },
+      "output_tokens": 12646,
+      "output_tokens_details": {
+        "reasoning_tokens": 9322
+      },
+      "total_tokens": 32055
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-15T03:32:12.097Z"
+  },
+  {
+    "round": "20",
+    "stage": "Bo5-3",
+    "status": "completed",
+    "submitted_at": "2026-11-15T03:28:19.038Z",
+    "input_sha256": "6d2705facdfe117e3cee99416eacc25f7d134ce79cb0ffddf3184200608c395e",
+    "input_reservation": 44782,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 19409,
+      "input_tokens_details": {
+        "cache_write_tokens": 19406,
+        "cached_tokens": 0
+      },
+      "output_tokens": 9998,
+      "output_tokens_details": {
+        "reasoning_tokens": 7250
+      },
+      "total_tokens": 29407
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-15T03:31:21.618Z"
+  },
+  {
+    "round": "20",
+    "stage": "Bo5-4",
+    "status": "completed",
+    "submitted_at": "2026-11-15T03:28:19.637Z",
+    "input_sha256": "6d2705facdfe117e3cee99416eacc25f7d134ce79cb0ffddf3184200608c395e",
+    "input_reservation": 44782,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 19409,
+      "input_tokens_details": {
+        "cache_write_tokens": 19406,
+        "cached_tokens": 0
+      },
+      "output_tokens": 10843,
+      "output_tokens_details": {
+        "reasoning_tokens": 7768
+      },
+      "total_tokens": 30252
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-15T03:31:19.310Z"
+  },
+  {
+    "round": "20",
+    "stage": "P6",
+    "status": "completed",
+    "submitted_at": "2026-11-15T03:32:43.998Z",
+    "input_sha256": "9448b4b89b795c23ed57380150b4931415a57ccfddfd9000e93397bd3d1b49dc",
+    "input_reservation": 95983,
+    "output_reservation": 20000,
+    "usage": {
+      "input_tokens": 45394,
+      "input_tokens_details": {
+        "cache_write_tokens": 45391,
+        "cached_tokens": 0
+      },
+      "output_tokens": 5981,
+      "output_tokens_details": {
+        "reasoning_tokens": 3439
+      },
+      "total_tokens": 51375
+    },
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "completed_at": "2026-11-15T03:34:43.505Z"
+  }
+]

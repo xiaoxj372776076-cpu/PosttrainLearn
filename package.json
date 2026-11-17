@@ -1,6 +1,6 @@
 {
   "name": "legal-data-synthesis-lab",
-  "version": "0.1.0",
+  "version": "0.4.0",
   "private": true,
   "type": "module",
   "description": "法律数据合成研究学习: versioned skills, case materials, benchmarks and expert review.",
@@ -10,6 +10,17 @@
     "dev": "node --watch server.mjs",
     "test": "node --test test/*.test.mjs",
     "check": "node scripts/check-content.mjs",
+    "dossier:build": "node scripts/build-dossier.mjs",
+    "pilot:prepare": "node scripts/pilot-prepare.mjs",
+    "pilot:generate": "node scripts/pilot-generate.mjs",
+    "pilot:build": "node scripts/pilot-build-harbor.mjs",
+    "pilot:audit": "node scripts/pilot-generate.mjs audit",
+    "pilot:finalize": "node scripts/pilot-finalize.mjs",
+    "pilot:check": "node scripts/check-pilot.mjs",
+    "hardness:run": "node scripts/hardness-run.mjs",
+    "hardness:controls": "python3 scripts/hardness-controls.py",
+    "hardness:finalize": "node scripts/hardness-finalize.mjs",
+    "hardness:skill": "node scripts/hardness-skill-release.mjs",
     "import:workspace": "node scripts/import-workspace.mjs ..",
     "package": "node scripts/package.mjs"
   }

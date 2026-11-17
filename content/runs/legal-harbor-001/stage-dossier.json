@@ -1,0 +1,20 @@
+{
+  "summary": "复用案件包v0.1.0并经既有结构/引用/金额校验映射，partial保持不变",
+  "pack_id": "material-shanghai-23060",
+  "normalization_quality": {
+    "status": "partial",
+    "missing_fields": [
+      "证据原件",
+      "首次四笔逐笔金额",
+      "追加款银行来源逐笔追踪",
+      "净利息冲突解释"
+    ],
+    "conflicts": [
+      "原告自述21900与42000-22100=19900不符"
+    ],
+    "alignment_check": "pass",
+    "review_run_id": "dossier-map-and-existing-semantic-check",
+    "unit_scope": "返还范围只以已记载交付事实与明示资金来源推断为前提，不恢复未知原件"
+  },
+  "method": "deterministic_mapping_not_new_llm_extraction"
+}

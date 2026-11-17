@@ -1,0 +1,94 @@
+{
+  "batch": "first",
+  "request_sha256": "cfa434e45101c5acc6089073365a5667293ef0179553de2c39a20a10aeb803b0",
+  "selection_rule": "First complete answer per slot; retry only terminal infrastructure or grading-validation failures.",
+  "blind": [
+    {
+      "index": 1,
+      "call": "first-blind-1",
+      "cached": true,
+      "attempts": [
+        "first-blind-1"
+      ]
+    },
+    {
+      "index": 2,
+      "call": "first-blind-2",
+      "cached": true,
+      "attempts": [
+        "first-blind-2"
+      ]
+    },
+    {
+      "index": 3,
+      "call": "first-blind-3-retry-1",
+      "cached": true,
+      "attempts": [
+        "first-blind-3",
+        "first-blind-3-retry-1"
+      ]
+    },
+    {
+      "index": 4,
+      "call": "first-blind-4-retry-1",
+      "cached": true,
+      "attempts": [
+        "first-blind-4",
+        "first-blind-4-retry-1"
+      ]
+    },
+    {
+      "index": 5,
+      "call": "first-blind-5",
+      "cached": true,
+      "attempts": [
+        "first-blind-5"
+      ]
+    }
+  ],
+  "grades": [
+    {
+      "index": 1,
+      "call": "first-grade-1",
+      "cached": true,
+      "attempts": [
+        "first-grade-1"
+      ]
+    },
+    {
+      "index": 2,
+      "call": "first-grade-2-retry-1",
+      "cached": true,
+      "attempts": [
+        "first-grade-2",
+        "first-grade-2-retry-1"
+      ]
+    },
+    {
+      "index": 3,
+      "call": "first-grade-3",
+      "cached": true,
+      "attempts": [
+        "first-grade-3"
+      ]
+    },
+    {
+      "index": 4,
+      "call": "first-grade-4",
+      "cached": true,
+      "attempts": [
+        "first-grade-4"
+      ]
+    },
+    {
+      "index": 5,
+      "call": "first-grade-5",
+      "cached": true,
+      "attempts": [
+        "first-grade-5"
+      ]
+    }
+  ],
+  "shared_limit": 52,
+  "planned_at": "2026-11-16T08:20:15.359Z"
+}

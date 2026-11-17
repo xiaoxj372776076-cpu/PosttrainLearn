@@ -1,0 +1,12 @@
+{
+  "frozen_at": "2026-11-14T21:47:45.391Z",
+  "instruction_sha256": "063060e8faa01014e5642a7eeed9c8ba066d766f390cd1b30c2b09c4487aacd8",
+  "student_sha256": "7a54caa6872aaadca3b04712b7b4ea0f19763e4d449ceae1f9f243c95bb21d69",
+  "reference_sha256": "1883089016c8d5e6eff29925c1329d6c108292f6ed6a5641bd578765703f53c4",
+  "verifier_sha256": "520691d7610ba6e9aef9ef10e74192ec4ac359fd1a23ad11cad7c9dabb352229",
+  "model": "gpt-6-astra",
+  "effort": "high",
+  "max_output_tokens": 20000,
+  "n": 5,
+  "semantic_score_separate": true
+}

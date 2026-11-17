@@ -1,0 +1,20 @@
+{
+  "requested_model": "gpt-6-astra",
+  "actual_model": "deployment-gpt-6-astra-platform-global",
+  "usage": {
+    "input_tokens": 12,
+    "input_tokens_details": {
+      "cache_write_tokens": 0,
+      "cached_tokens": 0
+    },
+    "output_tokens": 6,
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "total_tokens": 18
+  },
+  "latency_ms": 1961,
+  "completed_at": "2026-11-14T09:28:55.340Z",
+  "purpose": "gateway_connectivity_only",
+  "response_content_excluded": true
+}

@@ -1,0 +1,18 @@
+[
+  {
+    "job": "legal-pilot-blind-3",
+    "status": "infrastructure_timeout",
+    "requested_model": "gpt-6-astra",
+    "quality_score": null,
+    "harbor_recorded_reward": 0.0,
+    "completed_model_answer": false,
+    "usage": null,
+    "unknown_usage_reservation": {
+      "input_tokens": 9544,
+      "max_output_tokens": 10000
+    },
+    "reason": "网关超时，未收到完成响应或学生答案；不是法律答错，也不把计费情况当作零。",
+    "original_trial_finished_at": "2026-11-14T10:07:44.518913Z",
+    "replacement_job": "legal-pilot-blind-3-retry-1"
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "critical_fact_spans_all_student_visible": true,
+  "reference_and_seeds_excluded_from_student_input": true,
+  "target_config_unchanged": true,
+  "request_sha256": "cfa434e45101c5acc6089073365a5667293ef0179553de2c39a20a10aeb803b0",
+  "material_sha256": "b792a789b9ee93b21303f606108f60f0071e16ecf91baa390f0275a557c23954",
+  "reference_sha256": "2d46df9ad75f76244a94d58628bc48bfd27b3516dcef96b13e66d274121d42a5",
+  "target_actual_model": "deepseek-v4-1-flash-261017",
+  "checked_at": "2026-11-16T08:22:53.332Z",
+  "limitation": "Structural/source visibility checks, not expert legal certification."
+}

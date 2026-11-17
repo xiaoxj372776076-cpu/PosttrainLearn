@@ -1,0 +1,12 @@
+{
+  "kind": "source_preserving",
+  "source_case_id": "cn-shanghai-minhang-2023-civil-first-23060",
+  "new_scenario": false,
+  "changes": [
+    "删除金额角色列表和逐项解题指令，不删除所需原文和限定任务前提"
+  ],
+  "dossier_sha256": "41a26881f9e8256afd8313cce0e21d7e2919ce0611d9d0e8ec046d98f266fe38",
+  "authority_manifest_sha256": "8761431470d3efaedb0ff45aeb7e2998de03b1717cf8751fddf0405cee422c8d",
+  "use": "local_research_only",
+  "expert_review": false
+}

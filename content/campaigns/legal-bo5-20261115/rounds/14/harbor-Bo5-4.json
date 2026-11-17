@@ -1,0 +1,73 @@
+{
+  "job": "legal-bo5-14-bo5-4",
+  "finished_at": "2026-11-15T00:53:33.938019Z",
+  "exceptions": [],
+  "completed_answer": true,
+  "infrastructure_failure": false,
+  "report": {
+    "passed": true,
+    "score": 1.0,
+    "checks": {
+      "A_valid": true,
+      "A_restitution": true,
+      "A_guarantee": true,
+      "B_initial_principal": true,
+      "B_protected_total": true,
+      "B_guarantee": true,
+      "C_outstanding_principal": true,
+      "C_outstanding_interest": true,
+      "C_outstanding_expenses": true,
+      "C_guarantee": true,
+      "borrower_total": true,
+      "B_second_guarantee": true,
+      "B_joint_payment_limit": true
+    },
+    "failed_checks": [],
+    "note": "金额或状态固定核对，不证明法律解释；语义等价与错误类型由P6另审，不以此直接计低成功率。"
+  },
+  "reward": 1.0,
+  "model": "deployment-gpt-6-astra-platform-global",
+  "usage": {
+    "input_tokens": 16770,
+    "input_tokens_details": {
+      "cache_write_tokens": 16767,
+      "cached_tokens": 0
+    },
+    "output_tokens": 12651,
+    "output_tokens_details": {
+      "reasoning_tokens": 10358
+    },
+    "total_tokens": 29421
+  },
+  "latency_ms": 248074,
+  "answer_text": "{\n  \"A_valid\": \"invalid\",\n  \"A_restitution\": \"122846.00\",\n  \"A_guarantee\": \"invalid_accessory\",\n  \"B_initial_principal\": \"185180.00\",\n  \"B_protected_total\": \"200963.38\",\n  \"B_guarantee\": \"joint\",\n  \"C_outstanding_principal\": \"149556.37\",\n  \"C_outstanding_interest\": \"1384.93\",\n  \"C_outstanding_expenses\": \"0.00\",\n  \"C_guarantee\": \"general_preserved_not_yet_enforceable\",\n  \"borrower_total\": \"474750.68\",\n  \"B_second_guarantee\": \"joint\",\n  \"B_joint_payment_limit\": \"200963.38\",\n  \"basis\": {\n    \"A\": {\n      \"facts\": \"dossier.md [S01]、[S02]：A成立于2022年，资金系套取银行信贷后转贷，实际交付143038.00元，已返还20192.00元；同交易号收据不构成另一笔交付。\",\n      \"law\": \"lending-2020-12第13条第（一）项不以高利转贷或借款人知情为无效要件，故乙不知来源、利率仅6%不影响A无效。依civil-code-2020第157、682条，乙承担财产返还义务，丁的从属保证无效。\",\n      \"calculation_and_scope\": \"143038.00－20192.00＝122846.00元。依dossier.md [S12]，不支持丁按保证合同付款；无效后的过错赔偿不在本次请求及计算范围内。\"\n    },\n    \"B_amount\": {\n      \"facts\": \"dossier.md [S03]—[S05]：B使用合法自有资金，原借款关系有效；预扣利息12406.00元，实际交付185180.00元。三次归档均无新增交付、无债务更新，约定按原利率逐期结息并保留计算精度。\",\n      \"law\": \"依civil-code-2020第670、679条及lending-2020-12第25—28条，以实际交付额为初始本金；13.2%低于成立时LPR四倍14.8%，依法允许的利息可以结入后期本金，但须再审查全程本息上限；逾期部分按原借期利率计算。\",\n      \"calculation\": \"四段日数依次为175、103、84、204日，共566日。校正后逐期本息＝185180×(1＋0.132×175/365)×(1＋0.132×103/365)×(1＋0.132×84/365)×(1＋0.132×204/365)＝225963.375438元。全程上限＝185180×(1＋0.148×566/365)＝227679.063671元，故上限不压减上述逐期结果。扣除SP-01分配给B的25000.00元后，余额为200963.38元。\"\n    },\n    \"B_guarantees\": {\n      \"facts\": \"dossier.md [S06]：戊、庚各自对全部B债务提供连带保证并同意结息；双方内部约定各50%分担并可相互追偿，未书面同意展期。戊于2023-07-07收到完整给付诉状后，甲于07-09撤诉；庚于07-06独立收到完整给付请求。\",\n      \"law\": \"依civil-code-2020第688、691、692、693、695条及guarantee-2020第25、32条，两人的保证均为连带责任保证；“直至还清”属于期间约定不明，保证期间仍按原到期日2023-01-12起算六个月，至2023-07-12届满。依guarantee-2020第31条，戊在期间内收到诉状后撤诉，不否定已经行权；对庚的07-06请求亦在期间内。\",\n      \"scope\": \"依guarantee-2020第13、29条，内部50%分担不等于对甲各担一半。甲已分别及时向戊、庚行权，庚不免责，戊不存在因甲漏向庚行权而丧失追偿权的减责事由。SP-01到账后，戊、庚各自对剩余B债务200963.38元承担全额连带保证责任；同一B债权不得重复受偿。\"\n    },\n    \"C_accounting\": {\n      \"facts\": \"dossier.md [S07]—[S09]：C为2019年成立的有效自有资金借款，2022年保证文件不构成新借款。原合同约定费用、依法可请求利息、本金的抵充顺序；仅T-02经双方特别约定先还本金。其他单方“还本金”备注不能变更双方约定。\",\n      \"law\": \"依lending-2020-12第31条及lending-2015第26条，成立日至2020-08-19按约定23.5%计算；2020-08-20起依lending-2020-12第25、28、31条，按3.25%×4＝13%计算，逾期亦适用该保护上限。2019—2020年的付款抵充依[S09]已有约定处理，2021年后的同一顺序亦符合civil-code-2020第561条。\",\n      \"cash_verification\": \"dossier.md [S08]、[S11]：T-01至T-07实际到账合计212625.00元。T-01截图与收据只是同一交易的重复记录；X-01已撤销且未到账，不计为清偿。T-01先付费用1680.00元、利息10173.761644元，其余抵本金；T-02的26913.00元全部抵本金。\",\n      \"calculation\": \"各计息区间日数依次为70、127、175、188、32、202、421、395、26日，其中T-03至T-04之间以2020-08-20拆成188日和32日。每段按当段未偿本金×适用年利率×日数/365计算，未付利息不计复利。T-01至T-07付款后的（本金，未付利息）依次为：（212411.761644，0）、（185498.761644，17368.298702）、（185498.761644，9624.672874）、（185498.761644，3816.823936）、（170555.332103，0）、（162292.286420，0）、（149556.365620，0）。以上仅为中间展示值，递推未逐次取整。\",\n      \"closing_balance\": \"T-07后至2023-08-01共26日，不计截日利息：149556.365619635×13%×26/365＝1384.932920元。SP-01不分配给C，故最终本金149556.37元、利息1384.93元、费用0.00元，合计150941.30元。\"\n    },\n    \"C_guarantee\": {\n      \"facts\": \"dossier.md [S07]、[S10]：C原到期日为2022-12-15。己仅在乙不能履行、无力偿还时承担责任，未约定保证期间。甲第一次起诉乙后撤诉，但于2023-06-14再次有效起诉，截至截日尚未审判；乙有可执行财产，且无先诉抗辩例外。\",\n      \"law\": \"依civil-code-2020第686、687、691—693条及guarantee-2020第25、31条，己为一般保证人，六个月保证期间至2023-06-15届满。06-14再诉在期间内，故原保证责任已保全，并未消灭。05-08单独催告不能替代对乙起诉；06-25仅确认收件不构成新保证承诺，亦无须据此另行成立保证，参见guarantee-2020第34条。\",\n      \"scope\": \"己的存续保证覆盖剩余C债务150941.30元，但先诉抗辩条件尚未消除；截至截日，甲要求己立即付款的可支持金额为0.00元，不等于己的保证责任已经消灭。\"\n    },\n    \"SP_01\": {\n      \"facts\": \"dossier.md [S13]：25000.00元已实际到账，双方排除A，未在B、C之间具体指定，并约定在两债均到期且有同等资信全额保证时，优先抵充依法可强制请求年利率较高者。\",\n      \"law_and_application\": \"依civil-code-2020第560条，应优先适用该抵充约定。结合[S06]、[S10]，B的戊、庚保证与C的己保证均为存续的全额保证，资信符合附件条件；一般保证尚有先诉抗辩，不等于缺乏担保。B的可强制请求年利率13.2%高于C的13%，不能用C票面23.5%比较。因此25000.00元全部抵充B，A、C余额不变。\"\n    },\n    \"total\": \"依dossier.md [S12]、[S13]，乙在SP-01到账后的付款责任总额按最终分项取分后相加：122846.00＋200963.38＋149556.37＋1384.93＋0.00＝474750.68元。保证责任不另行计入借款人总额。\"\n  }\n}",
+  "trace": {
+    "actions": [
+      {
+        "action": "adapter_read_file",
+        "path": "/app/input/dossier.md",
+        "sha256": "458ae23e9a0fc1f65a8883d530aac1141369ac68e2de98a3cdf05ee4a9af506a"
+      },
+      {
+        "action": "adapter_read_file",
+        "path": "/app/input/rules.json",
+        "sha256": "f53bcb63ad639c74edcf320669eadddc2a754fc51c147112843a352a1b4c9b24"
+      },
+      {
+        "action": "adapter_read_file",
+        "path": "/app/input/answer-contract.json",
+        "sha256": "a894bbccda44291b43bbeafa6a195163cb21e6851fa6d0007fbd6ef2e78934d5"
+      },
+      {
+        "action": "adapter_submit_answer",
+        "path": "/app/output/answer.json",
+        "sha256": "827fcf1b699d7cc35a9bf898712e993cd1d2c956d6ef3a7f3123a5ab26970f86"
+      }
+    ],
+    "adapter_version": "0.3.0",
+    "host_writes_answer": true,
+    "fresh_api_completion": true,
+    "arbitrary_shell_enabled": false,
+    "hidden_answer_input": false
+  }
+}

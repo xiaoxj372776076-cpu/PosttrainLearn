@@ -1,0 +1,22 @@
+{
+  "requestedModel": "gpt-6-astra",
+  "actualModel": "deployment-gpt-6-astra-platform-global",
+  "text": "{\n  \"question_sufficiency\": \"pass\",\n  \"answer_leakage\": false,\n  \"required_repairs\": [],\n  \"assessed_difficulty\": \"D4\",\n  \"reasoning_dependencies\": [\n    \"合同成立及受理时点→规范版本选择→A资金来源的效力评价→财产返还与从属保证状态（S01、S02、S12；lending-2020-12第13、31条；civil-code-2020第157、682条）。\",\n    \"B实际交付与预扣利息→初始本金→逐期结息的合法计入范围→整个借款期间本息上限及逾期利息（S03—S06；civil-code-2020第670、679条；lending-2020-12第25—28条）。\",\n    \"B原到期日、展期及保证人书面同意范围→保证期间计算→首次请求是否及时，须区分同意结息与同意展期（S06；civil-code-2020第692、693、695条）。\",\n    \"C交易号、结算状态与重复凭证→实际付款集合→指定债务与债务内部抵充顺序的区分→双边补充协议和单方备注的不同作用（S08、S09、S11；civil-code-2020第560、561条）。\",\n    \"C付款抵充结果→各段未偿本金及利息→后续付款分配→截日余额，付款当日的本金变化影响后续计息（S07—S09；lending-2020-12第25、28条）。\",\n    \"C保证方式、到期日、短信及起诉日期→保证期间内是否有效行权→是否仍需审查先诉抗辩，不能仅凭前诉尚未审判确定保证状态（S07、S10；civil-code-2020第686、687、692、693条）。\",\n    \"各债务请求范围与分项余额→分别取分→汇总，保证责任不得重复计入借款人总额（S12及answer-contract.json）。\"\n  ],\n  \"reason\": \"学生材料足以支持限定范围内的作答：实际交付、结算和付款日期、自然日/365口径、付款当日处理、截日排除、利率、费用、保证范围及行权时点均有依据；取分和汇总规则明确。题设认可的LPR、费用可收取性及清算协议属于虚构情景前提，不是原案证据或隐藏答案。状态选项未指定其与各保证人的对应关系，不构成答案泄漏。D4仅为多层规则与动态余额依赖的结构性评估，不代表已经验证低成功率；部分字段仍属直接提取。本次仅检查所给规范摘录的覆盖性，未独立认证法条全文或来源真实性。\"\n}",
+  "usage": {
+    "input_tokens": 15666,
+    "input_tokens_details": {
+      "cache_write_tokens": 15663,
+      "cached_tokens": 0
+    },
+    "output_tokens": 1910,
+    "output_tokens_details": {
+      "reasoning_tokens": 1248
+    },
+    "total_tokens": 17576
+  },
+  "latencyMs": 42638,
+  "completedAt": "2026-11-14T22:04:45.122Z",
+  "status": "completed",
+  "input_sha256": "ed5331c38504e91ac8e5c6a8105e46533ce5cf8a7e08c1cdf061af008ab1d70d",
+  "output_sha256": "dcd12bc67ad602767a02a4e207d88d209a142e0c5fbcb806c1cf146cba2f11eb"
+}

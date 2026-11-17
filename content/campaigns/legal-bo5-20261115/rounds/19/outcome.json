@@ -1,0 +1,27 @@
+{
+  "round": 19,
+  "status": "completed_not_confirmed",
+  "full_chain_completed": true,
+  "skill_version": "1.2.18",
+  "measured": {
+    "valid": true,
+    "correct": 5,
+    "n": 5,
+    "target_hit": false,
+    "deterministic_successes": 0,
+    "reason": "semantic_five_answer_measurement"
+  },
+  "confirmation": null,
+  "confirmed_target_hit": false,
+  "next_level": 6,
+  "training_rows": 0,
+  "release_status": "quarantine",
+  "assessed_difficulty": "D4",
+  "analysis": "按随题事实及规范摘录核对，未发现使题目不可回答或工程参考失去支持的实质问题。关键数值为：A返还122816.00元；B合法结息候选228220.81276653元低于整体上限229953.64120548元，SP-01抵充后为203220.81元；C未偿本金152860.88元、利息1415.53元、费用0.00元，分项取分合计154276.41元。付款时戊、庚均被及时行权，己的一般保证也因期间内再诉而存续，因此依S13比较13.2%与13%后抵B；随后S14全部转移C债务，乙退出、己免责，乙总额为326036.81元。五份均为有效完成，法律正确5/5、最终金额正确5/5、按冻结容差评定的依据正确5/5，整体实质正确5/5；未见截断、基础设施失败或学生格式错误。确定性检查将开放式状态误作固定标签匹配，其低分不能证明题目难度。difficulty_mechanism_valid表示保证状态、付款抵充及后续债务转移之间存在有据且必要的依赖；D4仅为结构性评估，不代表已经证实低成功率。本轮没有必要推理失误，不支持1—2/5难题命中，也不能据此声称法律推理或金额计算能力不足。本审计依据所给冻结文本与可复算日期、算式，未联网重验来源页面或哈希，未调用外部计算工具，不构成专家审核或真实裁判认定。",
+  "remaining_gates": [
+    "expert_review",
+    "source_and_export_permissions",
+    "independent_family_confirmation",
+    "benchmark_source_overlap"
+  ]
+}

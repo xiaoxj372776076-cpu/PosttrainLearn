@@ -1,0 +1,12 @@
+{
+  "route": "目标模型 benchmark 错题 -> 完整 few-shot -> 新材料同类 QA -> 有据校验 -> 五答",
+  "historical_campaign_untouched": true,
+  "real_benchmark_examples": true,
+  "referenceAnswer_source": "No standalone official answer; original rubrics retained; separately reconstruct rubric-derived answers.",
+  "source_case": "原始真实上海借贷案例，不用20轮虚构构造器",
+  "limitations": [
+    "Public source permissions unresolved",
+    "Same-family automated audits, no expert gold",
+    "Single-answer probes only identify error candidates"
+  ]
+}

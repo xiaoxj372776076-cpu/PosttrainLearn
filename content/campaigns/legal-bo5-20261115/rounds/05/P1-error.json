@@ -1,0 +1,13 @@
+{
+  "round": "05",
+  "stage": "P1",
+  "status": "failed_usage_unknown",
+  "submitted_at": "2026-11-14T21:41:11.375Z",
+  "input_sha256": "868edd70908ccbdc45854353c923a9b00c18773f9cdfbb788c3a9df15da817b9",
+  "input_reservation": 29754,
+  "output_reservation": 20000,
+  "usage": null,
+  "failure_kind": "infrastructure",
+  "error": "fetch failed",
+  "failed_at": "2026-11-14T21:41:11.404Z"
+}

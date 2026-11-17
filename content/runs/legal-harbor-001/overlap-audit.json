@@ -1,0 +1,45 @@
+{
+  "method": "local_normalized_exact_and_8gram_candidate_retrieval_not_semantic_clearance",
+  "protected_records": 280,
+  "benchmark_sent_to_generation": false,
+  "exact_question_matches": 0,
+  "case_number_matches": 0,
+  "top_candidates": [
+    {
+      "record_id": "case-186",
+      "jaccard": 0.001528584530724549,
+      "exact_question": false,
+      "case_number_match": false
+    },
+    {
+      "record_id": "defendant-006",
+      "jaccard": 0.0006490696668109044,
+      "exact_question": false,
+      "case_number_match": false
+    },
+    {
+      "record_id": "case-046",
+      "jaccard": 0.0006263701847792045,
+      "exact_question": false,
+      "case_number_match": false
+    },
+    {
+      "record_id": "case-185",
+      "jaccard": 0.0006184291898577613,
+      "exact_question": false,
+      "case_number_match": false
+    },
+    {
+      "record_id": "case-086",
+      "jaccard": 0.00048638132295719845,
+      "exact_question": false,
+      "case_number_match": false
+    }
+  ],
+  "status": "unresolved",
+  "limitations": [
+    "案例身份字段在基准中不完整",
+    "8gram仅候选检索，阈值未标注校准",
+    "未完成独立语义近重复和源案例溯源审核，不宣称无污染"
+  ]
+}

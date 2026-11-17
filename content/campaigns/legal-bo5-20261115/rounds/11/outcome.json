@@ -1,0 +1,27 @@
+{
+  "round": 11,
+  "status": "completed_not_confirmed",
+  "full_chain_completed": true,
+  "skill_version": "1.2.10",
+  "measured": {
+    "valid": false,
+    "correct": 5,
+    "n": 5,
+    "target_hit": false,
+    "deterministic_successes": 5,
+    "reason": "reference_not_supported"
+  },
+  "confirmation": null,
+  "confirmed_target_hit": false,
+  "next_level": 6,
+  "training_rows": 0,
+  "release_status": "quarantine",
+  "assessed_difficulty": "D4",
+  "analysis": "五份均为有效完成答案：法律正确5/5、最终金额正确5/5、计算依据正确5/5、整体正确5/5；不存在可用于统计1–2/5的必要推理失误。题面提供了必要合同、日期、付款、保证及请求边界，能够支持全部必答结论。工程参考的必答答案和实际计算路径可支持，但完整参考附带的“若两项保证均消灭，B的利息负担更重”缺乏充分依据：B约定利率为13.2%，C截日保护利率为14.2%，B存在结息并不自动证明其在民法典第560条下负担更重，材料也未提供足以确定该反事实排序的比较口径。因此reference_supported=false针对完整参考中的该附带断言，不影响五份答案的正确性。本题实际抵充只需比较B无存续保证、C有存续一般保证，无须进入负担轻重比较。拒绝据现有完整参考确认实测难度机制，故difficulty_mechanism_valid=false；这不等于否认题目具有必要推理。D4仅表示多规范时点、保证程序与金额抵充交互的结构评估，不是低成功率实证标签。可公开核验的规范来源包括最高人民法院民法典页面https://www.court.gov.cn/zixun/xiangqing/233181.html、民间借贷解释页面https://cicc.court.gov.cn/html/1/380/385/12844.html及担保解释页面https://www.court.gov.cn/zixun/xiangqing/282721.html。本次仅依据所附文本核对，未联网验证网页或哈希，未进行专家审核。",
+  "remaining_gates": [
+    "expert_review",
+    "source_and_export_permissions",
+    "independent_family_confirmation",
+    "benchmark_source_overlap"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "requestedModel": "gpt-6-astra",
+  "actualModel": "deployment-gpt-6-astra-platform-global",
+  "text": "{\n  \"question_sufficiency\": \"pass\",\n  \"answer_leakage\": false,\n  \"required_repairs\": [],\n  \"assessed_difficulty\": \"D4\",\n  \"reasoning_dependencies\": [\n    \"A的资金来源与成立时点→合同效力→实际财产返还范围及从属保证效力。依据：S01、S02、S12；lending-2020-12第13条，civil-code-2020第157、682条。\",\n    \"B实际交付与预扣利息→逐期可计入本金的利息→结息结果与整体保护上限比较。依据：S03—S05；civil-code-2020第670条，lending-2020-12第25—28条。\",\n    \"C合同成立与受理时点→利率过渡分段；付款到账、重复记录及特别清偿协议→费用、利息和本金逐笔抵充。依据：S07—S11；lending-2015第26条，lending-2020-12第25、31条，civil-code-2020第561条。\",\n    \"保证合同正文、原到期日及展期同意情况→保证类型和期间；各人的起诉、送达、撤诉、再诉及催告记录→保证存续与即时请求条件。依据：S06、S10；civil-code-2020第686—695条相关规定，guarantee-2020第25、31、32、34条。\",\n    \"独立签约与内部追偿约定→对部分保证人行权的效力及其他保证人的责任减免条件。依据：S06；guarantee-2020第13、29条。\",\n    \"付款时保证存续、覆盖范围及资信条件→SP附件的适用或法定抵充顺序→SP-01在B、C之间的归属→两笔剩余余额和戊的即时付款上限。依据：S06、S10、S13；civil-code-2020第560、561、691条。\",\n    \"最终请求范围、分项取分规则与责任重叠关系→借款人总额及各保证人责任的一致性。依据：S02、S06、S12、S13及answer-contract.json。\"\n  ],\n  \"reason\": \"学生输入已提供必要的交付、起息、结息、付款、到期及行权日期，实际自然日/365口径、截日不计息规则、费用与清偿顺序、利率参数和保证范围，未发现阻碍唯一作答的必要事实缺口。庚的最终请求对象身份已由问题及S06明确。合同条款、题设报价和无争议事实属于虚构情景前提，不是原案证据，也不因直接规定权利义务而构成答案泄漏。D4依据是保证状态与付款归属、债务余额之间的跨分支依赖，不是材料长度或运算次数；该标签未经实测校准。本次仅审查所给学生输入，不独立认证法条摘录的真实性或完整性。\"\n}",
+  "usage": {
+    "input_tokens": 20436,
+    "input_tokens_details": {
+      "cache_write_tokens": 20433,
+      "cached_tokens": 0
+    },
+    "output_tokens": 3183,
+    "output_tokens_details": {
+      "reasoning_tokens": 2477
+    },
+    "total_tokens": 23619
+  },
+  "latencyMs": 71086,
+  "completedAt": "2026-11-15T00:32:40.105Z",
+  "status": "completed",
+  "input_sha256": "56d2d63189ea85869d7f8bb9fff6bc233dada2f59dedd48edbd4b563c6106699",
+  "output_sha256": "ce85ea2ab40f7ef3aa9afc5258bbea884f134a419129fdca24e1489b2becd7bc"
+}

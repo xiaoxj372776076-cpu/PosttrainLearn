@@ -1,0 +1,1 @@
+{"model":"gpt-6-astra","messages":[{"role":"user","content":"Reply with exactly: gateway-ready"}],"maxOutputTokens":500,"effort":"low"}

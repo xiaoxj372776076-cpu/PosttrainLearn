@@ -1,0 +1,69 @@
+{
+  "job": "legal-bo5-05-bo5-3",
+  "finished_at": "2026-11-14T21:55:09.936244Z",
+  "exceptions": [],
+  "completed_answer": true,
+  "infrastructure_failure": false,
+  "report": {
+    "passed": true,
+    "score": 1.0,
+    "checks": {
+      "A_valid": true,
+      "A_restitution": true,
+      "A_guarantee": true,
+      "B_initial_principal": true,
+      "B_protected_total": true,
+      "B_guarantee": true,
+      "C_outstanding_principal": true,
+      "C_outstanding_interest": true,
+      "C_outstanding_expenses": true,
+      "C_guarantee": true,
+      "borrower_total": true
+    },
+    "failed_checks": [],
+    "note": "金额或状态固定核对，不证明法律解释；语义等价与错误类型由P6另审，不以此直接计低成功率。"
+  },
+  "reward": 1.0,
+  "model": "deployment-gpt-6-astra-platform-global",
+  "usage": {
+    "input_tokens": 12386,
+    "input_tokens_details": {
+      "cache_write_tokens": 12383,
+      "cached_tokens": 0
+    },
+    "output_tokens": 7988,
+    "output_tokens_details": {
+      "reasoning_tokens": 6214
+    },
+    "total_tokens": 20374
+  },
+  "latency_ms": 153666,
+  "answer_text": "{\n  \"A_valid\": \"无效\",\n  \"A_restitution\": \"122900.00\",\n  \"A_guarantee\": \"invalid_accessory\",\n  \"B_initial_principal\": \"181850.00\",\n  \"B_protected_total\": \"221665.05\",\n  \"B_guarantee\": \"joint\",\n  \"C_outstanding_principal\": \"199188.07\",\n  \"C_outstanding_interest\": \"10016.16\",\n  \"C_outstanding_expenses\": \"0.00\",\n  \"C_guarantee\": \"expired\",\n  \"borrower_total\": \"553769.28\",\n  \"basis\": {\n    \"适用规范\": \"据dossier.md开篇及[S01]、[S03]、[S07]，借款均发生于2022年，本案于2023-08-01新受理。适用rules.json中source_id=lending-2020-12第31条及source_id=civil-code-2020第1260条确定的现行规范，不适用lending-2015第14条的旧版无效要件。\",\n    \"A\": {\n      \"依据\": \"dossier.md [S01]、[S02]、[S11]、[S12]；rules.json：source_id=lending-2020-12第13条第（一）项，source_id=civil-code-2020第157、682条。\",\n      \"结论\": \"A资金系套取银行贷款转贷，合同无效，不以高利转贷或乙事先知情为必要条件。丁的保证合同随主合同无效，不能作为连带保证债务请求即时支付。保证无效后的过错赔偿不在诉请范围，不作认定。乙应返还未清偿的实际取得财产。\",\n      \"算式\": \"142885.00－19985.00＝122900.00；票面未交付差额及重复收据不增加返还额。\"\n    },\n    \"B本息\": {\n      \"依据\": \"dossier.md [S03]—[S06]、[S11]、[S12]；rules.json：source_id=civil-code-2020第670、679、680条，source_id=lending-2020-12第25—28条。\",\n      \"结论\": \"B有效，预扣利息不计入最初本金。保护利率上限为3.70%×4＝14.80%，约定13.20%未超过上限。新借据没有新增交付，应从实际本金重算合法结息，并再审查全期间本息总额上限。逾期部分按原约定利率计算。中间值均不取分。\",\n      \"算式\": [\n        \"P0＝193995.00－12145.00＝181850.00。\",\n        \"2022-01-12至2022-07-06为175日；至2023-01-09再计187日；至2023-08-01再计204日，共566日。\",\n        \"P1＝181850×(1＋0.132×175/365)；P2＝P1×(1＋0.132×187/365)；T＝P2×(1＋0.132×204/365)。\",\n        \"全期间上限H＝181850×(1＋0.148×566/365)，取分为223584.82；T＜H，最终可保护本息round2(min(T,H))＝221665.05。\"\n      ]\n    },\n    \"戊保证\": {\n      \"依据\": \"dossier.md [S06]、[S12]；rules.json：source_id=civil-code-2020第688、691—693、695条。\",\n      \"结论\": \"戊书面承担连带保证并同意合法结息机制。未经戊书面同意的展期不改变保证期间，仍按原到期日2023-01-12计算六个月，至2023-07-12届满。2023-07-05到达戊的请求在期间内，保证责任未免除；截至截日B亦已届展期后的履行期限。戊应在221665.05元范围内与乙承担连带即时支付责任，该金额不是另加一笔债权。\"\n    },\n    \"C本息及费用\": {\n      \"依据\": \"dossier.md [S07]—[S09]、[S11]、[S12]；rules.json：source_id=civil-code-2020第560、561条，source_id=lending-2020-12第25、28条。\",\n      \"结论\": \"C有效，借期内及逾期年利率11.40%均低于14.80%上限。四笔付款均指定清偿C，不跨债务冲抵。T-02依双方协议先抵本金；其余付款依费用、利息、本金顺序。未付利息不另生息。下列r为日利率，全部中间值保持精度。\",\n      \"算式\": [\n        \"r＝0.114/365；五段计息日数依次为70、127、83、99、161日。\",\n        \"T-01：先清费用1680；当期利息＝222050×r×70；付款后本金P1＝222050－(9865－1680－222050×r×70)，费用余额为0。\",\n        \"T-02：新增未付利息I2＝P1×r×127；11596全部抵本金，P2＝P1－11596。\",\n        \"T-03：付款后未付利息J＝I2＋P2×r×83－13327＞0，故本金仍为P2。\",\n        \"T-04：先清利息J＋P2×r×99，余款抵本金；P4＝P2－[15058－(J＋P2×r×99)]，round2(P4)＝199188.07。\",\n        \"截日未付利息＝round2(P4×r×161)＝10016.16；未偿费用＝0.00。\"\n      ]\n    },\n    \"己保证\": {\n      \"依据\": \"dossier.md [S07]、[S10]、[S12]；rules.json：source_id=civil-code-2020第686、687、692、693条。\",\n      \"结论\": \"保证方式未约定，属于一般保证；未约定保证期间，故自2022-12-15主债务到期起六个月，至2023-06-15届满。2023-05-08向己催付的短信不能替代在保证期间内对乙起诉或申请仲裁；2023-06-20起诉乙已经逾期。因此己因保证期间届满免除保证责任，即时支付请求不获支持。此为expired，而非保证合同无效，也不是期间内有效保全但尚可行使先诉抗辩的状态。\"\n    },\n    \"核对及汇总\": {\n      \"依据\": \"dossier.md [S02]、[S04]、[S08]、[S11]、[S12]及answer-contract.json的金额、汇总约定。\",\n      \"说明\": \"T-01的截图及收据均为同一交易，只计一次；X-01失败未到账，不计清偿。A收据不构成追加交付，B新借据不构成新现金。仅将最终分项取分后相加；B最初本金已包含在B可保护本息中，保证责任亦不重复计入乙的总债务。截至2023-08-01，不计当日利息。\",\n      \"算式\": \"122900.00＋221665.05＋199188.07＋10016.16＋0.00＝553769.28。\"\n    }\n  }\n}",
+  "trace": {
+    "actions": [
+      {
+        "action": "adapter_read_file",
+        "path": "/app/input/dossier.md",
+        "sha256": "f3fbfbbd26f46fcbc0845aac68d68346be9a0ffcfe6dee16473f6fc6b710475f"
+      },
+      {
+        "action": "adapter_read_file",
+        "path": "/app/input/rules.json",
+        "sha256": "deaf2aabd02014bbe259c915ff9305c12bca7c276a7197c8ec5b02db5ed8a20b"
+      },
+      {
+        "action": "adapter_read_file",
+        "path": "/app/input/answer-contract.json",
+        "sha256": "d80489a0c14a1b12d9627689a8be5fe1e53fd9e9c969247217d359399d834c25"
+      },
+      {
+        "action": "adapter_submit_answer",
+        "path": "/app/output/answer.json",
+        "sha256": "41ccdb4fd6e4b954e6050dd0fcbbd7ab0582c6a19b702e45453f764c5ebfea51"
+      }
+    ],
+    "fresh_api_completion": true,
+    "arbitrary_shell_enabled": false,
+    "hidden_answer_input": false
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "legal-benchmark-20261116",
+  "status": "infrastructure_interrupted",
+  "first": null,
+  "confirmation": null,
+  "target_confirmed": false,
+  "submissions": 16,
+  "shared_submissions": 16,
+  "completed": 9,
+  "failed_usage_unknown": 7,
+  "unreturned_request_artifacts": [
+    "probe-case-025-request.json",
+    "probe-case-061-request.json"
+  ],
+  "known_input_tokens": 5149,
+  "known_output_tokens": 29739,
+  "cost_usd": null,
+  "expert_review": false,
+  "training_rows": 0,
+  "local_only": true,
+  "candidate_count": 0,
+  "seed_ids": [],
+  "benchmark_sent": false,
+  "finished_at": "2026-11-16T06:41:42.072Z"
+}

@@ -1,0 +1,89 @@
+{
+  "kind": "fictional_derivative",
+  "new_scenario": true,
+  "not_original_case_evidence": true,
+  "changes": [
+    "增加独立虚构B/C债务、预扣利息与结息借据、分时付款和保证状态",
+    "原案只是研究动机；全部新情景参考重新由题设与法条建立"
+  ],
+  "student_projection": {
+    "policy": "neutral_primary_records",
+    "enabled_from_round": 6,
+    "rationale": "保留同一交易号、银行执行状态、双方补充协议与单方备注；删除整理者归属结论和责任状态检查表，不改变已生成参考的实质事实。",
+    "skill_version": "1.2.11"
+  },
+  "material_repairs": {
+    "basis": "rounds/02/stage-P3.json",
+    "changes": [
+      "明确B实际到账、起息和成立日期，不能以借据日期推定",
+      "A的清算约定改为如被认定无效的条件式，不预给效力结论"
+    ],
+    "previous_rounds_not_rewritten": true
+  },
+  "mechanisms": [
+    "actual_disbursement_before_capitalization",
+    "period_cap_and_whole_term_cap",
+    "agreement_exception_to_payment_priority",
+    "accessory_validity_and_guarantee_period",
+    "preservation_vs_immediate_enforcement",
+    "guarantee_state_to_undesignated_payment_allocation",
+    "guarantee_type_withdrawal_service_refiling_receipt_signature",
+    "old_loan_new_guarantee_transitional_rate_and_payment_sequence",
+    "relative_guarantee_preservation_lost_recourse_and_payment_security_comparison"
+  ],
+  "cross_branch_coupling": {
+    "enabled_from_round": 8,
+    "span": "S13",
+    "amount": "25000.00",
+    "dependency": "保证存续状态 -> 民法典560条B/C债务抵充 -> 未偿余额",
+    "scope": "双方限定只清偿B/C；不将先诉抗辩视为保证消灭；新增题设与参考，不复用旧题计数"
+  },
+  "procedural_coupling": {
+    "enabled_from_round": 9,
+    "spans": [
+      "S06",
+      "S10",
+      "S13"
+    ],
+    "authority": "https://www.court.gov.cn/zixun/xiangqing/282721.html",
+    "dependency": "保证条款类型与期间 -> 起诉/送达/撤诉/再诉及收件签名 -> 保证存续 -> B/C抵充及剩余余额",
+    "hypothesis": "第8轮前三答均通过简单的催告/起诉分支；改用原始程序文件，区分两种保证的撤诉效果与仅收件签名，不增加算术量。",
+    "not_retroactive": true
+  },
+  "cap_shortcut_repair": {
+    "enabled_from_round": 10,
+    "basis": "rounds/08/stage-P6.json",
+    "rate": "13.20%",
+    "cap": "14.80%",
+    "hypothesis": "前轮整体上限遮蔽逐次结息；降低有效合同利率，使合法结息候选额必须与独立上限比较，不能只用整体上限作答。保留原日期和归档次数，不靠新增运算量加难。",
+    "not_retroactive": true
+  },
+  "temporal_rate_coupling": {
+    "enabled_from_round": 11,
+    "basis": "previous high-success guarantee and amount branches; rounds/08/stage-P6.json shortcut audit",
+    "spans": [
+      "S07",
+      "S08",
+      "S09",
+      "S10",
+      "S13"
+    ],
+    "dependency": "2019原借款成立与2022保证成立分开 -> 新受理旧合同利率过渡 -> 付款跨越规范分界的合法利息 -> 顺序抵充及后续本金；未送达撤诉与期间内再诉重新影响担保比较",
+    "rates_are_researcher_reference_only": true,
+    "not_retroactive": true
+  },
+  "co_guarantee_coupling": {
+    "enabled_from_round": 12,
+    "spans": [
+      "S06",
+      "S13"
+    ],
+    "dependency": "对不同保证人行权的相对效力 -> 明确相互追偿及份额 -> 丧失追偿的责任减免 -> 担保覆盖范围比较与抵充 -> 戊最高即时责任",
+    "not_retroactive": true,
+    "reference_requires_P4_and_P6_review": true
+  },
+  "dossier_sha256": "6bb7f2603c7fd379b8f55c3e3926c1d211c811bdf4275bc80099a9bf7aab9ed2",
+  "authority_manifest_sha256": "88c4cc408ec2d4f93b53401390b8216630724c48b113c239f1d9d47dafe7eeec",
+  "use": "local_research_only",
+  "expert_review": false
+}

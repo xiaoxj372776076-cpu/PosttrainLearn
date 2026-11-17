@@ -1,0 +1,260 @@
+{
+  "audit_scope": {
+    "basis": "以audit_student_projection中的六类文件内容核对教师答案、公开依据摘要及三份盲答；未执行数据区内的文件操作指令。",
+    "reference_boundary": "reference_basis中的p-020、p-022、p-023不是学生可用证据，不用于补足题面、推导未提供的裁判结论或证明教师答案正确。未将生成用seed答案作为审计依据。",
+    "expert_review_performed": false,
+    "public_basis_note": "以下是可复核的公开审计依据，不是内部思维链，也不是专家金标认证。"
+  },
+  "checks": {
+    "evidence_alignment": "pass",
+    "question_sufficiency": "pass",
+    "authority_validity": "pass",
+    "answer_support": "pass",
+    "blind_answer_agreement": "pass",
+    "numeric_consistency": "pass",
+    "variant_consistency": "not_applicable",
+    "difficulty_alignment": "fail",
+    "source_permission": "unresolved",
+    "material_normalization": "unresolved",
+    "privacy": "unresolved",
+    "leakage": "unresolved"
+  },
+  "check_reasons": {
+    "evidence_alignment": {
+      "locations": [
+        "teacher.answer.legal.reason",
+        "teacher.answer.ledger",
+        "teacher.answer.evidence_limits",
+        "p-007",
+        "p-009",
+        "p-015",
+        "p-016",
+        "p-017",
+        "scope.txt"
+      ],
+      "reason": "教师答案区分原告自述、文书记载、事实段记载和条件性审计推断。追加款实际交付据p-017，贷款来源及同一关系归属仅在接受p-007退还预扣款解释的前提下推断；未将其写成独立流水追踪结果。保留首次交付2022-08-24至2022-08-25的日期范围，未补造四笔明细。未把缺席、收条或p-009概括证据确认扩张为实体自认或独立鉴真。审计侧p-020使用“当日”概括首次交付，教师答案没有据此覆盖学生材料p-016的日期范围。"
+    },
+    "question_sufficiency": {
+      "locations": [
+        "audit_student_projection",
+        "mentions.json",
+        "output-contract.json",
+        "scope.txt"
+      ],
+      "reason": "六类输入内容、15个金额提及、分类定义、版本时点和追加款来源推断前提均已提供，足以完成限定审计。逐笔流水、真实利息及原始证据的缺失是题目要求表达的未知，不是必须补齐才能作答的信息。返还总额字段明确允许限定前提下的审计金额，不要求证明无条件的完整资金链。"
+    },
+    "authority_validity": {
+      "locations": [
+        "rules.json:lending-2015:14",
+        "rules.json:lending-2020-08:14",
+        "rules.json:lending-2020-12:13",
+        "rules.json:lending-2020-12:31",
+        "rules.json:civil-code-2020:157",
+        "rules.json:civil-code-2020:1260",
+        "p-006",
+        "p-012",
+        "p-017",
+        "teacher.answer.legal"
+      ],
+      "reason": "就所附规范及版本信息而言，2022年行为、2023-05-06受理支持适用2020年12月版第13条第1项及第31条第1款；涉及2020-08-20前成立合同的利息过渡条款不适用。教师正确说明2015版高利与借款人知情条件已删除，没有混用历史要件。民法典施行时间及第157条返还规则匹配本题，折价补偿等例外未被遗漏或无据适用。本项通过仅指封闭材料内的规范适用，不认证官方全文真实性、现行有效性或材料使用权限。"
+    },
+    "answer_support": {
+      "locations": [
+        "teacher.answer",
+        "teacher.rationale",
+        "p-007",
+        "p-015",
+        "p-016",
+        "p-017",
+        "civil-code-2020:157",
+        "output-contract.json"
+      ],
+      "reason": "核心返还结论由首次实际交付合计及三项追加交付支持，追加款纳入保留了scope限定条件。银行端放款、借条、收条和本金诉请均未直接替代实际取得审查。教师答案覆盖契约字段，15个id各一次，金额原值及分类枚举相符。公开摘要与完整答案一致，未扩大为未知原判结果、损害赔偿或真实利息认定。未发现需要否定核心答案的实质错误。"
+    },
+    "blind_answer_agreement": {
+      "locations": [
+        "blind_answers[0].answer",
+        "blind_answers[1].answer",
+        "blind_answers[2].answer",
+        "teacher.answer",
+        "evaluation.same_family_fresh_context"
+      ],
+      "reason": "三份盲答与教师答案在规则版本、无效前提、15项金额分类、524100.00元返还范围、19900.00元算术剩余、2000.00元冲突及全部证据限制状态上语义一致。理由详略和引用组合存在差异，但未形成实质矛盾。该一致性仅是答案间比较结果；三次均属同家族新上下文，不能称为不同家族独立验证，也不据此证明法律正确。"
+    },
+    "numeric_consistency": {
+      "locations": [
+        "teacher.answer.ledger:m01-m15",
+        "teacher.answer.restitution_total",
+        "teacher.answer.not_delivered_net",
+        "teacher.answer.interest_conflict"
+      ],
+      "reason": "银行放款合计为144000.00+200000.00+200000.00=544000.00；追加明细为750.00+1350.00+20000.00=22100.00；计入项m06、m08、m09、m10合计524100.00。m07、m12为复述，m11为已有明细的汇总，均未重复计入；m13虽同为22100.00，却是另一时期的利息请求，未误判为同一交易。42000.00-22100.00=19900.00，且|21900.00-19900.00|=2000.00。答案正确保留原文数字冲突，而非使原文各项虚假一致；没有把差额转化为新增交易或抵扣。"
+    },
+    "variant_consistency": {
+      "locations": [
+        "audit_student_projection",
+        "blind_answers",
+        "rules.json"
+      ],
+      "reason": "本轮只有一个题面及其材料投影，没有提供需要比较的实质题面变体。投影不是另一版题面，三份盲答也不是题面变体。历史法律版本的差异已在authority_validity中核对。"
+    },
+    "difficulty_alignment": {
+      "locations": [
+        "question_difficulty_audit.difficulty_alignment.target",
+        "question_difficulty_audit.reasoning_requirements",
+        "question",
+        "scope.txt",
+        "evaluation"
+      ],
+      "reason": "目标D4偏高，独立复核支持D3。任务确需时点和条件比较、跨段交易识别与条件归属、算术冲突及证据性质核对，但均围绕一个限定返还范围问题；不存在实质跨期分段适用或多个争点、阶段之间必须联动解决的复杂结构。三次完成答题均严格通过，也不支持将其宣传为经验高难题。"
+    },
+    "source_permission": {
+      "locations": [
+        "verified_authority_metadata",
+        "scope.txt"
+      ],
+      "reason": "未提供专门权限检查结论。公开文书描述、网址、哈希及copyright-2020元数据不能单独认证材料使用权限，本轮不作补充认证。"
+    },
+    "material_normalization": {
+      "locations": [
+        "audit_student_projection",
+        "mentions.json"
+      ],
+      "reason": "按适配器约定将投影视为同一学生材料，而非变体；内容足以进行本轮语义审计。但未提供专门规范化检查结果，本轮未独立重算段落哈希或UTF-16定位，不能以答案语义通过替代技术规范化认证。"
+    },
+    "privacy": {
+      "locations": [
+        "audit_student_projection",
+        "scope.txt"
+      ],
+      "reason": "材料存在姓名、账户等脱敏表述，但未提供专门隐私检查结论，不能仅据可见脱敏形式认定全部隐私风险已排除。"
+    },
+    "leakage": {
+      "locations": [
+        "question_difficulty_audit.answer_leakage",
+        "evaluation",
+        "reference_basis"
+      ],
+      "reason": "已有题面审计报告称未检出答案泄露，可以保留该已报告结果；但本轮不据此独立认证完整隔离与泄露检查。审计者能看到教师答案和原判片段，并不等于学生可见这些内容。"
+    }
+  },
+  "remaining_issues": [
+    {
+      "issue": "目标难度标注过高",
+      "status": "fail",
+      "locations": [
+        "question_difficulty_audit.difficulty_alignment.target"
+      ],
+      "impact": "需要修复发布元数据，不影响现有教师答案的封闭材料支持。",
+      "repair": "将D4调整为D3，并明确结构分级不等于经验高难。"
+    },
+    {
+      "issue": "累计利息自述与算术剩余不一致",
+      "status": "unresolved",
+      "locations": [
+        "p-007",
+        "p-016",
+        "p-017",
+        "teacher.answer.interest_conflict"
+      ],
+      "impact": "教师已正确保留冲突，不构成答案缺陷。",
+      "repair": "如需解决真实收付问题，须取得完整利息往来流水、原始凭证及累计口径说明；当前不得修正文书数字或调整返还金额。"
+    },
+    {
+      "issue": "追加款来源未独立追踪",
+      "status": "unresolved",
+      "locations": [
+        "scope.txt",
+        "p-007",
+        "p-017",
+        "teacher.answer.evidence_limits.additional_origin"
+      ],
+      "impact": "524100.00元只能作为限定来源前提下的审计金额，不能改写为无条件资金鉴定结论。",
+      "repair": "保持现有限定；若要求独立证明，另需银行入账、留存、账户划转及支付宝付款之间的完整资金链。"
+    },
+    {
+      "issue": "首次交付明细、实体自认及原始证据未充分披露",
+      "status": "unresolved",
+      "locations": [
+        "p-006",
+        "p-008",
+        "p-009",
+        "p-016",
+        "teacher.answer.evidence_limits"
+      ],
+      "impact": "现有null、not_established和not_obtained表达恰当；未获证明不等于有关事实已被反驳。",
+      "repair": "无需为完成本题补造材料；超出封闭审计时再获取逐笔流水、具体陈述或庭审记录及证据原件。"
+    },
+    {
+      "issue": "专门发布检查尚未完成认证",
+      "status": "unresolved",
+      "locations": [
+        "checks.source_permission",
+        "checks.material_normalization",
+        "checks.privacy",
+        "checks.leakage"
+      ],
+      "impact": "本轮法律与账目语义通过不能代替这些发布门槛。",
+      "repair": "接入各专门检查结果；不要由本轮审计补写pass。"
+    }
+  ],
+  "repair_scope": {
+    "question": "无必要的可回答性修复，不应通过增加篇幅、字段或虚构事实维持D4标签。",
+    "teacher_answer": "未发现必须修改的实质答案错误；保留全部来源前提、未知状态、日期范围和利息冲突。",
+    "metadata": [
+      "目标难度改为D3。",
+      "注明参考答案为工程性、来源派生参考，未经专家审核。",
+      "报告同家族新上下文3次完成、3次严格通过及经验难度局限。"
+    ],
+    "release_checks": "另行取得权限、规范化、隐私及泄露专门检查结论。",
+    "prohibited_repairs": [
+      "以原判理由或主文补足学生证据。",
+      "用生成用seed答案或多模型一致性证明法律正确。",
+      "将21900.00自行改为19900.00。",
+      "补造首次四笔明细、真实利息交易或追加款逐笔来源。"
+    ]
+  },
+  "needs_expert_review": true,
+  "expert_review_scope": "建议正式法律评测参考发布前，由专家复核第13条第1项与事实的对应，以及追加款在限定前提下纳入同一返还范围的表达。本轮未进行专家审核；专家复核也不能替代缺失的原始资金证据。",
+  "assessed_difficulty": "D3",
+  "difficulty_reason": {
+    "necessary_operations": [
+      {
+        "operation": "时点适用与版本条件比较",
+        "basis": "结合2022年行为、2023年受理、施行信息和过渡条款选择规范，并确认旧版额外条件是否仍必要。"
+      },
+      {
+        "operation": "跨段交易识别、去重及条件归属",
+        "basis": "区分文书记载与交付、无明细合计与已有明细汇总、跨段复述与同额不同事项；在公开限定前提下关联追加交付。"
+      },
+      {
+        "operation": "计算比较与证据性质核对",
+        "basis": "计算返还范围和预扣剩余，将其与累计自述比较，再区分算术结果、实际收付与未获证明事项。"
+      }
+    ],
+    "why_not_D1_or_D2": "不能直接摘录一句原文或仅凭单规则、纯加法完成，跨段同一性判断和条件归属不可省略。",
+    "why_not_D4": "操作数量达到三个不自动构成D4。版本比较没有实质跨期分支，来源追踪已被限定前提替代，利息冲突核对不参与新增返还或抵扣。整体是同一返还问题内的短链审计，没有必要的多争点或阶段联动。",
+    "independence_note": "该分级来自必要操作结构，而非教师与盲答一致、文本长度或字段数量。"
+  },
+  "empirical_hardness": {
+    "completed_attempts": 3,
+    "reported_strict_successes": 3,
+    "reported_strict_success_rate": 1,
+    "same_family_fresh_context": true,
+    "cross_family_independence": false,
+    "infrastructure_timeouts": 1,
+    "timeout_treatment": "未产生完成答案的超时不计作法律答错，不纳入三次完成答题的成功率分母；未知用量也不等于零成本。",
+    "selection_caveat": "evaluation.selection为oracle_max_fixed_verifier_score_not_deployable_selector，best_score不能代表可部署选择策略的效果。",
+    "assessment": "所报告严格成功率为100%，与本轮语义核对一致地显示该小样本内答题顺利。高难度缺乏经验支持；样本仅三次且同家族，不能据此估计广泛模型群体的真实难度，也不能将验证器通过当作法律正确性认证。"
+  },
+  "release_recommendation": {
+    "decision": "有条件通过，按D3发布为非专家封闭材料审计参考",
+    "reason": "法律适用、账目归类、数值计算和证据边界未发现实质错误；主要修复对象是D4标注及发布认证边界。",
+    "conditions": [
+      "将目标难度改为D3，并披露3/3严格通过及高难度缺乏经验支持。",
+      "保留追加款来源条件、利息冲突和证据未知，不将审计金额表述为原判预测或独立资金鉴定。",
+      "取得专门权限、规范化、隐私及泄露检查结果后再完成发布放行。",
+      "未经专家复核不得标注为专家金标；正式法律评测参考建议完成上述专家复核。"
+    ]
+  }
+}

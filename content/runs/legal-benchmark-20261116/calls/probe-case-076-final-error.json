@@ -1,0 +1,4 @@
+{
+  "message": "HTTP 429: {\"error\":{\"message\":\"业务申请资源不足，平台申请扩容 (https://gpt.bytedance.net/gpt_openapi/model)\",\"code\":\"-2004\"}}",
+  "response": null
+}

@@ -1,0 +1,74 @@
+[
+  {
+    "source_id": "guarantee-2020",
+    "provision": "25",
+    "quote": "第二十五条当事人在保证合同中约定了保证人在债务人不能履行债务或者无力偿还债务时才承担保证责任等类似内容，具有债务人应当先承担责任的意思表示的，人民法院应当将其认定为一般保证。\n　　当事人在保证合同中约定了保证人在债务人不履行债务或者未偿还债务时即承担保证责任、无条件承担保证责任等类似内容，不具有债务人应当先承担责任的意思表示的，人民法院应当将其认定为连带责任保证。",
+    "url": "https://www.court.gov.cn/zixun/xiangqing/282721.html",
+    "version": "法释〔2020〕28号",
+    "effective_from": "2021-01-01",
+    "retrievedAt": "2026-11-14T22:59:45.408Z",
+    "raw_sha256": "5e8c275fcf50bc3cec155f872036b9ef582578d35cb9c1e39adcaacc3ef7d323",
+    "full_text_sha256": "dcdb65511c728c4644442992da65e9ddd7b6a89ea5e5b0bef13b123b8a4c238d",
+    "excerpt_sha256": "fbb1c01f4b86379f619107c0f9732c215c9683c25a0920376bb5a15dc79527ea",
+    "locator": {
+      "start": 5153,
+      "end": 5339,
+      "index_unit": "JavaScript UTF-16 code units"
+    },
+    "verification": "exact_excerpt_from_frozen_official_text"
+  },
+  {
+    "source_id": "guarantee-2020",
+    "provision": "31",
+    "quote": "第三十一条一般保证的债权人在保证期间内对债务人提起诉讼或者申请仲裁后，又撤回起诉或者仲裁申请，债权人在保证期间届满前未再行提起诉讼或者申请仲裁，保证人主张不再承担保证责任的，人民法院应予支持。\n　　连带责任保证的债权人在保证期间内对保证人提起诉讼或者申请仲裁后，又撤回起诉或者仲裁申请，起诉状副本或者仲裁申请书副本已经送达保证人的，人民法院应当认定债权人已经在保证期间内向保证人行使了权利。",
+    "url": "https://www.court.gov.cn/zixun/xiangqing/282721.html",
+    "version": "法释〔2020〕28号",
+    "effective_from": "2021-01-01",
+    "retrievedAt": "2026-11-14T22:59:45.408Z",
+    "raw_sha256": "5e8c275fcf50bc3cec155f872036b9ef582578d35cb9c1e39adcaacc3ef7d323",
+    "full_text_sha256": "dcdb65511c728c4644442992da65e9ddd7b6a89ea5e5b0bef13b123b8a4c238d",
+    "excerpt_sha256": "eb21a88cb86894d8743ab8f8fcd7ca6a09200135dfc22a8eb3faba54cb3fea0d",
+    "locator": {
+      "start": 6390,
+      "end": 6588,
+      "index_unit": "JavaScript UTF-16 code units"
+    },
+    "verification": "exact_excerpt_from_frozen_official_text"
+  },
+  {
+    "source_id": "guarantee-2020",
+    "provision": "32",
+    "quote": "第三十二条保证合同约定保证人承担保证责任直至主债务本息还清时为止等类似内容的，视为约定不明，保证期间为主债务履行期限届满之日起六个月。",
+    "url": "https://www.court.gov.cn/zixun/xiangqing/282721.html",
+    "version": "法释〔2020〕28号",
+    "effective_from": "2021-01-01",
+    "retrievedAt": "2026-11-14T22:59:45.408Z",
+    "raw_sha256": "5e8c275fcf50bc3cec155f872036b9ef582578d35cb9c1e39adcaacc3ef7d323",
+    "full_text_sha256": "dcdb65511c728c4644442992da65e9ddd7b6a89ea5e5b0bef13b123b8a4c238d",
+    "excerpt_sha256": "481b5f56dcea074c82913ca786b380d62141fe2922e506f4bb6a672e5eb3a787",
+    "locator": {
+      "start": 6588,
+      "end": 6658,
+      "index_unit": "JavaScript UTF-16 code units"
+    },
+    "verification": "exact_excerpt_from_frozen_official_text"
+  },
+  {
+    "source_id": "guarantee-2020",
+    "provision": "34",
+    "quote": "第三十四条人民法院在审理保证合同纠纷案件时，应当将保证期间是否届满、债权人是否在保证期间内依法行使权利等事实作为案件基本事实予以查明。\n　　债权人在保证期间内未依法行使权利的，保证责任消灭。保证责任消灭后，债权人书面通知保证人要求承担保证责任，保证人在通知书上签字、盖章或者按指印，债权人请求保证人继续承担保证责任的，人民法院不予支持，但是债权人有证据证明成立了新的保证合同的除外。",
+    "url": "https://www.court.gov.cn/zixun/xiangqing/282721.html",
+    "version": "法释〔2020〕28号",
+    "effective_from": "2021-01-01",
+    "retrievedAt": "2026-11-14T22:59:45.408Z",
+    "raw_sha256": "5e8c275fcf50bc3cec155f872036b9ef582578d35cb9c1e39adcaacc3ef7d323",
+    "full_text_sha256": "dcdb65511c728c4644442992da65e9ddd7b6a89ea5e5b0bef13b123b8a4c238d",
+    "excerpt_sha256": "577a7e129f6b194d558d15033f18518ec9c4a7a4b44fe1a9bed03f8b721a81e9",
+    "locator": {
+      "start": 6720,
+      "end": 6914,
+      "index_unit": "JavaScript UTF-16 code units"
+    },
+    "verification": "exact_excerpt_from_frozen_official_text"
+  }
+]

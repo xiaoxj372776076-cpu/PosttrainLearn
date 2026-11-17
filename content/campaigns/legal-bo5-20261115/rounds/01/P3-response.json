@@ -1,0 +1,22 @@
+{
+  "requestedModel": "gpt-6-astra",
+  "actualModel": "deployment-gpt-6-astra-platform-global",
+  "text": "{\n  \"question_sufficiency\": \"pass\",\n  \"answer_leakage\": false,\n  \"required_repairs\": [],\n  \"assessed_difficulty\": \"D3\",\n  \"reasoning_dependencies\": [\n    \"结合[p-006]、[p-012]至[p-017]所载受理及交易时间，依lending-2020-12第31条和所给生效信息选择适用版本，而非混用旧版转贷无效要件。\",\n    \"结合银行放款、办理贷款及后续交付材料，适用lending-2020-12第13条审查借贷效力，再依civil-code-2020第157条确定财产返还的法律基础。\",\n    \"比较[p-015]凭证金额与[p-016]实际转账；仅在题设限定前提下，将[p-017]追加交付纳入同一关系，计算返还范围及算术未交付余额。\",\n    \"将算术余额与[p-007]净利息陈述作比较，同时区分原告陈述、实际交付记录与未经原始流水证明的真实利息收付。\",\n    \"分别审查追加款来源是否有独立追踪材料，以及[p-008]记载的缺席、未举证是否足以建立实体自认，不将题设前提或程序状态替代证据。\"\n  ],\n  \"reason\": \"必要金额、交付方向、交易及受理时间和相关规范节录均已提供。范围限定解决了追加款在本题中的归属口径，但不构成原案事实认定或独立来源证明。按输出契约，本题不要求核算利息、违约金、诉讼费用或保证责任，故不缺必需的日数、利率或保证范围信息。未提供原判理由、主文或预设答案；范围说明属于公开任务前提。任务需要规则适用、证据角色区分与金额归属运算，支持D3，但材料长度和无关条文不支持升为D4。本检查不独立认证法条全文或来源真实性。\"\n}",
+  "usage": {
+    "input_tokens": 14469,
+    "input_tokens_details": {
+      "cache_write_tokens": 14466,
+      "cached_tokens": 0
+    },
+    "output_tokens": 1324,
+    "output_tokens_details": {
+      "reasoning_tokens": 844
+    },
+    "total_tokens": 15793
+  },
+  "latencyMs": 30753,
+  "completedAt": "2026-11-14T20:55:50.022Z",
+  "status": "completed",
+  "input_sha256": "608baccf9d91fd5cb3ebc4cb85ccac5d08c7449b9bf17d024d7c8d39300864c5",
+  "output_sha256": "54fe5b11229693a5e121997343784c6f13637c677bdc5a652e5dc898388fa623"
+}

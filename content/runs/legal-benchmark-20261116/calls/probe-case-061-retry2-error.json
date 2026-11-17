@@ -1,0 +1,4 @@
+{
+  "message": "rate_limit_exceeded: Your requests to gpt-6-astra for deployment-gpt-6-astra-platform-global in westus have exceeded token rate limit.",
+  "response": null
+}

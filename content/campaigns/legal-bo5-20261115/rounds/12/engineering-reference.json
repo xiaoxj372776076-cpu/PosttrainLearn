@@ -1,0 +1,208 @@
+{
+  "answer": {
+    "A_valid": false,
+    "A_restitution": "122858.00",
+    "A_guarantee": "invalid_accessory",
+    "B_initial_principal": "184440.00",
+    "B_protected_total": "200060.40",
+    "B_guarantee": "joint_limited_due_lost_recourse",
+    "C_outstanding_principal": "154941.17",
+    "C_outstanding_interest": "1567.24",
+    "C_outstanding_expenses": "0.00",
+    "C_guarantee": "general_preserved_not_yet_enforceable",
+    "borrower_total": "479426.81",
+    "B_second_guarantee": "expired",
+    "B_joint_payment_limit": "100030.20"
+  },
+  "proof": {
+    "B_periods": [
+      {
+        "period_start": "2022-01-12",
+        "period_end": "2022-07-06",
+        "days": 175,
+        "lawful_base": "184440",
+        "protected_annual_rate": "0.132",
+        "lawful_rollover_base": "196112.778082191780821917808219178082"
+      },
+      {
+        "period_start": "2022-07-06",
+        "period_end": "2022-10-17",
+        "days": 103,
+        "lawful_base": "196112.778082191780821917808219178082",
+        "protected_annual_rate": "0.132",
+        "lawful_rollover_base": "203417.844741932820416588478138487521"
+      },
+      {
+        "period_start": "2022-10-17",
+        "period_end": "2023-01-09",
+        "days": 84,
+        "lawful_base": "203417.844741932820416588478138487521",
+        "protected_annual_rate": "0.132",
+        "lawful_rollover_base": "209597.288748778165931051856345609575"
+      }
+    ],
+    "B_contractual_terminal": "225060.400506112682238425457407731697",
+    "B_global_cap": "226769.232657534246575342465753424658",
+    "B_initial_actual_principal": "184440",
+    "B_whole_days": 566,
+    "C_payment_allocations": [
+      {
+        "date": "2019-04-18",
+        "days": 70,
+        "before": {
+          "principal": "224920",
+          "interest": "10136.8054794520547945205479452054795",
+          "expenses": "1680"
+        },
+        "allocation": {
+          "expenses": "1680",
+          "interest": "10136.8054794520547945205479452054795",
+          "principal": "13339.1945205479452054794520547945205"
+        },
+        "after": {
+          "principal": "211580.805479452054794520547945205480",
+          "interest": "0E-31",
+          "expenses": "0"
+        }
+      },
+      {
+        "date": "2019-08-23",
+        "days": 127,
+        "before": {
+          "principal": "211580.805479452054794520547945205480",
+          "interest": "17300.3538069431413023081253518483768",
+          "expenses": "0"
+        },
+        "allocation": {
+          "principal": "26887",
+          "expenses": "0",
+          "interest": "0"
+        },
+        "after": {
+          "principal": "184693.805479452054794520547945205480",
+          "interest": "17300.3538069431413023081253518483768",
+          "expenses": "0"
+        }
+      },
+      {
+        "date": "2020-02-14",
+        "days": 175,
+        "before": {
+          "principal": "184693.805479452054794520547945205480",
+          "interest": "38110.0325750046913116907487333458435",
+          "expenses": "0"
+        },
+        "allocation": {
+          "expenses": "0",
+          "interest": "28618",
+          "principal": "0"
+        },
+        "after": {
+          "principal": "184693.805479452054794520547945205480",
+          "interest": "9492.0325750046913116907487333458435",
+          "expenses": "0"
+        }
+      },
+      {
+        "date": "2020-09-21",
+        "days": 220,
+        "before": {
+          "principal": "184693.805479452054794520547945205480",
+          "interest": "34146.8845700206417714392944267217115",
+          "expenses": "0"
+        },
+        "allocation": {
+          "expenses": "0",
+          "interest": "30349",
+          "principal": "0"
+        },
+        "after": {
+          "principal": "184693.805479452054794520547945205480",
+          "interest": "3797.8845700206417714392944267217115",
+          "expenses": "0"
+        }
+      },
+      {
+        "date": "2021-04-11",
+        "days": 202,
+        "before": {
+          "principal": "184693.805479452054794520547945205480",
+          "interest": "18312.2876285757177706886845562019142",
+          "expenses": "0"
+        },
+        "allocation": {
+          "expenses": "0",
+          "interest": "18312.2876285757177706886845562019142",
+          "principal": "13767.7123714242822293113154437980858"
+        },
+        "after": {
+          "principal": "170926.093108027772565209232501407394",
+          "interest": "0E-31",
+          "expenses": "0"
+        }
+      },
+      {
+        "date": "2022-06-06",
+        "days": 421,
+        "before": {
+          "principal": "170926.093108027772565209232501407394",
+          "interest": "27995.3525977647021903927077736962652",
+          "expenses": "0"
+        },
+        "allocation": {
+          "expenses": "0",
+          "interest": "27995.3525977647021903927077736962652",
+          "principal": "5815.6474022352978096072922263037348"
+        },
+        "after": {
+          "principal": "165110.445705792474755601940275103659",
+          "interest": "0E-31",
+          "expenses": "0"
+        }
+      },
+      {
+        "date": "2023-07-06",
+        "days": 395,
+        "before": {
+          "principal": "165110.445705792474755601940275103659",
+          "interest": "25372.7257524326024905252406302207239",
+          "expenses": "0"
+        },
+        "allocation": {
+          "expenses": "0",
+          "interest": "25372.7257524326024905252406302207239",
+          "principal": "10169.2742475673975094747593697792761"
+        },
+        "after": {
+          "principal": "154941.171458225077246127180905324383",
+          "interest": "0E-31",
+          "expenses": "0"
+        }
+      }
+    ],
+    "C_final_period_days": 26,
+    "C_final_unrounded_interest": "1567.24056170895064436356589562317157",
+    "A_actual_less_return": "143004-20146",
+    "B_guarantee_period_end": "2023-07-12",
+    "C_guarantee_period_end": "2023-06-15",
+    "shared_cutoff_payment": {
+      "id": "SP-01",
+      "date": "2023-08-01",
+      "amount": "25000.00",
+      "eligible_debts": [
+        "B",
+        "C"
+      ],
+      "engineering_recipient": "B",
+      "before": {
+        "B": "225060.400506112682238425457407731697",
+        "C_principal": "154941.171458225077246127180905324383",
+        "C_interest": "1567.24056170895064436356589562317157",
+        "C_expenses": "0"
+      },
+      "basis": "civil-code-2020:560; B has only half-debt enforceable security after lost-recourse reduction, C has full preserved general security; B has less security"
+    }
+  },
+  "expert_review": false,
+  "reference_kind": "hypothetical_fact_and_frozen_rule_derived_engineering_reference"
+}

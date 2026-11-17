@@ -1,0 +1,84 @@
+{
+  "question": "请仅依据随附的 dossier.md、rules.json 和 answer-contract.json，对 dossier.md 中甲的最终诉请作一次完整的财产与责任审查：截至2023-08-01（不计当日利息），甲对乙的请求可支持到何种范围，要求丁、戊、己依各自保证合同立即支付相应债务是否有依据？结论须以相关合同及保证的法律状态支撑，并严格限于材料所列事实、约定和请求范围。这是已明示虚构的闭卷情景，不是真实案件的裁判预测。\n\n交付一个名为 answer.json 的有效JSON文件，完整包含 answer-contract.json 要求的 A_valid、A_restitution、A_guarantee、B_initial_principal、B_protected_total、B_guarantee、C_outstanding_principal、C_outstanding_interest、C_outstanding_expenses、C_guarantee、borrower_total 字段，并提供 basis。金额表示、取分及汇总遵循该契约；状态表达遵循契约语义，不要求固定字段顺序。basis 应以简短、可核验的事实依据、适用法条及必要算式支持结论，事实引用使用材料段落编号，规范引用使用 source_id 与条号；不要求内部思维链。不得修改输入材料或补设事实。",
+  "reasoning_dependencies": [
+    {
+      "dependency": "规范适用时点与合同法律状态共同支撑各项请求的法律基础。",
+      "sources": [
+        "dossier.md首段",
+        "dossier.md[S01]",
+        "dossier.md[S03]",
+        "dossier.md[S07]",
+        "rules.json中的规范版本、施行时间及适用条款"
+      ]
+    },
+    {
+      "dependency": "A的合同法律状态与履行记录关联其财产请求及丁的保证合同请求。",
+      "sources": [
+        "dossier.md[S01]",
+        "dossier.md[S02]",
+        "dossier.md[S12]",
+        "rules.json"
+      ]
+    },
+    {
+      "dependency": "B的交付记录、连续结算文书和相关约定共同支撑B项金额审查。",
+      "sources": [
+        "dossier.md[S03]",
+        "dossier.md[S04]",
+        "dossier.md[S05]",
+        "dossier.md[S06]",
+        "rules.json"
+      ]
+    },
+    {
+      "dependency": "C的付款证据、双方约定和履行时间共同支撑C项金额审查。",
+      "sources": [
+        "dossier.md[S07]",
+        "dossier.md[S08]",
+        "dossier.md[S09]",
+        "dossier.md[S11]",
+        "rules.json"
+      ]
+    },
+    {
+      "dependency": "保证合同内容、相关履行期限及行权记录支撑保证法律状态与立即支付请求的判断。",
+      "sources": [
+        "dossier.md[S01]",
+        "dossier.md[S06]",
+        "dossier.md[S07]",
+        "dossier.md[S10]",
+        "rules.json"
+      ]
+    },
+    {
+      "dependency": "各项金额请求与各主体责任状态共同形成最终诉请的整体审查结论。",
+      "sources": [
+        "dossier.md[S12]",
+        "answer-contract.json"
+      ]
+    }
+  ],
+  "shortcut_audit": [
+    {
+      "check": "题面泄漏",
+      "finding": "题面仅给出整体目标与交付要求，未提供分项解题步骤、金额角色标注、计算公式、状态答案或金额结果。"
+    },
+    {
+      "check": "材料完整性",
+      "finding": "保留三份学生文件中的事实、日期、法条及约定，不通过删减必要信息或改变材料制造难度。"
+    },
+    {
+      "check": "参考隔离",
+      "finding": "未将命题单元中的支持结论、结构示例答案或历史analysis中的金额、保证状态与成功率写入学生题面。"
+    },
+    {
+      "check": "既有脚手架",
+      "finding": "学生材料已有结算说明和明确约定，本题未额外增加解答性提示；其是否形成直接作答捷径，仍需后续题面审查与盲答验证。"
+    },
+    {
+      "check": "阶段边界",
+      "finding": "本输出仅为P2候选任务，不表示已完成金额复算、外部来源核验、盲答审计或实测难度确认。"
+    }
+  ],
+  "source_mode": "new_scenario"
+}

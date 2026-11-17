@@ -1,0 +1,197 @@
+[
+  {
+    "id": "m01",
+    "value": "144000.00",
+    "span_id": "p-012",
+    "label": "段落 p-012 中的金额提及 m01",
+    "locator": {
+      "start": 39,
+      "end": 57,
+      "index_unit": "UTF-16 code units in the frozen paragraph"
+    },
+    "quote": "广发银行向原告发放贷款14.40万元",
+    "paragraph_sha256": "c744904e01521e5bcbc3918b7dcbc57ab978a59d60b4cd6e982ad8473fea2375"
+  },
+  {
+    "id": "m02",
+    "value": "200000.00",
+    "span_id": "p-013",
+    "label": "段落 p-013 中的金额提及 m02",
+    "locator": {
+      "start": 39,
+      "end": 54,
+      "index_unit": "UTF-16 code units in the frozen paragraph"
+    },
+    "quote": "江苏银行向原告发放贷款20万元",
+    "paragraph_sha256": "91473537c833e12bff8c78f7c09e0908ae9ca96c1ec4b2c75db058b00b9ea316"
+  },
+  {
+    "id": "m03",
+    "value": "200000.00",
+    "span_id": "p-014",
+    "label": "段落 p-014 中的金额提及 m03",
+    "locator": {
+      "start": 46,
+      "end": 63,
+      "index_unit": "UTF-16 code units in the frozen paragraph"
+    },
+    "quote": "上海农商银行向原告发放贷款20万元",
+    "paragraph_sha256": "41328405cf4f5b0b396705f679c6e1376065e5308ca20350e542e1c24913d1cd"
+  },
+  {
+    "id": "m04",
+    "value": "544000.00",
+    "span_id": "p-015",
+    "label": "段落 p-015 中的金额提及 m04",
+    "locator": {
+      "start": 44,
+      "end": 54,
+      "index_unit": "UTF-16 code units in the frozen paragraph"
+    },
+    "quote": "544000.00/",
+    "paragraph_sha256": "bdf66f70a8f398bef3621398ddd5ff36e8f89cc17f9573ac765c9166f21e9755"
+  },
+  {
+    "id": "m05",
+    "value": "544000.00",
+    "span_id": "p-015",
+    "label": "段落 p-015 中的金额提及 m05",
+    "locator": {
+      "start": 209,
+      "end": 222,
+      "index_unit": "UTF-16 code units in the frozen paragraph"
+    },
+    "quote": "载明收到原告54.40万元",
+    "paragraph_sha256": "bdf66f70a8f398bef3621398ddd5ff36e8f89cc17f9573ac765c9166f21e9755"
+  },
+  {
+    "id": "m06",
+    "value": "502000.00",
+    "span_id": "p-016",
+    "label": "段落 p-016 中的金额提及 m06",
+    "locator": {
+      "start": 54,
+      "end": 68,
+      "index_unit": "UTF-16 code units in the frozen paragraph"
+    },
+    "quote": "转账四笔，共计50.20万元",
+    "paragraph_sha256": "0f3366d22a5c1e3b7582f9f736b30095332ed5ea609f7d1b8f8d5c61cae29566"
+  },
+  {
+    "id": "m07",
+    "value": "502000.00",
+    "span_id": "p-007",
+    "label": "段落 p-007 中的金额提及 m07",
+    "locator": {
+      "start": 812,
+      "end": 823,
+      "index_unit": "UTF-16 code units in the frozen paragraph"
+    },
+    "quote": "50.20万元转至被告",
+    "paragraph_sha256": "22c1f9b8865df740cec988544f09cea6394f88e42fedc127a95c96a12813bbea"
+  },
+  {
+    "id": "m08",
+    "value": "750.00",
+    "span_id": "p-017",
+    "label": "段落 p-017 中的金额提及 m08",
+    "locator": {
+      "start": 42,
+      "end": 57,
+      "index_unit": "UTF-16 code units in the frozen paragraph"
+    },
+    "quote": "借款750元用于缴纳家中水电费",
+    "paragraph_sha256": "23147d5a3c66c4217294e52840748efc2039f4c16679b081a7eb77266780b9ba"
+  },
+  {
+    "id": "m09",
+    "value": "1350.00",
+    "span_id": "p-017",
+    "label": "段落 p-017 中的金额提及 m09",
+    "locator": {
+      "start": 76,
+      "end": 87,
+      "index_unit": "UTF-16 code units in the frozen paragraph"
+    },
+    "quote": "借款1,350元还花呗",
+    "paragraph_sha256": "23147d5a3c66c4217294e52840748efc2039f4c16679b081a7eb77266780b9ba"
+  },
+  {
+    "id": "m10",
+    "value": "20000.00",
+    "span_id": "p-017",
+    "label": "段落 p-017 中的金额提及 m10",
+    "locator": {
+      "start": 118,
+      "end": 126,
+      "index_unit": "UTF-16 code units in the frozen paragraph"
+    },
+    "quote": "被告表示取2万元",
+    "paragraph_sha256": "23147d5a3c66c4217294e52840748efc2039f4c16679b081a7eb77266780b9ba"
+  },
+  {
+    "id": "m11",
+    "value": "22100.00",
+    "span_id": "p-017",
+    "label": "段落 p-017 中的金额提及 m11",
+    "locator": {
+      "start": 149,
+      "end": 158,
+      "index_unit": "UTF-16 code units in the frozen paragraph"
+    },
+    "quote": "合计22,100元",
+    "paragraph_sha256": "23147d5a3c66c4217294e52840748efc2039f4c16679b081a7eb77266780b9ba"
+  },
+  {
+    "id": "m12",
+    "value": "22100.00",
+    "span_id": "p-007",
+    "label": "段落 p-007 中的金额提及 m12",
+    "locator": {
+      "start": 877,
+      "end": 888,
+      "index_unit": "UTF-16 code units in the frozen paragraph"
+    },
+    "quote": "退还部分利息2.21万",
+    "paragraph_sha256": "22c1f9b8865df740cec988544f09cea6394f88e42fedc127a95c96a12813bbea"
+  },
+  {
+    "id": "m13",
+    "value": "22100.00",
+    "span_id": "p-007",
+    "label": "段落 p-007 中的金额提及 m13",
+    "locator": {
+      "start": 64,
+      "end": 84,
+      "index_unit": "UTF-16 code units in the frozen paragraph"
+    },
+    "quote": "暂计至2023年8月23日为2.21万元",
+    "paragraph_sha256": "22c1f9b8865df740cec988544f09cea6394f88e42fedc127a95c96a12813bbea"
+  },
+  {
+    "id": "m14",
+    "value": "42000.00",
+    "span_id": "p-016",
+    "label": "段落 p-016 中的金额提及 m14",
+    "locator": {
+      "start": 93,
+      "end": 104,
+      "index_unit": "UTF-16 code units in the frozen paragraph"
+    },
+    "quote": "一年的利息4.20万元",
+    "paragraph_sha256": "0f3366d22a5c1e3b7582f9f736b30095332ed5ea609f7d1b8f8d5c61cae29566"
+  },
+  {
+    "id": "m15",
+    "value": "21900.00",
+    "span_id": "p-007",
+    "label": "段落 p-007 中的金额提及 m15",
+    "locator": {
+      "start": 906,
+      "end": 922,
+      "index_unit": "UTF-16 code units in the frozen paragraph"
+    },
+    "quote": "故被告累计支付原告利息2.19万",
+    "paragraph_sha256": "22c1f9b8865df740cec988544f09cea6394f88e42fedc127a95c96a12813bbea"
+  }
+]

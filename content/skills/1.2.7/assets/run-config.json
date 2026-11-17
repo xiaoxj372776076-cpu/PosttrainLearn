@@ -1,0 +1,45 @@
+{
+  "skill": "legal-posttrain-synthesis",
+  "schema_version": "1.1",
+  "mode": "design",
+  "jurisdiction": null,
+  "legal_as_of": null,
+  "task_types": ["rule_application", "evidence_qa"],
+  "source_manifest": null,
+  "protected_evaluation_manifest": null,
+  "seed_manifest": null,
+  "material_normalization": {
+    "material_pack_version": "1.0",
+    "require_source_alignment": true,
+    "missing_fields": "unresolved",
+    "preserve_amount_roles": true
+  },
+  "few_shot": {
+    "enabled": true,
+    "examples_per_prompt": 3,
+    "selection_strategy": "task_and_reasoning_pattern",
+    "require_verified_seeds": true,
+    "export_examples_to_student": false
+  },
+  "difficulty": {
+    "reasoning_task_target": "D3",
+    "extraction_task_target": "D1",
+    "unsupported_target_action": "skip_or_explicitly_reconfigure"
+  },
+  "models": {
+    "writer": null,
+    "blind_solver": null,
+    "auditor": null
+  },
+  "external_source_upload_authorized": false,
+  "api_budget": {
+    "max_calls": null,
+    "max_cost": null,
+    "currency": null
+  },
+  "pilot_candidate_target": 100,
+  "candidate_questions_per_unit": 3,
+  "max_repair_rounds": 2,
+  "export_styles": ["answer_with_rationale"],
+  "release_level": "experimental"
+}

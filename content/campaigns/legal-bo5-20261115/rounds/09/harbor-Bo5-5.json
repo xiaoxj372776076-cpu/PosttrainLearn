@@ -1,0 +1,71 @@
+{
+  "job": "legal-bo5-09-bo5-5",
+  "finished_at": "2026-11-14T23:21:49.880802Z",
+  "exceptions": [],
+  "completed_answer": true,
+  "infrastructure_failure": false,
+  "report": {
+    "passed": true,
+    "score": 1.0,
+    "checks": {
+      "A_valid": true,
+      "A_restitution": true,
+      "A_guarantee": true,
+      "B_initial_principal": true,
+      "B_protected_total": true,
+      "B_guarantee": true,
+      "C_outstanding_principal": true,
+      "C_outstanding_interest": true,
+      "C_outstanding_expenses": true,
+      "C_guarantee": true,
+      "borrower_total": true
+    },
+    "failed_checks": [],
+    "note": "金额或状态固定核对，不证明法律解释；语义等价与错误类型由P6另审，不以此直接计低成功率。"
+  },
+  "reward": 1.0,
+  "model": "deployment-gpt-6-astra-platform-global",
+  "usage": {
+    "input_tokens": 14707,
+    "input_tokens_details": {
+      "cache_write_tokens": 14704,
+      "cached_tokens": 0
+    },
+    "output_tokens": 6200,
+    "output_tokens_details": {
+      "reasoning_tokens": 4660
+    },
+    "total_tokens": 20907
+  },
+  "latency_ms": 116162,
+  "answer_text": "{\n  \"A_valid\": \"invalid\",\n  \"A_restitution\": \"122876.00\",\n  \"A_guarantee\": \"invalid_accessory\",\n  \"B_initial_principal\": \"183330.00\",\n  \"B_protected_total\": \"225404.49\",\n  \"B_guarantee\": \"joint\",\n  \"C_outstanding_principal\": \"149745.16\",\n  \"C_outstanding_interest\": \"0.00\",\n  \"C_outstanding_expenses\": \"0.00\",\n  \"C_guarantee\": \"expired\",\n  \"borrower_total\": \"498025.65\",\n  \"basis\": {\n    \"applicable_law\": \"三笔合同均成立于2022年，案件于2023-08-01新受理。依lending-2020-12第31条及civil-code-2020第1260条，适用所附现行民间借贷解释、民法典和guarantee-2020，不适用2015版关于高利转贷及借款人知情的旧要件。\",\n    \"A\": \"S01、S02、S12：A系套取银行信贷资金转贷，依lending-2020-12第13条无效；乙不知资金来源、利率仅6%不改变结论。依民法典第157条，剩余返还财产为142953.00－20077.00＝122876.00元，同交易号收据不重复计算交付。依第682条，丁的从属保证无效；本题不请求无效保证的过错赔偿，故对丁立即履行保证的请求不予支持。\",\n    \"B_amount\": \"S03—S05：依民法典第670、679条及lending-2020-12第25—28条，预扣利息12261.00元不计本金，最初本金为183330.00元；保护年利率为3.70%×4＝14.80%。三次换据无新增交付、无债务更新，仅允许法定限额内结息。分段日数为175、103、84、204天，共566天。逐期限息结算额为183330×∏(1＋0.148×各段日数÷365)，仍高于第27条第二款整体上限，故取183330×(1＋0.148×566÷365)＝225404.486136986…元。SP-01不抵充B，最终余额225404.49元。\",\n    \"B_guarantee\": \"S06：无须先向乙追索、乙不履行即无条件清偿，依guarantee-2020第25条及民法典第688条属于连带责任保证，不因缺少类型标题而成为一般保证。依guarantee-2020第32条及民法典第692、695条，保证期间约定不明，且展期未经戊书面同意，保证期间仍以原到期日2023-01-12起算六个月，至2023-07-12届满。甲于7月5日起诉戊，7月7日完整给付请求已送达；依guarantee-2020第31条第二款，7月9日撤诉不否定期间内行权。戊的保证范围包括依法清算的全部本息及获同意的合法结息，故可立即请求戊对B余额225404.49元承担连带保证责任。\",\n    \"C_guarantee\": \"S07、S10：己约定乙不能履行、无力偿还时才代偿，依guarantee-2020第25条及民法典第687条为一般保证。未约定保证期间，依第692条自2022-12-15到期起算六个月，至2023-06-15届满。甲6月8日起诉乙后于6月12日撤诉，6月20日才再诉，依guarantee-2020第31条第一款，己主张不再承担保证责任应获支持；5月8日仅催告己不能代替对乙起诉。依第34条，6月25日仅确认收件且明确不确认付款义务，不成立新保证。故保证责任已消灭，而非仅暂受先诉抗辩限制，对己立即付款请求不予支持。\",\n    \"payment_allocation\": \"S08、S09、S11、S13及民法典第560、561条：T系列均指定偿还C；T-02有双方有效补充协议，先清偿本金，其余付款的单方‘还本金’备注不改变费用、利息、本金的法定顺序。T-01截图和收据属于同一交易，只计一次；X-01未执行、未到账，不作清偿。SP-01已到账25000.00元且约定排除A，B、C均已到期；B有存续的连带保证，C保证责任已消灭，故优先清偿缺乏担保的C，不因B利率较高而优先清偿B。\",\n    \"C_calculation\": \"S07—S09：11.40%低于14.80%上限，依lending-2020-12第25、28条支持借期及逾期利息。以未偿本金×0.114×实际日数÷365累计单利，各段日数为70、127、83、99、49、56、56，不计截日当日利息。T-01至T-06付款后的本金、未清利息依次为：(220343.54，0.00)、(208695.54，8740.09)、(208695.54，771.17)、(200809.68，0.00)、(187041.89，0.00)、(171741.33，0.00)。这些中间数仅展示到分，计算保留全部精度；1680.00元费用已由T-01付清，T-03不足清偿累计利息，未减少本金。SP-01前本金171741.331088453…元、利息3003.826459366…元；SP-01清偿全部利息后，其余抵本金，剩余本金171741.331088453…＋3003.826459366…－25000＝149745.157547819…元，最终本金149745.16元，利息和费用均为零。\",\n    \"total\": \"依S12各最终分项先取分再相加：122876.00＋225404.49＋149745.16＋0.00＋0.00＝498025.65元。戊对其中B债务承担连带保证责任，不另行叠加为甲可重复受偿的金额。\"\n  }\n}",
+  "trace": {
+    "actions": [
+      {
+        "action": "adapter_read_file",
+        "path": "/app/input/dossier.md",
+        "sha256": "49c102b06177ce10959c753db0fc302f87d3ac9884878e91238b1e3afc4c9507"
+      },
+      {
+        "action": "adapter_read_file",
+        "path": "/app/input/rules.json",
+        "sha256": "ea05c461bb12689551674e91b2e71e2f7534c4dcc47f414edae19e930452f6e0"
+      },
+      {
+        "action": "adapter_read_file",
+        "path": "/app/input/answer-contract.json",
+        "sha256": "330a074e8a26cc3da4d6ce3c37fbf3b67e8bbcf0c306488898e7b342ee7bb9c9"
+      },
+      {
+        "action": "adapter_submit_answer",
+        "path": "/app/output/answer.json",
+        "sha256": "c7b6d56c202778d5ac48cc57817bfd27a9248f29f1602a22366880cdad27fdbf"
+      }
+    ],
+    "adapter_version": "0.3.0",
+    "host_writes_answer": true,
+    "fresh_api_completion": true,
+    "arbitrary_shell_enabled": false,
+    "hidden_answer_input": false
+  }
+}

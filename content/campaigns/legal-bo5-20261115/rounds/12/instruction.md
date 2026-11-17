@@ -1,0 +1,5 @@
+依据随任务提供的 dossier.md、rules.json 和 answer-contract.json，对其中明确标示为虚构的三笔借款及保证关系，完成一份整体财产与责任审查：截至2023-08-01，在SP-01已经结算到账且不计当日利息的条件下，在档案所载最终请求范围内，甲对乙就A、B、C分别可以请求哪些剩余款项、合计多少，对丁、戊、庚、己依保证合同立即请求付款的范围分别如何？请以相关合同及保证的法律状态、可核验的金额依据支持整体结论，并完整回答 answer-contract.json 所要求的内容。事实与法律依据限于上述学生文件，不改变题设事实、规范摘录或当事人约定。本任务是虚构情景下的规则适用，不是真实裁判提取或原案判决预测。
+
+交付格式：只返回一个有效JSON对象，不附Markdown或JSON之外的文字。按 answer-contract.json 填写全部字段：A_valid、A_restitution、A_guarantee、B_initial_principal、B_protected_total、B_guarantee、C_outstanding_principal、C_outstanding_interest、C_outstanding_expenses、C_guarantee、borrower_total、B_second_guarantee、B_joint_payment_limit；另以 basis 提供简短、可核验的依据。保证字段的对象对应为A_guarantee对应丁、B_guarantee对应戊、B_second_guarantee对应庚、C_guarantee对应己。保证状态使用契约给定的状态值；字段与basis共同说明四人的即时付款请求范围。金额使用人民币元，以数字或十进制金额字符串表示，遵守文件规定的精度和汇总要求。basis应引用档案段落编号及规范来源、版本和条号，说明决定性法律判断并提供必要计算依据，不要求内部思维链。你只需返回JSON，宿主负责落盘，不要求自行创建文件。
+
+只使用/app/input/dossier.md、rules.json、answer-contract.json。学生仅返回JSON，由宿主适配器写入/app/output/answer.json。输出契约允许数字或金额字符串、简短依据，语义等价措辞可接受。不要访问研究者参考、验证器或网络。

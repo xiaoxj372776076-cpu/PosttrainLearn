@@ -1,0 +1,292 @@
+{
+  "network_failures": [
+    {
+      "stage": "preflight",
+      "scope": "restricted-sandbox",
+      "error": "fetch failed",
+      "successful_retry": true
+    },
+    {
+      "stage": "P1",
+      "scope": "restricted-sandbox",
+      "error": "fetch failed",
+      "successful_retry": true
+    }
+  ],
+  "vm_failure": {
+    "job": "legal-pilot-oracle",
+    "error": "Smol readonly state database in restricted sandbox",
+    "successful_retry": "legal-pilot-oracle-approved",
+    "not_counted_as_model_error": true
+  },
+  "infrastructure_model_failures": [
+    {
+      "job": "legal-pilot-blind-3",
+      "status": "infrastructure_timeout",
+      "requested_model": "gpt-6-astra",
+      "quality_score": null,
+      "harbor_recorded_reward": 0,
+      "completed_model_answer": false,
+      "usage": null,
+      "unknown_usage_reservation": {
+        "input_tokens": 9544,
+        "max_output_tokens": 10000
+      },
+      "reason": "网关超时，未收到完成响应或学生答案；不是法律答错，也不把计费情况当作零。",
+      "original_trial_finished_at": "2026-11-14T10:07:44.518913Z",
+      "replacement_job": "legal-pilot-blind-3-retry-1"
+    }
+  ],
+  "total_api_requests": 12,
+  "repairs": {
+    "rounds": [
+      {
+        "repair_round": 1,
+        "trigger": "P3 required_repairs",
+        "method": "engineering_format_and_leakage_repair_not_model_generated_new_facts",
+        "old_instruction_sha256": "8026ebd536b720c75b1be61b12675becbcdc1aaf1538b800f1099db46e78aeab",
+        "new_instruction_sha256": "497c78b8c892bbf9a86ddd895ef36f0765b3ebd04e9be2c7aef4408870594c86",
+        "old_student_sha256": "d76adfa4d06921c184bb04ea00148497cd69222101d1df3aee703aa29d6486c6",
+        "new_student_sha256": "255445628c0a911c0ac736b9192aaf6bd2ae71b3278cd04faf85bb0452340ce8",
+        "changes": [
+          "标题不预设效力结论",
+          "金额提及中性定位，不给角色或重复关系答案",
+          "公开角色/计数约定，保持严格评分原有经济语义",
+          "总额明确为限定来源前提的结果",
+          "P3补足D1-D4定义"
+        ],
+        "facts_changed": false,
+        "required_reruns": [
+          "P3",
+          "P4",
+          "P5",
+          "P6"
+        ],
+        "old_P3_preserved": true
+      },
+      {
+        "repair_round": 2,
+        "trigger": "P3-r1 fail: same-paragraph equal-value IDs not uniquely located",
+        "method": "exact_frozen_source_quote_and_offset_alignment",
+        "old_student_sha256": "255445628c0a911c0ac736b9192aaf6bd2ae71b3278cd04faf85bb0452340ce8",
+        "new_student_sha256": "8abe001158c7bfe20e33ec3718ae88df11c9ff65eb279895aacf10de591fcd00",
+        "changes": [
+          "所有15个提及增加唯一原文quote与字符起止定位，不补角色/答案标签",
+          "区分同段同额的借条/收条、原诉请利息/追加款叙述"
+        ],
+        "facts_changed": false,
+        "locators_all_unique": true,
+        "required_reruns": [
+          "P3",
+          "P4",
+          "P5",
+          "P6"
+        ]
+      }
+    ],
+    "max_repairs": 2
+  },
+  "model_calls": [
+    {
+      "stage": "P1",
+      "requested_model": "gpt-6-astra",
+      "actual_model": "deployment-gpt-6-astra-platform-global",
+      "usage": {
+        "input_tokens": 18144,
+        "input_tokens_details": {
+          "cache_write_tokens": 18141,
+          "cached_tokens": 0
+        },
+        "output_tokens": 8935,
+        "output_tokens_details": {
+          "reasoning_tokens": 1884
+        },
+        "total_tokens": 27079
+      },
+      "latency_ms": 142546,
+      "input_sha256": "8bd98ca77bea38799812c4bb7f749558b0ebf9e02532b13aa7b5e8c1726fa836",
+      "output_sha256": "c3165ec51674e5d05ced9ec83aac59c90d6a2c1c97616671ca50684a64a520d0",
+      "completed_at": "2026-11-14T09:35:11.514Z"
+    },
+    {
+      "stage": "P2",
+      "requested_model": "gpt-6-astra",
+      "actual_model": "deployment-gpt-6-astra-platform-global",
+      "usage": {
+        "input_tokens": 12758,
+        "input_tokens_details": {
+          "cache_write_tokens": 12755,
+          "cached_tokens": 0
+        },
+        "output_tokens": 5749,
+        "output_tokens_details": {
+          "reasoning_tokens": 2588
+        },
+        "total_tokens": 18507
+      },
+      "latency_ms": 119490,
+      "input_sha256": "830d8bd5f6d6a4198edd6c31af63174ba0d0299a037250455eac03abc379c27a",
+      "output_sha256": "859d9059ed64e430dee46947fde5fd75f471118730f006c0f66f33fde3c3ab43",
+      "completed_at": "2026-11-14T09:37:11.009Z"
+    },
+    {
+      "stage": "P3-r1",
+      "requested_model": "gpt-6-astra",
+      "actual_model": "deployment-gpt-6-astra-platform-global",
+      "usage": {
+        "input_tokens": 7680,
+        "input_tokens_details": {
+          "cache_write_tokens": 7677,
+          "cached_tokens": 0
+        },
+        "output_tokens": 3401,
+        "output_tokens_details": {
+          "reasoning_tokens": 1891
+        },
+        "total_tokens": 11081
+      },
+      "latency_ms": 78367,
+      "input_sha256": "b719eccaf6d29fd46f7e8616e62434fd489a5006a0d23cd63c1846205b187506",
+      "output_sha256": "51a999b10c857003e12262cc14ca2e4307155af331f26b3535e300151487ede9",
+      "completed_at": "2026-11-14T09:41:24.514Z"
+    },
+    {
+      "stage": "P3-r2",
+      "requested_model": "gpt-6-astra",
+      "actual_model": "deployment-gpt-6-astra-platform-global",
+      "usage": {
+        "input_tokens": 9058,
+        "input_tokens_details": {
+          "cache_write_tokens": 9055,
+          "cached_tokens": 0
+        },
+        "output_tokens": 4671,
+        "output_tokens_details": {
+          "reasoning_tokens": 3586
+        },
+        "total_tokens": 13729
+      },
+      "latency_ms": 114780,
+      "input_sha256": "e7c41e093dff006ad7b6a66e545c6a001b6fa83b0eb50f7ce926a18dafb2c9ad",
+      "output_sha256": "1edf1502a448c025411e0b33569ec46b028a0aae252b8e48b3fe51065f350a48",
+      "completed_at": "2026-11-14T09:44:17.185Z"
+    },
+    {
+      "stage": "P3",
+      "requested_model": "gpt-6-astra",
+      "actual_model": "deployment-gpt-6-astra-platform-global",
+      "usage": {
+        "input_tokens": 6778,
+        "input_tokens_details": {
+          "cache_write_tokens": 6775,
+          "cached_tokens": 0
+        },
+        "output_tokens": 4261,
+        "output_tokens_details": {
+          "reasoning_tokens": 2070
+        },
+        "total_tokens": 11039
+      },
+      "latency_ms": 103308,
+      "input_sha256": "ccdb0362cde775c00d2b6e94db1dc3645f3b724f6e82a556e06df30c8fd450f3",
+      "output_sha256": "52fa8ccd3ff4edeb5da157206adf15209759f70890556471f4f3be43ba6de239",
+      "completed_at": "2026-11-14T09:38:54.322Z"
+    },
+    {
+      "stage": "P4",
+      "requested_model": "gpt-6-astra",
+      "actual_model": "deployment-gpt-6-astra-platform-global",
+      "usage": {
+        "input_tokens": 17503,
+        "input_tokens_details": {
+          "cache_write_tokens": 17500,
+          "cached_tokens": 0
+        },
+        "output_tokens": 6676,
+        "output_tokens_details": {
+          "reasoning_tokens": 2070
+        },
+        "total_tokens": 24179
+      },
+      "latency_ms": 108574,
+      "input_sha256": "89955bc93e5efee7876c2762841bc7361d96fec2b3a7a30cbe7493dcfc84140d",
+      "output_sha256": "56a4a75e8224006e02c26321db894de294e6b36a8968651a2caa22cbcb3df23b",
+      "completed_at": "2026-11-14T09:46:05.765Z"
+    },
+    {
+      "stage": "P6",
+      "requested_model": "gpt-6-astra",
+      "actual_model": "deployment-gpt-6-astra-platform-global",
+      "usage": {
+        "input_tokens": 21750,
+        "input_tokens_details": {
+          "cache_write_tokens": 21747,
+          "cached_tokens": 0
+        },
+        "output_tokens": 5949,
+        "output_tokens_details": {
+          "reasoning_tokens": 2070
+        },
+        "total_tokens": 27699
+      },
+      "latency_ms": 109904,
+      "input_sha256": "d387a544a5b5b64654228642697f6a781f738a9b73146ddd41ca4b1c15430ab1",
+      "output_sha256": "5f2da41fd18949152f39e989ff8e87bd6754c0d5ec7c1d835ea06343b3854cf1",
+      "completed_at": "2026-11-14T11:42:39.439Z"
+    },
+    {
+      "stage": "P5-1",
+      "actual_model": "deployment-gpt-6-astra-platform-global",
+      "usage": {
+        "input_tokens": 9544,
+        "input_tokens_details": {
+          "cache_write_tokens": 9541,
+          "cached_tokens": 0
+        },
+        "output_tokens": 4257,
+        "output_tokens_details": {
+          "reasoning_tokens": 1034
+        },
+        "total_tokens": 13801
+      },
+      "latency_ms": 71426
+    },
+    {
+      "stage": "P5-2",
+      "actual_model": "deployment-gpt-6-astra-platform-global",
+      "usage": {
+        "input_tokens": 9544,
+        "input_tokens_details": {
+          "cache_write_tokens": 9541,
+          "cached_tokens": 0
+        },
+        "output_tokens": 5000,
+        "output_tokens_details": {
+          "reasoning_tokens": 1796
+        },
+        "total_tokens": 14544
+      },
+      "latency_ms": 92723
+    },
+    {
+      "stage": "P5-3",
+      "actual_model": "deployment-gpt-6-astra-platform-global",
+      "usage": {
+        "input_tokens": 9544,
+        "input_tokens_details": {
+          "cache_write_tokens": 9541,
+          "cached_tokens": 0
+        },
+        "output_tokens": 5192,
+        "output_tokens_details": {
+          "reasoning_tokens": 2070
+        },
+        "total_tokens": 14736
+      },
+      "latency_ms": 89553
+    }
+  ],
+  "preflight_note": "另1次成功连通性预检，18 total tokens；无法送达的网络尝试不冒称计费API响应",
+  "cost_usd": null,
+  "identity_note": "模型服务别名不是独立认证的固定权重checkpoint"
+}

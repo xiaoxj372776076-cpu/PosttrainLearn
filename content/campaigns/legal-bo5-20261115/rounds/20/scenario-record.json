@@ -1,0 +1,172 @@
+{
+  "loans": {
+    "A": {
+      "actual": "143140",
+      "returned": "20330"
+    },
+    "B": {
+      "original_actual": "187400",
+      "paper": "199980",
+      "rate": "0.132",
+      "rolls": [
+        {
+          "id": "B-1",
+          "date": "2022-07-06",
+          "face_value": "212636.27",
+          "new_cash": "0.00"
+        },
+        {
+          "id": "B-2",
+          "date": "2022-10-17",
+          "face_value": "220556.82",
+          "new_cash": "0.00"
+        },
+        {
+          "id": "B-3",
+          "date": "2023-01-09",
+          "face_value": "227256.92",
+          "new_cash": "0.00"
+        }
+      ]
+    },
+    "C": {
+      "actual": "228200",
+      "payments": [
+        {
+          "id": "T-01",
+          "date": "2019-04-18",
+          "amount": "25260.00",
+          "debt": "C",
+          "status": "settled",
+          "principal_first_agreement": false
+        },
+        {
+          "id": "T-02",
+          "date": "2019-08-23",
+          "amount": "26991.00",
+          "debt": "C",
+          "status": "settled",
+          "principal_first_agreement": true
+        },
+        {
+          "id": "T-03",
+          "date": "2020-02-14",
+          "amount": "28722.00",
+          "debt": "C",
+          "status": "settled",
+          "principal_first_agreement": false
+        },
+        {
+          "id": "T-04",
+          "date": "2020-09-21",
+          "amount": "30453.00",
+          "debt": "C",
+          "status": "settled",
+          "principal_first_agreement": false
+        },
+        {
+          "id": "T-05",
+          "date": "2021-04-11",
+          "amount": "32184.00",
+          "debt": "C",
+          "status": "settled",
+          "principal_first_agreement": false
+        },
+        {
+          "id": "T-06",
+          "date": "2022-06-06",
+          "amount": "33915.00",
+          "debt": "C",
+          "status": "settled",
+          "principal_first_agreement": false
+        },
+        {
+          "id": "T-07",
+          "date": "2023-07-06",
+          "amount": "35646.00",
+          "debt": "C",
+          "status": "settled",
+          "principal_first_agreement": false
+        }
+      ],
+      "started_at": "2019-02-07",
+      "contractual_rate": "0.235",
+      "protected_rate_schedule": [
+        {
+          "from": "2019-02-07",
+          "rate": "0.235"
+        },
+        {
+          "from": "2020-08-20",
+          "rate": "0.130"
+        }
+      ],
+      "suit_lpr": "0.0325",
+      "old_period_request": true
+    }
+  },
+  "level": 6,
+  "round": 20,
+  "cap": "0.148",
+  "cutoff": "2023-08-01",
+  "shared_cutoff_payment": {
+    "id": "SP-01",
+    "date": "2023-08-01",
+    "amount": "25000.00",
+    "eligible_debts": [
+      "B",
+      "C"
+    ],
+    "engineering_recipient": "B",
+    "before": {
+      "B": "228672.300232300567401219533280247886",
+      "C_principal": "153521.784020099313958917385059166165",
+      "C_interest": "1421.65378078886487994833085342460722",
+      "C_expenses": "0"
+    },
+    "basis": "SP agreement: both debts fully secured at payment time; current enforceable annual rates B13.2% > C13.0%; later S14 does not retroactively change this allocation"
+  },
+  "procedural_mechanism": {
+    "B_type_clause": "immediate_unconditional",
+    "B_initial_maturity": "2023-01-12",
+    "B_filed": "2023-07-05",
+    "B_served": "2023-07-07",
+    "B_withdrawn": "2023-07-09",
+    "C_type_clause": "only_if_unable",
+    "C_initial_maturity": "2022-12-15",
+    "C_filed": "2023-06-08",
+    "C_withdrawn": "2023-06-12",
+    "C_refiled": "2023-06-14",
+    "C_later_signature": "receipt_only_not_new_promise",
+    "basis": [
+      "guarantee-2020:25",
+      "guarantee-2020:31",
+      "guarantee-2020:32",
+      "guarantee-2020:34"
+    ],
+    "C_guarantee_signed": "2022-02-07"
+  },
+  "co_guarantee": {
+    "external_scope_each": "all_B",
+    "internal_recourse_share": "0.5",
+    "second_guarantor_first_request": "2023-07-06",
+    "second_guarantor_period_end": "2023-07-12",
+    "basis": [
+      "guarantee-2020:13",
+      "guarantee-2020:29"
+    ],
+    "researcher_liability_limit": "203672.30",
+    "internal_recourse_exists": true,
+    "same_contract": true,
+    "lost_recourse_reduction": false
+  },
+  "third_party_mechanism": {
+    "type": "debt_transfer",
+    "share": "0.5",
+    "sequence": "after_SP_before_final_litigation",
+    "old_guarantor_written_consent": false,
+    "third_party_immediate_limit": "77471.72",
+    "original_borrower_remaining_C": "77471.71",
+    "no_new_loan": true
+  }
+}

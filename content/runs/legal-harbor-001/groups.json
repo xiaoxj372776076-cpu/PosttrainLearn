@@ -1,0 +1,18 @@
+{
+  "group_id": "group-shanghai-23060",
+  "case_ids": [
+    "cn-shanghai-minhang-2023-civil-first-23060"
+  ],
+  "unit_ids": [
+    "issue-return"
+  ],
+  "sample_ids": [
+    "harbor-loan-restitution-001"
+  ],
+  "split": "dev",
+  "purpose": "已用于调试与合成学习，不再声明未见test",
+  "variants": 0,
+  "case_group_split_check": "pass",
+  "benchmark_policy": "PLawBench全量仅本地审计和浏览，不作为few-shot",
+  "note": "无实质事实改编；同案原文、匿名化和未来变体必须保持同组"
+}

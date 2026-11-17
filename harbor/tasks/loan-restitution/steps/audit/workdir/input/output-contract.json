@@ -1,0 +1,61 @@
+{
+  "schema_version": "harbor-legal-audit-0.1",
+  "description": "严格输出 /app/output/audit.json；金额两位小数的十进制字符串，source_ids使用p-xxx或法源ID。每个项目给简短reason，不输出内部思维链。",
+  "legal": {
+    "lending_version": "lending-2015 | lending-2020-08 | lending-2020-12",
+    "invalidity_article": "例如14(1)或13(1)",
+    "transition_article": "例如31(1)",
+    "civil_code_article": "条号字符串",
+    "validity": "valid | invalid | insufficient",
+    "needs_2015_extra_conditions": "boolean，适用版本是否仍需旧版高利和知情条件",
+    "source_ids": "string[]",
+    "reason": "string"
+  },
+  "ledger": {
+    "container": "array",
+    "item": {
+      "id": "原mentions的id，恰好一次",
+      "value": "保留原值，两位小数字符串",
+      "role": "下列role定义的一个枚举值",
+      "treatment": "下列treatment定义的一个枚举值",
+      "source_ids": "包含对应原段落的string[]；只允许所提供p-xxx与法源ID",
+      "reason": "不少于6个字符的简短依据"
+    },
+    "role_definitions": {
+      "bank_disbursement": "金融机构向出借人发放的贷款",
+      "contract_face": "借条或合同约定的金额",
+      "receipt_face": "收条记载的收到金额；记载内容不自动等于实际取得",
+      "actual_transfer": "独立实际交付项；原文仅有合计而无可用明细时，将该合计作为一个实际交付项",
+      "transfer_duplicate": "另一处对已列交付或交付集合的重复称谓/叙述",
+      "transfer_summary": "同段已经给出可分别计入的明细的汇总项",
+      "claimed_interest": "当事人请求的利息，不是新交付",
+      "withheld_interest": "未交付而预先扣留的利息自述",
+      "asserted_net_interest": "累计/净利息收付的自述"
+    },
+    "treatment_definitions": {
+      "include": "按所附规则可纳入返还范围的一次实际交付，包括没有明细的独立交付合计",
+      "exclude": "非本次应纳入的实际交付，不仅凭票据、诉请或自述计入",
+      "duplicate": "别处已经列入的交付复述，不另计",
+      "aggregate": "同段明细已分别列入的汇总项，不再计入"
+    }
+  },
+  "restitution_total": "两位小数字符串：scope限定的来源推断前提下材料可支持的返还范围，不是已独立流水核验的无条件事实；在legal.reason与evidence_limits.reason中交代前提",
+  "not_delivered_net": "string；仅算术剩余，不冒认为实收利息",
+  "interest_conflict": {
+    "reported": "string",
+    "computed": "string",
+    "difference": "string绝对值",
+    "status": "unresolved | resolved",
+    "source_ids": "string[]",
+    "reason": "string"
+  },
+  "evidence_limits": {
+    "first_transfer_breakdown": "null或逐笔金额",
+    "actual_interest_paid": "null或有据金额",
+    "additional_origin": "inferred_not_independently_traced | independently_traced | unknown",
+    "defendant_admission": "not_established | established",
+    "evidence_originals": "not_obtained | obtained",
+    "source_ids": "string[]",
+    "reason": "string"
+  }
+}

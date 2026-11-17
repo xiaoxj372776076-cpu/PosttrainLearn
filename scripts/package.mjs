@@ -9,9 +9,16 @@ const pkg = JSON.parse(await fs.readFile(path.join(root, 'package.json'), 'utf8'
 const output = path.join(root, 'releases');
 await fs.mkdir(output, { recursive: true });
 execFileSync(process.execPath, [path.join(root, 'scripts/check-content.mjs')], { stdio: 'inherit' });
+execFileSync(process.execPath, [path.join(root, 'scripts/check-pilot.mjs')], { cwd:root, stdio: 'inherit' });
+try {
+  await fs.access(path.join(root, 'content/campaigns/legal-bo5-20261115/config.json'));
+  execFileSync(process.execPath, [path.join(root, 'scripts/hardness-finalize.mjs')], { cwd:root, stdio: 'inherit' });
+} catch (error) {
+  if (error.code !== 'ENOENT') throw error;
+}
 const name = `${pkg.name}-${pkg.version}.tar.gz`;
 const archive = path.join(output, name);
-execFileSync('tar', ['-czf', archive, '--exclude=.git', '--exclude=.local', '--exclude=private-source', '--exclude=releases', '--exclude=node_modules', '--exclude=.DS_Store', '--exclude=.env', '--exclude=.env.*', '--exclude=*.log', '--exclude=*.tmp', '-C', root, '.'], { stdio: 'inherit' });
+execFileSync('tar', ['-czf', archive, '--exclude=.git', '--exclude=.local', '--exclude=private-source', '--exclude=releases', '--exclude=node_modules', '--exclude=__pycache__', '--exclude=.venv', '--exclude=.DS_Store', '--exclude=.env', '--exclude=.env.*', '--exclude=*.log', '--exclude=*.tmp', '-C', root, '.'], { stdio: 'inherit' });
 const sha = createHash('sha256').update(await fs.readFile(archive)).digest('hex');
 await fs.writeFile(archive + '.sha256', `${sha}  ${name}\n`);
 console.log(`Source archive: ${archive}\nSHA-256: ${sha}\nExcluded private originals, runtime expert records, credentials, Git metadata and dependencies. Review third-party data permissions before publishing.`);

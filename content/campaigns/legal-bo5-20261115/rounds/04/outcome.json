@@ -1,0 +1,27 @@
+{
+  "round": 4,
+  "status": "completed_not_confirmed",
+  "full_chain_completed": true,
+  "skill_version": "1.2.3",
+  "measured": {
+    "valid": true,
+    "correct": 4,
+    "n": 5,
+    "target_hit": false,
+    "deterministic_successes": 0,
+    "reason": "semantic_five_answer_measurement"
+  },
+  "confirmation": null,
+  "confirmed_target_hit": false,
+  "next_level": 2,
+  "training_rows": 0,
+  "release_status": "quarantine",
+  "assessed_difficulty": "D3",
+  "analysis": "依据学生可见事实和规范复核，题面具备必要的交付、起息、结息、付款、到期和保证行权信息，未发现使问题无法回答的缺口。工程参考得到支持：A返还122906.00元；B受保护本息为181480×(1＋0.132×175/365)×(1＋0.132×187/365)×(1＋0.132×204/365)，取分221214.04元，低于全程上限223129.91元；C本金199035.88元、利息10008.51元、费用0.00元；总额553164.43元。丁保证无效，戊可被请求连带支付，己因未在一般保证期间内依法行权而免责。依所附完成记录及答案文本，五份均完整可审计，未见截断或基础设施异常，实质正确数为4/5，而非确定性检查表面呈现的0/5，未命中1–2/5区间。五份答案均正确处理主要法律分支，唯一失败来自C金额计算。题目确有本金审查与结息限额、付款顺序与后续计息、保证方式与行权时点等必要交互，结构评为D3；难度机制有效不等于低成功率已获验证，也不能凭字段数量或材料长度认定D4。本次仅复核所给冻结文本和答案，未外部核验来源下载、哈希或调用独立性。",
+  "remaining_gates": [
+    "expert_review",
+    "source_and_export_permissions",
+    "independent_family_confirmation",
+    "benchmark_source_overlap"
+  ]
+}

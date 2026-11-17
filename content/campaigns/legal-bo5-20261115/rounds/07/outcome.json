@@ -1,0 +1,27 @@
+{
+  "round": 7,
+  "status": "completed_not_confirmed",
+  "full_chain_completed": true,
+  "skill_version": "1.2.6",
+  "measured": {
+    "valid": false,
+    "correct": 5,
+    "n": 5,
+    "target_hit": false,
+    "deterministic_successes": 5,
+    "reason": "difficulty_mechanism_not_valid"
+  },
+  "confirmation": null,
+  "confirmed_target_hit": false,
+  "next_level": 5,
+  "training_rows": 0,
+  "release_status": "quarantine",
+  "assessed_difficulty": "D3",
+  "analysis": "先按题设和所附规则复核，工程参考的决定性结论获支持。A适用2021年起施行版本，不要求高利转贷或借款人知情，返还142919－20031＝122888.00元。B实际本金182590元，保护利率14.80%，全期566日；逐段结息候选额约228076.444421元，高于182590×(1＋0.148×566/365)＝224494.655123…元，故保护224494.66元。C按五段日数70、127、83、99、161及各笔适用的清偿顺序计算，最终未取分本金199998.876254889…元、利息10056.9297939239…元、费用0元；分项取分后总额557438.47元。丁、戊、己分别属于保证无效、期间届满免责、保证权利已保全但尚可行使先诉抗辩。可核验法源为题给民法典及民间借贷解释官方链接：https://www.court.gov.cn/zixun/xiangqing/233181.html；https://cicc.court.gov.cn/html/1/380/385/12844.html。本次未重新联网核验网页或运行独立计算程序。五份均为有效完成：完成5/5、法律分支正确5/5、最终金额正确5/5、整体实质正确5/5；未见格式失败、截断或基础设施故障。原始检查与P6结论一致，无需改判。答案1、2、4、5有分以下近似数展示偏差，但必要公式及契约规定的分精度结果正确；这些质量提示不构成将本轮改计为1/5的依据。题目具有证据识别、清偿例外与余额递推等D3结构，但本轮没有观察到必要推理失误，故difficulty_mechanism_valid=false表示低成功率难度机制未获本轮实测支持，并非题目无效。未命中1—2/5，不启动命中确认，也不据五答全对断言题目没有法律推理要求。题面同时出现无需写文件与写入文件的交付表述，属于接口一致性问题，本轮未影响五份完整JSON答案。以下仅为修改建议，未修改文件或执行后续调用。",
+  "remaining_gates": [
+    "expert_review",
+    "source_and_export_permissions",
+    "independent_family_confirmation",
+    "benchmark_source_overlap"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "few_shot_run_id": "fs-legal-harbor-001",
+  "seed_ids": [
+    "independent-ledger-001",
+    "independent-version-002",
+    "independent-integrated-003"
+  ],
+  "selection_reasons": [
+    "本金角色/去重/净额",
+    "适用时点改变必要条件",
+    "联动返还范围与矛盾保留"
+  ],
+  "protected_benchmark": "PLawBench 280题全部不参与生成",
+  "expert_approved_seed_count": 0,
+  "structure_seed_count": 3,
+  "limitation": "D4 示例是结构设计，尚无独立难度实证，正式发布需复核",
+  "prompt_sha256": "830d8bd5f6d6a4198edd6c31af63174ba0d0299a037250455eac03abc379c27a"
+}

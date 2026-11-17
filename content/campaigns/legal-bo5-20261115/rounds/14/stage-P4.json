@@ -1,0 +1,295 @@
+{
+  "answer": {
+    "A_valid": false,
+    "A_restitution": "122846.00",
+    "A_guarantee": "invalid_accessory",
+    "B_initial_principal": "185180.00",
+    "B_protected_total": "200963.38",
+    "B_guarantee": "joint",
+    "C_outstanding_principal": "149556.37",
+    "C_outstanding_interest": "1384.93",
+    "C_outstanding_expenses": "0.00",
+    "C_guarantee": "general_preserved_not_yet_enforceable",
+    "borrower_total": "474750.68",
+    "B_second_guarantee": "joint",
+    "B_joint_payment_limit": "200963.38",
+    "basis": {
+      "A": "dossier.md [S01][S02][S12]：A于2022年成立，资金为套取的银行信贷资金。依rules.json lending-2020-12第13条，A无效，不以高利转贷或乙事先知情为必要条件。依civil-code-2020第157条，乙应返还143038.00－20192.00＝122846.00元；同交易号收据不构成另一次交付。依第682条，丁的从属保证无效，本题不请求保证无效后的过错赔偿。",
+      "B_principal_and_interest": {
+        "authority_and_facts": "dossier.md [S03][S04][S05]；rules.json civil-code-2020第670、679条及lending-2020-12第25—28条。预扣12406.00元不能计入本金，初始本金为185180.00元。约定年利率13.2%低于成立时LPR四倍14.8%。各归档日没有新交付，只能按实际本金、合法利息重建结息基数，不能直接采用纸面本金。",
+        "formula": "令P0＝185180，P1＝P0×(1＋0.132×175/365)，P2＝P1×(1＋0.132×103/365)，P3＝P2×(1＋0.132×84/365)。截日前候选本息＝P3×(1＋0.132×204/365)。整体上限＝185180×(1＋0.148×566/365)。两者取小后抵充SP-01。",
+        "periods": [
+          {
+            "from": "2022-01-12",
+            "to_exclusive": "2022-07-06",
+            "days": 175,
+            "lawful_closing_base_display": "196899.610959"
+          },
+          {
+            "from": "2022-07-06",
+            "to_exclusive": "2022-10-17",
+            "days": 103,
+            "lawful_closing_base_display": "204233.986604"
+          },
+          {
+            "from": "2022-10-17",
+            "to_exclusive": "2023-01-09",
+            "days": 84,
+            "lawful_closing_base_display": "210438.223436"
+          },
+          {
+            "from": "2023-01-09",
+            "to_exclusive": "2023-08-01",
+            "days": 204,
+            "lawful_closing_total_display": "225963.375438"
+          }
+        ],
+        "global_cap_display": "227679.063671",
+        "result": "候选本息低于整体上限；抵充SP-01后，225963.375438－25000.00，最终取分为200963.38元。中间数仅作展示，计算不逐段取分。"
+      },
+      "B_guarantors": "dossier.md [S06]；rules.json guarantee-2020第25、32条及civil-code-2020第688、692、695条：戊、庚均为覆盖全部B债务的连带保证人。保证期间约定不明，原到期日2023-01-12起算六个月，至2023-07-12；未经其书面同意的展期不改变保证期间。戊于2023-07-07收到含完整请求的起诉状，随后撤诉依guarantee-2020第31条不否定已行权；庚于2023-07-06独立收到完整催告，也在期间内。依该解释第13、29条，内部各50%的分担约定不等于对甲各担一半；甲并未漏向庚及时行权，戊不成立丧失追偿权的减责事由。两人各自对剩余200963.38元承担连带保证责任，不重复计债；戊立即付款请求上限为200963.38元。",
+      "C_interest_and_payments": {
+        "authority_and_facts": "dossier.md [S07][S08][S09][S11]；rules.json lending-2020-12第31条、lending-2015第26条及lending-2020-12第25、28条。C借款成立于2019年，2022年保证不使借款更新。依甲的明确请求，2020-08-19以前按23.5%计算；自2020-08-20起按受理时LPR四倍，即13%计算。均按未偿本金×年利率×实际日数/365计单利，未付利息不生息。",
+        "allocation_rule": "2019年原合同已约定费用、合法利息、本金的顺序，早期付款据此处理，并非追溯适用民法典。T-02另有双方有效补充约定，优先偿本金；其余单方备注不能改变清偿顺序。2021年后同一约定也与civil-code-2020第561条一致。T-01截图及收据不另算付款；X-01未执行，不予抵充。",
+        "ledger": [
+          {
+            "payment": "T-01",
+            "days": 70,
+            "annual_rate": "23.5%",
+            "payment_amount": "25182.00",
+            "expense_paid": "1680.00",
+            "interest_paid_display": "10173.761644",
+            "principal_paid_display": "13328.238356",
+            "remaining_principal_display": "212411.761644",
+            "remaining_interest_display": "0.000000"
+          },
+          {
+            "payment": "T-02",
+            "days": 127,
+            "annual_rate": "23.5%",
+            "payment_amount": "26913.00",
+            "principal_paid": "26913.00",
+            "remaining_principal_display": "185498.761644",
+            "remaining_interest_display": "17368.298702"
+          },
+          {
+            "payment": "T-03",
+            "days": 175,
+            "annual_rate": "23.5%",
+            "payment_amount": "28644.00",
+            "interest_paid": "28644.00",
+            "remaining_principal_display": "185498.761644",
+            "remaining_interest_display": "9624.672874"
+          },
+          {
+            "payment": "T-04",
+            "days": 220,
+            "interest_segments": [
+              {
+                "from": "2020-02-14",
+                "to_exclusive": "2020-08-20",
+                "days": 188,
+                "annual_rate": "23.5%"
+              },
+              {
+                "from": "2020-08-20",
+                "to_exclusive": "2020-09-21",
+                "days": 32,
+                "annual_rate": "13%"
+              }
+            ],
+            "payment_amount": "30375.00",
+            "interest_paid": "30375.00",
+            "remaining_principal_display": "185498.761644",
+            "remaining_interest_display": "3816.823936"
+          },
+          {
+            "payment": "T-05",
+            "days": 202,
+            "annual_rate": "13%",
+            "payment_amount": "32106.00",
+            "interest_paid_display": "17162.570459",
+            "principal_paid_display": "14943.429541",
+            "remaining_principal_display": "170555.332103",
+            "remaining_interest_display": "0.000000"
+          },
+          {
+            "payment": "T-06",
+            "days": 421,
+            "annual_rate": "13%",
+            "payment_amount": "33837.00",
+            "interest_paid_display": "25573.954318",
+            "principal_paid_display": "8263.045682",
+            "remaining_principal_display": "162292.286420",
+            "remaining_interest_display": "0.000000"
+          },
+          {
+            "payment": "T-07",
+            "days": 395,
+            "annual_rate": "13%",
+            "payment_amount": "35568.00",
+            "interest_paid_display": "22832.079199",
+            "principal_paid_display": "12735.920801",
+            "remaining_principal_display": "149556.365620",
+            "remaining_interest_display": "0.000000"
+          }
+        ],
+        "cutoff": "2023-07-06至2023-08-01不含截日，共26日。按未取分本金计算：149556.36561963479…×0.13×26/365＝1384.93291998456…元。最终本金149556.37元、利息1384.93元、费用0.00元。上述中间数为展示值，不用于逐期舍入。"
+      },
+      "C_guarantor": "dossier.md [S07][S10]；rules.json guarantee-2020第25条及civil-code-2020第687、691—693条：己承诺在乙不能履行、无力偿还时承担责任，属于一般保证，保证期间截至2023-06-15。第一次诉讼虽撤回，但甲于2023-06-14在期间届满前再次有效起诉乙，依guarantee-2020第31条，己的保证责任仍被保留。2023-05-08仅向己催告不能替代对乙起诉；2023-06-25仅确认收件亦不构成新保证，不能以第34条推导出新的承诺。因尚未经审判及执行、乙有可执行财产且无先诉抗辩例外，己目前可拒绝立即付款。其保证覆盖C剩余合法债务，不能将暂不可立即执行等同保证消灭。",
+      "SP_01": "dossier.md [S06][S10][S13]；rules.json civil-code-2020第560条允许当事人另约清偿顺序。SP-01只适用于B、C；付款时两笔均到期，戊、庚对B的全额保证均存续，己对C的一般保证也存续，题设确认担保资信和价值。附件所定比较条件成立，应比较可强制请求的年利率：B为13.2%，C为13%，不能用C名义23.5%比较。因此25000.00元全部抵B，不抵A或C。",
+      "total_and_scope": "dossier.md [S12][S13]：分项最终取分后，乙的总额为122846.00＋200963.38＋149556.37＋1384.93＋0.00＝474750.68元。丁不承担本题所请求的保证付款责任；戊、庚分别对同一B余额承担连带保证责任，非各承担50%；己的立即付款请求目前不支持。保证责任不另加至乙的债务总额，甲对同一债权不得重复受偿。"
+    }
+  },
+  "rationale": "按随题规范摘录及自然日公式核对，工程参考的法律状态、付款归属和最终金额均有支持。决定性事实是庚在保证期间内独立收到请求、戊撤诉前诉状已送达、C撤诉后在保证期间内再诉；因此不存在戊因丧失对庚追偿权而减责，亦不能把己的先诉抗辩当作保证消灭。SP-01依双方附件按合法利率比较后抵充B。本结果仅针对明示虚构情景，未经过专家审核，未进行联网或来源哈希核验，不是实际裁判。",
+  "reference_supported": true,
+  "authority_refs": [
+    {
+      "source_id": "lending-2020-12",
+      "provisions": [
+        "13",
+        "25",
+        "26",
+        "27",
+        "28",
+        "31"
+      ],
+      "url": "https://cicc.court.gov.cn/html/1/380/385/12844.html",
+      "supports": "A合同无效；B实际本金、合法结息及整体上限；C分段适用利率保护标准。"
+    },
+    {
+      "source_id": "lending-2015",
+      "provisions": [
+        "26"
+      ],
+      "url": "https://www.court.gov.cn/zixun/xiangqing/15146.html",
+      "supports": "C在2020-08-20以前按未超过24%的约定年利率23.5%计算利息。"
+    },
+    {
+      "source_id": "civil-code-2020",
+      "provisions": [
+        "157",
+        "560",
+        "561",
+        "670",
+        "679",
+        "682",
+        "687",
+        "688",
+        "691",
+        "692",
+        "693",
+        "695"
+      ],
+      "url": "https://www.court.gov.cn/zixun/xiangqing/233181.html",
+      "supports": "无效返还、清偿抵充、预扣利息处理、保证从属性、保证方式及范围、保证期间和未经同意展期的效果。"
+    },
+    {
+      "source_id": "guarantee-2020",
+      "provisions": [
+        "13",
+        "25",
+        "29",
+        "31",
+        "32",
+        "34"
+      ],
+      "url": "https://www.court.gov.cn/zixun/xiangqing/282721.html",
+      "supports": "内部追偿与外部责任区分；保证类型认定；分别行权；撤诉及期间内再诉的不同效果；保证期间约定不明及新保证认定。"
+    }
+  ],
+  "source_spans": [
+    {
+      "file": "dossier.md",
+      "span": "[S01]",
+      "quote": "甲把为个人消费用途向银行套取的信贷资金转给乙，银行追踪与双方陈述已证实该来源。",
+      "supports": "A适用套取贷款转贷的无效规则。"
+    },
+    {
+      "file": "dossier.md",
+      "span": "[S02]",
+      "quote": "乙此前共返给甲20192.00元；如A被认定无效，双方同意在清算中全部作为已返还财产冲抵",
+      "supports": "A返还余额。"
+    },
+    {
+      "file": "dossier.md",
+      "span": "[S03]",
+      "quote": "乙于2022-01-12实际收到185180.00元，当日起息，合同也于该日成立。",
+      "supports": "B初始本金、成立日与起息日。"
+    },
+    {
+      "file": "dossier.md",
+      "span": "[S04]",
+      "quote": "逐次结算从上次结算日起算，日数为实际自然日、年基数365。保留全部计算精度，仅在最终各输出金额上四舍五入到分。",
+      "supports": "B逐次结息及精度口径。"
+    },
+    {
+      "file": "dossier.md",
+      "span": "[S05]",
+      "quote": "B-1，2022-07-06，纸面本金210090.76元，新增交付0.00元。",
+      "supports": "归档金额不是新增贷款，应结合其余归档记录重建合法基数。"
+    },
+    {
+      "file": "dossier.md",
+      "span": "[S06]",
+      "quotes": [
+        "起诉状副本2023-07-07实际送达戊，包含完整给付请求",
+        "甲2023-07-06对庚提出完整B给付请求并实际到达庚，这是首次催告",
+        "戊、庚各自以连带责任保证向甲覆盖全部B债务；不是对甲各担一半。"
+      ],
+      "supports": "两名B保证人均被及时分别行权，对外全额保证未因内部份额而减半。"
+    },
+    {
+      "file": "dossier.md",
+      "span": "[S07]",
+      "quote": "甲明确请求按照合同成立至2020-08-19当时的司法解释计算该段利息，之后请求适用法律保护范围",
+      "supports": "C过渡利率规则及请求范围。"
+    },
+    {
+      "file": "dossier.md",
+      "span": "[S08]",
+      "quotes": [
+        "T-01 / 2019-04-18 / 乙向甲付款25182.00元 / 银行已结算 / 乙指定偿还C号债务。",
+        "T-07 / 2023-07-06 / 乙向甲付款35568.00元 / 银行已结算 / 乙指定偿还C号债务。"
+      ],
+      "supports": "结合本段完整T-01至T-07主表确定实际付款、日期和逐段日数。"
+    },
+    {
+      "file": "dossier.md",
+      "span": "[S09]",
+      "quote": "2019-08-23双方又签署仅适用于T-02的补充协议：该笔付款用于清偿本金，剩余依次偿付实现债权费用和利息。",
+      "supports": "T-02优先清偿本金，其他付款仍依原顺序。"
+    },
+    {
+      "file": "dossier.md",
+      "span": "[S10]",
+      "quotes": [
+        "甲2023-06-14重新对乙起诉C债务，当日有效受理，截至截日未审判。",
+        "乙有可供执行财产，无民法典第687条各项例外，己未放弃先诉抗辩"
+      ],
+      "supports": "己的一般保证被保留，但目前不能要求其立即清偿。"
+    },
+    {
+      "file": "dossier.md",
+      "span": "[S11]",
+      "quotes": [
+        "两份记录的银行交易号均与S08首行相同。",
+        "X-01未执行，已撤销付款指令，未向甲账户记入该金额。"
+      ],
+      "supports": "排除重复记账及未完成付款。"
+    },
+    {
+      "file": "dossier.md",
+      "span": "[S12]",
+      "quote": "不请求计算保证合同无效后的过错赔偿。各输出分项最终取分后再相加形成总额。",
+      "supports": "丁的审查范围及借款人总额计算方式。"
+    },
+    {
+      "file": "dossier.md",
+      "span": "[S13]",
+      "quote": "B/C均到期且有同等资信的全额保证时，以付款日依法可强制请求的年利率比较，先清偿该年利率较高的债务，不计不可强制请求部分",
+      "supports": "SP-01全部抵充B，而非按C名义利率或先诉抗辩分配。"
+    }
+  ],
+  "unresolved_issues": []
+}

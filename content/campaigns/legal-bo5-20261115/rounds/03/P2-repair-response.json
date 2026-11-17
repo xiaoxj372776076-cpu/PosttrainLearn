@@ -1,0 +1,22 @@
+{
+  "requestedModel": "gpt-6-astra",
+  "actualModel": "deployment-gpt-6-astra-platform-global",
+  "text": "{\"question\":null,\"blocked_reason\":\"缺口属于材料，不能仅修任务表述解决。dossier.md [S03]仅明确B最初借据日期，未明确首次实际交付日期及首次计息起点；[S04]也未补足首段计息起止口径。依据所给civil-code-2020第679条，不能直接将借据日期视为自然人借款合同成立及交付日期。该缺口影响B_protected_total、borrower_total及对戊请求支付的金额边界，允许填写unresolved不能使这些金额获得唯一依据。此外，[S02]“在本次无效清算中”对待判断的A_valid存在结论提示，修复需修改材料措辞。两项均超出本阶段仅修任务表述的权限。\"}",
+  "usage": {
+    "input_tokens": 15145,
+    "input_tokens_details": {
+      "cache_write_tokens": 15142,
+      "cached_tokens": 0
+    },
+    "output_tokens": 477,
+    "output_tokens_details": {
+      "reasoning_tokens": 288
+    },
+    "total_tokens": 15622
+  },
+  "latencyMs": 12097,
+  "completedAt": "2026-11-14T21:13:16.827Z",
+  "status": "completed",
+  "input_sha256": "91fd8f24cc336fe1a32dc60da4328deb75a53b3667b7594ba16d2d9af0f71317",
+  "output_sha256": "8e9963f88ff85afaade001a721ac5af1aec33efc8d0f3e70b8d2a4eb14fa970d"
+}

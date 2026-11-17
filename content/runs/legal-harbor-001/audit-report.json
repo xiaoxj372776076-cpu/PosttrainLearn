@@ -1,0 +1,221 @@
+{
+  "run_id": "legal-harbor-001",
+  "status": "completed_experimental_quarantined",
+  "completed_at": "2026-11-14T11:48:17.176Z",
+  "summary": "1个原案Harbor任务已完成全流程；保留两次题面修复、三份完成盲答、一次网关超时和所有审计。正式训练发布仍隔离，不将实验看板当作法律金标。",
+  "source_cases": 1,
+  "material_packs": 1,
+  "decision_units": 1,
+  "structure_seeds": 3,
+  "expert_approved_seeds": 0,
+  "candidates": 1,
+  "unique_tasks": 1,
+  "accepted": 0,
+  "rejected": 0,
+  "quarantine": 1,
+  "training_rows": 0,
+  "expert_reviewed": 0,
+  "target_difficulty": "D4",
+  "assessed_difficulty": "D3",
+  "empirical_hardness": "三份完成的盲答均严格通过（超时另记），高难度缺乏经验支持",
+  "bon": {
+    "n": 3,
+    "physical_trials": 4,
+    "first_score": 1,
+    "best_score": 1,
+    "strict_successes": 3,
+    "infrastructure_failures": 1,
+    "selector": "oracle_max_fixed_verifier_score_not_deployable_selector"
+  },
+  "model_calls_successful": 10,
+  "preflight_successful": 1,
+  "total_api_requests": 12,
+  "usage": {
+    "input_tokens": 122315,
+    "output_tokens": 54097,
+    "total_tokens": 176412,
+    "known_usage_only": true,
+    "timeout_usage_unknown_calls": 1,
+    "timeout_reservations": [
+      {
+        "input_tokens": 9544,
+        "max_output_tokens": 10000
+      }
+    ],
+    "cost_usd": null,
+    "includes_connectivity_preflight": true
+  },
+  "budget_status": "请求数量不超过12；已知token低于预算，超时请求实际计费/用量未返回，保留估算预留，不宣称总费用为零或所有token已完整计量",
+  "budget": {
+    "max_calls": 12,
+    "max_input_tokens": 160000,
+    "max_output_tokens": 100000,
+    "per_call_max_output_tokens": 10000,
+    "max_repairs": 2,
+    "max_cost": null,
+    "cost_note": "网关未提供价格；以调用数和 token 硬限制约束，实际金额未知"
+  },
+  "teacher_verifier": {
+    "passed": true,
+    "score": 1,
+    "checks": {
+      "schema": true,
+      "historical_law": true,
+      "legal_sources": true,
+      "ledger_values": true,
+      "amount_roles": true,
+      "dedup_and_inclusion": true,
+      "ledger_provenance": true,
+      "recomputable_total": true,
+      "conflict_preserved": true,
+      "unknowns_not_fabricated": true,
+      "basis_present_not_semantics": true,
+      "no_fabricated_sources": true
+    },
+    "failed_checks": [],
+    "rubric_version": "0.1",
+    "implementation_version": "0.1.1",
+    "semantic_limitation": "来源仅检查存在与必要定位，说明只检查非空；不证明解释法律语义正确。"
+  },
+  "semantic_audit": {
+    "evidence_alignment": "pass",
+    "question_sufficiency": "pass",
+    "authority_validity": "pass",
+    "answer_support": "pass",
+    "blind_answer_agreement": "pass",
+    "numeric_consistency": "pass",
+    "variant_consistency": "not_applicable",
+    "difficulty_alignment": "fail",
+    "source_permission": "unresolved",
+    "material_normalization": "unresolved",
+    "privacy": "unresolved",
+    "leakage": "unresolved"
+  },
+  "quarantine_reasons": [
+    "source_permission: limited_local_research_only，正式训练/再分发范围未解决",
+    "leakage: benchmark语义近重复与源案例溯源未完成",
+    "review: 0条专家审核；同家族审计不能视为法律金标",
+    "material_normalization: unresolved，原文定位校验和可见脱敏不等于完整发布认证",
+    "privacy: unresolved，原文定位校验和可见脱敏不等于完整发布认证",
+    "difficulty_alignment: target D4, assessed D3",
+    "empirical_hardness: 三份完成的盲答均严格通过（超时另记），高难度缺乏经验支持"
+  ],
+  "limitations": [
+    "单案例，不代表完整诉讼卷宗或总体难度",
+    "同家族新上下文，不是跨家族独立核验",
+    "说明非空/来源存在不等于法律语义正确",
+    "BoN有隐藏评分器，非无金标上线选择器",
+    "种子结构可核验但高难度未独立实测",
+    "未跑zero-shot消融，也未训练或测训练收益",
+    "网关超时无完成响应，实际计费与token用量未知"
+  ],
+  "verifier_sha256": "63c25ed2a8e3edeead86fb09acab45d75c1d67f0db810876cf6e04bcd2473143",
+  "question_sha256": "497c78b8c892bbf9a86ddd895ef36f0765b3ebd04e9be2c7aef4408870594c86",
+  "release_checks": {
+    "evidence_alignment": "pass",
+    "question_sufficiency": "pass",
+    "authority_validity": "pass",
+    "answer_support": "pass",
+    "blind_answer_agreement": "pass",
+    "numeric_consistency": "pass",
+    "variant_consistency": "not_applicable",
+    "difficulty_alignment": "fail",
+    "source_permission": "unresolved",
+    "material_normalization": "unresolved",
+    "privacy": "unresolved",
+    "leakage": "unresolved"
+  },
+  "semantic_remaining_issues": [
+    {
+      "issue": "目标难度标注过高",
+      "status": "fail",
+      "locations": [
+        "question_difficulty_audit.difficulty_alignment.target"
+      ],
+      "impact": "需要修复发布元数据，不影响现有教师答案的封闭材料支持。",
+      "repair": "将D4调整为D3，并明确结构分级不等于经验高难。"
+    },
+    {
+      "issue": "累计利息自述与算术剩余不一致",
+      "status": "unresolved",
+      "locations": [
+        "p-007",
+        "p-016",
+        "p-017",
+        "teacher.answer.interest_conflict"
+      ],
+      "impact": "教师已正确保留冲突，不构成答案缺陷。",
+      "repair": "如需解决真实收付问题，须取得完整利息往来流水、原始凭证及累计口径说明；当前不得修正文书数字或调整返还金额。"
+    },
+    {
+      "issue": "追加款来源未独立追踪",
+      "status": "unresolved",
+      "locations": [
+        "scope.txt",
+        "p-007",
+        "p-017",
+        "teacher.answer.evidence_limits.additional_origin"
+      ],
+      "impact": "524100.00元只能作为限定来源前提下的审计金额，不能改写为无条件资金鉴定结论。",
+      "repair": "保持现有限定；若要求独立证明，另需银行入账、留存、账户划转及支付宝付款之间的完整资金链。"
+    },
+    {
+      "issue": "首次交付明细、实体自认及原始证据未充分披露",
+      "status": "unresolved",
+      "locations": [
+        "p-006",
+        "p-008",
+        "p-009",
+        "p-016",
+        "teacher.answer.evidence_limits"
+      ],
+      "impact": "现有null、not_established和not_obtained表达恰当；未获证明不等于有关事实已被反驳。",
+      "repair": "无需为完成本题补造材料；超出封闭审计时再获取逐笔流水、具体陈述或庭审记录及证据原件。"
+    },
+    {
+      "issue": "专门发布检查尚未完成认证",
+      "status": "unresolved",
+      "locations": [
+        "checks.source_permission",
+        "checks.material_normalization",
+        "checks.privacy",
+        "checks.leakage"
+      ],
+      "impact": "本轮法律与账目语义通过不能代替这些发布门槛。",
+      "repair": "接入各专门检查结果；不要由本轮审计补写pass。"
+    }
+  ],
+  "preflight": {
+    "requested_model": "gpt-6-astra",
+    "actual_model": "deployment-gpt-6-astra-platform-global",
+    "usage": {
+      "input_tokens": 12,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 6,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 18
+    },
+    "latency_ms": 1961,
+    "completed_at": "2026-11-14T09:28:55.340Z",
+    "purpose": "gateway_connectivity_only",
+    "response_content_excluded": true
+  },
+  "release_auditor": {
+    "exit_code": 1,
+    "passed": false,
+    "errors": [
+      {
+        "line": null,
+        "sample_id": null,
+        "code": "empty_release",
+        "detail": "No accepted records to export"
+      }
+    ],
+    "artifact": "release-gate-audit.json"
+  }
+}

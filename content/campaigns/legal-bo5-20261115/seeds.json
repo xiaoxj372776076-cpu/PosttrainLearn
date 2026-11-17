@@ -1,0 +1,47 @@
+[
+  {
+    "seed_id": "structure-double-cap",
+    "role": "independent",
+    "fictional_rules": true,
+    "question": "假设单位债务10000，合法年利率6%，每半年结息并入下一期；规则另限制一年最终本息不超过初始本金按10%单利上界。无付款。一年可请求多少？",
+    "answer": "10609；第一次10300，再乘1.03为10609，小于11000全期上界。",
+    "rationale": "先用合法本金逐期结息，再独立核对全期上界，不能以纸面新本金绕过总上界。",
+    "patterns": [
+      "multi_condition_application",
+      "amount_classification",
+      "arithmetic_computation"
+    ],
+    "verification": "deterministic_arithmetic",
+    "expert_review": false
+  },
+  {
+    "seed_id": "structure-preservation-vs-exigibility",
+    "role": "independent",
+    "fictional_rules": true,
+    "question": "假设规则：一般保证须在到期后60日内起诉债务人才能保全，保全后仍需执行未果才能即时向保证人收款。第45日只催保证人，第55日起诉债务人，尚未审判。保证是失效、保全可立即收款，还是保全但暂可抗辩？",
+    "answer": "保全但暂可抗辩。",
+    "rationale": "区分期间内正确行权对象与随后可立即履行条件，不能把两种状态合成一个有效标签。",
+    "patterns": [
+      "temporal_applicability",
+      "exception_check",
+      "multi_issue_composition"
+    ],
+    "verification": "explicit_hypothetical_rule_check",
+    "expert_review": false
+  },
+  {
+    "seed_id": "structure-payment-agreement",
+    "role": "independent",
+    "fictional_rules": true,
+    "question": "假设规则通常费用、利息、本金顺序，但双方可另约。本金10000、利息800、费用200。付2000时双方明确先本金；之后剩余本金按10%经过半年度，再付1000，无另约。剩余各项？",
+    "answer": "本金8000，利息400，费用0。",
+    "rationale": "首付使本金8000；新利息400，累计利息1200、费用200。第二笔先费用200再利息800，利息余400，本金未再减少。",
+    "patterns": [
+      "exception_check",
+      "amount_classification",
+      "temporal_applicability"
+    ],
+    "verification": "deterministic_arithmetic",
+    "expert_review": false
+  }
+]

@@ -1,0 +1,27 @@
+{
+  "round": 17,
+  "status": "completed_not_confirmed",
+  "full_chain_completed": true,
+  "skill_version": "1.2.16",
+  "measured": {
+    "valid": true,
+    "correct": 5,
+    "n": 5,
+    "target_hit": false,
+    "deterministic_successes": 0,
+    "reason": "semantic_five_answer_measurement"
+  },
+  "confirmation": null,
+  "confirmed_target_hit": false,
+  "next_level": 6,
+  "training_rows": 0,
+  "release_status": "quarantine",
+  "assessed_difficulty": "D4",
+  "analysis": "题设在限定实体请求范围内具有充分事实和规范依据，未发现使答案不能确定的材料缺口。按题设核对，B合法逐期本息约227317.837835元，低于独立整体上限约229043.810192元；SP-01依付款时有效保证状态及双方约定抵充B后，余额为202317.84元。C依过渡利率、实际日数及有效抵充约定结算，未取分本金约151539.074819867元，末段利息约1403.293350387元；分项取分后合计152942.36元，辛承担其中76471.18元。工程参考的法律结论及金额受到随题材料支持，但不因此成为法律金标。所给五份均为完整答案，法律正确5/5、最终金额正确5/5、依据正确5/5，整体实质正确5/5。固定核对器对六个状态字段的失败源于未接受契约允许的语义等价表达，不是学生格式错误或法律错误。保证行权影响付款时担保状态，继而影响抵充对象和第三人责任基数，存在真实必要依赖，因此结构上评为D4；这不意味着经验低成功率，本轮没有命中1—2/5，也没有观察到所测必要法律推理失误。本次仅依据所给事实、规范摘录与可复算依据审查，未联网核验来源页面或哈希，未运行审计脚本，也未核实五次调用的独立性。",
+  "remaining_gates": [
+    "expert_review",
+    "source_and_export_permissions",
+    "independent_family_confirmation",
+    "benchmark_source_overlap"
+  ]
+}

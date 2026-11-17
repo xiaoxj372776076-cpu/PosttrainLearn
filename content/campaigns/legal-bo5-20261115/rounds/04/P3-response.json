@@ -1,0 +1,22 @@
+{
+  "requestedModel": "gpt-6-astra",
+  "actualModel": "deployment-gpt-6-astra-platform-global",
+  "text": "{\n  \"question_sufficiency\": \"pass\",\n  \"answer_leakage\": false,\n  \"required_repairs\": [],\n  \"assessed_difficulty\": \"D4\",\n  \"reasoning_dependencies\": [\n    \"规范版本选择：合同成立及受理时点，与 rules.json 中各版本有效期间、lending-2020-12 第31条相结合，确定适用规则。\",\n    \"A效力与返还、保证的联动：依据[S01]—[S02]的资金来源、实际交付和附条件清算约定，结合 lending-2020-12 第13条、civil-code-2020 第157、682条分别判断。\",\n    \"B本金与结息限额：依据[S03]—[S05]剔除预扣利息，逐期重算可计入本金的利息，再审查整体本息上限；对应 civil-code-2020 第670条及 lending-2020-12 第25—28条。\",\n    \"B保证责任：将[S06]的结息同意范围、原到期日、展期及首次请求到达日，与 civil-code-2020 第688、691—693、695条结合，区分债务范围和保证期间。\",\n    \"C动态清偿计算：依据[S07]—[S09]、[S11]识别实际付款及重复、失败记录，按 civil-code-2020 第560—561条分配费用、利息和本金，并按变动本金分段计息。\",\n    \"C保证状态：依据[S10]的保证方式缺省、短信、起诉日期及程序状态，结合 civil-code-2020 第686—687、692—693条，先审查期间及行权方式，再判断先诉抗辩是否仍需适用。\",\n    \"最终汇总：依[S12]及输出契约区分财产返还、本息、费用与保证责任，不重复累计本金或跨债务冲抵，各输出分项取分后汇总。\"\n  ],\n  \"reason\": \"学生材料已提供决定性时点、实际交付、起息所需事实、自然日/365口径、付款日与截日处理、利率、费用到期及保证范围；精度和汇总规则亦明确。题设认可的LPR、费用及清算约定属于虚构情景前提，不是原案证据。状态选项未直接指定各保证人的答案，附条件清算也未预判A效力。D4是多阶段金额与责任依赖的结构性评估，不是实测难度；本次仅审查输入充分性，未独立认证法条原文或来源元数据。\"\n}",
+  "usage": {
+    "input_tokens": 14638,
+    "input_tokens_details": {
+      "cache_write_tokens": 14635,
+      "cached_tokens": 0
+    },
+    "output_tokens": 1559,
+    "output_tokens_details": {
+      "reasoning_tokens": 955
+    },
+    "total_tokens": 16197
+  },
+  "latencyMs": 36392,
+  "completedAt": "2026-11-14T21:16:41.833Z",
+  "status": "completed",
+  "input_sha256": "7349717241ada27a1a7ccefa78cde4380b642ef3cb15a67423190e87ea78ecc2",
+  "output_sha256": "198e03d1d7528b22f29efcee6a289e7794ab26bfd78456ce9f4fca4d7cf2bd05"
+}

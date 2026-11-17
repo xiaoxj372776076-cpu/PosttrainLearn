@@ -1,0 +1,8 @@
+{
+  "group_id": "bo5-calibration-family-20261115",
+  "split": "dev",
+  "adaptively_developed": true,
+  "source_mode": "fictional_derivative",
+  "benchmark_sent": false,
+  "training_rows": 0
+}

@@ -1,0 +1,27 @@
+{
+  "round": 8,
+  "status": "completed_not_confirmed",
+  "full_chain_completed": true,
+  "skill_version": "1.2.7",
+  "measured": {
+    "valid": true,
+    "correct": 5,
+    "n": 5,
+    "target_hit": false,
+    "deterministic_successes": 5,
+    "reason": "semantic_five_answer_measurement"
+  },
+  "confirmation": null,
+  "confirmed_target_hit": false,
+  "next_level": 6,
+  "training_rows": 0,
+  "release_status": "quarantine",
+  "assessed_difficulty": "D3",
+  "analysis": "闭卷复核支持题面和工程参考。A适用lending-2020-12第13条，不要求高利或借款人知情；返还余额为122882.00元。B实际本金182960.00元，保护利率14.80%，全期566日；合法逐次结息约228538.618058元，高于第27条整体上限182960×(1＋0.148×566/365)＝224949.570630…元。戊的保证期间不因未经书面同意的展期改变，至2023-07-12届满，7月18日请求已经迟延。己属一般保证，6月8日起诉早于6月15日期间届满，但仍有先诉抗辩。依第560条，SP-01抵充无担保的B，余额199949.57元。C按第561条及T-02特别约定递推，末段本金约171348.757432565元，56日利息约2996.960184793元，费用已清偿；按契约汇总为497177.29元。\n本轮有效完成5/5、法律分支正确5/5、必需最终金额正确5/5、整体实质正确5/5；五份均为完整JSON，无可见截断或基础设施失败。答案2另有不影响取分结果的高精度数值偏差，已单列，不能据此凑成低成功率。原机械检查均通过，P6无需改判。\ndifficulty_mechanism_valid为true仅表示存在有据且必要的证据识别、规则适用和清偿计算，不表示实测命中1–2/5。按实际必要操作保守评为D3。B整体上限使逐段结息精确求值不再是最终金额的必要步骤；SP-01也存在判别力遮蔽：即使错误地把B、C都视为无担保，继续比较债务负担仍可能选择B。不过保证状态及决定性依据是必答内容，不能因此免审该错误。本轮没有观察到这类法律错误，不能宣称高法律推理难度已验证，不启动命中确认。\n以上仅据提交的事实、规则摘录和答案复核；未联网核验来源元数据、运行审计脚本或另行调用独立模型。以下为修改建议，不表示已保存文件、修改Skill或执行后续轮次。",
+  "remaining_gates": [
+    "expert_review",
+    "source_and_export_permissions",
+    "independent_family_confirmation",
+    "benchmark_source_overlap"
+  ]
+}

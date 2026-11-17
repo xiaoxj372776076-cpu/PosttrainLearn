@@ -1,0 +1,272 @@
+{
+  "mode": "trusted_host_mutation_tests_not_VM_rollouts",
+  "positive_reference_pass": true,
+  "negative_count": 9,
+  "all_detected": true,
+  "tests": [
+    {
+      "name": "wrong_total",
+      "detected": true,
+      "report": {
+        "passed": false,
+        "score": 0.9166666666666666,
+        "checks": {
+          "schema": true,
+          "historical_law": true,
+          "legal_sources": true,
+          "ledger_values": true,
+          "amount_roles": true,
+          "dedup_and_inclusion": true,
+          "ledger_provenance": true,
+          "recomputable_total": false,
+          "conflict_preserved": true,
+          "unknowns_not_fabricated": true,
+          "basis_present_not_semantics": true,
+          "no_fabricated_sources": true
+        },
+        "failed_checks": [
+          "recomputable_total"
+        ],
+        "rubric_version": "0.1",
+        "implementation_version": "0.1.1",
+        "semantic_limitation": "来源仅检查存在与必要定位，说明只检查非空；不证明解释法律语义正确。"
+      }
+    },
+    {
+      "name": "double_count",
+      "detected": true,
+      "report": {
+        "passed": false,
+        "score": 0.8333333333333334,
+        "checks": {
+          "schema": true,
+          "historical_law": true,
+          "legal_sources": true,
+          "ledger_values": true,
+          "amount_roles": true,
+          "dedup_and_inclusion": false,
+          "ledger_provenance": true,
+          "recomputable_total": false,
+          "conflict_preserved": true,
+          "unknowns_not_fabricated": true,
+          "basis_present_not_semantics": true,
+          "no_fabricated_sources": true
+        },
+        "failed_checks": [
+          "dedup_and_inclusion",
+          "recomputable_total"
+        ],
+        "rubric_version": "0.1",
+        "implementation_version": "0.1.1",
+        "semantic_limitation": "来源仅检查存在与必要定位，说明只检查非空；不证明解释法律语义正确。"
+      }
+    },
+    {
+      "name": "mixed_version",
+      "detected": true,
+      "report": {
+        "passed": false,
+        "score": 0.9166666666666666,
+        "checks": {
+          "schema": true,
+          "historical_law": false,
+          "legal_sources": true,
+          "ledger_values": true,
+          "amount_roles": true,
+          "dedup_and_inclusion": true,
+          "ledger_provenance": true,
+          "recomputable_total": true,
+          "conflict_preserved": true,
+          "unknowns_not_fabricated": true,
+          "basis_present_not_semantics": true,
+          "no_fabricated_sources": true
+        },
+        "failed_checks": [
+          "historical_law"
+        ],
+        "rubric_version": "0.1",
+        "implementation_version": "0.1.1",
+        "semantic_limitation": "来源仅检查存在与必要定位，说明只检查非空；不证明解释法律语义正确。"
+      }
+    },
+    {
+      "name": "invent_unknown",
+      "detected": true,
+      "report": {
+        "passed": false,
+        "score": 0.9166666666666666,
+        "checks": {
+          "schema": true,
+          "historical_law": true,
+          "legal_sources": true,
+          "ledger_values": true,
+          "amount_roles": true,
+          "dedup_and_inclusion": true,
+          "ledger_provenance": true,
+          "recomputable_total": true,
+          "conflict_preserved": true,
+          "unknowns_not_fabricated": false,
+          "basis_present_not_semantics": true,
+          "no_fabricated_sources": true
+        },
+        "failed_checks": [
+          "unknowns_not_fabricated"
+        ],
+        "rubric_version": "0.1",
+        "implementation_version": "0.1.1",
+        "semantic_limitation": "来源仅检查存在与必要定位，说明只检查非空；不证明解释法律语义正确。"
+      }
+    },
+    {
+      "name": "fabricated_source",
+      "detected": true,
+      "report": {
+        "passed": false,
+        "score": 0.8333333333333334,
+        "checks": {
+          "schema": true,
+          "historical_law": true,
+          "legal_sources": true,
+          "ledger_values": true,
+          "amount_roles": true,
+          "dedup_and_inclusion": true,
+          "ledger_provenance": false,
+          "recomputable_total": true,
+          "conflict_preserved": true,
+          "unknowns_not_fabricated": true,
+          "basis_present_not_semantics": true,
+          "no_fabricated_sources": false
+        },
+        "failed_checks": [
+          "ledger_provenance",
+          "no_fabricated_sources"
+        ],
+        "rubric_version": "0.1",
+        "implementation_version": "0.1.1",
+        "semantic_limitation": "来源仅检查存在与必要定位，说明只检查非空；不证明解释法律语义正确。"
+      }
+    },
+    {
+      "name": "resolved_conflict",
+      "detected": true,
+      "report": {
+        "passed": false,
+        "score": 0.9166666666666666,
+        "checks": {
+          "schema": true,
+          "historical_law": true,
+          "legal_sources": true,
+          "ledger_values": true,
+          "amount_roles": true,
+          "dedup_and_inclusion": true,
+          "ledger_provenance": true,
+          "recomputable_total": true,
+          "conflict_preserved": false,
+          "unknowns_not_fabricated": true,
+          "basis_present_not_semantics": true,
+          "no_fabricated_sources": true
+        },
+        "failed_checks": [
+          "conflict_preserved"
+        ],
+        "rubric_version": "0.1",
+        "implementation_version": "0.1.1",
+        "semantic_limitation": "来源仅检查存在与必要定位，说明只检查非空；不证明解释法律语义正确。"
+      }
+    },
+    {
+      "name": "empty_explanation",
+      "detected": true,
+      "report": {
+        "passed": false,
+        "score": 0.9166666666666666,
+        "checks": {
+          "schema": true,
+          "historical_law": true,
+          "legal_sources": true,
+          "ledger_values": true,
+          "amount_roles": true,
+          "dedup_and_inclusion": true,
+          "ledger_provenance": true,
+          "recomputable_total": true,
+          "conflict_preserved": true,
+          "unknowns_not_fabricated": true,
+          "basis_present_not_semantics": false,
+          "no_fabricated_sources": true
+        },
+        "failed_checks": [
+          "basis_present_not_semantics"
+        ],
+        "rubric_version": "0.1",
+        "implementation_version": "0.1.1",
+        "semantic_limitation": "来源仅检查存在与必要定位，说明只检查非空；不证明解释法律语义正确。"
+      }
+    },
+    {
+      "name": "invalid_nested_types",
+      "detected": true,
+      "report": {
+        "passed": false,
+        "score": 0.08333333333333333,
+        "checks": {
+          "schema": true,
+          "historical_law": false,
+          "legal_sources": false,
+          "ledger_values": false,
+          "amount_roles": false,
+          "dedup_and_inclusion": false,
+          "ledger_provenance": false,
+          "recomputable_total": false,
+          "conflict_preserved": false,
+          "unknowns_not_fabricated": false,
+          "basis_present_not_semantics": false,
+          "no_fabricated_sources": false
+        },
+        "failed_checks": [
+          "historical_law",
+          "legal_sources",
+          "ledger_values",
+          "amount_roles",
+          "dedup_and_inclusion",
+          "ledger_provenance",
+          "recomputable_total",
+          "conflict_preserved",
+          "unknowns_not_fabricated",
+          "basis_present_not_semantics",
+          "no_fabricated_sources"
+        ],
+        "rubric_version": "0.1",
+        "implementation_version": "0.1.1",
+        "semantic_limitation": "来源仅检查存在与必要定位，说明只检查非空；不证明解释法律语义正确。"
+      }
+    },
+    {
+      "name": "boolean_type_confusion",
+      "detected": true,
+      "report": {
+        "passed": false,
+        "score": 0.9166666666666666,
+        "checks": {
+          "schema": true,
+          "historical_law": false,
+          "legal_sources": true,
+          "ledger_values": true,
+          "amount_roles": true,
+          "dedup_and_inclusion": true,
+          "ledger_provenance": true,
+          "recomputable_total": true,
+          "conflict_preserved": true,
+          "unknowns_not_fabricated": true,
+          "basis_present_not_semantics": true,
+          "no_fabricated_sources": true
+        },
+        "failed_checks": [
+          "historical_law"
+        ],
+        "rubric_version": "0.1",
+        "implementation_version": "0.1.1",
+        "semantic_limitation": "来源仅检查存在与必要定位，说明只检查非空；不证明解释法律语义正确。"
+      }
+    }
+  ]
+}

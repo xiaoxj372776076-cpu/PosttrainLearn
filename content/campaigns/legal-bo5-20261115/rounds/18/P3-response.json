@@ -1,0 +1,22 @@
+{
+  "requestedModel": "gpt-6-astra",
+  "actualModel": "deployment-gpt-6-astra-platform-global",
+  "text": "{\n  \"question_sufficiency\": \"pass\",\n  \"answer_leakage\": false,\n  \"required_repairs\": [],\n  \"assessed_difficulty\": \"D4\",\n  \"reasoning_dependencies\": [\n    \"A的资金来源、成立时点和实际交付额→适用规范版本、合同效力→返还范围及保证效力（S01、S02；lending-2020-12第13条，civil-code-2020第157、682条）。\",\n    \"B实际到账与预扣利息→最初本金→按归档日期重新计算合法结息，并与整体上限比较（S03—S05；civil-code-2020第670条，lending-2020-12第25—28条）。\",\n    \"C借款成立时间、请求范围及题设报价→新旧利率规则分段→各付款日前的合法应计利息（S07；lending-2015第26条，lending-2020-12第25、31条）。\",\n    \"交易号、到账结果与付款协议→排除重复记录及未执行指令→区分T-02特别约定和其他付款的清偿顺序→滚动确定C本金、利息及费用余额（S08、S09、S11）。\",\n    \"保证条款、原到期日、展期同意情况及逐人行权记录→保证类型与期间→撤诉、送达和再诉的不同效果→保证存续、内部追偿与对外责任（S06、S10；civil-code-2020第686—695条，guarantee-2020第13、25、29、31、32、34条）。\",\n    \"SP-01到账时B、C的到期与担保状态→适用共同签署的条件性抵充约定或法定顺序→确定付款归属及剩余债务（S13；civil-code-2020第560、561条）。\",\n    \"SP-01与后来文书的先后顺序、文书正文及执行前提→第三人义务类型和范围→区分担保存续与立即付款请求（S10、S14；civil-code-2020第552、687、697条，guarantee-2020第36条）。\",\n    \"分项余额及各主体责任性质→最终取分、借款人总额与第三人责任限额→避免对同一债权重复汇总（S12、S14；answer-contract.json）。\"\n  ],\n  \"reason\": \"学生输入已提供决定性到账记录、起息与结息日期、实际自然日/365口径、截日不计息、费用到期、付款顺序、利率切点、保证范围及程序事件。S14具体区分C继续诉讼中的追加与A、B新受理，最终核算明确在SP-01到账之后。题设明确约定、虚构事实和单方法律主张可区分，不需把它们当作原案证据；未直接给出待填金额或核心责任结论。D4仅表示多层且相互影响的规则与计算依赖，不代表实测难度。本次未独立认证法条全文或来源元数据。\"\n}",
+  "usage": {
+    "input_tokens": 22101,
+    "input_tokens_details": {
+      "cache_write_tokens": 22098,
+      "cached_tokens": 0
+    },
+    "output_tokens": 3192,
+    "output_tokens_details": {
+      "reasoning_tokens": 2461
+    },
+    "total_tokens": 25293
+  },
+  "latencyMs": 76108,
+  "completedAt": "2026-11-15T02:55:59.018Z",
+  "status": "completed",
+  "input_sha256": "94f8666653e6ecfcd19062523a0618bfb7b32f3c3be720900997edd8340d0e4b",
+  "output_sha256": "8b969670f1632277cc7c98b8a19ce510d89cea5d8cfa548a30d7d0686b45c8f8"
+}

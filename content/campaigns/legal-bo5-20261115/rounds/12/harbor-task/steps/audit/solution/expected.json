@@ -1,0 +1,15 @@
+{
+  "A_valid": false,
+  "A_restitution": "122858.00",
+  "A_guarantee": "invalid_accessory",
+  "B_initial_principal": "184440.00",
+  "B_protected_total": "200060.40",
+  "B_guarantee": "joint_limited_due_lost_recourse",
+  "C_outstanding_principal": "154941.17",
+  "C_outstanding_interest": "1567.24",
+  "C_outstanding_expenses": "0.00",
+  "C_guarantee": "general_preserved_not_yet_enforceable",
+  "borrower_total": "479426.81",
+  "B_second_guarantee": "expired",
+  "B_joint_payment_limit": "100030.20"
+}

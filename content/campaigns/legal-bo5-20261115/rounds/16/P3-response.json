@@ -1,0 +1,22 @@
+{
+  "requestedModel": "gpt-6-astra",
+  "actualModel": "deployment-gpt-6-astra-platform-global",
+  "text": "{\n  \"question_sufficiency\": \"pass\",\n  \"answer_leakage\": false,\n  \"required_repairs\": [],\n  \"assessed_difficulty\": \"D4\",\n  \"reasoning_dependencies\": [\n    \"A资金来源、实际交付与已返还金额→合同效力→返还范围及保证效力。依据：S01、S02、S12；lending-2020-12第13条、civil-code-2020第157、682条。\",\n    \"B预扣利息与实际交付→逐次结息可认可本金→全期间本息上限→付款后受保护余额。依据：S03—S05、S13；lending-2020-12第25—28条。\",\n    \"C合同成立及起息时间、规范切点→分段利率；付款协议、交易号及执行结果→清偿顺序与逐次剩余本金→截日利息和费用。依据：S07—S11；lending-2015第26条、lending-2020-12第31条、civil-code-2020第561条。\",\n    \"B原到期日、展期同意情况、分别行权与送达撤诉记录→各保证人的责任存续→内部追偿抗辩与对外责任范围。依据：S06；civil-code-2020第692、693、695条，guarantee-2020第13、29、31、32条。\",\n    \"C保证成立时间与原件措辞→保证类型；撤诉、期间内再诉及后来收件签名→保证存续与即时付款条件。依据：S10；civil-code-2020第686、687、692、693条，guarantee-2020第25、31、34条。\",\n    \"SP-01付款时的到期状态、担保范围与履行能力→适用附件约定或法定抵充顺序→B/C归属及剩余责任金额。依据：S06、S10、S13；civil-code-2020第560、561条。\",\n    \"SP-01与辛签署文件的先后顺序、文件正文及程序进度→第三人义务类型与即时付款边界→避免追溯改写抵充及重复汇总。依据：S12—S14；civil-code-2020第552、687条，guarantee-2020第36条。\"\n  ],\n  \"reason\": \"学生材料已提供决定性资金事实、实际到账及起息日期、结息节点、实际自然日/365口径、截日不计息规则、费用到期日、付款特别约定、保证范围及完整行权时间线。交易重复与失败付款有可区分记录，SP-01付款和后来签署事件有明确时序，输出契约明确金额含义、取分及汇总方法，未发现阻碍唯一作答的必要信息缺口。合同原文、虚构题设约定和适用规则属于允许输入，未直接给出最终抵充、余额或责任答案。D4仅表示存在跨分支依赖和多阶段计算，不代表已经实测为高难；本审查未独立认证法条全文或来源元数据，也不将题设视为真实案件证据。\"\n}",
+  "usage": {
+    "input_tokens": 22042,
+    "input_tokens_details": {
+      "cache_write_tokens": 22039,
+      "cached_tokens": 0
+    },
+    "output_tokens": 2086,
+    "output_tokens_details": {
+      "reasoning_tokens": 1349
+    },
+    "total_tokens": 24128
+  },
+  "latencyMs": 48838,
+  "completedAt": "2026-11-15T02:28:47.020Z",
+  "status": "completed",
+  "input_sha256": "a135d49eb0166b49c2a18b0292f6a55fba84cb84730f767dbeb543f1770a4a71",
+  "output_sha256": "51bea0b548c3a9e072819e64782247407533cdf16aa2e6e1e4931eeddd1f4adb"
+}

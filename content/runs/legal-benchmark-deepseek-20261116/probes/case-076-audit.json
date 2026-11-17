@@ -1,0 +1,14 @@
+{
+  "id": "case-076",
+  "rubric_supported": true,
+  "rubric_problems": [
+    "案涉合同签订于2016年，rubric主要列《民法典》第153、761、766条，未说明法律时际适用；效力判断应优先适用《合同法》及合同法解释二，保理性质可参照民法典。"
+  ],
+  "legal_core_correct": true,
+  "substantive_errors": [],
+  "minor_omissions": [
+    "未复述汇通保理2019年因未取得许可被责令停止新增业务及处罚信息公开披露这一后续事实；不影响本题效力和性质认定。"
+  ],
+  "wrong_seed_candidate": false,
+  "reason": "模型结论为两份协议有效且属保理合同，并正确分析未取得许可不当然导致合同无效、构成有追索权保理；与rubric核心结论一致。"
+}

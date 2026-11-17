@@ -1,0 +1,12 @@
+{
+  "round": "04",
+  "stage": "Bo5-1",
+  "status": "failed_usage_unknown",
+  "submitted_at": "2026-11-14T21:18:47.238Z",
+  "input_sha256": "516065ec94db46d50c544a60a403e363b2bb9d16d8432440840f3017259951d0",
+  "input_reservation": 29414,
+  "output_reservation": 10000,
+  "usage": null,
+  "error": "Incomplete response: incomplete",
+  "failed_at": "2026-11-14T21:22:05.769Z"
+}

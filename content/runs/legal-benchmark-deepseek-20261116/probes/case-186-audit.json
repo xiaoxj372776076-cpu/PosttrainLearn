@@ -1,0 +1,15 @@
+{
+  "id": "case-186",
+  "rubric_supported": true,
+  "rubric_problems": [
+    "分析项提到李四会从张三投资中获取报酬，但题干未明确该事实；该点不影响过错分担结论。",
+    "rubric对‘保本担保’的性质及无效担保责任上限未细化，结论比例区间较宽。"
+  ],
+  "legal_core_correct": true,
+  "substantive_errors": [],
+  "minor_omissions": [
+    "未逐一展开委托合同要件分析，但已认定投资及保本承诺无效并按过错分担，不影响核心结论。"
+  ],
+  "wrong_seed_candidate": false,
+  "reason": "答案结论、损失基数、50%分担及主要法律依据与rubric一致；虚拟货币投资违背公序良俗无效、双方过错分担的认定无明显实质法律错误。"
+}

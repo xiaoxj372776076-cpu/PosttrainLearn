@@ -1,0 +1,151 @@
+{
+  "question_valid": true,
+  "reference_supported": false,
+  "difficulty_mechanism_valid": false,
+  "assessed_difficulty": "D4",
+  "results": [
+    {
+      "index": 1,
+      "legal_correct": true,
+      "final_amount_correct": true,
+      "basis_correct": true,
+      "correct": true,
+      "error_kind": "none",
+      "failed_concepts": [],
+      "evidence": [
+        "S01、S02及lending-2020-12第13条、civil-code-2020第157、682条支持A无效、返还122852.00元及丁的从属保证无效。",
+        "S06、S10及guarantee-2020第13、29、31、32条支持戊全额连带保证存续、庚责任消灭、己的一般保证保留但暂不可立即执行；对戊行权不及于庚，戊亦无据主张丧失内部追偿权免责。",
+        "B四段日数175、103、84、204及结息公式正确：付款前225511.887971886元，低于整体上限227224.148164384元。依S13，SP-01抵B后余额及戊即时付款上限均为200511.89元。",
+        "C按23.5%与13%分段，T-02本金优先，其余依合同清偿顺序；末段26日。最终本金148895.46元、利息1378.81元、费用0元，借款人总额473638.16元，均可复核。"
+      ],
+      "quality_warnings": [],
+      "reason": "必要法律分支、必答金额及决定性计算依据均正确。B内部先息后本的展示金额亦与合法结息余额一致。"
+    },
+    {
+      "index": 2,
+      "legal_correct": true,
+      "final_amount_correct": true,
+      "basis_correct": true,
+      "correct": true,
+      "error_kind": "none",
+      "failed_concepts": [],
+      "evidence": [
+        "正确区分戊期间内诉状送达后撤诉、庚期间届满后首次催告、己期间内撤诉后再诉三种程序效果，符合S06、S10及guarantee-2020第29、31条。",
+        "以S09原合同及T-02补充协议确定C的清偿顺序，未把乙单方备注作为双方变更；T-01不重复抵扣，X-01不计付款。",
+        "B四段结息、566日整体上限及C跨2020-08-20的188日／32日分段均正确。全部必答金额与复核结果一致。",
+        "依S06、S10、S13保留的一般保证仍属担保，附件比较依法可请求利率13.2%与13%，SP-01全部抵B；戊付款责任不重复加入乙的债务总额。"
+      ],
+      "quality_warnings": [],
+      "reason": "法律状态、责任范围、金额和公开依据一致。对civil-code-2020第561条的并列引用不构成实质性溯及适用错误，因为答案已明确以原合同约定和补充协议确定旧付款的顺序。"
+    },
+    {
+      "index": 3,
+      "legal_correct": true,
+      "final_amount_correct": true,
+      "basis_correct": true,
+      "correct": true,
+      "error_kind": "none",
+      "failed_concepts": [],
+      "evidence": [
+        "A效力与返还、戊和庚分别行权、内部追偿前提、己的保证保留及先诉抗辩均与S01、S02、S06、S10和所附规范相符。",
+        "C的合并公式中363日＝175＋188，234日＝32＋202；本金未变期间可以合并计息，且未将未付利息计入计息本金。",
+        "B付款后余额及戊即时付款上限均为200511.89元；C本金148895.46元、利息1378.81元、费用0元；总额473638.16元，均正确。"
+      ],
+      "quality_warnings": [
+        {
+          "location": "basis.C必要计算.P6",
+          "displayed_value": "161701.498334",
+          "checked_value": "161701.498335066907",
+          "absolute_difference_yuan": "0.000001066907",
+          "changes_final_rounding": false,
+          "affects_substantive_score": false
+        },
+        {
+          "location": "basis.C必要计算.P7",
+          "displayed_value": "148895.462552",
+          "checked_value": "148895.462552890703",
+          "absolute_difference_yuan": "0.000000890703",
+          "changes_final_rounding": false,
+          "affects_substantive_score": false
+        }
+      ],
+      "reason": "两处高精度中间展示偏差均远小于0.01元，不改变规则、日数、公式或最终取分。依冻结容差仅记录质量提示，不计实质错误。"
+    },
+    {
+      "index": 4,
+      "legal_correct": true,
+      "final_amount_correct": false,
+      "basis_correct": false,
+      "correct": false,
+      "error_kind": "substantive",
+      "failed_concepts": [
+        "B第三次合法结息的数值复算",
+        "B付款后余额及戊即时付款上限",
+        "分项取分后的借款人总额"
+      ],
+      "evidence": [
+        "S04规定实际自然日／365且中间不取分。第三次结息应为203825.915673154438×(1＋0.132×84/365)＝210017.756092288510元，而非210017.525955元，绝对差约0.23013729元。",
+        "继续按204日计算，SP-01前B本息应为225511.887971886168元，而非225511.640856元，绝对差约0.24711589元；两者虽都低于整体上限，但上限不会消除该错误。",
+        "B_protected_total及B_joint_payment_limit应各为200511.89元，答案各报200511.64元，均少0.25元；borrower_total应为473638.16元，答案报473637.91元，少0.25元。",
+        "答案采用的保证规则、SP-01归属、利率、日数及结息公式本身正确；A及C的必答最终金额也正确。错误发生于B公式的数值执行，并向三个最终字段传导。"
+      ],
+      "quality_warnings": [
+        {
+          "location": "basis.C计算.付款后余额展示.T-07本金",
+          "displayed_value": "148895.462552",
+          "checked_value": "148895.462552890703",
+          "absolute_difference_yuan": "0.000000890703",
+          "changes_final_rounding": false,
+          "affects_substantive_score": false
+        }
+      ],
+      "reason": "属于法律金额计算的实质错误，而非法律规则选择错误或格式错误。B中间差额超过冻结容差并改变必答最终金额，因此金额层和计算依据层不通过；三个错误字段源于同一数值错误，不是三个独立法律错误。"
+    },
+    {
+      "index": 5,
+      "legal_correct": true,
+      "final_amount_correct": true,
+      "basis_correct": true,
+      "correct": true,
+      "error_kind": "none",
+      "failed_concepts": [],
+      "evidence": [
+        "正确适用A无效规则、B实际交付本金和结息限额，以及C旧借款的利率过渡规则；2019年付款顺序明确来自S09合同及补充协议。",
+        "依S06及guarantee-2020第13、29、31条，戊责任存续且不因庚免责而减半；依S10及第31条，己的一般保证保留但尚不具备即时付款条件。",
+        "C的P5公式正确，包含保留的I2、旧利率175＋188日、新利率32＋202日及三笔付款；后续421、395、26日公式正确。",
+        "全部必答最终金额正确，包括B余额和戊上限200511.89元、C本金148895.46元及利息1378.81元、总额473638.16元。"
+      ],
+      "quality_warnings": [
+        {
+          "location": "basis.C计算.calculation.P5",
+          "displayed_value": "170030.2739665603",
+          "checked_value": "170030.273967310940",
+          "absolute_difference_yuan": "0.000000750640",
+          "changes_final_rounding": false,
+          "affects_substantive_score": false
+        }
+      ],
+      "reason": "P5展示值存在微小偏差，但公式、法律适用、日数及最终金额正确。依预先规定的容差仅作质量提示，不能据此改判为实质错误。"
+    }
+  ],
+  "analysis": "依据随题事实、规范摘录及日期和算式复核，题面能够支持唯一的必要法律状态及最终金额，question_valid=true。工程参考answer中的状态和金额可获支持，但proof.shared_cutoff_payment.basis援引“later S14”；学生材料没有S14，也没有该所谓后来事件，因此完整参考的来源对齐不通过，reference_supported=false。SP-01归属仅凭S06、S10、S13即可确定，这一参考瑕疵不计为学生错误。按用户要求，当前冻结参考存在错误时拒绝难度验收，故difficulty_mechanism_valid=false；D4仅表示题面包含保证分别行权、内部追偿前提、担保比较与抵充、跨时利率及结息限额等必要依赖的结构性评估，不是经验难度认证。五份均为有效完成答案，未见截断、基础设施失败或应计为实质错误的格式问题。法律层5/5、最终金额层4/5、依据层4/5，整体4/5；不能记为1—2/5。唯一实质失败来自第4份的B结息运算，不能据此声称法律推理能力不足。分项核验同时覆盖B余额、C本金和利息以及戊付款上限，没有仅凭总额判定。此次未调用工具、联网核验规范页面或验证所附哈希，也不能仅凭答卷确认盲答模型及上下文的独立性；不构成专家审核或法律金标。",
+  "skill_changes": [
+    {
+      "instruction": "在P4/P6增加参考依据的段号存在性检查；对不存在的S14保留错误记录，在修订版中删除该表述，改以S06、S10、S13说明SP-01归属，并重做受影响的来源对齐检查。",
+      "why": "参考最终答案正确，不代表其全部证据说明均有来源；无来源事件会破坏难度验收的可追溯性。",
+      "evidence": "engineering_reference.proof.shared_cutoff_payment.basis出现“later S14”，而dossier.md仅提供S01至S13。"
+    },
+    {
+      "instruction": "继续固定法律、最终金额、计算依据三层评分；中间展示偏差单列展示值、复核值、绝对差和最终取分影响，同源数值错误记录其传导字段，不重复解释为多个法律失败。",
+      "why": "必须区分容差内展示瑕疵与改变必答金额的计算错误，不能为追求目标成功率事后调整口径。",
+      "evidence": "第3、5份的微小展示偏差不改变最终取分；第4份B第三次结息偏差约0.23013729元，最终使B余额、戊上限和总额各少0.25元。"
+    },
+    {
+      "instruction": "封存本轮五答及4/5分层审计。后续如另获执行授权，应先检查共同成功分支中的整理性提示；任何学生事实、规则或评分变更均另建冻结轮次并重新盲答，不复用本轮结果。",
+      "why": "本轮全部法律分支均成功，只有一次运算失败；增加结息次数、替换金额或收紧精度不能证明法律推理机制变难。",
+      "evidence": "五份答案均正确识别戊、庚、己的不同状态、内部追偿前提及SP-01抵充B的依赖关系。"
+    }
+  ],
+  "next_focus": "先修复工程参考的S14来源对齐错误并完成受影响检查，不改动本轮五答及4/5记录。若后续另行授权研究，重点检查学生视图是否预先解释了独立保证、内部追偿及担保比较关系；保留所有必要合同条款和否定事实，分别验证这些分支对B、C余额与戊上限的输出敏感性。新情景或新评分必须重新冻结实测，不以追加挑选答案寻找1—2/5。",
+  "needs_expert_review": true
+}

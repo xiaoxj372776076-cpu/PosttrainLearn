@@ -1,0 +1,21 @@
+{
+  "task_path": "harbor/tasks/loan-restitution",
+  "task_schema": "1.4",
+  "files": [
+    "claims.txt",
+    "findings.txt",
+    "rules.json",
+    "mentions.json",
+    "output-contract.json",
+    "scope.txt"
+  ],
+  "verifier_sha256": "63c25ed2a8e3edeead86fb09acab45d75c1d67f0db810876cf6e04bcd2473143",
+  "reference_sha256": "92ad16d9c2ffed88d939430858db710a13fc01a0f6760dbdeb8e6b96c29d6d84",
+  "student_sha256": "8abe001158c7bfe20e33ec3718ae88df11c9ff65eb279895aacf10de591fcd00",
+  "leakage_check": {
+    "method": "explicit hidden-paragraph and target-string exclusion plus prompt review",
+    "status": "pass",
+    "limitations": "不是全面语义泄漏证明"
+  },
+  "oracle_note": "oracle copies source-derived reference, only tests verifier plumbing"
+}

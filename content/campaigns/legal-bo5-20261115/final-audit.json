@@ -1,0 +1,1834 @@
+{
+  "campaign": "legal-bo5-20261115",
+  "completed_at": "2026-11-15T03:36:59.233Z",
+  "status": "completed_max_rounds",
+  "configuration_history": [
+    {
+      "from_round": 1,
+      "max_output_tokens": 10000,
+      "reason": "Initial frozen configuration; all prior inputs and trials remain unchanged."
+    },
+    {
+      "from_round": 5,
+      "max_output_tokens": 20000,
+      "reason": "Round 04 Bo5-5 explicitly terminated at max_output_tokens. Increase the output allowance rather than using truncation as difficulty. Aggregate budgets, model and reasoning effort remain unchanged.",
+      "evidence": "rounds/04/Bo5-5-error.json"
+    },
+    {
+      "from_round": 7,
+      "adapter_version": "0.3.0",
+      "reason": "Clarify that the host writes answer.json; exclude missing-file-tool prose from substantive difficulty. No new tools, model changes or budget changes.",
+      "evidence": "rounds/06/harbor-Bo5-1.json"
+    },
+    {
+      "from_round": 10,
+      "blind_concurrency": 2,
+      "reason": "Bounded parallel independent trials; transaction-safe request reservations, same model/input/budget and all five answers retained."
+    },
+    {
+      "from_round": 13,
+      "blind_concurrency": 5,
+      "host_memory_bytes": 34359738368,
+      "reason": "Five independent 2GB Harbor environments fit the verified 32GB host; same input/model/tools/output budget and transaction-safe aggregate reservations."
+    }
+  ],
+  "completed_rounds": 17,
+  "full_chain_attempted_rounds": 18,
+  "started_rounds": 20,
+  "target_confirmed": false,
+  "winner": null,
+  "rounds": [
+    {
+      "round": 1,
+      "skill_version": "1.2.0",
+      "source_mode": "source_preserving",
+      "student_projection": "legacy_frozen_projection",
+      "cross_branch_coupling": null,
+      "procedural_coupling": null,
+      "cap_shortcut_repair": null,
+      "temporal_rate_coupling": null,
+      "co_guarantee_coupling": null,
+      "relative_rights_variant": null,
+      "third_party_sequence_coupling": null,
+      "reviewer_skill_projection": "legacy_full_iteration_skill",
+      "teacher_reference_supported": true,
+      "blind_concurrency": null,
+      "configuration_evidence": "legacy_frozen_requests_without_separate_model_config",
+      "frozen_at": "2026-11-14T20:56:55.996Z",
+      "max_output_tokens": 10000,
+      "valid_measurement": false,
+      "first_batch": {
+        "measured": {
+          "valid": false,
+          "correct": 5,
+          "n": 5,
+          "target_hit": false,
+          "deterministic_successes": 5,
+          "reason": "difficulty_mechanism_not_valid"
+        },
+        "completed_answers": 5,
+        "identical_input_sha256": "fdc6e06376b42225fca943f21b26a09c43e8b1f4d79c49cede393e13f13e3c58",
+        "legal_state_check_perfect_answers": 5,
+        "semantic_components": {
+          "legal_correct": null,
+          "final_amount_correct": null,
+          "basis_correct": null
+        },
+        "raw_frozen_legal_check_perfect_answers": 5,
+        "fixed_check_failures": {},
+        "normalized_field_failures": {},
+        "failure_analysis": [],
+        "note": "Fixed legal-state fields are not semantic legal certification; inspect P6 explanations separately."
+      },
+      "confirmation": null,
+      "confirmed_target_hit": false,
+      "analysis": "独立按题设与所给规范核对，工程参考的三项金额及三个布尔值均有支持。524100元成立于文末明确限定的同一关系口径，不是已经独立追踪追加款来源后的结论；19900元和2000元仅为算术余额及陈述差异。题目虽非完整卷宗，但这些限制不妨碍完成约定任务。所展示五份答案均完整且实质正确，本轮计5/5，实质错误为0；不能认定命中1–2/5。静态评为D3，是因为仍需完成效力判断与返还基础转换、凭证与实际交付比较、算术差异与证明程度区分；这不等于实测高难度。difficulty_mechanism_valid=false表示本轮没有必要推理失误支持所追求的低成功率机制：文末限定已解决追加款归属并明示来源和利息边界，输出契约又直接点出待核对状态，时点也没有真正交叉适用分支。核验限于提供的摘录和答案，未重新访问来源页面；调用独立性、冻结哈希及预算日志未提供，不能据此认证。"
+    },
+    {
+      "round": 2,
+      "status": "question_quarantined_before_blind",
+      "valid_measurement": false,
+      "reason": "quarantined_before_blind",
+      "source_mode": "fictional_derivative",
+      "skill_version": "1.2.1",
+      "max_output_tokens": 10000
+    },
+    {
+      "round": 3,
+      "status": "question_quarantined_before_blind",
+      "valid_measurement": false,
+      "reason": "quarantined_before_blind",
+      "source_mode": "fictional_derivative",
+      "skill_version": "1.2.2",
+      "max_output_tokens": 10000
+    },
+    {
+      "round": 4,
+      "skill_version": "1.2.3",
+      "source_mode": "fictional_derivative",
+      "student_projection": "legacy_frozen_projection",
+      "cross_branch_coupling": null,
+      "procedural_coupling": null,
+      "cap_shortcut_repair": null,
+      "temporal_rate_coupling": null,
+      "co_guarantee_coupling": null,
+      "relative_rights_variant": null,
+      "third_party_sequence_coupling": null,
+      "reviewer_skill_projection": "legacy_full_iteration_skill",
+      "teacher_reference_supported": true,
+      "blind_concurrency": null,
+      "configuration_evidence": "legacy_frozen_requests_without_separate_model_config",
+      "frozen_at": "2026-11-14T21:18:15.658Z",
+      "max_output_tokens": 10000,
+      "valid_measurement": true,
+      "first_batch": {
+        "measured": {
+          "valid": true,
+          "correct": 4,
+          "n": 5,
+          "target_hit": false,
+          "deterministic_successes": 0,
+          "reason": "semantic_five_answer_measurement"
+        },
+        "completed_answers": 5,
+        "identical_input_sha256": "516065ec94db46d50c544a60a403e363b2bb9d16d8432440840f3017259951d0",
+        "legal_state_check_perfect_answers": 5,
+        "semantic_components": {
+          "legal_correct": null,
+          "final_amount_correct": null,
+          "basis_correct": null
+        },
+        "raw_frozen_legal_check_perfect_answers": 0,
+        "fixed_check_failures": {
+          "A_valid": 5,
+          "C_outstanding_principal": 1,
+          "C_outstanding_interest": 1,
+          "borrower_total": 1
+        },
+        "normalized_field_failures": {
+          "C_outstanding_principal": 1,
+          "C_outstanding_interest": 1,
+          "borrower_total": 1
+        },
+        "failure_analysis": [
+          {
+            "index": 1,
+            "error_kind": "substantive",
+            "failed_concepts": [
+              "C首段利息计算",
+              "清偿后本金及后续利息的数值递推"
+            ],
+            "reason": "法律状态、清偿顺序、日期区间及其他债务结论正确，但C计算出现实质数值错误，并传导至本金、尾段利息和总额。下游金额差异不另算独立法律判断错误。"
+          }
+        ],
+        "note": "Fixed legal-state fields are not semantic legal certification; inspect P6 explanations separately."
+      },
+      "confirmation": null,
+      "confirmed_target_hit": false,
+      "analysis": "依据学生可见事实和规范复核，题面具备必要的交付、起息、结息、付款、到期和保证行权信息，未发现使问题无法回答的缺口。工程参考得到支持：A返还122906.00元；B受保护本息为181480×(1＋0.132×175/365)×(1＋0.132×187/365)×(1＋0.132×204/365)，取分221214.04元，低于全程上限223129.91元；C本金199035.88元、利息10008.51元、费用0.00元；总额553164.43元。丁保证无效，戊可被请求连带支付，己因未在一般保证期间内依法行权而免责。依所附完成记录及答案文本，五份均完整可审计，未见截断或基础设施异常，实质正确数为4/5，而非确定性检查表面呈现的0/5，未命中1–2/5区间。五份答案均正确处理主要法律分支，唯一失败来自C金额计算。题目确有本金审查与结息限额、付款顺序与后续计息、保证方式与行权时点等必要交互，结构评为D3；难度机制有效不等于低成功率已获验证，也不能凭字段数量或材料长度认定D4。本次仅复核所给冻结文本和答案，未外部核验来源下载、哈希或调用独立性。"
+    },
+    {
+      "round": 5,
+      "skill_version": "1.2.4",
+      "source_mode": "fictional_derivative",
+      "student_projection": "legacy_frozen_projection",
+      "cross_branch_coupling": null,
+      "procedural_coupling": null,
+      "cap_shortcut_repair": null,
+      "temporal_rate_coupling": null,
+      "co_guarantee_coupling": null,
+      "relative_rights_variant": null,
+      "third_party_sequence_coupling": null,
+      "reviewer_skill_projection": "legacy_full_iteration_skill",
+      "teacher_reference_supported": true,
+      "blind_concurrency": null,
+      "configuration_evidence": "model_config_and_frozen_requests",
+      "frozen_at": "2026-11-14T21:47:45.391Z",
+      "max_output_tokens": 20000,
+      "valid_measurement": false,
+      "first_batch": {
+        "measured": {
+          "valid": false,
+          "correct": 4,
+          "n": 5,
+          "target_hit": false,
+          "deterministic_successes": 4,
+          "reason": "difficulty_mechanism_not_valid"
+        },
+        "completed_answers": 5,
+        "identical_input_sha256": "c167c7b951d45298321a437b8ad22250c1cef37d337ed4484f7d7fd7ae403fd6",
+        "legal_state_check_perfect_answers": 5,
+        "semantic_components": {
+          "legal_correct": null,
+          "final_amount_correct": null,
+          "basis_correct": null
+        },
+        "raw_frozen_legal_check_perfect_answers": 5,
+        "fixed_check_failures": {
+          "B_protected_total": 1,
+          "borrower_total": 1
+        },
+        "normalized_field_failures": {
+          "B_protected_total": 1,
+          "borrower_total": 1
+        },
+        "failure_analysis": [
+          {
+            "index": 2,
+            "error_kind": "substantive",
+            "failed_concepts": [
+              "B逐段结息公式的数值求值",
+              "错误B金额向戊的给付范围及借款人总额传递"
+            ],
+            "reason": "属于算术求值造成的实质金额错误，不是法律分支错误或格式问题。总额是在错误B金额基础上的正确加总，属于下游传播，不能另算一次独立法律错误。答案未披露中间数值，无法进一步确定内部首次出错的运算步骤；现有证据也不足以归因为取分错误。其余金额及法律状态正确，“invalid”表达可接受。"
+          }
+        ],
+        "note": "Fixed legal-state fields are not semantic legal certification; inspect P6 explanations separately."
+      },
+      "confirmation": null,
+      "confirmed_target_hit": false,
+      "analysis": "独立按题设事实、所附条文和算式核对，未发现使问题不可回答或工程参考失去支持的缺陷。工程参考及教师结论未被当作权威依据。B的三个期间为175、187、204日，合法结息后的两个本金为193358.863013…、206435.219656…元；期末本息221665.048683…元，低于181850×(1＋0.148×566/365)＝223584.824109…元。C的五段日数为70、127、83、99、161；T-01后本金218719.682191…元，T-02后本金207123.682191…元，T-03后未付利息718.007779…元，T-04前利息7122.385525…元，付款后本金199188.067717…元；最终利息为该本金×0.114×161/365＝10016.158342…元。分项取分后总额为553769.28元。保证状态分别由主合同无效、连带保证期间内请求、一般保证未及时起诉决定，参考中的invalid_accessory、joint、expired均有支持。五份答案均为有效完成，法律状态及决定性规则适用正确数为5/5，全部金额正确数及整体实质正确数为4/5；实质错误1份，格式错误、截断及基础设施故障均未见。现有确定性检查已接受A_valid的等价表达，本次无需改判。D3仅表示题目确有结息限额、清偿顺序及保证期间等多步必要操作，不表示实测高难度。difficulty_mechanism_valid=false是指本轮未验证目标1—2/5的低成功率机制：唯一失败是必要金额计算中的算术错误，不能据此宣称法律推理能力不足，也不能启动命中确认。未外部复验网页、哈希或运行审计脚本；所给记录不足以独立核实盲答隔离、工具使用和模型条件，结果不得外推至其他执行环境。"
+    },
+    {
+      "round": 6,
+      "skill_version": "1.2.5",
+      "source_mode": "fictional_derivative",
+      "student_projection": "neutral_primary_records",
+      "cross_branch_coupling": null,
+      "procedural_coupling": null,
+      "cap_shortcut_repair": null,
+      "temporal_rate_coupling": null,
+      "co_guarantee_coupling": null,
+      "relative_rights_variant": null,
+      "third_party_sequence_coupling": null,
+      "reviewer_skill_projection": "legacy_full_iteration_skill",
+      "teacher_reference_supported": true,
+      "blind_concurrency": null,
+      "configuration_evidence": "model_config_and_frozen_requests",
+      "frozen_at": "2026-11-14T22:09:32.388Z",
+      "max_output_tokens": 20000,
+      "valid_measurement": false,
+      "first_batch": {
+        "measured": {
+          "valid": false,
+          "correct": 3,
+          "n": 5,
+          "target_hit": false,
+          "deterministic_successes": 2,
+          "reason": "nonsemantic_or_inconsistent_grading"
+        },
+        "completed_answers": 5,
+        "identical_input_sha256": "765dcef21f4866b0dbcc64d0f27bdfd7265b2a38013d53f557671c05bddf0be8",
+        "legal_state_check_perfect_answers": 5,
+        "semantic_components": {
+          "legal_correct": null,
+          "final_amount_correct": null,
+          "basis_correct": null
+        },
+        "raw_frozen_legal_check_perfect_answers": 3,
+        "fixed_check_failures": {
+          "C_outstanding_interest": 1,
+          "borrower_total": 1
+        },
+        "normalized_field_failures": {
+          "C_outstanding_interest": 1,
+          "borrower_total": 1
+        },
+        "failure_analysis": [
+          {
+            "index": 2,
+            "error_kind": "substantive",
+            "failed_concepts": [
+              "C_outstanding_principal：公式数值求值不符",
+              "C_outstanding_interest：金额偏差",
+              "borrower_total：错误分项向总额传递"
+            ],
+            "reason": "存在金额实质错误，同时有前置说明造成的格式问题。首个可观察数值偏差出现在T-04后本金的最终求值；此前未披露中间数值，不能定位更早的内部运算错误。法律规则、分段日数及所列公式正确，也没有证据表明错误来自取分规则。"
+          },
+          {
+            "index": 5,
+            "error_kind": "substantive",
+            "failed_concepts": [
+              "C_outstanding_interest：末段利息公式求值不符",
+              "borrower_total：错误利息向总额传递"
+            ],
+            "reason": "首个可观察数值偏差出现在末段利息求值，并传递至总额。属于金额实质错误，不是法律分支、日数、清偿顺序或格式错误。原检查识别的两个失败字段获得P6支持，无需改判字段集合。"
+          }
+        ],
+        "note": "Fixed legal-state fields are not semantic legal certification; inspect P6 explanations separately."
+      },
+      "confirmation": null,
+      "confirmed_target_hit": false,
+      "analysis": "依据题设与所附冻结条文复核，未发现妨碍唯一作答的事实缺口或工程参考答案错误。A适用lending-2020-12第13、31条，套取贷款转贷不再以高利或借款人知情为要件；按civil-code-2020第157、682条及S02、S12，返还122894.00元，丁的从属保证无效，不扩展到未请求的过错赔偿。B依第670条及lending-2020-12第25—28条，以182220元、14.80%计算；三个区间为175、187、204日，合法逐期结息约227313.705829元，全程上限182220×(1＋0.148×566/365)＝224039.739616…元，最终支持224039.74元。戊未书面同意展期，依civil-code-2020第692、693、695条，其保证期间仍于2023-07-12届满，7月18日请求已迟。C按S08—S11识别四笔实际付款，不重复计算T-01，不计未执行X-01；依第560、561条，只有T-02适用本金优先。复算四次付款后的本金依次约为219125.646027、207516.646027、207516.646027、199593.471986元；末段161日利息约10036.544068元，费用余额为零。己为一般保证，期间于2023-06-15届满，5月8日催告己不能替代期间内对乙起诉，6月20日起诉已迟；因此是责任期间届满，而非已保全但暂不可执行。分项取分后总额556563.75元。以上为对所附事实和条文的复核，未联网核验来源元数据，也未执行文件写入或外部审计脚本。五份均有完整可审计答案：有效完成5/5、法律分支正确5/5、金额全对3/5、整体实质正确3/5。原整段解析通过仅答案3、4；P6将答案1改为实质通过，将答案2由解析失败细分为三个金额字段失败，答案3—5的既有字段判断无需改判。答案1、2的前置说明属于格式问题，其中答案2另有金额实质错误；未见截断或基础设施故障导致缺答的证据。题目具备证据识别、条件例外、分段清偿和保证期间判断，结构评定为D3，但不能由题面长度或运算量升级为D4。difficulty_mechanism_valid=false表示本轮未验证低成功率法律推理机制：全部法律分支成功，两个实质失败均为必要金额算式的数值求值问题，至多反映本轮法律金额计算可靠性，不证明法律推理能力不足。整体3/5未命中1–2/5，不启动命中确认，也不沿用先前轮次的4/5计数。"
+    },
+    {
+      "round": 7,
+      "skill_version": "1.2.6",
+      "source_mode": "fictional_derivative",
+      "student_projection": "neutral_primary_records",
+      "cross_branch_coupling": null,
+      "procedural_coupling": null,
+      "cap_shortcut_repair": null,
+      "temporal_rate_coupling": null,
+      "co_guarantee_coupling": null,
+      "relative_rights_variant": null,
+      "third_party_sequence_coupling": null,
+      "reviewer_skill_projection": "legacy_full_iteration_skill",
+      "teacher_reference_supported": true,
+      "blind_concurrency": null,
+      "configuration_evidence": "model_config_and_frozen_requests",
+      "frozen_at": "2026-11-14T22:30:26.585Z",
+      "max_output_tokens": 20000,
+      "valid_measurement": false,
+      "first_batch": {
+        "measured": {
+          "valid": false,
+          "correct": 5,
+          "n": 5,
+          "target_hit": false,
+          "deterministic_successes": 5,
+          "reason": "difficulty_mechanism_not_valid"
+        },
+        "completed_answers": 5,
+        "identical_input_sha256": "17054ed5afa9bd64c5807bff4f4d5e3877e352d310ead906fc2d5de8294f9f5c",
+        "legal_state_check_perfect_answers": 5,
+        "semantic_components": {
+          "legal_correct": null,
+          "final_amount_correct": null,
+          "basis_correct": null
+        },
+        "raw_frozen_legal_check_perfect_answers": 5,
+        "fixed_check_failures": {},
+        "normalized_field_failures": {},
+        "failure_analysis": [],
+        "note": "Fixed legal-state fields are not semantic legal certification; inspect P6 explanations separately."
+      },
+      "confirmation": null,
+      "confirmed_target_hit": false,
+      "analysis": "先按题设和所附规则复核，工程参考的决定性结论获支持。A适用2021年起施行版本，不要求高利转贷或借款人知情，返还142919－20031＝122888.00元。B实际本金182590元，保护利率14.80%，全期566日；逐段结息候选额约228076.444421元，高于182590×(1＋0.148×566/365)＝224494.655123…元，故保护224494.66元。C按五段日数70、127、83、99、161及各笔适用的清偿顺序计算，最终未取分本金199998.876254889…元、利息10056.9297939239…元、费用0元；分项取分后总额557438.47元。丁、戊、己分别属于保证无效、期间届满免责、保证权利已保全但尚可行使先诉抗辩。可核验法源为题给民法典及民间借贷解释官方链接：https://www.court.gov.cn/zixun/xiangqing/233181.html；https://cicc.court.gov.cn/html/1/380/385/12844.html。本次未重新联网核验网页或运行独立计算程序。五份均为有效完成：完成5/5、法律分支正确5/5、最终金额正确5/5、整体实质正确5/5；未见格式失败、截断或基础设施故障。原始检查与P6结论一致，无需改判。答案1、2、4、5有分以下近似数展示偏差，但必要公式及契约规定的分精度结果正确；这些质量提示不构成将本轮改计为1/5的依据。题目具有证据识别、清偿例外与余额递推等D3结构，但本轮没有观察到必要推理失误，故difficulty_mechanism_valid=false表示低成功率难度机制未获本轮实测支持，并非题目无效。未命中1—2/5，不启动命中确认，也不据五答全对断言题目没有法律推理要求。题面同时出现无需写文件与写入文件的交付表述，属于接口一致性问题，本轮未影响五份完整JSON答案。以下仅为修改建议，未修改文件或执行后续调用。"
+    },
+    {
+      "round": 8,
+      "skill_version": "1.2.7",
+      "source_mode": "fictional_derivative",
+      "student_projection": "neutral_primary_records",
+      "cross_branch_coupling": {
+        "enabled_from_round": 8,
+        "span": "S13",
+        "amount": "25000.00",
+        "dependency": "保证存续状态 -> 民法典560条B/C债务抵充 -> 未偿余额",
+        "scope": "双方限定只清偿B/C；不将先诉抗辩视为保证消灭；新增题设与参考，不复用旧题计数"
+      },
+      "procedural_coupling": null,
+      "cap_shortcut_repair": null,
+      "temporal_rate_coupling": null,
+      "co_guarantee_coupling": null,
+      "relative_rights_variant": null,
+      "third_party_sequence_coupling": null,
+      "reviewer_skill_projection": "legacy_full_iteration_skill",
+      "teacher_reference_supported": true,
+      "blind_concurrency": null,
+      "configuration_evidence": "model_config_and_frozen_requests",
+      "frozen_at": "2026-11-14T22:48:21.782Z",
+      "max_output_tokens": 20000,
+      "valid_measurement": true,
+      "first_batch": {
+        "measured": {
+          "valid": true,
+          "correct": 5,
+          "n": 5,
+          "target_hit": false,
+          "deterministic_successes": 5,
+          "reason": "semantic_five_answer_measurement"
+        },
+        "completed_answers": 5,
+        "identical_input_sha256": "08862440e079bf6da3ed7190666088cd924cb2736bf4a899ace7f59626d1cb80",
+        "legal_state_check_perfect_answers": 5,
+        "semantic_components": {
+          "legal_correct": null,
+          "final_amount_correct": null,
+          "basis_correct": null
+        },
+        "raw_frozen_legal_check_perfect_answers": 5,
+        "fixed_check_failures": {},
+        "normalized_field_failures": {},
+        "failure_analysis": [],
+        "note": "Fixed legal-state fields are not semantic legal certification; inspect P6 explanations separately."
+      },
+      "confirmation": null,
+      "confirmed_target_hit": false,
+      "analysis": "闭卷复核支持题面和工程参考。A适用lending-2020-12第13条，不要求高利或借款人知情；返还余额为122882.00元。B实际本金182960.00元，保护利率14.80%，全期566日；合法逐次结息约228538.618058元，高于第27条整体上限182960×(1＋0.148×566/365)＝224949.570630…元。戊的保证期间不因未经书面同意的展期改变，至2023-07-12届满，7月18日请求已经迟延。己属一般保证，6月8日起诉早于6月15日期间届满，但仍有先诉抗辩。依第560条，SP-01抵充无担保的B，余额199949.57元。C按第561条及T-02特别约定递推，末段本金约171348.757432565元，56日利息约2996.960184793元，费用已清偿；按契约汇总为497177.29元。\n本轮有效完成5/5、法律分支正确5/5、必需最终金额正确5/5、整体实质正确5/5；五份均为完整JSON，无可见截断或基础设施失败。答案2另有不影响取分结果的高精度数值偏差，已单列，不能据此凑成低成功率。原机械检查均通过，P6无需改判。\ndifficulty_mechanism_valid为true仅表示存在有据且必要的证据识别、规则适用和清偿计算，不表示实测命中1–2/5。按实际必要操作保守评为D3。B整体上限使逐段结息精确求值不再是最终金额的必要步骤；SP-01也存在判别力遮蔽：即使错误地把B、C都视为无担保，继续比较债务负担仍可能选择B。不过保证状态及决定性依据是必答内容，不能因此免审该错误。本轮没有观察到这类法律错误，不能宣称高法律推理难度已验证，不启动命中确认。\n以上仅据提交的事实、规则摘录和答案复核；未联网核验来源元数据、运行审计脚本或另行调用独立模型。以下为修改建议，不表示已保存文件、修改Skill或执行后续轮次。"
+    },
+    {
+      "round": 9,
+      "skill_version": "1.2.8",
+      "source_mode": "fictional_derivative",
+      "student_projection": "neutral_primary_records",
+      "cross_branch_coupling": {
+        "enabled_from_round": 8,
+        "span": "S13",
+        "amount": "25000.00",
+        "dependency": "保证存续状态 -> 民法典560条B/C债务抵充 -> 未偿余额",
+        "scope": "双方限定只清偿B/C；不将先诉抗辩视为保证消灭；新增题设与参考，不复用旧题计数"
+      },
+      "procedural_coupling": {
+        "enabled_from_round": 9,
+        "spans": [
+          "S06",
+          "S10",
+          "S13"
+        ],
+        "authority": "https://www.court.gov.cn/zixun/xiangqing/282721.html",
+        "dependency": "保证条款类型与期间 -> 起诉/送达/撤诉/再诉及收件签名 -> 保证存续 -> B/C抵充及剩余余额",
+        "hypothesis": "第8轮前三答均通过简单的催告/起诉分支；改用原始程序文件，区分两种保证的撤诉效果与仅收件签名，不增加算术量。",
+        "not_retroactive": true
+      },
+      "cap_shortcut_repair": null,
+      "temporal_rate_coupling": null,
+      "co_guarantee_coupling": null,
+      "relative_rights_variant": null,
+      "third_party_sequence_coupling": null,
+      "reviewer_skill_projection": "legacy_full_iteration_skill",
+      "teacher_reference_supported": true,
+      "blind_concurrency": null,
+      "configuration_evidence": "model_config_and_frozen_requests",
+      "frozen_at": "2026-11-14T23:10:41.737Z",
+      "max_output_tokens": 20000,
+      "valid_measurement": false,
+      "first_batch": {
+        "measured": {
+          "valid": false,
+          "correct": 4,
+          "n": 5,
+          "target_hit": false,
+          "deterministic_successes": 5,
+          "reason": "difficulty_mechanism_not_valid"
+        },
+        "completed_answers": 5,
+        "identical_input_sha256": "690627621b9c01f79f25c678bed91a3a53cd1782983023140170398111b8b17a",
+        "legal_state_check_perfect_answers": 5,
+        "semantic_components": {
+          "legal_correct": null,
+          "final_amount_correct": null,
+          "basis_correct": null
+        },
+        "raw_frozen_legal_check_perfect_answers": 5,
+        "fixed_check_failures": {},
+        "normalized_field_failures": {},
+        "failure_analysis": [
+          {
+            "index": 5,
+            "error_kind": "substantive",
+            "failed_concepts": [
+              "C逐段金额数值求值的准确性",
+              "公开计算依据与可复算结果的一致性"
+            ],
+            "reason": "按本阶段“金额计算错误属于实质错误”的口径，公开依据中明确列出的未取分本金及利息错误应判为数值实质错误，而非格式错误。最终取分结果碰巧相同不能使这些计算陈述成立。但必须同时记录：本答法律分支及最终金额字段全部正确，不能将该错误解释为法律推理失败，也不推测其未披露的内部运算原因。"
+          }
+        ],
+        "note": "Fixed legal-state fields are not semantic legal certification; inspect P6 explanations separately."
+      },
+      "confirmation": null,
+      "confirmed_target_hit": false,
+      "analysis": "题面在给定闭卷范围内可回答，工程参考的法律状态、最终金额及主要计算节点得到支持。独立核对的关键依据是：A适用2020年12月版本无效规则；戊的连带保证经期间内送达保留，己的一般保证因撤诉后未在期间内再诉而消灭；据此SP-01依民法典第560条优先清偿C，再依第561条先息后本。C在T-04、T-05、T-06付款后的本金分别约为200809.6847922777、187041.8982148795、171741.3378811913元，截日新增利息约3003.8265781740元。最终分项合计498025.65元。五答有效完成5/5，法律分支正确5/5，最终金额字段正确5/5，公开计算依据实质正确4/5；按本次同时审查答案及basis的口径，整体正确4/5。原确定性检查均通过，P6仅对第5答的公开数值依据作不利判定，不改写原记录。没有格式、截断或基础设施失败。未命中1–2/5，且唯一实质错误未改变所要求的最终金额，不能据此认定必要法律推理具有低成功率。D3仅表示存在保证期间、撤诉效果、跨债务抵充及债务内部清偿的必要关联；difficulty_mechanism_valid=false表示本轮没有验证目标实测难度，不表示题面无效。B各段正利率下的乘积展开必然高于对应单利整体上限，因此精确求出全部结息中间值并非最终B金额的必要操作。题尾仍有写入文件的残留语句，与前文宿主落盘说明不一致，但未影响本轮五答完成，不作为实质难度。此次仅据提供的文本与算式复核，未联网核验网页、运行脚本或完成专家审核。"
+    },
+    {
+      "round": 10,
+      "skill_version": "1.2.9",
+      "source_mode": "fictional_derivative",
+      "student_projection": "neutral_primary_records",
+      "cross_branch_coupling": {
+        "enabled_from_round": 8,
+        "span": "S13",
+        "amount": "25000.00",
+        "dependency": "保证存续状态 -> 民法典560条B/C债务抵充 -> 未偿余额",
+        "scope": "双方限定只清偿B/C；不将先诉抗辩视为保证消灭；新增题设与参考，不复用旧题计数"
+      },
+      "procedural_coupling": {
+        "enabled_from_round": 9,
+        "spans": [
+          "S06",
+          "S10",
+          "S13"
+        ],
+        "authority": "https://www.court.gov.cn/zixun/xiangqing/282721.html",
+        "dependency": "保证条款类型与期间 -> 起诉/送达/撤诉/再诉及收件签名 -> 保证存续 -> B/C抵充及剩余余额",
+        "hypothesis": "第8轮前三答均通过简单的催告/起诉分支；改用原始程序文件，区分两种保证的撤诉效果与仅收件签名，不增加算术量。",
+        "not_retroactive": true
+      },
+      "cap_shortcut_repair": {
+        "enabled_from_round": 10,
+        "basis": "rounds/08/stage-P6.json",
+        "rate": "13.20%",
+        "cap": "14.80%",
+        "hypothesis": "前轮整体上限遮蔽逐次结息；降低有效合同利率，使合法结息候选额必须与独立上限比较，不能只用整体上限作答。保留原日期和归档次数，不靠新增运算量加难。",
+        "not_retroactive": true
+      },
+      "temporal_rate_coupling": null,
+      "co_guarantee_coupling": null,
+      "relative_rights_variant": null,
+      "third_party_sequence_coupling": null,
+      "reviewer_skill_projection": "legacy_full_iteration_skill",
+      "teacher_reference_supported": true,
+      "blind_concurrency": 2,
+      "configuration_evidence": "model_config_and_frozen_requests",
+      "frozen_at": "2026-11-14T23:30:01.266Z",
+      "max_output_tokens": 20000,
+      "valid_measurement": true,
+      "first_batch": {
+        "measured": {
+          "valid": true,
+          "correct": 5,
+          "n": 5,
+          "target_hit": false,
+          "deterministic_successes": 5,
+          "reason": "semantic_five_answer_measurement"
+        },
+        "completed_answers": 5,
+        "identical_input_sha256": "1a7f053708b73c3dd9e89b44349d3bb1eb2fc11d81e04dc252344710b49739f7",
+        "legal_state_check_perfect_answers": 5,
+        "semantic_components": {
+          "legal_correct": {
+            "correct": 5,
+            "n": 5
+          },
+          "final_amount_correct": {
+            "correct": 5,
+            "n": 5
+          },
+          "basis_correct": {
+            "correct": 5,
+            "n": 5
+          }
+        },
+        "raw_frozen_legal_check_perfect_answers": 5,
+        "fixed_check_failures": {},
+        "normalized_field_failures": {},
+        "failure_analysis": [],
+        "note": "Fixed legal-state fields are not semantic legal certification; inspect P6 explanations separately."
+      },
+      "confirmation": null,
+      "confirmed_target_hit": false,
+      "analysis": "本次依据所给虚构事实和规范摘录核对，不将工程参考或教师判断直接视为金标。适用lending-2020-12第31条；A转贷无效不要求高利或借款人知情。B以实际交付183700元起算，合法结息公式为183700×(1＋0.132×175/365)×(1＋0.132×103/365)×(1＋0.132×84/365)×(1＋0.132×204/365)，结果约224157.425575元，低于整体上限225859.401644元。C按各段未偿本金计单利，T-02适用本金优先协议；其余付款按费用、利息、本金抵充。SP-01前C本金约172133.918329818元、利息约3010.692971555元；因B保证仍存续而C保证已消灭，25000元优先清偿C，最终本金约150144.611301373元。工程参考的法律状态、最终金额和决定性计算依据均获支持，未发现导致题面不成立的缺口。提交的五份答案均完整、可解析：有效完成5/5、法律正确5/5、最终金额正确5/5、basis正确5/5、整体正确5/5；无格式失败、截断或已报告的基础设施故障。原确定性检查与本次语义审计结论一致，无需改判。答案3、4只有容差内尾数展示质量提示。结构评定为D3：保证类型、期间与程序效果会影响担保状态及跨债务抵充，债内抵充又影响计息本金，存在真实必要的规则依赖。difficulty_mechanism_valid为true仅表示这些依赖有效且影响必答字段，不表示低成功率已验证。本批5/5正确，未命中1—2/5目标，不应启动命中确认或声称已验证高法律推理难度。本次未外部核验网页、来源哈希或五答调用独立性，结论限于提交材料。"
+    },
+    {
+      "round": 11,
+      "skill_version": "1.2.10",
+      "source_mode": "fictional_derivative",
+      "student_projection": "neutral_primary_records",
+      "cross_branch_coupling": {
+        "enabled_from_round": 8,
+        "span": "S13",
+        "amount": "25000.00",
+        "dependency": "保证存续状态 -> 民法典560条B/C债务抵充 -> 未偿余额",
+        "scope": "双方限定只清偿B/C；不将先诉抗辩视为保证消灭；新增题设与参考，不复用旧题计数"
+      },
+      "procedural_coupling": {
+        "enabled_from_round": 9,
+        "spans": [
+          "S06",
+          "S10",
+          "S13"
+        ],
+        "authority": "https://www.court.gov.cn/zixun/xiangqing/282721.html",
+        "dependency": "保证条款类型与期间 -> 起诉/送达/撤诉/再诉及收件签名 -> 保证存续 -> B/C抵充及剩余余额",
+        "hypothesis": "第8轮前三答均通过简单的催告/起诉分支；改用原始程序文件，区分两种保证的撤诉效果与仅收件签名，不增加算术量。",
+        "not_retroactive": true
+      },
+      "cap_shortcut_repair": {
+        "enabled_from_round": 10,
+        "basis": "rounds/08/stage-P6.json",
+        "rate": "13.20%",
+        "cap": "14.80%",
+        "hypothesis": "前轮整体上限遮蔽逐次结息；降低有效合同利率，使合法结息候选额必须与独立上限比较，不能只用整体上限作答。保留原日期和归档次数，不靠新增运算量加难。",
+        "not_retroactive": true
+      },
+      "temporal_rate_coupling": {
+        "enabled_from_round": 11,
+        "basis": "previous high-success guarantee and amount branches; rounds/08/stage-P6.json shortcut audit",
+        "spans": [
+          "S07",
+          "S08",
+          "S09",
+          "S10",
+          "S13"
+        ],
+        "dependency": "2019原借款成立与2022保证成立分开 -> 新受理旧合同利率过渡 -> 付款跨越规范分界的合法利息 -> 顺序抵充及后续本金；未送达撤诉与期间内再诉重新影响担保比较",
+        "rates_are_researcher_reference_only": true,
+        "not_retroactive": true
+      },
+      "co_guarantee_coupling": null,
+      "relative_rights_variant": null,
+      "third_party_sequence_coupling": null,
+      "reviewer_skill_projection": "legacy_full_iteration_skill",
+      "teacher_reference_supported": false,
+      "blind_concurrency": 2,
+      "configuration_evidence": "model_config_and_frozen_requests",
+      "frozen_at": "2026-11-14T23:51:04.104Z",
+      "max_output_tokens": 20000,
+      "valid_measurement": false,
+      "first_batch": {
+        "measured": {
+          "valid": false,
+          "correct": 5,
+          "n": 5,
+          "target_hit": false,
+          "deterministic_successes": 5,
+          "reason": "reference_not_supported"
+        },
+        "completed_answers": 5,
+        "identical_input_sha256": "8824ddd693cb4f965b198eed684ad7b7fcda52386e42d249ff38b0f96b8d5f57",
+        "legal_state_check_perfect_answers": 5,
+        "semantic_components": {
+          "legal_correct": {
+            "correct": 5,
+            "n": 5
+          },
+          "final_amount_correct": {
+            "correct": 5,
+            "n": 5
+          },
+          "basis_correct": {
+            "correct": 5,
+            "n": 5
+          }
+        },
+        "raw_frozen_legal_check_perfect_answers": 5,
+        "fixed_check_failures": {},
+        "normalized_field_failures": {},
+        "failure_analysis": [],
+        "note": "Fixed legal-state fields are not semantic legal certification; inspect P6 explanations separately."
+      },
+      "confirmation": null,
+      "confirmed_target_hit": false,
+      "analysis": "五份均为有效完成答案：法律正确5/5、最终金额正确5/5、计算依据正确5/5、整体正确5/5；不存在可用于统计1–2/5的必要推理失误。题面提供了必要合同、日期、付款、保证及请求边界，能够支持全部必答结论。工程参考的必答答案和实际计算路径可支持，但完整参考附带的“若两项保证均消灭，B的利息负担更重”缺乏充分依据：B约定利率为13.2%，C截日保护利率为14.2%，B存在结息并不自动证明其在民法典第560条下负担更重，材料也未提供足以确定该反事实排序的比较口径。因此reference_supported=false针对完整参考中的该附带断言，不影响五份答案的正确性。本题实际抵充只需比较B无存续保证、C有存续一般保证，无须进入负担轻重比较。拒绝据现有完整参考确认实测难度机制，故difficulty_mechanism_valid=false；这不等于否认题目具有必要推理。D4仅表示多规范时点、保证程序与金额抵充交互的结构评估，不是低成功率实证标签。可公开核验的规范来源包括最高人民法院民法典页面https://www.court.gov.cn/zixun/xiangqing/233181.html、民间借贷解释页面https://cicc.court.gov.cn/html/1/380/385/12844.html及担保解释页面https://www.court.gov.cn/zixun/xiangqing/282721.html。本次仅依据所附文本核对，未联网验证网页或哈希，未进行专家审核。"
+    },
+    {
+      "round": 12,
+      "skill_version": "1.2.11",
+      "source_mode": "fictional_derivative",
+      "student_projection": "neutral_primary_records",
+      "cross_branch_coupling": {
+        "enabled_from_round": 8,
+        "span": "S13",
+        "amount": "25000.00",
+        "dependency": "保证存续状态 -> 民法典560条B/C债务抵充 -> 未偿余额",
+        "scope": "双方限定只清偿B/C；不将先诉抗辩视为保证消灭；新增题设与参考，不复用旧题计数"
+      },
+      "procedural_coupling": {
+        "enabled_from_round": 9,
+        "spans": [
+          "S06",
+          "S10",
+          "S13"
+        ],
+        "authority": "https://www.court.gov.cn/zixun/xiangqing/282721.html",
+        "dependency": "保证条款类型与期间 -> 起诉/送达/撤诉/再诉及收件签名 -> 保证存续 -> B/C抵充及剩余余额",
+        "hypothesis": "第8轮前三答均通过简单的催告/起诉分支；改用原始程序文件，区分两种保证的撤诉效果与仅收件签名，不增加算术量。",
+        "not_retroactive": true
+      },
+      "cap_shortcut_repair": {
+        "enabled_from_round": 10,
+        "basis": "rounds/08/stage-P6.json",
+        "rate": "13.20%",
+        "cap": "14.80%",
+        "hypothesis": "前轮整体上限遮蔽逐次结息；降低有效合同利率，使合法结息候选额必须与独立上限比较，不能只用整体上限作答。保留原日期和归档次数，不靠新增运算量加难。",
+        "not_retroactive": true
+      },
+      "temporal_rate_coupling": {
+        "enabled_from_round": 11,
+        "basis": "previous high-success guarantee and amount branches; rounds/08/stage-P6.json shortcut audit",
+        "spans": [
+          "S07",
+          "S08",
+          "S09",
+          "S10",
+          "S13"
+        ],
+        "dependency": "2019原借款成立与2022保证成立分开 -> 新受理旧合同利率过渡 -> 付款跨越规范分界的合法利息 -> 顺序抵充及后续本金；未送达撤诉与期间内再诉重新影响担保比较",
+        "rates_are_researcher_reference_only": true,
+        "not_retroactive": true
+      },
+      "co_guarantee_coupling": {
+        "enabled_from_round": 12,
+        "spans": [
+          "S06",
+          "S13"
+        ],
+        "dependency": "对不同保证人行权的相对效力 -> 明确相互追偿及份额 -> 丧失追偿的责任减免 -> 担保覆盖范围比较与抵充 -> 戊最高即时责任",
+        "not_retroactive": true,
+        "reference_requires_P4_and_P6_review": true
+      },
+      "relative_rights_variant": null,
+      "third_party_sequence_coupling": null,
+      "reviewer_skill_projection": "legacy_full_iteration_skill",
+      "teacher_reference_supported": true,
+      "blind_concurrency": 2,
+      "configuration_evidence": "model_config_and_frozen_requests",
+      "frozen_at": "2026-11-15T00:12:31.636Z",
+      "max_output_tokens": 20000,
+      "valid_measurement": true,
+      "first_batch": {
+        "measured": {
+          "valid": true,
+          "correct": 5,
+          "n": 5,
+          "target_hit": false,
+          "deterministic_successes": 5,
+          "reason": "semantic_five_answer_measurement"
+        },
+        "completed_answers": 5,
+        "identical_input_sha256": "b660fcecd4544cdd3f0adbd9b38848159c205e38d82ce8d7ca9cd02854f9979d",
+        "legal_state_check_perfect_answers": 5,
+        "semantic_components": {
+          "legal_correct": {
+            "correct": 5,
+            "n": 5
+          },
+          "final_amount_correct": {
+            "correct": 5,
+            "n": 5
+          },
+          "basis_correct": {
+            "correct": 5,
+            "n": 5
+          }
+        },
+        "raw_frozen_legal_check_perfect_answers": 5,
+        "fixed_check_failures": {},
+        "normalized_field_failures": {},
+        "failure_analysis": [],
+        "note": "Fixed legal-state fields are not semantic legal certification; inspect P6 explanations separately."
+      },
+      "confirmation": null,
+      "confirmed_target_hit": false,
+      "analysis": "本次以题设虚构事实与所附规范摘录为依据核对，未将工程参考或确定性检查结果直接视为金标，也未执行联网核验、脚本或额外盲答。题面具备必要交付日期、计息规则、付款约定、保证行权记录及请求范围。关键法律依据为民法典2020年版第560、687、692—695条，以及担保制度解释法释〔2020〕28号第13、29、31、32条：戊、庚的保证期间均至2023-07-12；对戊期间内送达诉状后撤诉仍构成行权，对庚的首次催告则逾期，戊因丧失约定追偿权减责50%；己因2023-06-14期间内再诉而保留一般保证，但享有先诉抗辩。因此SP-01优先抵充担保较少的B。数值复核支持：B付款前合法结息225060.400506…元，低于整体上限226769.232657…元，抵充后200060.40元；C本金154941.171458225…元，末段利息为该本金×0.142×26/365＝1567.24056170895…元；分项取分后总额479426.81元，戊上限100030.20元。工程参考的必答结论与必要证明均获支持。五份均为有效完成，legal_correct、final_amount_correct、basis_correct及整体正确数均为5/5；第2、3份只有冻结容差内的展示瑕疵。D4仅表示本题存在跨保证状态、清偿归属、时间法与金额计算的联动结构，不表示已实测为低成功率难题。机制确实影响必答分项，但本批没有必要推理失误，不命中1—2/5，不启动命中确认。来源支持范围限于所附摘录，未重新验证网页、哈希或来源元数据。"
+    },
+    {
+      "round": 13,
+      "skill_version": "1.2.12",
+      "source_mode": "fictional_derivative",
+      "student_projection": "neutral_primary_records",
+      "cross_branch_coupling": {
+        "enabled_from_round": 8,
+        "span": "S13",
+        "amount": "25000.00",
+        "dependency": "保证存续状态 -> 民法典560条B/C债务抵充 -> 未偿余额",
+        "scope": "双方限定只清偿B/C；不将先诉抗辩视为保证消灭；新增题设与参考，不复用旧题计数"
+      },
+      "procedural_coupling": {
+        "enabled_from_round": 9,
+        "spans": [
+          "S06",
+          "S10",
+          "S13"
+        ],
+        "authority": "https://www.court.gov.cn/zixun/xiangqing/282721.html",
+        "dependency": "保证条款类型与期间 -> 起诉/送达/撤诉/再诉及收件签名 -> 保证存续 -> B/C抵充及剩余余额",
+        "hypothesis": "第8轮前三答均通过简单的催告/起诉分支；改用原始程序文件，区分两种保证的撤诉效果与仅收件签名，不增加算术量。",
+        "not_retroactive": true
+      },
+      "cap_shortcut_repair": {
+        "enabled_from_round": 10,
+        "basis": "rounds/08/stage-P6.json",
+        "rate": "13.20%",
+        "cap": "14.80%",
+        "hypothesis": "前轮整体上限遮蔽逐次结息；降低有效合同利率，使合法结息候选额必须与独立上限比较，不能只用整体上限作答。保留原日期和归档次数，不靠新增运算量加难。",
+        "not_retroactive": true
+      },
+      "temporal_rate_coupling": {
+        "enabled_from_round": 11,
+        "basis": "previous high-success guarantee and amount branches; rounds/08/stage-P6.json shortcut audit",
+        "spans": [
+          "S07",
+          "S08",
+          "S09",
+          "S10",
+          "S13"
+        ],
+        "dependency": "2019原借款成立与2022保证成立分开 -> 新受理旧合同利率过渡 -> 付款跨越规范分界的合法利息 -> 顺序抵充及后续本金；未送达撤诉与期间内再诉重新影响担保比较",
+        "rates_are_researcher_reference_only": true,
+        "not_retroactive": true
+      },
+      "co_guarantee_coupling": {
+        "enabled_from_round": 12,
+        "spans": [
+          "S06",
+          "S13"
+        ],
+        "dependency": "对不同保证人行权的相对效力 -> 明确相互追偿及份额 -> 丧失追偿的责任减免 -> 担保覆盖范围比较与抵充 -> 戊最高即时责任",
+        "not_retroactive": true,
+        "reference_requires_P4_and_P6_review": true
+      },
+      "relative_rights_variant": {
+        "round": 13,
+        "same_contract": false,
+        "mutual_recourse": false,
+        "second_guarantor_timely_request": false,
+        "rate_priority_agreement": "After both-debts due and equally fully secured, compare legally enforceable current annual rates, not nominal disallowed interest.",
+        "C_suit_lpr": "3.25%",
+        "not_retroactive": true
+      },
+      "third_party_sequence_coupling": null,
+      "reviewer_skill_projection": "legacy_full_iteration_skill",
+      "teacher_reference_supported": false,
+      "blind_concurrency": 5,
+      "configuration_evidence": "model_config_and_frozen_requests",
+      "frozen_at": "2026-11-15T00:34:41.775Z",
+      "max_output_tokens": 20000,
+      "valid_measurement": false,
+      "first_batch": {
+        "measured": {
+          "valid": false,
+          "correct": 4,
+          "n": 5,
+          "target_hit": false,
+          "deterministic_successes": 4,
+          "reason": "reference_not_supported"
+        },
+        "completed_answers": 5,
+        "identical_input_sha256": "0c935cc8196d2403da153d4bba6efee5154dfb1616e59e7ddfc36c31706eb19f",
+        "legal_state_check_perfect_answers": 5,
+        "semantic_components": {
+          "legal_correct": {
+            "correct": 5,
+            "n": 5
+          },
+          "final_amount_correct": {
+            "correct": 4,
+            "n": 5
+          },
+          "basis_correct": {
+            "correct": 4,
+            "n": 5
+          }
+        },
+        "raw_frozen_legal_check_perfect_answers": 5,
+        "fixed_check_failures": {
+          "B_protected_total": 1,
+          "borrower_total": 1,
+          "B_joint_payment_limit": 1
+        },
+        "normalized_field_failures": {
+          "B_protected_total": 1,
+          "borrower_total": 1,
+          "B_joint_payment_limit": 1
+        },
+        "failure_analysis": [
+          {
+            "index": 4,
+            "error_kind": "substantive",
+            "failed_concepts": [
+              "B第三次合法结息的数值复算",
+              "B付款后余额及戊即时付款上限",
+              "分项取分后的借款人总额"
+            ],
+            "reason": "属于法律金额计算的实质错误，而非法律规则选择错误或格式错误。B中间差额超过冻结容差并改变必答最终金额，因此金额层和计算依据层不通过；三个错误字段源于同一数值错误，不是三个独立法律错误。"
+          }
+        ],
+        "note": "Fixed legal-state fields are not semantic legal certification; inspect P6 explanations separately."
+      },
+      "confirmation": null,
+      "confirmed_target_hit": false,
+      "analysis": "依据随题事实、规范摘录及日期和算式复核，题面能够支持唯一的必要法律状态及最终金额，question_valid=true。工程参考answer中的状态和金额可获支持，但proof.shared_cutoff_payment.basis援引“later S14”；学生材料没有S14，也没有该所谓后来事件，因此完整参考的来源对齐不通过，reference_supported=false。SP-01归属仅凭S06、S10、S13即可确定，这一参考瑕疵不计为学生错误。按用户要求，当前冻结参考存在错误时拒绝难度验收，故difficulty_mechanism_valid=false；D4仅表示题面包含保证分别行权、内部追偿前提、担保比较与抵充、跨时利率及结息限额等必要依赖的结构性评估，不是经验难度认证。五份均为有效完成答案，未见截断、基础设施失败或应计为实质错误的格式问题。法律层5/5、最终金额层4/5、依据层4/5，整体4/5；不能记为1—2/5。唯一实质失败来自第4份的B结息运算，不能据此声称法律推理能力不足。分项核验同时覆盖B余额、C本金和利息以及戊付款上限，没有仅凭总额判定。此次未调用工具、联网核验规范页面或验证所附哈希，也不能仅凭答卷确认盲答模型及上下文的独立性；不构成专家审核或法律金标。"
+    },
+    {
+      "round": 14,
+      "skill_version": "1.2.13",
+      "source_mode": "fictional_derivative",
+      "student_projection": "neutral_primary_records",
+      "cross_branch_coupling": {
+        "enabled_from_round": 8,
+        "span": "S13",
+        "amount": "25000.00",
+        "dependency": "保证存续状态 -> 民法典560条B/C债务抵充 -> 未偿余额",
+        "scope": "双方限定只清偿B/C；不将先诉抗辩视为保证消灭；新增题设与参考，不复用旧题计数"
+      },
+      "procedural_coupling": {
+        "enabled_from_round": 9,
+        "spans": [
+          "S06",
+          "S10",
+          "S13"
+        ],
+        "authority": "https://www.court.gov.cn/zixun/xiangqing/282721.html",
+        "dependency": "保证条款类型与期间 -> 起诉/送达/撤诉/再诉及收件签名 -> 保证存续 -> B/C抵充及剩余余额",
+        "hypothesis": "第8轮前三答均通过简单的催告/起诉分支；改用原始程序文件，区分两种保证的撤诉效果与仅收件签名，不增加算术量。",
+        "not_retroactive": true
+      },
+      "cap_shortcut_repair": {
+        "enabled_from_round": 10,
+        "basis": "rounds/08/stage-P6.json",
+        "rate": "13.20%",
+        "cap": "14.80%",
+        "hypothesis": "前轮整体上限遮蔽逐次结息；降低有效合同利率，使合法结息候选额必须与独立上限比较，不能只用整体上限作答。保留原日期和归档次数，不靠新增运算量加难。",
+        "not_retroactive": true
+      },
+      "temporal_rate_coupling": {
+        "enabled_from_round": 11,
+        "basis": "previous high-success guarantee and amount branches; rounds/08/stage-P6.json shortcut audit",
+        "spans": [
+          "S07",
+          "S08",
+          "S09",
+          "S10",
+          "S13"
+        ],
+        "dependency": "2019原借款成立与2022保证成立分开 -> 新受理旧合同利率过渡 -> 付款跨越规范分界的合法利息 -> 顺序抵充及后续本金；未送达撤诉与期间内再诉重新影响担保比较",
+        "rates_are_researcher_reference_only": true,
+        "not_retroactive": true
+      },
+      "co_guarantee_coupling": {
+        "enabled_from_round": 12,
+        "spans": [
+          "S06",
+          "S13"
+        ],
+        "dependency": "对不同保证人行权的相对效力 -> 明确相互追偿及份额 -> 丧失追偿的责任减免 -> 担保覆盖范围比较与抵充 -> 戊最高即时责任",
+        "not_retroactive": true,
+        "reference_requires_P4_and_P6_review": true
+      },
+      "relative_rights_variant": {
+        "round": 14,
+        "same_contract": true,
+        "mutual_recourse": true,
+        "second_guarantor_timely_request": true,
+        "rate_priority_agreement": "After both-debts due and equally fully secured, compare legally enforceable current annual rates, not nominal disallowed interest.",
+        "C_suit_lpr": "3.25%",
+        "not_retroactive": true
+      },
+      "third_party_sequence_coupling": null,
+      "reviewer_skill_projection": "common_quality_rules_without_prior_outcomes",
+      "teacher_reference_supported": true,
+      "blind_concurrency": 5,
+      "configuration_evidence": "model_config_and_frozen_requests",
+      "frozen_at": "2026-11-15T00:49:02.924Z",
+      "max_output_tokens": 20000,
+      "valid_measurement": true,
+      "first_batch": {
+        "measured": {
+          "valid": true,
+          "correct": 4,
+          "n": 5,
+          "target_hit": false,
+          "deterministic_successes": 5,
+          "reason": "semantic_five_answer_measurement"
+        },
+        "completed_answers": 5,
+        "identical_input_sha256": "176c97e99321f417a42ea32911036ac779a850ea71dfeba8298c300298cb8bde",
+        "legal_state_check_perfect_answers": 5,
+        "semantic_components": {
+          "legal_correct": {
+            "correct": 5,
+            "n": 5
+          },
+          "final_amount_correct": {
+            "correct": 4,
+            "n": 5
+          },
+          "basis_correct": {
+            "correct": 4,
+            "n": 5
+          }
+        },
+        "raw_frozen_legal_check_perfect_answers": 5,
+        "fixed_check_failures": {},
+        "normalized_field_failures": {},
+        "failure_analysis": [
+          {
+            "index": 2,
+            "error_kind": "substantive",
+            "failed_concepts": [
+              "B逐期结息公式的数值求值",
+              "B受保护余额及戊立即付款上限的最终取分",
+              "借款人总额"
+            ],
+            "reason": "法律分支、日数及所列乘积公式正确，但公式求值错误改变了三个必答最终金额，属于数值实质错误，不适用中间展示容差。"
+          }
+        ],
+        "note": "Fixed legal-state fields are not semantic legal certification; inspect P6 explanations separately."
+      },
+      "confirmation": null,
+      "confirmed_target_hit": false,
+      "analysis": "依据随题事实和规范摘录复核，题面可回答，工程参考的法律状态、付款归属和最终金额均获支持。关键依据包括：lending-2020-12第13条确定A无效；guarantee-2020第29、31条支持分别行权及不同保证方式下的撤诉效果；[S13]特别约定支持在两债全额保证存续时比较依法可请求利率，将SP-01抵B，而不是认定一般保证与连带保证在任何场景下价值当然相等。五份答案均有效完成，无截断、基础设施或纯格式失败。分层结果为法律正确5/5、最终金额正确4/5、依据正确4/5，整体实质正确4/5。唯一失败来自第2份的B乘积求值，不能归因于法律规则选择，也不能用确定性检查的通过标记覆盖该错误。本题存在保证状态、抵充条件、过渡利率与余额之间的真实依赖，结构评估为D4；但本批次未命中1–2/5区间，不能据此宣称已获得低成功率法律难题。本审计未联网核验来源页面或哈希，亦不构成专家审核。"
+    },
+    {
+      "round": 15,
+      "skill_version": "1.2.14",
+      "source_mode": "fictional_derivative",
+      "student_projection": "contract_and_event_without_researcher_conclusions",
+      "cross_branch_coupling": {
+        "enabled_from_round": 8,
+        "span": "S13",
+        "amount": "25000.00",
+        "dependency": "保证存续状态 -> 民法典560条B/C债务抵充 -> 未偿余额",
+        "scope": "双方限定只清偿B/C；不将先诉抗辩视为保证消灭；新增题设与参考，不复用旧题计数"
+      },
+      "procedural_coupling": {
+        "enabled_from_round": 9,
+        "spans": [
+          "S06",
+          "S10",
+          "S13"
+        ],
+        "authority": "https://www.court.gov.cn/zixun/xiangqing/282721.html",
+        "dependency": "保证条款类型与期间 -> 起诉/送达/撤诉/再诉及收件签名 -> 保证存续 -> B/C抵充及剩余余额",
+        "hypothesis": "第8轮前三答均通过简单的催告/起诉分支；改用原始程序文件，区分两种保证的撤诉效果与仅收件签名，不增加算术量。",
+        "not_retroactive": true
+      },
+      "cap_shortcut_repair": {
+        "enabled_from_round": 10,
+        "basis": "rounds/08/stage-P6.json",
+        "rate": "13.20%",
+        "cap": "14.80%",
+        "hypothesis": "前轮整体上限遮蔽逐次结息；降低有效合同利率，使合法结息候选额必须与独立上限比较，不能只用整体上限作答。保留原日期和归档次数，不靠新增运算量加难。",
+        "not_retroactive": true
+      },
+      "temporal_rate_coupling": {
+        "enabled_from_round": 11,
+        "basis": "previous high-success guarantee and amount branches; rounds/08/stage-P6.json shortcut audit",
+        "spans": [
+          "S07",
+          "S08",
+          "S09",
+          "S10",
+          "S13"
+        ],
+        "dependency": "2019原借款成立与2022保证成立分开 -> 新受理旧合同利率过渡 -> 付款跨越规范分界的合法利息 -> 顺序抵充及后续本金；未送达撤诉与期间内再诉重新影响担保比较",
+        "rates_are_researcher_reference_only": true,
+        "not_retroactive": true
+      },
+      "co_guarantee_coupling": {
+        "enabled_from_round": 12,
+        "spans": [
+          "S06",
+          "S13"
+        ],
+        "dependency": "对不同保证人行权的相对效力 -> 明确相互追偿及份额 -> 丧失追偿的责任减免 -> 担保覆盖范围比较与抵充 -> 戊最高即时责任",
+        "not_retroactive": true,
+        "reference_requires_P4_and_P6_review": true
+      },
+      "relative_rights_variant": {
+        "round": 15,
+        "same_contract": true,
+        "mutual_recourse": true,
+        "second_guarantor_timely_request": true,
+        "rate_priority_agreement": "After both-debts due and equally fully secured, compare legally enforceable current annual rates, not nominal disallowed interest.",
+        "C_suit_lpr": "3.25%",
+        "not_retroactive": true
+      },
+      "third_party_sequence_coupling": {
+        "round": 15,
+        "span": "S14",
+        "dependency": "SP时点有效担保与可请求利率 -> 先清偿 -> 后签文件实质为保证/加入/转移 -> 原债务人/新主体/原保证人最终责任",
+        "new_loan_not_created": true,
+        "not_retroactive": true
+      },
+      "reviewer_skill_projection": "common_quality_rules_without_prior_outcomes",
+      "teacher_reference_supported": true,
+      "blind_concurrency": 5,
+      "configuration_evidence": "model_config_and_frozen_requests",
+      "frozen_at": "2026-11-15T01:02:29.579Z",
+      "max_output_tokens": 20000,
+      "valid_measurement": false,
+      "first_batch": {
+        "measured": {
+          "valid": false,
+          "correct": 0,
+          "n": 5,
+          "target_hit": false,
+          "deterministic_successes": 0,
+          "reason": "incomplete_batch"
+        },
+        "completed_answers": 0,
+        "legal_state_check_perfect_answers": 0,
+        "semantic_components": {
+          "legal_correct": null,
+          "final_amount_correct": null,
+          "basis_correct": null
+        },
+        "raw_frozen_legal_check_perfect_answers": 0,
+        "fixed_check_failures": {},
+        "normalized_field_failures": {},
+        "failure_analysis": [
+          {
+            "index": 1,
+            "error_kind": "infrastructure",
+            "failed_concepts": [],
+            "reason": "网关失败导致无可审计答案。不能判断法律、最终金额或计算依据是否正确；correct=false仅表示未形成合格交付，不表示实质答错，不计入难度统计。"
+          },
+          {
+            "index": 2,
+            "error_kind": "infrastructure",
+            "failed_concepts": [],
+            "reason": "没有完成答案可供语义审计。应归为基础设施失败，而不是格式错误或法律错误；三个分层判断均不可评估，不计入难度统计。"
+          },
+          {
+            "index": 3,
+            "error_kind": "infrastructure",
+            "failed_concepts": [],
+            "reason": "已知失败类别是基础设施故障，更具体的网关原因未知。不能由空输入解析失败推断学生不会作答，不计入实质正确率。"
+          },
+          {
+            "index": 4,
+            "error_kind": "infrastructure",
+            "failed_concepts": [],
+            "reason": "缺少作答内容，无法识别失败概念，也不能应用金额误差容差。保留故障记录，排除出难度统计分母。"
+          },
+          {
+            "index": 5,
+            "error_kind": "infrastructure",
+            "failed_concepts": [],
+            "reason": "没有可核验的完成答案。机械评分为0不能替代语义审计，也不能据此认定法律、金额或依据错误；用量及费用不能由null推定为零。"
+          }
+        ],
+        "note": "Fixed legal-state fields are not semantic legal certification; inspect P6 explanations separately."
+      },
+      "confirmation": null,
+      "confirmed_target_hit": false,
+      "analysis": "依据随附事实与规范核对，题面可回答，工程参考的决定性结论及金额获得支持，但不据其自报核验状态认定法律金标。A依[S01][S02]、lending-2020-12第13条及civil-code-2020第157、682条无效，返还额143055－20215＝122840.00元，丁无本题范围内的立即给付责任。B依[S03]—[S05]及lending-2020-12第25—28条，以实际本金185550元重建合法结息：185550×(1＋0.132×175/365)×(1＋0.132×103/365)×(1＋0.132×84/365)×(1＋0.132×204/365)＝226414.862903…，低于整体上限185550×(1＋0.148×566/365)＝228133.979178…。依[S06]、civil-code-2020第692、693、695条及guarantee-2020第29、31、32条，戊庚期间均截至2023-07-12，分别已于7月7日和7月6日获有效行权；撤诉不否定对戊的期间内送达，内部50%不限制各自对外全额保证。依[S10]及guarantee-2020第31条，己的期间截至2023-06-15，6月14日再诉保留一般保证，但civil-code-2020第687条先诉抗辩仍成立。故[S13]付款时两债务符合特别抵充约定，按受保护年利率13.2%与13%比较，25000元抵B，余额201414.86元。C依[S07]—[S09][S11]、lending-2015第26条及lending-2020-12第31条分段适用23.5%与13%；计息日数依次为70、127、175、188＋32、202、421、395、26，T-02依双方法定范围内的特别约定先抵本金，其余依约先费用后利息再本金，重复凭证及未执行指令不另计付款。递推得到本金150217.27元、利息1391.05元、费用0.00元。依[S14]、civil-code-2020第552、697条及guarantee-2020第36条，辛加入全部剩余C债务，可立即请求151608.32元，不追溯改变SP-01抵充，也不新增整体债权。乙合计475863.18元。以上仅据随附文本核对，未重新联网核验来源或运行外部计算脚本。题面确有保证存续、抵充、时间法及金额递推的必要依赖，D4仅为结构性评估；difficulty_mechanism_valid=true不表示经验难度已验证。本轮5次均为基础设施失败，有效完成数为0，实质正确率不可计算，不能报告0/5或命中1—2/5，也没有学生推理失误可供归因。"
+    },
+    {
+      "round": 16,
+      "skill_version": "1.2.15",
+      "source_mode": "fictional_derivative",
+      "student_projection": "contract_and_event_without_researcher_conclusions",
+      "cross_branch_coupling": {
+        "enabled_from_round": 8,
+        "span": "S13",
+        "amount": "25000.00",
+        "dependency": "保证存续状态 -> 民法典560条B/C债务抵充 -> 未偿余额",
+        "scope": "双方限定只清偿B/C；不将先诉抗辩视为保证消灭；新增题设与参考，不复用旧题计数"
+      },
+      "procedural_coupling": {
+        "enabled_from_round": 9,
+        "spans": [
+          "S06",
+          "S10",
+          "S13"
+        ],
+        "authority": "https://www.court.gov.cn/zixun/xiangqing/282721.html",
+        "dependency": "保证条款类型与期间 -> 起诉/送达/撤诉/再诉及收件签名 -> 保证存续 -> B/C抵充及剩余余额",
+        "hypothesis": "第8轮前三答均通过简单的催告/起诉分支；改用原始程序文件，区分两种保证的撤诉效果与仅收件签名，不增加算术量。",
+        "not_retroactive": true
+      },
+      "cap_shortcut_repair": {
+        "enabled_from_round": 10,
+        "basis": "rounds/08/stage-P6.json",
+        "rate": "13.20%",
+        "cap": "14.80%",
+        "hypothesis": "前轮整体上限遮蔽逐次结息；降低有效合同利率，使合法结息候选额必须与独立上限比较，不能只用整体上限作答。保留原日期和归档次数，不靠新增运算量加难。",
+        "not_retroactive": true
+      },
+      "temporal_rate_coupling": {
+        "enabled_from_round": 11,
+        "basis": "previous high-success guarantee and amount branches; rounds/08/stage-P6.json shortcut audit",
+        "spans": [
+          "S07",
+          "S08",
+          "S09",
+          "S10",
+          "S13"
+        ],
+        "dependency": "2019原借款成立与2022保证成立分开 -> 新受理旧合同利率过渡 -> 付款跨越规范分界的合法利息 -> 顺序抵充及后续本金；未送达撤诉与期间内再诉重新影响担保比较",
+        "rates_are_researcher_reference_only": true,
+        "not_retroactive": true
+      },
+      "co_guarantee_coupling": {
+        "enabled_from_round": 12,
+        "spans": [
+          "S06",
+          "S13"
+        ],
+        "dependency": "对不同保证人行权的相对效力 -> 明确相互追偿及份额 -> 丧失追偿的责任减免 -> 担保覆盖范围比较与抵充 -> 戊最高即时责任",
+        "not_retroactive": true,
+        "reference_requires_P4_and_P6_review": true
+      },
+      "relative_rights_variant": {
+        "round": 16,
+        "same_contract": true,
+        "mutual_recourse": true,
+        "second_guarantor_timely_request": true,
+        "rate_priority_agreement": "After both-debts due and equally fully secured, compare legally enforceable current annual rates, not nominal disallowed interest.",
+        "C_suit_lpr": "3.25%",
+        "not_retroactive": true
+      },
+      "third_party_sequence_coupling": {
+        "round": 16,
+        "span": "S14",
+        "dependency": "SP时点有效担保与可请求利率 -> 先清偿 -> 后签文件实质为保证/加入/转移 -> 原债务人/新主体/原保证人最终责任",
+        "new_loan_not_created": true,
+        "not_retroactive": true
+      },
+      "reviewer_skill_projection": "common_quality_rules_without_prior_outcomes",
+      "teacher_reference_supported": true,
+      "blind_concurrency": 5,
+      "configuration_evidence": "model_config_and_frozen_requests",
+      "frozen_at": "2026-11-15T02:30:58.908Z",
+      "max_output_tokens": 20000,
+      "valid_measurement": true,
+      "first_batch": {
+        "measured": {
+          "valid": true,
+          "correct": 5,
+          "n": 5,
+          "target_hit": false,
+          "deterministic_successes": 0,
+          "reason": "semantic_five_answer_measurement"
+        },
+        "completed_answers": 5,
+        "identical_input_sha256": "df0512d77aa16c0a08de4915391507bb7f70f3653bc6e1bec10ac9d96c58b0ba",
+        "legal_state_check_perfect_answers": 0,
+        "semantic_components": {
+          "legal_correct": {
+            "correct": 5,
+            "n": 5
+          },
+          "final_amount_correct": {
+            "correct": 5,
+            "n": 5
+          },
+          "basis_correct": {
+            "correct": 5,
+            "n": 5
+          }
+        },
+        "raw_frozen_legal_check_perfect_answers": 0,
+        "fixed_check_failures": {
+          "A_valid": 5,
+          "A_guarantee": 5,
+          "B_guarantee": 5,
+          "C_guarantee": 5,
+          "B_second_guarantee": 5,
+          "C_third_party_type": 5
+        },
+        "normalized_field_failures": {
+          "A_valid": 5,
+          "A_guarantee": 5,
+          "B_guarantee": 5,
+          "C_guarantee": 5,
+          "B_second_guarantee": 5,
+          "C_third_party_type": 5
+        },
+        "failure_analysis": [],
+        "note": "Fixed legal-state fields are not semantic legal certification; inspect P6 explanations separately."
+      },
+      "confirmation": null,
+      "confirmed_target_hit": false,
+      "analysis": "依据随题事实和规则核对，未发现使问题不可回答或推翻工程参考实质结论的缺陷。关键法律依据为：A适用lending-2020-12第13条；戊、庚依据S06分别在保证期间内被依法行权，内部追偿份额不改变对外全额责任；己依据S10在期间届满前发生对乙再诉，保证存续但有先诉抗辩。故S13约定的比较条件成立，按13.2%与13%比较后SP-01全部抵充B，S14后签文书不改变此前抵充。辛依正文及guarantee-2020第25、36条属于一般保证，即时付款为0。数值核对要点：A为143072－20238＝122834.00元；B按175、103、84、204日递推得226866.350369元，低于185920×(1＋0.148×566/365)所得228588.894685元，付款后201866.35元；C按70、127、175、188、32、202、421、395、26日及相应利率、约定抵充顺序核算，最终本金150878.17元、利息1397.17元、费用0.00元；分项取分后乙总额476975.69元。五份均为有效完成，实质正确数5/5，legal_correct、final_amount_correct、basis_correct分别为5/5。确定性检查统一报出的六项状态失败，来自自由中文状态与固定标签不匹配，依契约不应算作错误。本题存在保证行权状态影响抵充、利率过渡与付款顺序影响余额等必要依赖，D4仅为结构性难度评定，difficulty_mechanism_valid不表示命中低成功率目标。本轮不支持1—2/5难度结论，也没有法律或计算失败可供归因。核验范围限随题文本与公开算式；未联网认证来源、运行程序化复算或完成专家审查，所给记录亦不足以独立确认五答调用的隔离程度。"
+    },
+    {
+      "round": 17,
+      "skill_version": "1.2.16",
+      "source_mode": "fictional_derivative",
+      "student_projection": "contract_and_event_without_researcher_conclusions",
+      "cross_branch_coupling": {
+        "enabled_from_round": 8,
+        "span": "S13",
+        "amount": "25000.00",
+        "dependency": "保证存续状态 -> 民法典560条B/C债务抵充 -> 未偿余额",
+        "scope": "双方限定只清偿B/C；不将先诉抗辩视为保证消灭；新增题设与参考，不复用旧题计数"
+      },
+      "procedural_coupling": {
+        "enabled_from_round": 9,
+        "spans": [
+          "S06",
+          "S10",
+          "S13"
+        ],
+        "authority": "https://www.court.gov.cn/zixun/xiangqing/282721.html",
+        "dependency": "保证条款类型与期间 -> 起诉/送达/撤诉/再诉及收件签名 -> 保证存续 -> B/C抵充及剩余余额",
+        "hypothesis": "第8轮前三答均通过简单的催告/起诉分支；改用原始程序文件，区分两种保证的撤诉效果与仅收件签名，不增加算术量。",
+        "not_retroactive": true
+      },
+      "cap_shortcut_repair": {
+        "enabled_from_round": 10,
+        "basis": "rounds/08/stage-P6.json",
+        "rate": "13.20%",
+        "cap": "14.80%",
+        "hypothesis": "前轮整体上限遮蔽逐次结息；降低有效合同利率，使合法结息候选额必须与独立上限比较，不能只用整体上限作答。保留原日期和归档次数，不靠新增运算量加难。",
+        "not_retroactive": true
+      },
+      "temporal_rate_coupling": {
+        "enabled_from_round": 11,
+        "basis": "previous high-success guarantee and amount branches; rounds/08/stage-P6.json shortcut audit",
+        "spans": [
+          "S07",
+          "S08",
+          "S09",
+          "S10",
+          "S13"
+        ],
+        "dependency": "2019原借款成立与2022保证成立分开 -> 新受理旧合同利率过渡 -> 付款跨越规范分界的合法利息 -> 顺序抵充及后续本金；未送达撤诉与期间内再诉重新影响担保比较",
+        "rates_are_researcher_reference_only": true,
+        "not_retroactive": true
+      },
+      "co_guarantee_coupling": {
+        "enabled_from_round": 12,
+        "spans": [
+          "S06",
+          "S13"
+        ],
+        "dependency": "对不同保证人行权的相对效力 -> 明确相互追偿及份额 -> 丧失追偿的责任减免 -> 担保覆盖范围比较与抵充 -> 戊最高即时责任",
+        "not_retroactive": true,
+        "reference_requires_P4_and_P6_review": true
+      },
+      "relative_rights_variant": {
+        "round": 17,
+        "same_contract": true,
+        "mutual_recourse": true,
+        "second_guarantor_timely_request": true,
+        "rate_priority_agreement": "After both-debts due and equally fully secured, compare legally enforceable current annual rates, not nominal disallowed interest.",
+        "C_suit_lpr": "3.25%",
+        "not_retroactive": true
+      },
+      "third_party_sequence_coupling": {
+        "round": 17,
+        "span": "S14",
+        "dependency": "SP时点有效担保与可请求利率 -> 先清偿 -> 后签文件实质为保证/加入/转移 -> 原债务人/新主体/原保证人最终责任",
+        "new_loan_not_created": true,
+        "not_retroactive": true
+      },
+      "reviewer_skill_projection": "common_quality_rules_without_prior_outcomes",
+      "teacher_reference_supported": true,
+      "blind_concurrency": 5,
+      "configuration_evidence": "model_config_and_frozen_requests",
+      "frozen_at": "2026-11-15T02:44:45.892Z",
+      "max_output_tokens": 20000,
+      "valid_measurement": true,
+      "first_batch": {
+        "measured": {
+          "valid": true,
+          "correct": 5,
+          "n": 5,
+          "target_hit": false,
+          "deterministic_successes": 0,
+          "reason": "semantic_five_answer_measurement"
+        },
+        "completed_answers": 5,
+        "identical_input_sha256": "1d147453d03f4796b945d3d0c3961e4730acc105e0d709634881b8837d64d6fb",
+        "legal_state_check_perfect_answers": 0,
+        "semantic_components": {
+          "legal_correct": {
+            "correct": 5,
+            "n": 5
+          },
+          "final_amount_correct": {
+            "correct": 5,
+            "n": 5
+          },
+          "basis_correct": {
+            "correct": 5,
+            "n": 5
+          }
+        },
+        "raw_frozen_legal_check_perfect_answers": 0,
+        "fixed_check_failures": {
+          "A_valid": 5,
+          "A_guarantee": 5,
+          "B_guarantee": 5,
+          "C_guarantee": 5,
+          "B_second_guarantee": 5,
+          "C_third_party_type": 5
+        },
+        "normalized_field_failures": {
+          "A_valid": 5,
+          "A_guarantee": 5,
+          "B_guarantee": 5,
+          "C_guarantee": 5,
+          "B_second_guarantee": 5,
+          "C_third_party_type": 5
+        },
+        "failure_analysis": [],
+        "note": "Fixed legal-state fields are not semantic legal certification; inspect P6 explanations separately."
+      },
+      "confirmation": null,
+      "confirmed_target_hit": false,
+      "analysis": "题设在限定实体请求范围内具有充分事实和规范依据，未发现使答案不能确定的材料缺口。按题设核对，B合法逐期本息约227317.837835元，低于独立整体上限约229043.810192元；SP-01依付款时有效保证状态及双方约定抵充B后，余额为202317.84元。C依过渡利率、实际日数及有效抵充约定结算，未取分本金约151539.074819867元，末段利息约1403.293350387元；分项取分后合计152942.36元，辛承担其中76471.18元。工程参考的法律结论及金额受到随题材料支持，但不因此成为法律金标。所给五份均为完整答案，法律正确5/5、最终金额正确5/5、依据正确5/5，整体实质正确5/5。固定核对器对六个状态字段的失败源于未接受契约允许的语义等价表达，不是学生格式错误或法律错误。保证行权影响付款时担保状态，继而影响抵充对象和第三人责任基数，存在真实必要依赖，因此结构上评为D4；这不意味着经验低成功率，本轮没有命中1—2/5，也没有观察到所测必要法律推理失误。本次仅依据所给事实、规范摘录与可复算依据审查，未联网核验来源页面或哈希，未运行审计脚本，也未核实五次调用的独立性。"
+    },
+    {
+      "round": 18,
+      "skill_version": "1.2.17",
+      "source_mode": "fictional_derivative",
+      "student_projection": "contract_and_event_without_researcher_conclusions",
+      "cross_branch_coupling": {
+        "enabled_from_round": 8,
+        "span": "S13",
+        "amount": "25000.00",
+        "dependency": "保证存续状态 -> 民法典560条B/C债务抵充 -> 未偿余额",
+        "scope": "双方限定只清偿B/C；不将先诉抗辩视为保证消灭；新增题设与参考，不复用旧题计数"
+      },
+      "procedural_coupling": {
+        "enabled_from_round": 9,
+        "spans": [
+          "S06",
+          "S10",
+          "S13"
+        ],
+        "authority": "https://www.court.gov.cn/zixun/xiangqing/282721.html",
+        "dependency": "保证条款类型与期间 -> 起诉/送达/撤诉/再诉及收件签名 -> 保证存续 -> B/C抵充及剩余余额",
+        "hypothesis": "第8轮前三答均通过简单的催告/起诉分支；改用原始程序文件，区分两种保证的撤诉效果与仅收件签名，不增加算术量。",
+        "not_retroactive": true
+      },
+      "cap_shortcut_repair": {
+        "enabled_from_round": 10,
+        "basis": "rounds/08/stage-P6.json",
+        "rate": "13.20%",
+        "cap": "14.80%",
+        "hypothesis": "前轮整体上限遮蔽逐次结息；降低有效合同利率，使合法结息候选额必须与独立上限比较，不能只用整体上限作答。保留原日期和归档次数，不靠新增运算量加难。",
+        "not_retroactive": true
+      },
+      "temporal_rate_coupling": {
+        "enabled_from_round": 11,
+        "basis": "previous high-success guarantee and amount branches; rounds/08/stage-P6.json shortcut audit",
+        "spans": [
+          "S07",
+          "S08",
+          "S09",
+          "S10",
+          "S13"
+        ],
+        "dependency": "2019原借款成立与2022保证成立分开 -> 新受理旧合同利率过渡 -> 付款跨越规范分界的合法利息 -> 顺序抵充及后续本金；未送达撤诉与期间内再诉重新影响担保比较",
+        "rates_are_researcher_reference_only": true,
+        "not_retroactive": true
+      },
+      "co_guarantee_coupling": {
+        "enabled_from_round": 12,
+        "spans": [
+          "S06",
+          "S13"
+        ],
+        "dependency": "对不同保证人行权的相对效力 -> 明确相互追偿及份额 -> 丧失追偿的责任减免 -> 担保覆盖范围比较与抵充 -> 戊最高即时责任",
+        "not_retroactive": true,
+        "reference_requires_P4_and_P6_review": true
+      },
+      "relative_rights_variant": {
+        "round": 18,
+        "same_contract": true,
+        "mutual_recourse": true,
+        "second_guarantor_timely_request": true,
+        "rate_priority_agreement": "After both-debts due and equally fully secured, compare legally enforceable current annual rates, not nominal disallowed interest.",
+        "C_suit_lpr": "3.25%",
+        "not_retroactive": true
+      },
+      "third_party_sequence_coupling": {
+        "round": 18,
+        "span": "S14",
+        "dependency": "SP时点有效担保与可请求利率 -> 先清偿 -> 后签文件实质为保证/加入/转移 -> 原债务人/新主体/原保证人最终责任",
+        "new_loan_not_created": true,
+        "not_retroactive": true
+      },
+      "reviewer_skill_projection": "common_quality_rules_without_prior_outcomes",
+      "teacher_reference_supported": true,
+      "blind_concurrency": 5,
+      "configuration_evidence": "model_config_and_frozen_requests",
+      "frozen_at": "2026-11-15T02:58:20.956Z",
+      "max_output_tokens": 20000,
+      "valid_measurement": true,
+      "first_batch": {
+        "measured": {
+          "valid": true,
+          "correct": 4,
+          "n": 5,
+          "target_hit": false,
+          "deterministic_successes": 0,
+          "reason": "semantic_five_answer_measurement"
+        },
+        "completed_answers": 5,
+        "identical_input_sha256": "3581db82d020c80dd5cc0361dfc28a81fb5b6675f220544746c790a97676ef71",
+        "legal_state_check_perfect_answers": 0,
+        "semantic_components": {
+          "legal_correct": {
+            "correct": 5,
+            "n": 5
+          },
+          "final_amount_correct": {
+            "correct": 4,
+            "n": 5
+          },
+          "basis_correct": {
+            "correct": 4,
+            "n": 5
+          }
+        },
+        "raw_frozen_legal_check_perfect_answers": 0,
+        "fixed_check_failures": {
+          "A_valid": 5,
+          "A_guarantee": 5,
+          "B_guarantee": 5,
+          "C_guarantee": 5,
+          "B_second_guarantee": 5,
+          "C_third_party_type": 5,
+          "B_protected_total": 1,
+          "borrower_total": 1,
+          "B_joint_payment_limit": 1
+        },
+        "normalized_field_failures": {
+          "A_valid": 5,
+          "A_guarantee": 5,
+          "B_guarantee": 5,
+          "C_guarantee": 5,
+          "B_second_guarantee": 5,
+          "C_third_party_type": 5,
+          "B_protected_total": 1,
+          "borrower_total": 1,
+          "B_joint_payment_limit": 1
+        },
+        "failure_analysis": [
+          {
+            "index": 3,
+            "error_kind": "substantive",
+            "failed_concepts": [
+              "B首期合法结息的数值求值",
+              "结息算术误差向最终余额及保证付款上限传播",
+              "借款人总额的数值准确性"
+            ],
+            "reason": "实质错误限于法律金额计算：B首期算术错误传播并改变多个必答金额。不能将其归为法律规则选择错误，也不能用中间展示容差豁免已经改变最终金额的偏差。"
+          }
+        ],
+        "note": "Fixed legal-state fields are not semantic legal certification; inspect P6 explanations separately."
+      },
+      "confirmation": null,
+      "confirmed_target_hit": false,
+      "analysis": "据随附事实与规范复核，未发现使题面不可回答或工程参考不成立的缺口。工程参考的B合法结息及整体上限、C分段单利与付款抵充、保证存续和最终责任金额均获支持。五份答案均为有效完成，无截断或基础设施失败；实质正确4/5，legal_correct为5/5，final_amount_correct为4/5，basis_correct为4/5。固定核对器反复拒绝的六类中文状态字段均可与契约要求语义对应，不应计作错误。唯一实质失败来自第3份B结息算术，属于法律金额计算错误，不能据此认定法律推理能力不足。本题包含保证类型与行权程序、担保存续与付款归属、时间法与清偿余额等真实依赖，故结构性评为D4，difficulty_mechanism_valid表示这些依赖有效，不表示命中低成功率目标。本轮未达到1—2/5，不得宣称难度校准成功。以上仅基于提供的材料进行闭卷审计，未重新联网核验来源网址、哈希或调用独立计算工具。"
+    },
+    {
+      "round": 19,
+      "skill_version": "1.2.18",
+      "source_mode": "fictional_derivative",
+      "student_projection": "contract_and_event_without_researcher_conclusions",
+      "cross_branch_coupling": {
+        "enabled_from_round": 8,
+        "span": "S13",
+        "amount": "25000.00",
+        "dependency": "保证存续状态 -> 民法典560条B/C债务抵充 -> 未偿余额",
+        "scope": "双方限定只清偿B/C；不将先诉抗辩视为保证消灭；新增题设与参考，不复用旧题计数"
+      },
+      "procedural_coupling": {
+        "enabled_from_round": 9,
+        "spans": [
+          "S06",
+          "S10",
+          "S13"
+        ],
+        "authority": "https://www.court.gov.cn/zixun/xiangqing/282721.html",
+        "dependency": "保证条款类型与期间 -> 起诉/送达/撤诉/再诉及收件签名 -> 保证存续 -> B/C抵充及剩余余额",
+        "hypothesis": "第8轮前三答均通过简单的催告/起诉分支；改用原始程序文件，区分两种保证的撤诉效果与仅收件签名，不增加算术量。",
+        "not_retroactive": true
+      },
+      "cap_shortcut_repair": {
+        "enabled_from_round": 10,
+        "basis": "rounds/08/stage-P6.json",
+        "rate": "13.20%",
+        "cap": "14.80%",
+        "hypothesis": "前轮整体上限遮蔽逐次结息；降低有效合同利率，使合法结息候选额必须与独立上限比较，不能只用整体上限作答。保留原日期和归档次数，不靠新增运算量加难。",
+        "not_retroactive": true
+      },
+      "temporal_rate_coupling": {
+        "enabled_from_round": 11,
+        "basis": "previous high-success guarantee and amount branches; rounds/08/stage-P6.json shortcut audit",
+        "spans": [
+          "S07",
+          "S08",
+          "S09",
+          "S10",
+          "S13"
+        ],
+        "dependency": "2019原借款成立与2022保证成立分开 -> 新受理旧合同利率过渡 -> 付款跨越规范分界的合法利息 -> 顺序抵充及后续本金；未送达撤诉与期间内再诉重新影响担保比较",
+        "rates_are_researcher_reference_only": true,
+        "not_retroactive": true
+      },
+      "co_guarantee_coupling": {
+        "enabled_from_round": 12,
+        "spans": [
+          "S06",
+          "S13"
+        ],
+        "dependency": "对不同保证人行权的相对效力 -> 明确相互追偿及份额 -> 丧失追偿的责任减免 -> 担保覆盖范围比较与抵充 -> 戊最高即时责任",
+        "not_retroactive": true,
+        "reference_requires_P4_and_P6_review": true
+      },
+      "relative_rights_variant": {
+        "round": 19,
+        "same_contract": true,
+        "mutual_recourse": true,
+        "second_guarantor_timely_request": true,
+        "rate_priority_agreement": "After both-debts due and equally fully secured, compare legally enforceable current annual rates, not nominal disallowed interest.",
+        "C_suit_lpr": "3.25%",
+        "not_retroactive": true
+      },
+      "third_party_sequence_coupling": {
+        "round": 19,
+        "span": "S14",
+        "dependency": "SP时点有效担保与可请求利率 -> 先清偿 -> 后签文件实质为保证/加入/转移 -> 原债务人/新主体/原保证人最终责任",
+        "new_loan_not_created": true,
+        "not_retroactive": true
+      },
+      "reviewer_skill_projection": "common_quality_rules_without_prior_outcomes",
+      "teacher_reference_supported": true,
+      "blind_concurrency": 5,
+      "configuration_evidence": "model_config_and_frozen_requests",
+      "frozen_at": "2026-11-15T03:13:26.542Z",
+      "max_output_tokens": 20000,
+      "valid_measurement": true,
+      "first_batch": {
+        "measured": {
+          "valid": true,
+          "correct": 5,
+          "n": 5,
+          "target_hit": false,
+          "deterministic_successes": 0,
+          "reason": "semantic_five_answer_measurement"
+        },
+        "completed_answers": 5,
+        "identical_input_sha256": "8aa8905956e760ae59811b257d8476a882a8d86ebf729703a9eca970840e8787",
+        "legal_state_check_perfect_answers": 0,
+        "semantic_components": {
+          "legal_correct": {
+            "correct": 5,
+            "n": 5
+          },
+          "final_amount_correct": {
+            "correct": 5,
+            "n": 5
+          },
+          "basis_correct": {
+            "correct": 5,
+            "n": 5
+          }
+        },
+        "raw_frozen_legal_check_perfect_answers": 0,
+        "fixed_check_failures": {
+          "A_guarantee": 5,
+          "B_guarantee": 5,
+          "C_guarantee": 5,
+          "B_second_guarantee": 5,
+          "C_third_party_type": 5,
+          "A_valid": 3
+        },
+        "normalized_field_failures": {
+          "A_guarantee": 5,
+          "B_guarantee": 5,
+          "C_guarantee": 5,
+          "B_second_guarantee": 5,
+          "C_third_party_type": 5,
+          "A_valid": 3
+        },
+        "failure_analysis": [],
+        "note": "Fixed legal-state fields are not semantic legal certification; inspect P6 explanations separately."
+      },
+      "confirmation": null,
+      "confirmed_target_hit": false,
+      "analysis": "按随题事实及规范摘录核对，未发现使题目不可回答或工程参考失去支持的实质问题。关键数值为：A返还122816.00元；B合法结息候选228220.81276653元低于整体上限229953.64120548元，SP-01抵充后为203220.81元；C未偿本金152860.88元、利息1415.53元、费用0.00元，分项取分合计154276.41元。付款时戊、庚均被及时行权，己的一般保证也因期间内再诉而存续，因此依S13比较13.2%与13%后抵B；随后S14全部转移C债务，乙退出、己免责，乙总额为326036.81元。五份均为有效完成，法律正确5/5、最终金额正确5/5、按冻结容差评定的依据正确5/5，整体实质正确5/5；未见截断、基础设施失败或学生格式错误。确定性检查将开放式状态误作固定标签匹配，其低分不能证明题目难度。difficulty_mechanism_valid表示保证状态、付款抵充及后续债务转移之间存在有据且必要的依赖；D4仅为结构性评估，不代表已经证实低成功率。本轮没有必要推理失误，不支持1—2/5难题命中，也不能据此声称法律推理或金额计算能力不足。本审计依据所给冻结文本与可复算日期、算式，未联网重验来源页面或哈希，未调用外部计算工具，不构成专家审核或真实裁判认定。"
+    },
+    {
+      "round": 20,
+      "skill_version": "1.2.19",
+      "source_mode": "fictional_derivative",
+      "student_projection": "contract_and_event_without_researcher_conclusions",
+      "cross_branch_coupling": {
+        "enabled_from_round": 8,
+        "span": "S13",
+        "amount": "25000.00",
+        "dependency": "保证存续状态 -> 民法典560条B/C债务抵充 -> 未偿余额",
+        "scope": "双方限定只清偿B/C；不将先诉抗辩视为保证消灭；新增题设与参考，不复用旧题计数"
+      },
+      "procedural_coupling": {
+        "enabled_from_round": 9,
+        "spans": [
+          "S06",
+          "S10",
+          "S13"
+        ],
+        "authority": "https://www.court.gov.cn/zixun/xiangqing/282721.html",
+        "dependency": "保证条款类型与期间 -> 起诉/送达/撤诉/再诉及收件签名 -> 保证存续 -> B/C抵充及剩余余额",
+        "hypothesis": "第8轮前三答均通过简单的催告/起诉分支；改用原始程序文件，区分两种保证的撤诉效果与仅收件签名，不增加算术量。",
+        "not_retroactive": true
+      },
+      "cap_shortcut_repair": {
+        "enabled_from_round": 10,
+        "basis": "rounds/08/stage-P6.json",
+        "rate": "13.20%",
+        "cap": "14.80%",
+        "hypothesis": "前轮整体上限遮蔽逐次结息；降低有效合同利率，使合法结息候选额必须与独立上限比较，不能只用整体上限作答。保留原日期和归档次数，不靠新增运算量加难。",
+        "not_retroactive": true
+      },
+      "temporal_rate_coupling": {
+        "enabled_from_round": 11,
+        "basis": "previous high-success guarantee and amount branches; rounds/08/stage-P6.json shortcut audit",
+        "spans": [
+          "S07",
+          "S08",
+          "S09",
+          "S10",
+          "S13"
+        ],
+        "dependency": "2019原借款成立与2022保证成立分开 -> 新受理旧合同利率过渡 -> 付款跨越规范分界的合法利息 -> 顺序抵充及后续本金；未送达撤诉与期间内再诉重新影响担保比较",
+        "rates_are_researcher_reference_only": true,
+        "not_retroactive": true
+      },
+      "co_guarantee_coupling": {
+        "enabled_from_round": 12,
+        "spans": [
+          "S06",
+          "S13"
+        ],
+        "dependency": "对不同保证人行权的相对效力 -> 明确相互追偿及份额 -> 丧失追偿的责任减免 -> 担保覆盖范围比较与抵充 -> 戊最高即时责任",
+        "not_retroactive": true,
+        "reference_requires_P4_and_P6_review": true
+      },
+      "relative_rights_variant": {
+        "round": 20,
+        "same_contract": true,
+        "mutual_recourse": true,
+        "second_guarantor_timely_request": true,
+        "rate_priority_agreement": "After both-debts due and equally fully secured, compare legally enforceable current annual rates, not nominal disallowed interest.",
+        "C_suit_lpr": "3.25%",
+        "not_retroactive": true
+      },
+      "third_party_sequence_coupling": {
+        "round": 20,
+        "span": "S14",
+        "dependency": "SP时点有效担保与可请求利率 -> 先清偿 -> 后签文件实质为保证/加入/转移 -> 原债务人/新主体/原保证人最终责任",
+        "new_loan_not_created": true,
+        "not_retroactive": true
+      },
+      "reviewer_skill_projection": "common_quality_rules_without_prior_outcomes",
+      "teacher_reference_supported": true,
+      "blind_concurrency": 5,
+      "configuration_evidence": "model_config_and_frozen_requests",
+      "frozen_at": "2026-11-15T03:27:48.672Z",
+      "max_output_tokens": 20000,
+      "valid_measurement": true,
+      "first_batch": {
+        "measured": {
+          "valid": true,
+          "correct": 4,
+          "n": 5,
+          "target_hit": false,
+          "deterministic_successes": 0,
+          "reason": "semantic_five_answer_measurement"
+        },
+        "completed_answers": 5,
+        "identical_input_sha256": "6d2705facdfe117e3cee99416eacc25f7d134ce79cb0ffddf3184200608c395e",
+        "legal_state_check_perfect_answers": 0,
+        "semantic_components": {
+          "legal_correct": {
+            "correct": 5,
+            "n": 5
+          },
+          "final_amount_correct": {
+            "correct": 5,
+            "n": 5
+          },
+          "basis_correct": {
+            "correct": 4,
+            "n": 5
+          }
+        },
+        "raw_frozen_legal_check_perfect_answers": 0,
+        "fixed_check_failures": {
+          "A_valid": 5,
+          "A_guarantee": 5,
+          "B_guarantee": 5,
+          "C_guarantee": 5,
+          "B_second_guarantee": 5,
+          "C_third_party_type": 5
+        },
+        "normalized_field_failures": {
+          "A_valid": 5,
+          "A_guarantee": 5,
+          "B_guarantee": 5,
+          "C_guarantee": 5,
+          "B_second_guarantee": 5,
+          "C_third_party_type": 5
+        },
+        "failure_analysis": [
+          {
+            "index": 3,
+            "error_kind": "substantive",
+            "failed_concepts": [
+              "B第27条整体上限的数值复算"
+            ],
+            "reason": "仅计算依据层不通过：整体上限复算偏差超过冻结容差，计为数值实质错误；不得扩大解释为法律判断或最终请求金额错误。"
+          }
+        ],
+        "note": "Fixed legal-state fields are not semantic legal certification; inspect P6 explanations separately."
+      },
+      "confirmation": null,
+      "confirmed_target_hit": false,
+      "analysis": "题面在闭卷范围内可回答。独立核对的关键结果为：A返还122810.00元；B逐期候选本息228672.300232…元，整体上限230408.556712…元；C本金153521.78元、利息1421.65元、费用0.00元。付款时戊、庚及己的保证均存续，己享有先诉抗辩不等于C无担保，故依S13附件以13.2%与13%比较，将25000元抵充B，余额203672.30元。之后S14构成经甲同意的部分债务转移，辛承担77471.72元，乙保留C债务77471.71元，乙总额403954.01元。工程参考金额和核心结论受支持；其C保证简写须结合S14及民法典第697条理解为仅对乙保留部分继续存续，不得扩张至辛承接部分。五份均为完整有效作答：法律正确5/5、必答最终金额正确5/5、依据正确4/5、综合正确4/5。唯一实质错误是第3份整体上限复算超出冻结容差，不能据此声称法律推理失败或命中1–2/5。原自动核对的六个状态失败均为固定标签匹配误报。D4仅是多层依赖结构评估；机制有效不代表实测低成功率。本次未联网核验来源元数据、未执行代码或独立模型复答，依据限于随题规范摘录、事实定位及算式核对，不构成专家金标。"
+    }
+  ],
+  "calls": {
+    "submissions": 197,
+    "completed": 183,
+    "failed_usage_unknown": 13,
+    "failed_with_known_usage": 1,
+    "known_input_tokens": 3633383,
+    "known_output_tokens": 1277240,
+    "cost_usd": null
+  },
+  "integrity": {
+    "frozen_inputs_verified": true,
+    "identical_five_answer_prompts": true,
+    "within_round_fixed_configuration": true,
+    "actual_harbor_controls": true,
+    "no_student_seed_or_reference_input": true
+  },
+  "scope": {
+    "split": "adaptive_dev",
+    "model": "gpt-6-astra",
+    "adapter": "restricted_file_completion_no_calculator",
+    "same_family_semantic_audit": true,
+    "expert_review": false,
+    "training_rows": 0,
+    "local_only": true,
+    "caveats": [
+      "Single-family small-sample adaptive selection, not generalization evidence.",
+      "Numerical errors count as substantive but do not alone establish hard legal reasoning.",
+      "Fictional derivative scenarios are not actual litigation records or judgments.",
+      "Source permissions, expert law review, contamination checks and independent-family validation remain open."
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "question": "依据随任务提供的 dossier.md、rules.json 和 answer-contract.json，对其中明确标示为虚构的三笔借款及保证关系，完成一份整体财产与责任审查：截至2023-08-01，在SP-01已经结算到账且不计当日利息的条件下，在档案所载最终请求范围内，甲对乙就A、B、C分别可以请求哪些剩余款项、合计多少，对丁、戊、庚、己依保证合同立即请求付款的范围分别如何？请以相关合同及保证的法律状态、可核验的金额依据支持整体结论，并完整回答 answer-contract.json 所要求的内容。事实与法律依据限于上述学生文件，不改变题设事实、规范摘录或当事人约定。本任务是虚构情景下的规则适用，不是真实裁判提取或原案判决预测。\n\n交付格式：只返回一个有效JSON对象，不附Markdown或JSON之外的文字。按 answer-contract.json 填写全部字段：A_valid、A_restitution、A_guarantee、B_initial_principal、B_protected_total、B_guarantee、C_outstanding_principal、C_outstanding_interest、C_outstanding_expenses、C_guarantee、borrower_total、B_second_guarantee、B_joint_payment_limit；另以 basis 提供简短、可核验的依据。保证字段的对象对应为A_guarantee对应丁、B_guarantee对应戊、B_second_guarantee对应庚、C_guarantee对应己。保证状态使用契约给定的状态值；字段与basis共同说明四人的即时付款请求范围。金额使用人民币元，以数字或十进制金额字符串表示，遵守文件规定的精度和汇总要求。basis应引用档案段落编号及规范来源、版本和条号，说明决定性法律判断并提供必要计算依据，不要求内部思维链。你只需返回JSON，宿主负责落盘，不要求自行创建文件。",
+  "reasoning_dependencies": [
+    {
+      "dependency": "合同、保证及程序事件的不同发生时点，与规范适用范围及最终请求范围相互关联。",
+      "basis": [
+        "dossier.md：导语、S01、S03、S06、S07、S10",
+        "rules.json：lending-2020-12第31条、civil-code-2020第682条及第1260条"
+      ]
+    },
+    {
+      "dependency": "合同约定、交易记录与适用利息规则共同决定结算日的债务余额，不能仅靠读取某一借据或流水金额完成整体审查。",
+      "basis": [
+        "dossier.md：S02—S05、S07—S09、S11—S13",
+        "rules.json：lending-2020-12第25—28条及第31条、lending-2015第26条"
+      ]
+    },
+    {
+      "dependency": "保证责任状态、覆盖范围与SP-01的清偿效果存在关联，并共同影响最终债务及即时付款请求范围。",
+      "basis": [
+        "dossier.md：S06、S10、S12、S13",
+        "rules.json：civil-code-2020第560—561条、第687—695条相关摘录，guarantee-2020第13、29、31、34条"
+      ]
+    }
+  ],
+  "shortcut_audit": [
+    {
+      "check": "题面脚手架",
+      "observation": "题面仅规定整体审查目标、材料边界和交付要求，未补入款项分类、适用结果、计算公式、金额答案或逐项解题顺序。"
+    },
+    {
+      "check": "既有显式信息",
+      "observation": "S06已明确记载戊、庚的保证类型，输出契约也提供状态词表；这些既有信息予以保留，不把相应直接读取环节宣称为高难推理。"
+    },
+    {
+      "check": "输出覆盖",
+      "observation": "覆盖契约全部13个字段，并明确四名保证人与字段的对应关系；简短依据承载整体请求范围说明，不另设题外赔偿或裁判预测任务。"
+    },
+    {
+      "check": "来源与验证边界",
+      "observation": "题面仅依赖三份学生文件，不引入种子答案、研究者依赖图或历史审计结论。所列依据可通过rules.json中的官方来源定位；本阶段未联网复核、独立复算或开展盲答，不能据此确认本轮实测难度或分支输出敏感性。"
+    }
+  ],
+  "source_mode": "new_scenario"
+}

@@ -1,0 +1,11 @@
+{
+  "exact_examples_match": true,
+  "exact_material_match": true,
+  "input_sha256": "561ed838a5c047fb816b487b1924418bbc4c0aa13800f180d89a233649edbf20",
+  "seed_sha256": "6d0ff7c0e447d35ed4312429dfe3e878f9cdf05906110dd1d304fccae32f6115",
+  "material_sha256": "b792a789b9ee93b21303f606108f60f0071e16ecf91baa390f0275a557c23954",
+  "ids": [
+    "case-068"
+  ],
+  "request_artifact": "calls/P2-repair-1-request.json"
+}

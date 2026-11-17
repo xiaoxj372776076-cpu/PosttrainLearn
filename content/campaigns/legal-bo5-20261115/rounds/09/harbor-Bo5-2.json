@@ -1,0 +1,71 @@
+{
+  "job": "legal-bo5-09-bo5-2",
+  "finished_at": "2026-11-14T23:14:57.868727Z",
+  "exceptions": [],
+  "completed_answer": true,
+  "infrastructure_failure": false,
+  "report": {
+    "passed": true,
+    "score": 1.0,
+    "checks": {
+      "A_valid": true,
+      "A_restitution": true,
+      "A_guarantee": true,
+      "B_initial_principal": true,
+      "B_protected_total": true,
+      "B_guarantee": true,
+      "C_outstanding_principal": true,
+      "C_outstanding_interest": true,
+      "C_outstanding_expenses": true,
+      "C_guarantee": true,
+      "borrower_total": true
+    },
+    "failed_checks": [],
+    "note": "金额或状态固定核对，不证明法律解释；语义等价与错误类型由P6另审，不以此直接计低成功率。"
+  },
+  "reward": 1.0,
+  "model": "deployment-gpt-6-astra-platform-global",
+  "usage": {
+    "input_tokens": 14707,
+    "input_tokens_details": {
+      "cache_write_tokens": 14704,
+      "cached_tokens": 0
+    },
+    "output_tokens": 5922,
+    "output_tokens_details": {
+      "reasoning_tokens": 4421
+    },
+    "total_tokens": 20629
+  },
+  "latency_ms": 121329,
+  "answer_text": "{\n  \"A_valid\": \"invalid\",\n  \"A_restitution\": \"122876.00\",\n  \"A_guarantee\": \"invalid_accessory\",\n  \"B_initial_principal\": \"183330.00\",\n  \"B_protected_total\": \"225404.49\",\n  \"B_guarantee\": \"joint\",\n  \"C_outstanding_principal\": \"149745.16\",\n  \"C_outstanding_interest\": \"0.00\",\n  \"C_outstanding_expenses\": \"0.00\",\n  \"C_guarantee\": \"expired\",\n  \"borrower_total\": \"498025.65\",\n  \"basis\": {\n    \"适用规则\": \"三笔借款均发生于2022年，案件于2023-08-01新受理。依lending-2020-12第31条及civil-code-2020第1260条，适用所附现行民间借贷规定、民法典及guarantee-2020，不适用2015年版本的无效条件。\",\n    \"A合同及保证\": \"S01、S02：A系套取银行信贷资金转贷，依lending-2020-12第13条第1项无效，不以乙知情或高利转贷为条件。依民法典第157条，剩余返还财产为142953.00－20077.00＝122876.00元；同号收据不重复计款。依第682条，丁的从属保证无效。S12不请求保证无效后的过错赔偿，故对丁立即依保证支付的请求不予支持。\",\n    \"B本息计算\": \"S03—S05：B为合法自有资金借款，无所列无效事由；依民法典第670、679条及lending-2020-12第26条，2022-01-12成立，本金为实际交付的183330.00元，预扣12261.00元不计本金。依该规定第25、27、28条，保护年利率为3.70%×4＝14.80%。各结息区间为175、103、84、204日，新借据均无新增交付，仅按合法限额结息。逐期合法结息计算额183330×∏(1＋14.8%×区间日数/365)高于全期上限，故以183330＋183330×14.8%×566/365＝225404.486136986…元封顶。SP-01不抵充B，最终余额取分为225404.49元。\",\n    \"戊保证\": \"S06：‘不履行即无条件清偿、无须先追索乙’依guarantee-2020第25条及民法典第688条属于连带责任保证，而非因没有类型标题认定一般保证。‘直至本息还清’依guarantee-2020第32条属期间约定不明；依民法典第692、695条，未经戊书面同意的展期不改变保证期间，仍按原到期日2023-01-12起算六个月，至2023-07-12届满。甲7月5日起诉，7月7日给付请求已送达，虽7月9日撤诉，依guarantee-2020第31条第二款仍属期间内行权。按S06约定范围及民法典第691条，戊应对B剩余225404.49元承担可立即请求的连带保证责任。\",\n    \"己保证\": \"S10：‘不能履行、无力偿还时才代偿’依民法典第687条、guarantee-2020第25条属于一般保证。未约定期间，依民法典第692条，自2022-12-15到期起算六个月，至2023-06-15届满。甲6月8日对乙起诉后于6月12日撤诉，6月20日再诉已逾期；依guarantee-2020第31条第一款及民法典第693条，己主张不再承担保证责任应获支持。5月8日仅催告己不替代对乙起诉；6月25日仅确认收件且否认付款义务，依guarantee-2020第34条不成立新保证。因此是保证责任消灭，而非仅暂有先诉抗辩，对己立即支付的请求不予支持。\",\n    \"C流水及计息\": \"S07—S11：C为有效自有资金借款，11.40%的借期及逾期利率低于14.80%上限，依lending-2020-12第25、28条支持。依民法典第560、561条，T系列指定清偿C有效；仅T-02有双方协议，11648.00元全部先抵本金，其他付款依费用、利息、本金顺序，乙单方‘还本金’备注不改变顺序。T-01同交易号记录只计一次，X-01未执行不计付款。依次计息日数为70、127、83、99、49、56、56，每段按未偿本金×11.4%×日数/365计息，未付利息不复计。T-01清偿全部1680元费用；T-03仅清偿部分利息。保留计算精度，T-06后本金为171741.337881…元；至截日、不计当日利息的新增利息为3003.826578…元。\",\n    \"SP-01抵充及最终范围\": \"S13将已到账25000.00元限定用于B、C，但未在二者间指定。两债均已到期，B仍有戊的有效连带保证，C的己保证责任已消灭且无其他担保，故依民法典第560条优先清偿缺乏担保的C，不先比较利率负担。依第561条，C费用已清，先清利息3003.826578…元，余21996.173421…元抵本金。C最终本金＝171741.337881…＋3003.826578…－25000＝149745.164459…元，取分149745.16元，利息和费用均为0。乙应支付总额＝122876.00＋225404.49＋149745.16＝498025.65元。戊的连带责任与其中B债务重合，不另加入乙的债务总额；丁、己本次保证给付请求均不获支持。\"\n  }\n}",
+  "trace": {
+    "actions": [
+      {
+        "action": "adapter_read_file",
+        "path": "/app/input/dossier.md",
+        "sha256": "49c102b06177ce10959c753db0fc302f87d3ac9884878e91238b1e3afc4c9507"
+      },
+      {
+        "action": "adapter_read_file",
+        "path": "/app/input/rules.json",
+        "sha256": "ea05c461bb12689551674e91b2e71e2f7534c4dcc47f414edae19e930452f6e0"
+      },
+      {
+        "action": "adapter_read_file",
+        "path": "/app/input/answer-contract.json",
+        "sha256": "330a074e8a26cc3da4d6ce3c37fbf3b67e8bbcf0c306488898e7b342ee7bb9c9"
+      },
+      {
+        "action": "adapter_submit_answer",
+        "path": "/app/output/answer.json",
+        "sha256": "5500dac985be1707a0b31c778f27a5af0314cd13d0cbac6d5222687001472bc7"
+      }
+    ],
+    "adapter_version": "0.3.0",
+    "host_writes_answer": true,
+    "fresh_api_completion": true,
+    "arbitrary_shell_enabled": false,
+    "hidden_answer_input": false
+  }
+}

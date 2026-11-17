@@ -1,0 +1,22 @@
+{
+  "requestedModel": "gpt-6-astra",
+  "actualModel": "deployment-gpt-6-astra-platform-global",
+  "text": "{\n  \"question_sufficiency\": \"pass\",\n  \"answer_leakage\": false,\n  \"required_repairs\": [],\n  \"assessed_difficulty\": \"D4\",\n  \"reasoning_dependencies\": [\n    \"A的资金来源、合同时间与实际交付额→规范版本及合同效力→返还范围、既有返还抵扣与保证从属性。依据：S01—S02、S12；lending-2020-12第13条，civil-code-2020第157、682条。\",\n    \"B的实际交付与预扣利息→初始本金→逐期合法结息→累计本息与独立保护上限比较。依据：S03—S05；civil-code-2020第670条，lending-2020-12第25—28条。\",\n    \"B的保证条款、未获书面同意的展期、起诉送达及撤诉记录→分别判断戊、庚的保证期间与行权效果→内部追偿受损对外部责任范围的影响。依据：S06；civil-code-2020第692、693、695条，guarantee-2020第13、29、31、32条。\",\n    \"C的合同成立时间、分段利息请求及题设LPR→新旧利率保护标准衔接→按付款日期分段累计合法利息。依据：S07；lending-2015第26条，lending-2020-12第25、28、31条。\",\n    \"C的交易号、到账状态与双方协议→去重并区分有效付款→逐笔适用费用、利息、本金抵充顺序及T-02特别约定→更新剩余本金与利息。依据：S07—S09、S11；civil-code-2020第561条及题设付款约定。\",\n    \"C的保证措辞、撤诉后再诉及收件签名→保证类型、责任存续与先诉抗辩的分别判断；不能将暂不可立即执行等同于没有担保。依据：S10；civil-code-2020第686、687、691—693条，guarantee-2020第25、31、34条。\",\n    \"B、C的到期状态及依法存续的担保范围→SP-01的债务间抵充→更新借款余额与保证即时付款限额→各输出金额取分后汇总。依据：S06、S10、S13及输出契约；civil-code-2020第560、561条。\"\n  ],\n  \"reason\": \"学生材料已给出关键到账、起息、结息、到期、展期、行权与付款日期，费用范围、利率及LPR题设值、实际自然日/365口径、截日不计息和最终取分规则均有说明。保证范围、内部追偿份额、其他担保及先诉抗辩例外也有明确事实；S06已明确将庚纳入最终付款请求。必要判断可在给定材料内完成，无须补入隐藏事实。明确的虚构约定、请求范围及候选状态值不等于预先给出裁判结论。D4来自跨分支依赖与动态清偿计算，而非材料长度；仅为结构难度评估，不是实测难度。本审查不独立认证法条全文或来源元数据。\"\n}",
+  "usage": {
+    "input_tokens": 20219,
+    "input_tokens_details": {
+      "cache_write_tokens": 20216,
+      "cached_tokens": 0
+    },
+    "output_tokens": 2764,
+    "output_tokens_details": {
+      "reasoning_tokens": 1993
+    },
+    "total_tokens": 22983
+  },
+  "latencyMs": 56815,
+  "completedAt": "2026-11-15T00:10:59.451Z",
+  "status": "completed",
+  "input_sha256": "e70bdf256a0978909b28a3ebb402eb7b104dde6946259924386e1b8e3fe1a3e0",
+  "output_sha256": "edca0aa9e05558233b0e31b6f716a94d394d0d1c0cb35a8cb4d8baec9e6518e2"
+}

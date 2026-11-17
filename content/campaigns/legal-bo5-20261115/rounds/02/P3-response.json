@@ -1,0 +1,22 @@
+{
+  "requestedModel": "gpt-6-astra",
+  "actualModel": "deployment-gpt-6-astra-platform-global",
+  "text": "{\n  \"question_sufficiency\": \"unresolved\",\n  \"answer_leakage\": true,\n  \"required_repairs\": [\n    \"S03仅明确B最初借据日期，未明确180740.00元实际交付日期及首次计息起点。应补明二者是否均为2022-01-12；不能仅凭借据日期替代实际交付日期。该缺口影响B_protected_total及borrower_total。若有意保留未知，应明确允许这些字段因该缺口进入unresolved。\",\n    \"S02的“在本次无效清算中”直接预设了待判断的A合同效力。建议改为“如A被认定无效，双方同意……”，保留已返还款的冲抵约定、排除赔偿及S12请求范围，不改变实体事实。\"\n  ],\n  \"assessed_difficulty\": \"D4\",\n  \"reasoning_dependencies\": [\n    \"受理与合同时间→规范版本选择→A效力、返还性质及从属保证效力；依据S01—S02、S12，lending-2020-12第13、31条及civil-code-2020第157、682条。\",\n    \"B实际交付本金与起息时间→逐期合法结息→全部本息上限→可支持金额；依据S03—S06，civil-code-2020第670、679条及lending-2020-12第25—28条。\",\n    \"B原到期日、未经保证人书面同意的展期及请求到达日→保证期间与连带责任范围；依据S06及civil-code-2020第688、691—693、695条。\",\n    \"C交易去重与到账识别→债务指定→约定或法定清偿顺序→逐段本金、利息和费用余额；依据S07—S11及civil-code-2020第560—561条。\",\n    \"C保证方式与到期日→不同权利行使方式及时间→是否仍需审查先诉抗辩；依据S07、S10及civil-code-2020第686—687、692—693条。\",\n    \"各债务请求范围与最终分项取分→不交叉冲抵的借款人总额；依据S12及answer-contract.json。\"\n  ],\n  \"reason\": \"除B首次交付及起息日期外，截日、自然日/365口径、付款日处理、费用顺序、利率、保证范围和行权时间已基本给足。费用可收取、LPR及冲抵安排属于虚构题设，不要求补充真实案件证据。输出契约允许报告未知，因此任务并非不可作答，但目前不能确认全部金额均有唯一数值结果。S02另有局部结论泄漏。D4是基于状态联动、连续清偿和金额上限审查的静态评级，不代表实测难度；本审查未独立认证法条全文或来源元数据。\"\n}",
+  "usage": {
+    "input_tokens": 14717,
+    "input_tokens_details": {
+      "cache_write_tokens": 14714,
+      "cached_tokens": 0
+    },
+    "output_tokens": 3272,
+    "output_tokens_details": {
+      "reasoning_tokens": 2588
+    },
+    "total_tokens": 17989
+  },
+  "latencyMs": 88801,
+  "completedAt": "2026-11-14T21:07:23.629Z",
+  "status": "completed",
+  "input_sha256": "5c1411ce09dd03ab40aceeb6ef652a38e456de7ea45fd7929aaf11906cc16d32",
+  "output_sha256": "c4f5c796c2d0d17400f75268b3af7fef49c5b6b6c3341850d1b145372ce01b6a"
+}

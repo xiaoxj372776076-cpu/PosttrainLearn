@@ -1,0 +1,22 @@
+{
+  "candidate_id": "cand-001-r1",
+  "frozen_at": "2026-11-16T07:18:34.832Z",
+  "request_sha256": "cfa434e45101c5acc6089073365a5667293ef0179553de2c39a20a10aeb803b0",
+  "reference_sha256": "ed485375fea1bea6a5905bde0d40b366378061c6c2d300b1497f0d525b8a8408",
+  "reference_audit_sha256": "da1860a3405ce800e0ead3bcd195f995e3d0bb2cebb333e884ca0661e15efb6d",
+  "material_sha256": "b792a789b9ee93b21303f606108f60f0071e16ecf91baa390f0275a557c23954",
+  "model": {
+    "model": "deepseek-v4.1-1017",
+    "effort": "high",
+    "maxOutputTokens": 10000
+  },
+  "target_actual_model": "deepseek-v4-1-flash-261017",
+  "grading": "All mandatory legal criteria correct; minor form/quotation omissions do not fail; incomplete responses not legal errors.",
+  "target": {
+    "min_correct": 1,
+    "max_correct": 2,
+    "n": 5
+  },
+  "blind_concurrency": 1,
+  "expert_review": false
+}

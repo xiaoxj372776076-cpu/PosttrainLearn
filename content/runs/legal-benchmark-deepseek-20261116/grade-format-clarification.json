@@ -1,0 +1,11 @@
+{
+  "stage": "after_first_grade_2_validation_failure",
+  "reason": "Second grading response included noncritical IDs in the mandatory criteria array, violating the original validator contract.",
+  "change": "Clarify output shape: only the three existing critical IDs belong in criteria; noncritical observations belong in minor_issues.",
+  "frozen_legal_standard_changed": false,
+  "student_input_changed": false,
+  "target_config_changed": false,
+  "failed_response_preserved": "calls/first-grade-2-response.json",
+  "validation_error_preserved": "calls/first-grade-2-validation-error.json",
+  "retry_policy": "Named retry only, within authorized shared cap 52. Existing valid grading is reused without resubmission."
+}

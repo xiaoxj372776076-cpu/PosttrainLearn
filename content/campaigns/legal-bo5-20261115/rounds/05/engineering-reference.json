@@ -1,0 +1,124 @@
+{
+  "answer": {
+    "A_valid": false,
+    "A_restitution": "122900.00",
+    "A_guarantee": "invalid_accessory",
+    "B_initial_principal": "181850.00",
+    "B_protected_total": "221665.05",
+    "B_guarantee": "joint",
+    "C_outstanding_principal": "199188.07",
+    "C_outstanding_interest": "10016.16",
+    "C_outstanding_expenses": "0.00",
+    "C_guarantee": "expired",
+    "borrower_total": "553769.28"
+  },
+  "proof": {
+    "B_periods": [
+      {
+        "period_start": "2022-01-12",
+        "period_end": "2022-07-06",
+        "days": 175,
+        "lawful_base": "181850",
+        "protected_annual_rate": "0.132",
+        "lawful_rollover_base": "193358.863013698630136986301369863014"
+      },
+      {
+        "period_start": "2022-07-06",
+        "period_end": "2023-01-09",
+        "days": 187,
+        "lawful_base": "193358.863013698630136986301369863014",
+        "protected_annual_rate": "0.132",
+        "lawful_rollover_base": "206435.219656520923250140739350722462"
+      }
+    ],
+    "B_contractual_terminal": "221665.048683673787418030574499314940",
+    "B_global_cap": "223584.824109589041095890410958904110",
+    "B_initial_actual_principal": "181850",
+    "B_whole_days": 566,
+    "C_payment_allocations": [
+      {
+        "date": "2022-04-18",
+        "days": 70,
+        "before": {
+          "principal": "222050",
+          "interest": "4854.68219178082191780821917808219178",
+          "expenses": "1680"
+        },
+        "allocation": {
+          "expenses": "1680",
+          "interest": "4854.68219178082191780821917808219178",
+          "principal": "3330.31780821917808219178082191780822"
+        },
+        "after": {
+          "principal": "218719.682191780821917808219178082192",
+          "interest": "0E-32",
+          "expenses": "0"
+        }
+      },
+      {
+        "date": "2022-08-23",
+        "days": 127,
+        "before": {
+          "principal": "218719.682191780821917808219178082192",
+          "interest": "8675.68098293863764308500656783636707",
+          "expenses": "0"
+        },
+        "allocation": {
+          "principal": "11596",
+          "expenses": "0",
+          "interest": "0"
+        },
+        "after": {
+          "principal": "207123.682191780821917808219178082192",
+          "interest": "8675.68098293863764308500656783636707",
+          "expenses": "0"
+        }
+      },
+      {
+        "date": "2022-11-14",
+        "days": 83,
+        "before": {
+          "principal": "207123.682191780821917808219178082192",
+          "interest": "14045.0077799211859635954212797898293",
+          "expenses": "0"
+        },
+        "allocation": {
+          "expenses": "0",
+          "interest": "13327",
+          "principal": "0"
+        },
+        "after": {
+          "principal": "207123.682191780821917808219178082192",
+          "interest": "718.0077799211859635954212797898293",
+          "expenses": "0"
+        }
+      },
+      {
+        "date": "2023-02-21",
+        "days": 99,
+        "before": {
+          "principal": "207123.682191780821917808219178082192",
+          "interest": "7122.38552571964721336085569525239264",
+          "expenses": "0"
+        },
+        "allocation": {
+          "expenses": "0",
+          "interest": "7122.38552571964721336085569525239264",
+          "principal": "7935.61447428035278663914430474760736"
+        },
+        "after": {
+          "principal": "199188.067717500469131169074873334585",
+          "interest": "0E-32",
+          "expenses": "0"
+        }
+      }
+    ],
+    "C_final_period_days": 161,
+    "C_final_unrounded_interest": "10016.1583421561742751602115074662547",
+    "A_actual_less_return": "142885-19985",
+    "B_guarantee_period_end": "2023-07-12",
+    "C_guarantee_period_end": "2023-06-15"
+  },
+  "expert_review": false,
+  "reference_kind": "hypothetical_fact_and_frozen_rule_derived_engineering_reference"
+}

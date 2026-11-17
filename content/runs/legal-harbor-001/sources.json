@@ -1,0 +1,88 @@
+{
+  "case": {
+    "id": "cn-shanghai-minhang-2023-civil-first-23060",
+    "title": "马某与皮某民间借贷纠纷一审民事判决书",
+    "caseNumber": "（2023）沪0112民初23060号",
+    "court": "上海市闵行区人民法院",
+    "date": "2023-11-21",
+    "sourceUrl": "https://www.hshfy.sh.cn/shfy/web/flws_view.jsp?pa=adGFoPaOoMjAyM6Opu6YwMTEyw/Gz9TIzMDYwusUmd3N4aD00z",
+    "retrievedAt": "2026-11-14T15:58:42+08:00",
+    "sourceTextSha256": "54055dd0f876d61a49445184eabc6a8b2f16e2c2b6050c4c47fa0c3ce5ce170b",
+    "rawSha256": "817aefade5d2455d61208568046eae2ec7549ef2b25ddd7f406680b7a99ba6bc",
+    "viewSha256": "5735df246160af2f3f6cc854cbff91ea2719e26bbebdb940604b34be10efbbeb",
+    "status": "acquired_not_normalized",
+    "permissionStatus": "unresolved",
+    "appealStatus": "unresolved",
+    "evidenceExhibitsObtained": false,
+    "note": "本页为明确标记的脱敏展示视图，不冒充逐字原件；原件保存在 private-source（不进入 Git/发布包）。公开文书并非完整卷宗。"
+  },
+  "authorities": [
+    {
+      "source_id": "lending-2015",
+      "url": "https://www.court.gov.cn/zixun/xiangqing/15146.html",
+      "raw_sha256": "1af36550b2a89b1eb1d1d8ad0d942b1c6f0fb42c9a254020028f4464e8f92120",
+      "text_sha256": "60e77418bc1819ad40a3ec875162ceb275b051a71201d3e51f8008f089c48f28",
+      "retrieved_at": "2026-11-14T09:28:37.935Z",
+      "provision": "14"
+    },
+    {
+      "source_id": "lending-2020-08",
+      "url": "https://www.court.gov.cn/zixun/xiangqing/249031.html",
+      "raw_sha256": "3e4a25d7c08128547673cfbc788d0dd4977f3ae6bbbaf5d8d2b6a43818d87e03",
+      "text_sha256": "56d9c59e2a69b73eb9e35073118b5536a1dd6bf63eb690cb11a898b27a410e20",
+      "retrieved_at": "2026-11-14T09:28:38.434Z",
+      "provision": "14"
+    },
+    {
+      "source_id": "lending-2020-12",
+      "url": "https://cicc.court.gov.cn/html/1/380/385/12844.html",
+      "raw_sha256": "dab30431be22f28dd92e7a770d375a6dbb7bfe98b29a5dc87f4c9ce28ae311c0",
+      "text_sha256": "9f6fcb190088f67538e50b2986da12d170ba08cfd11424550e2aae939469cff5",
+      "retrieved_at": "2026-11-14T09:28:39.149Z",
+      "provision": "13"
+    },
+    {
+      "source_id": "lending-2020-12",
+      "url": "https://cicc.court.gov.cn/html/1/380/385/12844.html",
+      "raw_sha256": "dab30431be22f28dd92e7a770d375a6dbb7bfe98b29a5dc87f4c9ce28ae311c0",
+      "text_sha256": "9f6fcb190088f67538e50b2986da12d170ba08cfd11424550e2aae939469cff5",
+      "retrieved_at": "2026-11-14T09:28:39.149Z",
+      "provision": "31"
+    },
+    {
+      "source_id": "civil-code-2020",
+      "url": "https://www.court.gov.cn/zixun/xiangqing/233181.html",
+      "raw_sha256": "16fb30a132114600f32059367dae0d6dd274519aa154126eae0ef9600cf4074e",
+      "text_sha256": "c48c4c6bff9d38e82dfe6c04970d999ac8d708d28290083fcd4c0b41b9307db8",
+      "retrieved_at": "2026-11-14T09:28:39.891Z",
+      "provision": "157"
+    },
+    {
+      "source_id": "civil-code-2020",
+      "url": "https://www.court.gov.cn/zixun/xiangqing/233181.html",
+      "raw_sha256": "16fb30a132114600f32059367dae0d6dd274519aa154126eae0ef9600cf4074e",
+      "text_sha256": "c48c4c6bff9d38e82dfe6c04970d999ac8d708d28290083fcd4c0b41b9307db8",
+      "retrieved_at": "2026-11-14T09:28:39.891Z",
+      "provision": "1260"
+    },
+    {
+      "source_id": "copyright-2020",
+      "url": "https://www.ncac.gov.cn/xxfb/flfg/flfg_532/202103/t20210309_50530.html",
+      "raw_sha256": "e27fccf5c3a0f29439d7e165f09e4e3d148ac301c16f71d0210339c175cca4f3",
+      "text_sha256": "ce5f0f718acfd6705850a49e48eaf03beacc5d47d84cd2b90b955918ded4e829",
+      "retrieved_at": "2026-11-14T09:28:43.082Z",
+      "provision": "5"
+    }
+  ],
+  "usage_audit": {
+    "status": "limited_local_research_only",
+    "basis": "copyright-2020/5(1)",
+    "limits": [
+      "公开脱敏司法文件有限研究加工",
+      "不含证据原件",
+      "未确认商业再分发、个人信息和外部模型条款适配",
+      "正式训练准入仍 unresolved"
+    ]
+  },
+  "original_dossier_changed": false
+}

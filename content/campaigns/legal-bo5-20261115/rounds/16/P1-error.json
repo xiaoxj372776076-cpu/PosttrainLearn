@@ -1,0 +1,13 @@
+{
+  "round": "16",
+  "stage": "P1",
+  "status": "failed_usage_unknown",
+  "submitted_at": "2026-11-15T01:41:14.468Z",
+  "input_sha256": "4f468c7f2b6685eab0a5fb356eded0fd281f66fe4b8d8321b333201993bbe79c",
+  "input_reservation": 45576,
+  "output_reservation": 20000,
+  "usage": null,
+  "failure_kind": "infrastructure",
+  "error": "The operation was aborted due to timeout",
+  "failed_at": "2026-11-15T01:58:02.504Z"
+}

@@ -1,0 +1,27 @@
+{
+  "fields": {
+    "A_valid": "合同或保证状态",
+    "A_restitution": "金额，人民币元",
+    "A_guarantee": "合同或保证状态",
+    "B_initial_principal": "B最初实际交付本金，不是付款后的未偿本金，人民币元",
+    "B_protected_total": "截日全部已付金额抵充后，B仍可请求的受保护本息余额，人民币元",
+    "B_guarantee": "合同或保证状态",
+    "C_outstanding_principal": "金额，人民币元",
+    "C_outstanding_interest": "金额，人民币元",
+    "C_outstanding_expenses": "金额，人民币元",
+    "C_guarantee": "合同或保证状态",
+    "borrower_total": "金额，人民币元",
+    "B_second_guarantee": "合同或保证状态",
+    "B_joint_payment_limit": "在截日到账及最终清偿后，甲请求戊立即支付B所能支持的最高金额，不计入借款人总额，人民币元"
+  },
+  "guarantee_states": [
+    "invalid_accessory",
+    "expired",
+    "joint",
+    "general_preserved_not_yet_enforceable",
+    "joint_limited_due_lost_recourse"
+  ],
+  "money": "数字或十进制金额字符串均可；最终每项四舍五入至分，分项取分后计算总额",
+  "basis": "简短事实、法条、必要算式，须解释决定性法律分支；不要求内部思维链",
+  "evaluation": "法律分支、最终金额、公开计算依据分别审查。高精度中间展示偏差不超过0.01元且不改变最终取分、规则、日数或公式时，仅记录质量提示，不计实质错误；必要法律判断、日数、公式或必答最终金额错误仍属实质错误。学生只返回JSON，宿主负责落盘。"
+}

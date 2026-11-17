@@ -1,0 +1,60 @@
+{
+  "question": "请仅依据随附的 dossier.md、rules.json 和 answer-contract.json，对甲的最终付款请求完成一份整体财产与责任审查。本题事实为明确虚构的研究情景，不是实际裁判解释或原案判决预测。\n\n审查时点为2023-08-01材料所列付款、签署及程序事件完成后，计息截止口径遵守材料。请确定A、B、C关系中甲剩余请求的合法范围、SP-01的清偿归属，以及乙、丁、戊、庚、己、辛各自的义务状态和即时付款责任边界；以相关法律状态支撑金额及责任结论，并回应材料中影响最终请求的争议主张。具体必答项目及金额含义以answer-contract.json为准。\n\n交付时只返回一个有效JSON对象，包含answer-contract.json中fields列出的全部字段，并提供basis。basis应以简短、公开可核验的说明支持决定性法律判断及金额，引用dossier.md的段落编号和rules.json的source_id、provision，附必要的计算依据；不要求内部思维链。金额精度、汇总口径和状态表达遵守该契约。不要输出Markdown代码围栏或JSON之外的文字；学生只返回JSON，由宿主负责落盘。",
+  "reasoning_dependencies": [
+    {
+      "dependency": "合同成立、效力及规范适用时间与剩余财产请求范围相关联。",
+      "support": [
+        "dossier.md:S01-S05、S07",
+        "rules.json:civil-code-2020:157、670、679、682",
+        "rules.json:lending-2020-12:13、25-28、31",
+        "rules.json:lending-2015:26"
+      ]
+    },
+    {
+      "dependency": "付款记录、结算条款及适用规范共同约束债务余额。",
+      "support": [
+        "dossier.md:S02、S04、S08、S09、S11、S13",
+        "rules.json:civil-code-2020:560、561"
+      ]
+    },
+    {
+      "dependency": "保证条款、各主体行权记录与付款时的担保状态共同影响清偿归属及责任范围。",
+      "support": [
+        "dossier.md:S06、S10、S13",
+        "rules.json:civil-code-2020:687、688、692、693、695",
+        "rules.json:guarantee-2020:13、25、29、31、32、34"
+      ]
+    },
+    {
+      "dependency": "第三人文书的正文、事件时间与既有债务状态共同约束最终主体责任。",
+      "support": [
+        "dossier.md:S12-S14",
+        "rules.json:civil-code-2020:552、687、691、697",
+        "rules.json:guarantee-2020:36"
+      ]
+    }
+  ],
+  "shortcut_audit": [
+    {
+      "item": "题面泄漏",
+      "finding": "题面仅规定整体审查目标和交付要求，未给出金额归属标签、运算公式、具体法律结论或答案菜单。"
+    },
+    {
+      "item": "学生视图与来源隔离",
+      "finding": "作答依据限定为三个学生文件；研究者判断、历史分析及结构示例答案未写入题面，也不作为学生的实体依据。"
+    },
+    {
+      "item": "既有脚手架",
+      "finding": "S04、S06及answer-contract.json仍含明确约定和输出口径。本题按要求完整保留，不据材料长度或依赖数量宣称实测高难。"
+    },
+    {
+      "item": "程序日期表述",
+      "finding": "dossier.md总述的新受理表述与S10、S14的具体程序记录存在表述张力，留待P3核对；本题不补写或替换任何日期。"
+    },
+    {
+      "item": "核验边界",
+      "finding": "本阶段仅形成一个候选任务，未进行金额复算、外部来源核验、工具执行或独立盲答。"
+    }
+  ],
+  "source_mode": "new_scenario"
+}

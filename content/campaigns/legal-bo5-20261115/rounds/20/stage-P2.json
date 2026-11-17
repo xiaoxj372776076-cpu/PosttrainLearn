@@ -1,0 +1,67 @@
+{
+  "question": "依据随题文件 dossier.md、rules.json 和 answer-contract.json，对甲截至2023-08-01向乙、丁、戊、庚、己、辛提出的最终财产给付请求完成一份整体审查，不计截日当日利息。确定答题契约要求的A、B、C各项金额、相关合同与保证状态、第三人义务类型、各主体责任范围及即时履行条件，以有据的法律状态判断支撑最终请求金额。事实、规范和请求范围均以学生文件为限，不另补事实或改写约定。本任务是显著虚构情景下的规则适用与金额核对，不是预测或复述真实判决。\n\n交付格式：只返回一个有效JSON对象，包含 answer-contract.json 中 fields 所列的全部字段，并提供 basis。A_guarantee、B_guarantee、B_second_guarantee、C_guarantee分别记载丁、戊、庚、己的状态；字段含义、金额范围和精度遵循答题契约。状态可用语义明确的中文或英文自行概括。basis须提供支持决定性法律判断的简短事实定位、规范版本及条文引用，以及足以复核金额的必要计算依据，不要求内部思维链。不要添加JSON以外的说明，不需自行写文件，由宿主负责落盘。",
+  "reasoning_dependencies": [
+    {
+      "dependency": "可请求的财产范围与相应合同、保证的法律状态相互关联。",
+      "basis_refs": [
+        "dossier.md:S01、S02、S12",
+        "rules.json:lending-2020-12:13",
+        "rules.json:civil-code-2020:157、682"
+      ]
+    },
+    {
+      "dependency": "债务金额依赖合同成立及履行记录、结算约定和适用规范版本，不能由单份金额凭证独立确定。",
+      "basis_refs": [
+        "dossier.md:S03—S05、S07—S09、S11",
+        "rules.json:lending-2020-12:25—28、31",
+        "rules.json:lending-2015:26"
+      ]
+    },
+    {
+      "dependency": "截日付款的法律效果与当时债务状态、保证状态及双方约定存在交互。",
+      "basis_refs": [
+        "dossier.md:S06、S10、S13",
+        "rules.json:civil-code-2020:560、561",
+        "rules.json:guarantee-2020:25、29、31、32、34"
+      ]
+    },
+    {
+      "dependency": "各主体最终责任范围和即时履行条件共同依赖文书正文、行权记录与事件时间。",
+      "basis_refs": [
+        "dossier.md:S06、S10、S12、S14",
+        "rules.json:civil-code-2020:551、552、687、688、695、697",
+        "rules.json:guarantee-2020:13、36"
+      ]
+    },
+    {
+      "dependency": "关系层面的未偿金额与主体层面的请求金额须在答题契约规定的范围内相互一致。",
+      "basis_refs": [
+        "dossier.md:S12—S14",
+        "answer-contract.json:fields、money、C_amount_scope"
+      ]
+    }
+  ],
+  "shortcut_audit": [
+    {
+      "finding": "题面仅规定整体审查目标和交付格式，未写入金额角色、适用结论、计算公式、抵充选择或责任比例结果。",
+      "basis": "question文本可直接核对。"
+    },
+    {
+      "finding": "作答依据限定为学生文件，未把命题单元的supported_state、结构种子答案或历史analysis作为学生证据。",
+      "basis": "question仅引用dossier.md、rules.json和answer-contract.json。"
+    },
+    {
+      "finding": "既有analysis与当前学生文件并非同一事实版本，不能继承其金额参考或实测正确数。",
+      "basis": "对照DATA.analysis与当前dossier.md:S01、S02、S14可见差异。"
+    },
+    {
+      "finding": "受理日期总述与具体程序记录的口径差异保留原状，需由P3复核信息充分性；本题面没有擅自统一日期。",
+      "basis": "dossier.md首段与S10、S14。"
+    },
+    {
+      "finding": "材料认可真实性并提供完整规范，仍可能降低证据判断难度；依赖数量和输出字段数量不构成实测难度证明。",
+      "basis": "dossier.md首段、rules.json及answer-contract.json；本阶段未执行盲答、金额复算或外部来源核验。"
+    }
+  ],
+  "source_mode": "new_scenario"
+}

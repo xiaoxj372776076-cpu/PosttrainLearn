@@ -1,0 +1,20 @@
+{
+  "model": "gpt-6-astra",
+  "effort": "high",
+  "max_output_tokens": 20000,
+  "protocol": "0.3",
+  "created_at": "2026-11-14T22:00:52.525Z",
+  "configuration_history": [
+    {
+      "from_round": 1,
+      "max_output_tokens": 10000,
+      "reason": "Initial frozen configuration; all prior inputs and trials remain unchanged."
+    },
+    {
+      "from_round": 5,
+      "max_output_tokens": 20000,
+      "reason": "Round 04 Bo5-5 explicitly terminated at max_output_tokens. Increase the output allowance rather than using truncation as difficulty. Aggregate budgets, model and reasoning effort remain unchanged.",
+      "evidence": "rounds/04/Bo5-5-error.json"
+    }
+  ]
+}

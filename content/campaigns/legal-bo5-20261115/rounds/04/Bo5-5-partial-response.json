@@ -1,0 +1,23 @@
+{
+  "requestedModel": "gpt-6-astra",
+  "actualModel": "deployment-gpt-6-astra-platform-global",
+  "text": "{\n  \"A_valid\": \"invalid\",\n  \"A_restitution\": \"122906.00\",\n  \"A_guarantee\": \"invalid_accessory\",\n  \"B_initial_principal\": \"181480.00\",\n  \"B_protected_total\": \"221214.04\",\n  \"B_guarantee\": \"joint\",\n  \"C_outstanding_principal\": \"199035.88\",\n  \"C_outstanding_interest\": \"10008.51\",\n  \"C_outstanding_expenses\": \"0.00\",\n  \"C_guarantee\": \"expired\",\n  \"borrower_total\": \"553164.43\",\n  \"basis\": {\n    \"适用版本与计算口径\": {\n      \"facts\": [\n        \"dossier.md导言\",\n        \"[S01]\",\n        \"[S03]\",\n        \"[S04]\",\n        \"[S07]\",\n        \"[S12]\"\n      ],\n      \"rules\": [\n        {\n          \"source_id\": \"lending-2020-12\",\n          \"provision\": \"31\"\n        },\n        {\n          \"source_id\": \"civil-code-2020\",\n          \"provision\": \"1260\"\n        }\n      ],\n      \"explanation\": \"三笔借款均发生于2022年，本案于2023-08-01新受理，适用所给2021-01-01起施行的民法典及lending-2020-12版本，不适用此前版本。结算不计2023-08-01当日利息；实际自然日、年基数365；计算过程不提前舍入，最终分项取分后相加。\"\n    },\n    \"A及丁\": {\n      \"facts\": [\n        \"[S01]\",\n        \"[S02]\",\n        \"[S11]\",\n        \"[S12]\"\n      ],\n      \"rules\": [\n        {\n          \"source_id\": \"lending-2020-12\",\n          \"provision\": \"13\"\n        },\n        {\n          \"source_id\": \"civil-code-2020\",\n          \"provision\": \"157\"\n        },\n        {\n          \"source_id\": \"civil-code-2020\",\n          \"provision\": \"682\"\n        }\n      ],\n      \"explanation\": \"甲套取银行信贷资金转贷，A无效。现行第13条第（一）项不以高利转贷或乙事先知情为条件，乙不知资金来源、利率仅6%不改变结论。按清算协议，全部既付款冲抵实际交付财产：142868.00－19962.00＝122906.00元。票面未交付差额及同笔交付的重复收据均不增加债务。A无效导致丁的从属保证合同无效，状态为invalid_accessory，不能要求丁依连带保证立即支付该返还债务；保证无效后的过错赔偿不在诉请范围内。\"\n    },\n    \"B金额\": {\n      \"facts\": [\n        \"[S03]\",\n        \"[S04]\",\n        \"[S05]\",\n        \"[S06]\",\n        \"[S11]\"\n      ],\n      \"rules\": [\n        {\n          \"source_id\": \"civil-code-2020\",\n          \"provision\": \"670\"\n        },\n        {\n          \"source_id\": \"civil-code-2020\",\n          \"provision\": \"679\"\n        },\n        {\n          \"source_id\": \"lending-2020-12\",\n          \"provision\": \"25\"\n        },\n        {\n          \"source_id\": \"lending-2020-12\",\n          \"provision\": \"26\"\n        },\n        {\n          \"source_id\": \"lending-2020-12\",\n          \"provision\": \"27\"\n        },\n        {\n          \"source_id\": \"lending-2020-12\",\n          \"provision\": \"28\"\n        }\n      ],\n      \"explanation\": \"B为合法自有资金借款，无所列无效事由。预扣利息不得计入初始本金，故本金为193596.00－12116.00＝181480.00元，合同于2022-01-12实际提供借款时成立。约定年利率13.2%低于成立时一年期LPR四倍14.8%。两次新借据均无新交付，应从实际初始本金递推合法结息，不能直接采用纸面本金，也不能重算合同成立时点。逾期部分按已约定的借期内利率13.2%计算。\",\n      \"calculation\": {\n        \"分段日数\": [\n          {\n            \"from\": \"2022-01-12\",\n            \"to_exclusive\": \"2022-07-06\",\n            \"days\": 175\n          },\n          {\n            \"from\": \"2022-07-06\",\n            \"to_exclusive\": \"2023-01-09\",\n            \"days\": 187\n          },\n          {\n            \"from\": \"2023-01-09\",\n            \"to_exclusive\": \"2023-08-01\",\n            \"days\": 204\n          }\n        ],\n        \"合法结息递推\": \"181480×(1＋0.132×175/365)×(1＋0.132×187/365)×(1＋0.132×204/365)，最终取分为221214.04元。\",\n        \"整体上限\": \"整个期间为566日；181480＋181480×0.148×566/365，最终取分为223129.91元。\",\n        \"比较结论\": \"逐次合法结息后的本息未超过第27条整体上限，支持221214.04元。该数已包含本金及全部可保护利息，不另叠加初始本金、纸面本金或预扣利息。\"\n      }\n    },\n    \"戊\": {\n      \"facts\": [\n        \"[S06]\",\n        \"[S12]\"\n      ],\n      \"rules\": [\n        {\n",
+  "usage": {
+    "input_tokens": 12354,
+    "input_tokens_details": {
+      "cache_write_tokens": 12351,
+      "cached_tokens": 0
+    },
+    "output_tokens": 10000,
+    "output_tokens_details": {
+      "reasoning_tokens": 8705
+    },
+    "total_tokens": 22354
+  },
+  "latencyMs": 196725,
+  "completedAt": "2026-11-14T21:35:58.632Z",
+  "status": "incomplete",
+  "incompleteDetails": {
+    "reason": "max_output_tokens"
+  }
+}
